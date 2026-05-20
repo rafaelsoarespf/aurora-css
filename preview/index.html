@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Aurora CSS</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, aurora css" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Aurora CSS" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico" />
+  <!--CSS-->
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/themes.css" />
+  <link rel="stylesheet" href="../css/globals.css" />
+  <link rel="stylesheet" href="../css/classes.css" />
+  <link rel="stylesheet" href="./styles/app.css" />
+  <!--Scripts-->
+  <script type="module" src="./dist/main.js"></script>
+</head>
+
+<body data-theme="dark">
+  <header class="navbar">
+    <nav class="navbar__content">
+      <a href="#" class="navbar__logo">Aurora</a>
+      <ul class="navbar__menu">
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">GitHub</a></li>
+      </ul>
+      <button class="navbar__toggle" aria-label="Open menu">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero center">
+      <span class="badge">⁕ Modern CSS Framework</span>
+      
+      <h1 class="hero__title size--lg">Build elegant interfaces with simplicity</h1>
+
+      <p class="hero__description size--md">
+        Aurora CSS is a modern framework focused on clean design,
+        responsiveness and reusable components.
+      </p>
+
+      <div class="row hero__actions">
+        <a href="#" class="btn">Get Started</a>
+        <a href="#" class="btn btn--ghost">View GitHub</a>
+      </div>
+    </section>
+
+  <footer class="footer center">
+    <p>© 2026 Aurora CSS</p>
+  </footer>
+</body>
+
+</html>
