@@ -115,15 +115,13 @@
   gap: 1rem;
 }
 
-
-
-/*grow-orb ---------------------------------------------------*/
-.glow-orb,.glow-orb-sm,.glow-orb-md,.glow-orb-lg {
+/*efects -----------------------------------------------------*/
+.fx-glow,.fx-glow-sm,.fx-glow-md,.fx-glow-lg {
   position: relative;
   isolation: isolate;
 }
 
-.glow-orb::before,.glow-orb-sm::before,.glow-orb-md::before,.glow-orb-lg::before {
+.fx-glow::before,.fx-glow-sm::before,.fx-glow-md::before,.fx-glow-lg::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -136,28 +134,47 @@
   pointer-events: none;
 }
 
-.glow-orb::before {
+.fx-glow::before {
   width: min(320px, 70vw);
   height: min(320px, 70vw);
-  opacity: 0.08;
+  opacity: 0.1;
 }
 
-.glow-orb-sm::before {
+.fx-glow-sm::before {
   width: 180px;
   height: 180px;
-  opacity: 0.06;
-}
-
-.glow-orb-md::before {
-  width: min(420px, 70vw);
-  height: min(420px, 70vw);
   opacity: 0.08;
 }
 
-.glow-orb-lg::before {
+.fx-glow-md::before {
+  width: min(420px, 70vw);
+  height: min(420px, 70vw);
+  opacity: 0.1;
+}
+
+.fx-glow-lg::before {
   width: min(600px, 70vw);
   height: min(600px, 70vw);
-  opacity: 0.12;
+  opacity: 0.16;
+}
+
+/*fx-grid*/
+.fx-grid {
+  position: relative;
+  isolation: isolate;
+}
+
+.fx-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle, white 20%, transparent 80%);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /*button -----------------------------------------------------*/
