@@ -1,8 +1,10 @@
+section {
+  padding-block: 6rem;
+}
+
 /*============================================================*/
 /* Hero ======================================================*/
 .hero {
-  position: relative;
-  overflow: hidden;
   min-height: 85vh;
   gap: 1.5rem;
 }
@@ -15,9 +17,165 @@
   font-size: 1.1rem;
 }
 
-/*============================================================*/
-/* Preview ===================================================*/
-
-.preview {
-  padding-block: 4rem;
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+                    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:40px 40px;
+  mask-image: radial-gradient(circle, white 20%, transparent 80%);
+  z-index:-2;
 }
+
+/*============================================================*/
+/* features ==================================================*/
+.features .grid-3 {
+  margin-top: 2rem;
+}
+
+/*============================================================*/
+/* Components  ===============================================*/
+.components {
+  position: relative;
+}
+
+.components__header {
+  margin-bottom: 3.5rem;
+}
+
+.components-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.5rem;
+}
+
+.components-form {
+  grid-row: span 2;
+  text-align: left;
+}
+
+.components-form .form {
+  margin-top: 1rem;
+}
+
+.components .card {
+  text-align: left;
+}
+
+.components .alert {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .components-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .components-form {
+    grid-row: auto;
+  }
+}
+
+/*============================================================*/
+/* showcase ==================================================*/
+.showcase {
+  align-items: center;
+  gap: 1rem;
+}
+
+.showcase__preview {
+  position: relative;
+}
+
+.preview-window {
+  position: relative;
+  overflow: hidden;
+  min-height: 420px;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-border);
+  background:linear-gradient(180deg,color-mix(in srgb, var(--color-surface-1) 90%, transparent),transparent);
+}
+
+.preview-header,.preview-sidebar,.preview-chart,.preview-stats div {
+  border-radius: 1rem;
+  background:color-mix(in srgb, var(--color-surface-2) 75%, transparent);
+}
+
+.preview-header {
+  height: 52px;
+  margin-bottom: 1rem;
+}
+
+.preview-sidebar {
+  position: absolute;
+  inset: 5rem auto 1rem 1rem;
+  width: 90px;
+}
+
+.preview-content {
+  margin-left: 110px;
+}
+
+.preview-chart {
+  height: 180px;
+  background:linear-gradient(180deg,color-mix(in srgb, var(--color-accent) 20%, transparent),transparent);
+  border:1px solid color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
+}
+
+.preview-stats div {
+  margin-top: 20px;
+  height: 110px;
+}
+
+@media (max-width: 900px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*============================================================*/
+/* developer =================================================*/
+.developer{
+  gap: 3rem;
+  align-items: center;
+}
+
+/* text side */
+.developer__content h2{
+  margin-block: 1rem;
+}
+
+.developer__content p{
+  max-width: 580px;
+}
+
+/* checklist */
+.developer__list{
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* responsive */
+@media (max-width: 900px){
+  .developer{
+    grid-template-columns: 1fr;
+  }
+}
+
+/*============================================================*/
+/* why =======================================================*/
+.why .grid-3 {
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+/*cta --------------------------------------------------------*/
+.cta {
+  padding: 5rem 2rem;
+  border-radius: 24px;
+  gap: 1.5rem;
+}
+

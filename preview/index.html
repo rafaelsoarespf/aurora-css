@@ -42,7 +42,7 @@
   <script type="module" src="./dist/main.js"></script>
 </head>
 
-<body data-theme="dark">
+<body data-theme="dark-teal">
   <header class="navbar">
     <nav class="navbar__content">
       <a href="#" class="navbar__logo">Aurora</a>
@@ -57,10 +57,10 @@
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero center">
+    <!-- Hero -------------------------------------------------------->
+    <section class="hero glow-orb-lg center container">
       <span class="badge">⁕ Modern CSS Framework</span>
-      
+
       <h1 class="hero__title size--lg">Build elegant interfaces with simplicity</h1>
 
       <p class="hero__description size--md">
@@ -74,8 +74,208 @@
       </div>
     </section>
 
-  <footer class="footer center">
-    <p>© 2026 Aurora CSS</p>
+    <!--Features -------------------------------------------------------->
+    <section class="features container">
+      <h2 class="text-center">Everything you need to build modern interfaces</h2>
+      <p class="text-center">Aurora CSS provides reusable utilities and elegant components.</p>
+      <div class="grid-3">
+        <article class="card">
+          <h3 class="text-accent">⬢ Reusable Utilities</h3>
+          <p>
+            Build layouts faster using flexible utility classes
+            for spacing, grids, alignment and sizing.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="text-accent">◈ Modern Components</h3>
+          <p>
+            Elegant components designed with responsiveness,
+            accessibility and clean aesthetics in mind.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="text-accent">✦ Clean Architecture</h3>
+          <p>
+            Organized structure focused on scalability,
+            readability and maintainable interfaces.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!--Components -------------------------------------------------------->
+    <section class="components container center">
+      <!--header-->
+      <div class="components__header glow-orb center">
+        <span class="badge">Components</span>
+        <h2 class="size--md">Beautiful components out of the box</h2>
+        <p class="size--md">
+          Carefully crafted UI elements with accessibility,
+          responsiveness and clean aesthetics.
+        </p>
+      </div>
+
+      <div class="components-layout">
+        <article class="card components-form">
+          <h3 class="text-accent">✦ Elegant Forms</h3>
+          <p>
+            Modern form controls with floating labels,
+            accessibility and clean interactions.
+          </p>
+          <form class="form">
+
+            <div class="field">
+              <input type="text" placeholder=" ">
+              <label>Name</label>
+            </div>
+            <div class="field">
+              <input type="email" placeholder=" ">
+              <label>Email</label>
+            </div>
+
+            <button>Submit</button>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3 class="text-accent">◈ Interactive Buttons</h3>
+
+          <p>
+            Beautiful buttons designed for elegant
+            user interactions and responsive layouts.
+          </p>
+
+          <div class="row">
+            <button>Primary</button>
+            <button class="btn btn--ghost">Ghost</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="text-accent">⬢ Alerts & Feedback</h3>
+
+          <p>
+            Reusable feedback components with
+            accessible visual states.
+          </p>
+
+          <div class="alert">
+            Aurora CSS components are fully reusable.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!--showcase ------------------------------------------------------>
+    <section class="showcase glow-orb container grid-2">
+      <div class="showcase__content">
+        <span class="badge">Interface Patterns</span>
+        <h2>Interfaces designed for modern products</h2>
+        <p>
+          Aurora helps you build dashboards,authentication flows, settings panels
+          and scalable UI systems.
+        </p>
+      </div>
+
+      <div class="showcase__preview">
+        <article class="card">
+          <div class="preview-window">
+            <div class="preview-header"></div>
+
+            <div class="preview-sidebar"></div>
+
+            <div class="preview-content">
+              <div class="preview-chart"></div>
+
+              <div class="preview-stats grid-3">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!--Developer -------------------------------------------------------->
+    <section class="developer glow-orb container grid-2">
+      <div class="developer__content">
+        <span class="badge">Developer Experience</span>
+
+        <h2>Built for maintainable interfaces</h2>
+
+        <p>
+          Aurora keeps your styles predictable with reusable
+          primitives, scalable architecture and clean visual consistency.
+        </p>
+
+        <div class="developer__list">
+          <div class="card text-left">✓ Reusable utilities</div>
+          <div class="card text-left">✓ Minimal abstraction</div>
+          <div class="card text-left">✓ Responsive by default</div>
+          <div class="card text-left">✓ Theme-ready variables</div>
+        </div>
+      </div>
+
+      <div class="card-code">
+        <pre><code>.container {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 1.5rem;
+}</code></pre>
+      </div>
+    </section>
+
+    <!--Why -------------------------------------------------------->
+    <section class="why container center">
+      <span class="badge">Why Aurora</span>
+      <h2>Built for clarity. Designed for scale.</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Minimal by default</h3>
+          <p>Only the essentials — no bloated abstractions or unnecessary complexity.</p>
+        </div>
+
+        <div class="card">
+          <h3>Flexible composition</h3>
+          <p>Build interfaces freely with reusable and independent components.</p>
+        </div>
+
+        <div class="card">
+          <h3>Unified visual language</h3>
+          <p>Consistent spacing, typography and interaction across the entire system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Cta -------------------------------------------------------->
+    <section class="cta card center container glow-orb bg-gradient-accent">
+      <h2>Start building with Aurora today</h2>
+      <p class="size--md">A modern CSS system designed to scale real interfaces, not just pages.</p>
+      <div class="row">
+        <a class="btn">Get Started</a>
+        <a class="btn btn--ghost">Explore Components</a>
+      </div>
+    </section>
+  </main>
+
+  <!--Footer -------------------------------------------------------->
+  <footer class="footer container">
+    <p>Aurora CSS - Modern UI framework for clean interfaces</p>
+    <div class="row">
+      <a href="#">Docs</a>
+      <a href="#">Components</a>
+      <a href="#">Themes</a>
+      <a href="#">GitHub</a>
+    </div>
   </footer>
 </body>
 
