@@ -106,3 +106,39 @@
   --shadow-md: 0 4px 10px rgba(0,0,0,0.28);
   --shadow-lg: 0 10px 30px rgba(0,0,0,0.38);
 }
+
+/*============================================================*/
+/* Dark Teal =================================================*/
+[data-theme="aurora"]{
+  --color-background:
+    radial-gradient(circle at 20% 20%,rgba(120,255,200,.10),transparent 30%),
+    radial-gradient(circle at 80% 18%,rgba(120,190,255,.12),transparent 34%),
+    radial-gradient(circle at 75% 75%,rgba(210,140,255,.10),transparent 36%),
+    radial-gradient(circle at 30% 80%,rgba(255,220,140,.08),transparent 34%),
+    radial-gradient(circle at center,rgba(255,255,255,.035),transparent 55%),
+    linear-gradient(145deg,#0b0f14,#06080c);
+
+  --color-surface-1:rgba(255,255,255,.045);
+  --color-surface-2:rgba(255,255,255,.07);
+
+  --color-title:#f8fbff;
+  --color-subtitle:#dde6f0;
+  --color-text:#9baabc;
+
+  --color-border:rgba(255,255,255,.09);
+
+  /* diamond aurora */
+  --color-accent:#b2edff;
+  --color-on-accent:#0b1220;
+
+  --blur:blur(24px);
+
+  --font-title:700 2rem "Montserrat",Verdana,Helvetica,sans-serif;
+  --font-subtitle:500 1.45rem "Roboto",Verdana,Helvetica,sans-serif;
+  --font-text:400 1rem "Inter",Verdana,Helvetica,sans-serif;
+  --font-text-sm:400 .875rem "Inter",Verdana,Helvetica,sans-serif;
+
+  --shadow-sm:0 2px 8px rgba(0,0,0,.18);
+  --shadow-md:0 14px 40px rgba(0,0,0,.36);
+  --shadow-lg:0 40px 100px rgba(0,0,0,.60);
+}

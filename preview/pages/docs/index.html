@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Aurora CSS</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, aurora css" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Aurora CSS" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico" />
+  <!--CSS-->
+  <link rel="stylesheet" href="../../../css/reset.css" />
+  <link rel="stylesheet" href="../../../css/themes.css" />
+  <link rel="stylesheet" href="../../../css/globals.css" />
+  <link rel="stylesheet" href="../../../css/classes.css" />
+  <link rel="stylesheet" href="../../styles/docs.css" />
+  <!--Scripts-->
+  <script type="module" src="./dist/main.js"></script>
+</head>
+
+<body data-theme="aurora">
+  <main class="docs">
+    <!--aside ---------------------------------------------------------->
+    <aside class="docs-sidebar">
+
+  <div class="docs-sidebar__group">
+    <span>Getting Started</span>
+
+    <a href="#">Introduction</a>
+    <a href="#quick-start">Quick Start</a>
+  </div>
+
+  <div class="docs-sidebar__group">
+    <span>Layout</span>
+
+    <a href="#container">Container</a>
+    <a href="#grid">Grid</a>
+    <a href="#row">Row</a>
+  </div>
+
+  <div class="docs-sidebar__group">
+    <span>Typography</span>
+
+    <a href="#typography-system">System</a>
+    <a href="#typography-utilities">Utilities</a>
+    <a href="#text-elements">Text Elements</a>
+    <a href="#code">Code</a>
+    <a href="#quotes">Quotes</a>
+  </div>
+
+  <div class="docs-sidebar__group">
+    <span>Components</span>
+
+    <a href="#cards">Cards</a>
+    <a href="#buttons">Buttons</a>
+    <a href="#badges">Badges</a>
+    <a href="#alerts">Alerts</a>
+    <a href="#tooltips">Tooltips</a>
+    <a href="#toasts">Toasts</a>
+  </div>
+
+  <div class="docs-sidebar__group">
+    <span>Forms</span>
+
+    <a href="#form-elements">Elements</a>
+    <a href="#tables">Tables</a>
+    <a href="#modal">Modal</a>
+    <a href="#navbar">Navbar</a>
+    <a href="#footer">Footer</a>
+  </div>
+
+  <div class="docs-sidebar__group">
+    <span>Utilities</span>
+
+    <a href="#spacing">Spacing</a>
+    <a href="#center">Center</a>
+    <a href="#text-alignment">Text Align</a>
+    <a href="#size">Size</a>
+  </div>
+
+  <div class="docs-sidebar__group">
+    <span>Visuals</span>
+
+    <a href="#backgrounds">Backgrounds</a>
+    <a href="#effects">Effects</a>
+  </div>
+
+</aside>
+
+    <!--content ---------------------------------------------------------->
+    <section class="docs-content">
+      <!--hero ---------------------------------------------------------->
+      <section>
+        <span class="badge">Documentation</span>
+        <h1>Aurora CSS</h1>
+        <p class="size--md">Official documentation and component reference.</p>
+      </section>
+
+      <!--Instalation ---------------------------------------------------------->
+      <section id="quick-start">
+        <h2>Quick Start</h2>
+        <p>Include Aurora CSS in your project and start building modern interfaces immediately.</p>
+        <pre class="card-code"><code>npm install aurora-css</code></pre>
+        <pre class="card-code"><code>&lt;link rel="stylesheet" href="aurora.css" /&gt;</code></pre>
+      </section>
+      <!--Layout ---------------------------------------------------------->
+      <hr>
+      <section>
+        <span class="badge">Layout</span>
+        <h2>Layout System</h2>
+        <p>Utilities for building responsive and scalable page structures.</p>
+      </section>
+      <!--Container ---------------------------------------------------------->
+      <section id="container">
+        <h2>Container</h2>
+        <p>Center content and control maximum width.</p>
+        <div class="container card">Container</div>
+        <pre class="card-code"><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
+      </section>
+      <!--grid ---------------------------------------------------------->
+      <section id="grid">
+        <h2>Grid</h2>
+        <p>Flexible grid utilities for scalable and modern layouts.</p>
+        <!--grid-2---------------------------------------------------------->
+        <div class="card">
+          <p class="mb-sm">grid-2</p>
+          <div class="grid-2 mb">
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="grid-2"&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!--grid-3---------------------------------------------------------->
+        <div class="card">
+          <p class="mb-sm">grid-3</p>
+          <div class="grid-3 mb">
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="grid-3"&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!--grid-4---------------------------------------------------------->
+        <div class="card">
+          <p class="mb-sm">grid-4</p>
+          <div class="grid-4 mb">
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="grid-4"&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!--grid-4 + col-3---------------------------------------------------------->
+        <div class="card">
+          <p class="mb-sm">grid-4 + col-3</p>
+          <div class="grid-4 mb">
+            <div class="card col-3">Column</div>
+            <div class="card">Column</div>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="grid-4"&gt;
+  &lt;div class="col-3"&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!--grid-5---------------------------------------------------------->
+        <div class="card">
+          <p class="mb-sm">grid-5</p>
+          <div class="grid-5 mb">
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="grid-5"&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!--grid-5 + span---------------------------------------------------------->
+        <div class="card">
+          <p class="mb-sm">grid-5 + col-2</p>
+          <div class="grid-5 mb">
+            <div class="card col-2">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+            <div class="card">Column</div>
+          </div>
+          <!--code-->
+          <pre class="card-code"><code>&lt;div class="grid-5"&gt;
+  &lt;div class="col-2"&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+  &lt;div&gt;Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!--extended grids ---------------------------------------------------------->
+        <div class="card mt">
+          <p class="mb-sm">Extended Grids</p>
+          <div class="grid-5">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+          </div>
+
+          <div class="grid-6 mb-sm">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+          </div>
+
+          <div class="grid-10">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+            <div class="card">7</div>
+            <div class="card">8</div>
+            <div class="card">9</div>
+            <div class="card">10</div>
+          </div>
+        </div>
+      </section>
+
+      <!--row ---------------------------------------------------------->
+      <section id="row">
+        <h2>Row</h2>
+        <p>Horizontal alignment utilities for inline layouts.</p>
+        <div class="grid-5">
+          <div class="row mb center col-2">
+            <div class="card">Item</div>
+            <div class="card">Item</div>
+            <div class="card">Item</div>
+          </div>
+          <pre class="card-code col-3"><code>&lt;div class="row"&gt; ... &lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--Typography ---------------------------------------------------------->
+      <hr>
+      <section id="typography">
+        <span class="badge">Typography</span>
+        <h2>Typography</h2>
+        <p>Aurora provides a simplified typography system based on title, subtitle and text styles.</p>
+      </section>
+
+      <!--Typography System ---------------------------------------------------------->
+      <section id="typography-system">
+        <h2>Typography System</h2>
+        <p>Semantic elements already include Aurora typography styles by default.</p>
+
+        <div class="grid-3">
+          <!--title-->
+          <div class="card">
+            <p class="mb-sm">Title</p>
+            <h1>Title</h1>
+            <pre class="card-code"><code>&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
+          </div>
+          <!--subtitle-->
+          <div class="card">
+            <p class="mb-sm">Subtitle</p>
+            <h2>Subtitle</h2>
+            <pre class="card-code"><code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code></pre>
+          </div>
+          <!--text-->
+          <div class="card">
+            <p class="mb-sm">Text</p>
+            <p>Text</p>
+            <pre class="card-code"><code>&lt;p&gt;Text&lt;/p&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!--Typography Classes ---------------------------------------------------------->
+      <section id="typography-utilities">
+        <h2>Typography Utilities</h2>
+        <p>Apply Aurora typography styles to any element.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <p class="mb-sm">.title</p>
+            <span class="title">Title</span>
+            <pre class="card-code"><code>&lt;span class="title"&gt;Title&lt;/span&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p class="mb-sm">.subtitle</p>
+            <span class="subtitle">Subtitle</span>
+            <pre class="card-code"><code>&lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p class="mb-sm">.text</p>
+            <span class="text">Text</span>
+            <pre class="card-code"><code>&lt;span class="text"&gt;Text&lt;/span&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p class="mb-sm">.text-accent</p>
+            <span class="text-accent">Accent Text</span>
+            <pre class="card-code"><code>&lt;span class="text-accent"&gt;Accent Text&lt;/span&gt;</code></pre>
+          </div>
+
+        </div>
+      </section>
+
+      <!--Text Elements ---------------------------------------------------------->
+      <section id="text-elements">
+        <h2>Text Elements</h2>
+        <p>Semantic elements for emphasis and annotations.</p>
+        <div class="grid-2">
+
+          <div class="card">
+            <p class="mb-sm">&lt;strong&gt;</p>
+            <p><strong>Strong Text</strong></p>
+            <pre class="card-code"><code>&lt;strong&gt;Strong Text&lt;/strong&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p class="mb-sm">&lt;mark&gt;</p>
+            <p><mark>Highlighted Text</mark></p>
+            <pre class="card-code"><code>&lt;mark&gt;Highlighted Text&lt;/mark&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p class="mb-sm">&lt;abbr&gt;</p>
+            <p><abbr title="Cascading Style Sheets">CSS</abbr></p>
+            <pre class="card-code"><code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;</code></pre>
+          </div>
+
+        </div>
+      </section>
+
+      <!--Code ---------------------------------------------------------->
+      <section id="code">
+        <h2>Code</h2>
+        <p>Inline and block code formatting.</p>
+
+        <div class="grid-2">
+          <!--Inline Code-->
+          <div class="card">
+            <p class="mb-sm">Inline Code</p>
+            <p>Use <code>code</code> for inline code snippets.</p>
+            <pre class="card-code"><code>&lt;code&gt;code&lt;/code&gt;</code></pre>
+          </div>
+
+          <!--Code Block-->
+          <div class="card">
+            <p class="mb-sm">Code Block</p>
+            <pre><code>Example block content</code></pre>
+            <pre class="card-code"><code>&lt;pre&gt;
+  &lt;code&gt;Example block content&lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+          </div>
+
+        </div>
+      </section>
+
+      <!--Code Card ---------------------------------------------------------->
+      <section>
+        <h2>Code Card</h2>
+        <p>Display formatted code snippets inside a styled container.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <p class="mb-sm">Preview</p>
+            <pre class="card-code"><code>Example code snippet</code></pre>
+          </div>
+
+          <div class="card">
+            <p class="mb-sm">Usage</p>
+            <pre class="card-code"><code>&lt;pre class="card-code"&gt;
+  &lt;code&gt;Example code snippet&lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!--Quotes ---------------------------------------------------------->
+      <section id="quotes">
+        <h2>Quotes</h2>
+        <p>Elements for quotations and citations.</p>
+        <div class="grid-2">
+          <!--Inline Quote-->
+          <div class="card">
+            <p class="mb-sm">Inline Quote</p>
+            <p><q>Inline Quote.</q></p>
+            <pre class="card-code"><code>&lt;q&gt;Inline Quote.&lt;/q&gt;</code></pre>
+          </div>
+
+          <!--Blockquote-->
+          <div class="card">
+            <p class="mb-sm">Blockquote</p>
+            <blockquote>Aurora CSS focuses on atmospheric interfaces,
+              reusable utilities and scalable design systems.
+              <footer>Aurora Documentation</footer>
+            </blockquote>
+            <pre class="card-code"><code>&lt;blockquote&gt;
+  Aurora CSS focuses on atmospheric interfaces,
+  reusable utilities and scalable design systems.
+  &lt;footer&gt;Aurora Documentation&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!--Components ---------------------------------------------------------->
+      <hr>
+      <section>
+        <span class="badge">Components</span>
+        <h2>Components</h2>
+        <p>Reusable interface elements for building consistent user experiences.</p>
+      </section>
+
+      <!--Cards---------------------------------------------------------->
+      <section id="cards">
+        <h2>Card</h2>
+        <p>Flexible container for grouping related content.</p>
+        <div class="grid-2">
+
+          <!--Card-->
+          <div class="card center">
+            <h1>Card</h1>
+            <p>Default card style.</p>
+          </div>
+          <pre class="card-code"><code>&lt;div class="card"&gt;
+  &lt;h1&gt;Card&lt;/h1&gt;
+  &lt;p&gt;Default card style.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <!--Card Ghost-->
+          <div class="card-ghost center">
+            <h1>Card Ghost</h1>
+            <p>Minimal appearance.</p>
+          </div>
+          <pre class="card-code"><code>&lt;div class="card-ghost"&gt;
+  &lt;h1&gt;Card Ghost&lt;/h1&gt;
+  &lt;p&gt;Minimal appearance.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <!--Card Outline-->
+          <div class="card-outline center">
+            <h1>Card Outline</h1>
+            <p>Accent border style.</p>
+          </div>
+          <pre class="card-code"><code>&lt;div class="card-outline"&gt;
+  &lt;h1&gt;Card Outline&lt;/h1&gt;
+  &lt;p&gt;Accent border style.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <!--Card Soft-->
+          <div class="card-soft center">
+            <h1>Card Soft</h1>
+            <p>Subtle accent background.</p>
+          </div>
+          <pre class="card-code"><code>&lt;div class="card-soft"&gt;
+  &lt;h1&gt;Card Soft&lt;/h1&gt;
+  &lt;p&gt;Subtle accent background.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+          <!--Card Glow-->
+          <div class="card-glow center">
+            <h1>Card Glow</h1>
+            <p>Highlighted content.</p>
+          </div>
+          <pre class="card-code"><code>&lt;div class="card-glow"&gt;
+  &lt;h1&gt;Card Glow&lt;/h1&gt;
+  &lt;p&gt;Highlighted content.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+      </section>
+
+
+      <!--Buttons ---------------------------------------------------------->
+      <section id="buttons">
+        <h2>Buttons</h2>
+        <p>Interactive actions with multiple visual styles.</p>
+
+        <div class="grid-2">
+          <!--btn-->
+          <div class="card">
+            <button class="btn center mb">Button</button>
+            <pre class="card-code"><code>&lt;button class="btn"&gt;Button&lt;/button&gt;</code></pre>
+          </div>
+
+          <!--btn ghost-->
+          <div class="card">
+            <button class="btn-ghost center mb">Ghost</button>
+            <pre class="card-code"><code>&lt;button class="btn-ghost"&gt;Ghost&lt;/button&gt;</code></pre>
+          </div>
+
+          <!--btn outline-->
+          <div class="card">
+            <button class="btn-outline center mb">Outline</button>
+            <pre class="card-code"><code>&lt;button class="btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
+          </div>
+
+          <!--btn soft-->
+          <div class="card">
+            <button class="btn-soft center mb">Soft</button>
+            <pre class="card-code"><code>&lt;button class="btn-soft"&gt;Soft&lt;/button&gt;</code></pre>
+          </div>
+
+          <!--btn glow-->
+          <div class="card">
+            <button class="btn-glow center mb">Glow</button>
+            <pre class="card-code"><code>&lt;button class="btn-glow"&gt;Glow&lt;/button&gt;</code></pre>
+          </div>
+
+          <!--btn none-->
+          <div class="card">
+            <button class="btn-none center mb">None</button>
+            <pre class="card-code"><code>&lt;button class="btn-none"&gt;None&lt;/button&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!--Badges ---------------------------------------------------------->
+      <section id="badges">
+        <h2>Badges</h2>
+        <p>Small highlight elements for labels and status.</p>
+        <div class="grid-2">
+          <div class="center">
+            <span class="badge">Badge</span>
+          </div>
+          <pre class="card-code"><code>&lt;span class="badge"&gt;Badge&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--Alert ---------------------------------------------------------->
+      <section id="alerts">
+        <h2>Alert</h2>
+        <p>Contextual message component for important information.</p>
+        <div class="alert mb">This is an alert message.</div>
+        <pre class="card-code"><code>&lt;div class="alert"&gt;This is an alert message.&lt;/div&gt;</code></pre>
+      </section>
+
+      <!--Tooltip ---------------------------------------------------------->
+      <section id="tooltips">
+        <h2>Tooltip</h2>
+        <p>Display contextual information on hover.</p>
+
+        <div class="grid-4">
+          <!--default-->
+          <div class="center"><span class="tooltip" data-tooltip="Default tooltip">Default</span></div>
+          <pre
+            class="card-code col-3"><code>&lt;span class="tooltip" data-tooltip="Default tooltip"&gt;Default&lt;/span&gt;</code></pre>
+          <!--left-->
+          <div class="center"><span class="tooltip tooltip--left" data-tooltip="Left tooltip">Left</span></div>
+          <pre
+            class="card-code col-3"><code>&lt;span class="tooltip tooltip--left" data-tooltip="Left tooltip"&gt;Left&lt;/span&gt;</code></pre>
+          <!--right-->
+          <div class="center"><span class="tooltip tooltip--right" data-tooltip="Right tooltip">Right</span></div>
+          <pre
+            class="card-code col-3"><code>&lt;span class="tooltip tooltip--right" data-tooltip="Right tooltip"&gt;Right&lt;/span&gt;</code></pre>
+          <!--bottom-->
+          <div class="center"><span class="tooltip tooltip--bottom" data-tooltip="Bottom tooltip">Bottom</span></div>
+          <pre
+            class="card-code col-3"><code>&lt;span class="tooltip tooltip--bottom" data-tooltip="Bottom tooltip"&gt;Bottom&lt;/span&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--Toast ---------------------------------------------------------->
+      <section id="toasts">
+        <h2>Toast</h2>
+        <p>Transient notification messages for user feedback.</p>
+        <pre class="card-code"><code>&lt;div class="toast"&gt;Toast message&lt;/div&gt;</code></pre>
+      </section>
+
+      <!--From ---------------------------------------------------------->
+      <hr>
+      <section id="form">
+        <span class="badge">Form</span>
+        <h2>Form</h2>
+        <p>Form controls for collecting and validating user input.</p>
+      </section>
+
+      <!--Elements ---------------------------------------------------------->
+      <section id="form-elements">
+        <h2>Form Elements</h2>
+        <p>Form elements styled automatically by Aurora.</p>
+
+        <div class="grid-2">
+          <!--Input-->
+          <div class="card">
+            <p>Input</p>
+            <input type="text" placeholder="Text">
+            <pre class="card-code"><code>&lt;input type="text" placeholder="Text"&gt;</code></pre>
+          </div>
+          <!--Textarea-->
+          <div class="card">
+            <p>Textarea</p>
+            <textarea placeholder="Textarea"></textarea>
+            <pre class="card-code"><code>&lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;</code></pre>
+          </div>
+
+          <!--select-->
+          <div class="card">
+            <p>Select</p>
+            <select>
+              <option>Select Option</option>
+            </select>
+            <pre class="card-code"><code>&lt;select&gt;
+  &lt;option&gt;Select Option&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+          </div>
+
+          <!--checkbox-->
+          <div class="card">
+            <p>Checkbox</p>
+            <input type="checkbox" class="center" checked>
+            <pre class="card-code"><code>&lt;input type="checkbox"&gt;</code></pre>
+          </div>
+
+          <!--radio-->
+          <div class="card">
+            <p>Radio</p>
+            <label><input type="radio" checked>Option</label>
+            <pre class="card-code"><code>&lt;input type="radio" checked&gt;</code></pre>
+          </div>
+
+          <!--field-->
+          <div class="card">
+            <p>Field</p>
+            <div class="field">
+              <input type="text" placeholder=" ">
+              <label>Floating Label</label>
+            </div>
+            <pre class="card-code"><code>&lt;div class="field"&gt;
+  &lt;input type="text" placeholder=" "&gt;
+  &lt;label&gt;Floating Label&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+        </div>
+      </section>
+
+      <!--Tables ---------------------------------------------------------->
+      <section id="tables">
+        <h2>Tables</h2>
+        <p>Structured data displayed with Aurora table styling.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Alice</td>
+              <td>Developer</td>
+            </tr>
+
+            <tr>
+              <td>Bob</td>
+              <td>Designer</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!--code-->
+        <pre class="card-code"><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Role&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alice&lt;/td&gt;
+      &lt;td&gt;Developer&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+      &lt;td&gt;Bob&lt;/td&gt;
+      &lt;td&gt;Designer&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      </section>
+
+      <!--Modal ---------------------------------------------------------->
+      <section id="modal">
+        <h2>Modal</h2>
+        <p>Overlay dialog for focused interactions.</p>
+
+        <div class="grid-2">
+          <div class="center">
+            <a href="#demo-modal" class="btn">Open Modal</a>
+
+            <div id="demo-modal" class="modal">
+              <div class="modal__content">
+                <a href="##" class="modal__close">&times;</a>
+                <h2>Modal Title</h2>
+                <p>Modal content.</p>
+              </div>
+            </div>
+
+          </div>
+          <pre class="card-code"><code>&lt;a href="#modal" class="btn"&gt;Open Modal&lt;/a&gt;
+
+&lt;div id="modal" class="modal"&gt;
+  &lt;div class="modal__content"&gt;
+    &lt;a href="#" class="modal__close"&gt;&amp;times;&lt;/a&gt;
+    &lt;h2&gt;Modal Title&lt;/h2&gt;
+    &lt;p&gt;Modal content.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        </div>
+      </section>
+
+      <!--Navbar ---------------------------------------------------------->
+      <section id="navbar">
+        <h2>Navbar</h2>
+        <p>Responsive navigation bar with desktop and mobile support.</p>
+
+        <nav class="navbar mb">
+          <div class="navbar__content">
+            <a href="##" class="navbar__logo">Logo</a>
+            <ul class="navbar__menu">
+              <li><a href="##">Link1</a></li>
+              <li><a href="##">Link2</a></li>
+              <li><a href="##">Link3</a></li>
+            </ul>
+            <button class="navbar__toggle">☰</button>
+          </div>
+        </nav>
+
+        <pre class="card-code"><code>&lt;nav class="navbar"&gt;
+  &lt;div class="navbar__content"&gt;
+
+    &lt;a href="#" class="navbar__logo"&gt;Logo&lt;/a&gt;
+
+    &lt;ul class="navbar__menu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;button class="navbar__toggle"&gt;
+      ☰
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+      </section>
+
+      <!--Footer ---------------------------------------------------------->
+      <section id="footer">
+        <h2>Footer</h2>
+        <p>Footer section for copyright and secondary information.</p>
+
+        <footer class="footer mb">
+          <p>© 2026 Aurora CSS</p>
+          <p>Built with Aurora</p>
+        </footer>
+        <pre class="card-code"><code>&lt;footer class="footer"&gt;
+  &lt;p&gt;© 2026 Aurora CSS&lt;/p&gt;
+  &lt;p&gt;Built with Aurora&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+      </section>
+
+      <!--Utilities ---------------------------------------------------------->
+      <hr>
+      <section>
+        <span class="badge">Utilities</span>
+        <h2>Utilities</h2>
+        <p>Small helper classes for spacing, alignment and layout adjustments.</p>
+      </section>
+
+      <!--Spacing ---------------------------------------------------------->
+      <section id="spacing">
+        <h2>Spacing Utilities</h2>
+        <p>Margin utilities for consistent vertical spacing between sections and components.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>.mt-sm / .mb-sm</td>
+              <td>0.5rem</td>
+            </tr>
+            <tr>
+              <td>.mt / .mb</td>
+              <td>1rem</td>
+            </tr>
+            <tr>
+              <td>.mt-md / .mb-md</td>
+              <td>1.5rem</td>
+            </tr>
+            <tr>
+              <td>.mt-lg / .mb-lg</td>
+              <td>3rem</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <pre class="card-code"><code>&lt;section class="mb-lg"&gt; ... &lt;/section&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--center ---------------------------------------------------------->
+      <section id="center">
+        <h2>Center</h2>
+        <p>Utility class for centering content using flexbox.</p>
+        <div class="grid-2">
+          <div class="center demo-center size--full">
+            <button class="btn">Centered</button>
+          </div>
+          <pre class="card-code"><code>&lt;div class="center"&gt; ... &lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <!--Text Alignment ---------------------------------------------------------->
+      <section id="text-alignment">
+        <h2>Text Alignment</h2>
+        <p>Utilities for controlling text alignment.</p>
+
+        <div class="grid-3">
+          <!--text left-->
+          <div class="card">
+            <p class="text-left">Left aligned text</p>
+            <pre class="card-code"><code>&lt;p class="text-left"&gt;
+  Left aligned text
+&lt;/p&gt;</code></pre>
+          </div>
+
+          <!--text center-->
+          <div class="card">
+            <p class="text-center">Centered text</p>
+            <pre class="card-code"><code>&lt;p class="text-center"&gt;
+  Centered text
+&lt;/p&gt;</code></pre>
+          </div>
+
+          <!--text right-->
+          <div class="card">
+            <p class="text-right">Right aligned text</p>
+            <pre class="card-code"><code>&lt;p class="text-right"&gt;
+  Right aligned text
+&lt;/p&gt;</code></pre>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Size ---------------------------------------------------------->
+      <section id="size">
+        <h2>Size</h2>
+        <p>Utilities for controlling element width.</p>
+
+        <div class="grid-2">
+
+          <div class="card">
+            <p>.size--sm</p>
+            <div class="bg-accent size--sm center">320px</div>
+            <pre class="card-code"><code>&lt;div class="size--sm"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p>.size--md</p>
+            <div class="bg-accent size--md">640px</div>
+            <pre class="card-code"><code>&lt;div class="size--md"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p>.size--lg</p>
+            <div class="bg-accent size--lg">960px</div>
+            <pre class="card-code"><code>&lt;div class="size--lg"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p>.size--xl</p>
+            <div class="bg-accent size--xl">1280px</div>
+            <pre class="card-code"><code>&lt;div class="size--xl"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+
+          <div class="card">
+            <p>.size--full</p>
+            <div class="bg-accent size--full">100%</div>
+            <pre class="card-code"><code>&lt;div class="size--full"&gt;...&lt;/div&gt;</code></pre>
+          </div>
+
+        </div>
+      </section>
+
+      <!--visuals ---------------------------------------------------------->
+      <hr>
+      <section>
+        <span class="badge">Visuals</span>
+        <h2>Visuals</h2>
+        <p>Backgrounds and visual effects for creating atmospheric interfaces.</p>
+      </section>
+
+      <section id="backgrounds">
+        <h2>Backgrounds</h2>
+        <p>Utilities for applying predefined backgrounds and surface styles.</p>
+
+        <div class="grid-2">
+          <!--surface-->
+          <div class="bg-surface card center size--full">Surface</div>
+          <pre class="card-code"><code>&lt;div class="bg-surface"&gt;&lt;/div&gt;</code></pre>
+
+          <!--surface2-->
+          <div class="bg-surface-2 card center size--full">Surface 2</div>
+          <pre class="card-code"><code>&lt;div class="bg-surface-2"&gt;&lt;/div&gt;</code></pre>
+
+          <!--soft-->
+          <div class="bg-soft card center size--full">Soft</div>
+          <pre class="card-code"><code>&lt;div class="bg-soft"&gt;&lt;/div&gt;</code></pre>
+
+          <!--accent-->
+          <div class="bg-accent card center size--full">Accent</div>
+          <pre class="card-code"><code>&lt;div class="bg-accent"&gt;&lt;/div&gt;</code></pre>
+
+          <!--gradient accent-->
+          <div class="bg-gradient-accent card center size--full">Gradient Accent</div>
+          <pre class="card-code"><code>&lt;div class="bg-gradient-accent"&gt;&lt;/div&gt;</code></pre>
+
+          <!--glass-->
+          <div class="bg-glass card center size--full">Glass</div>
+          <pre class="card-code"><code>&lt;div class="bg-glass"&gt;&lt;/div&gt;</code></pre>
+        </div>
+
+        </div>
+      </section>
+
+      <!--Effects ---------------------------------------------------------->
+      <hr>
+      <section>
+        <span id="effects" class="badge">Effects</span>
+        <h2>Effects</h2>
+        <p>Visual effects for adding atmosphere and depth to interfaces.</p>
+
+        <div class="grid-2">
+
+          <!--glow-->
+          <div class="fx-glow card center size--sm">Glow</div>
+          <pre class="card-code"><code>&lt;div class="fx-glow"&gt;&lt;/div&gt;</code></pre>
+
+          <!--glow-sm-->
+          <div class="fx-glow-sm card center size--sm">Glow Small</div>
+          <pre class="card-code"><code>&lt;div class="fx-glow-sm"&gt;&lt;/div&gt;</code></pre>
+
+          <!--glow-md-->
+          <div class="fx-glow-md card center size--sm">Glow Medium</div>
+          <pre class="card-code"><code>&lt;div class="fx-glow-md"&gt;&lt;/div&gt;</code></pre>
+
+          <!--glow-lg-->
+          <div class="fx-glow-lg card center size--sm">Glow Large</div>
+          <pre class="card-code"><code>&lt;div class="fx-glow-lg"&gt;&lt;/div&gt;</code></pre>
+
+          <!--grid-->
+          <div class="fx-grid card center size--sm">Grid</div>
+          <pre class="card-code"><code>&lt;div class="fx-grid"&gt;&lt;/div&gt;</code></pre>
+
+          <!--noise-->
+          <div class="fx-noise card center size--sm">Noise</div>
+          <pre class="card-code"><code>&lt;div class="fx-noise"&gt;&lt;/div&gt;</code></pre>
+
+          <!--shine-->
+          <div class="fx-shine card center size--sm">Shine</div>
+          <pre class="card-code"><code>&lt;div class="fx-shine"&gt;&lt;/div&gt;</code></pre>
+
+          <!--dots-->
+          <div class="fx-dots card center size--sm">Dots</div>
+          <pre class="card-code"><code>&lt;div class="fx-dots"&gt;&lt;/div&gt;</code></pre>
+
+          <!--beam-->
+          <div class="fx-beam card center size--sm">Beam</div>
+          <pre class="card-code"><code>&lt;div class="fx-beam"&gt;&lt;/div&gt;</code></pre>
+
+        </div>
+      </section>
+
+
+      </div>
+    </section>
+    </section>
+
+  </main>
+</body>

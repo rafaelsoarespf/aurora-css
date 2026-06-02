@@ -101,15 +101,18 @@ button {
   line-height: 1;
   user-select: none;
   white-space: nowrap;
+  min-width:110px;
+  transition: transform .2s ease,opacity .2s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease;
 }
 
 button:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+  opacity: 0.8;
+  transform: translateY(-1px);  
+  box-shadow: var(--shadow-lg);
 }
 
 button:active { 
-    transform: scale(0.98);
+    transform:translateY(0);
 }
 
 button:disabled {
@@ -139,7 +142,6 @@ pre {
   border-radius: 12px;
   overflow-x: auto;
   line-height: 1.7;
-  margin: 1.5rem 0;
   border: 1px solid color-mix(in srgb,var(--color-accent) 40%,transparent);
   box-shadow: var(--shadow-md);
 }
@@ -305,9 +307,8 @@ table {
   overflow: hidden;
   background: var(--color-surface-1);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: var(--shadow-md);
-  overflow-x: auto;
 }
 
 thead {
