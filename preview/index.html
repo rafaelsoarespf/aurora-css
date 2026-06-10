@@ -42,16 +42,26 @@
   <script type="module" src="./dist/main.js"></script>
 </head>
 
-<body data-theme="dark-teal">
+<body data-theme="aurora">
   <header class="navbar">
     <nav class="navbar__content">
+      <!--logo-->
       <a href="#" class="navbar__logo">Aurora</a>
+      <!--menu-->
       <ul class="navbar__menu">
         <li><a href="#">Docs</a></li>
         <li><a href="#">Components</a></li>
         <li><a href="#">Themes</a></li>
         <li><a href="#">GitHub</a></li>
       </ul>
+      <!--themes-->
+      <select id="theme-selector" class="theme-selector">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="light-teal">Light Teal</option>
+        <option value="dark-teal">Dark Teal</option>
+        <option value="aurora" selected>Aurora</option>
+      </select>
       <button class="navbar__toggle" aria-label="Open menu">☰</button>
     </nav>
   </header>
@@ -63,7 +73,8 @@
 
       <h1 class="hero__title size-lg">Build elegant interfaces with simplicity</h1>
 
-      <p class="hero__description size-md">Aurora CSS is a modern framework focused on clean design,responsiveness and reusable components.</p>
+      <p class="hero__description size-md">Aurora CSS is a modern framework focused on clean design,responsiveness and
+        reusable components.</p>
 
       <div class="row hero__actions">
         <a href="#" class="btn">Get Started</a>
@@ -77,12 +88,12 @@
       <p class="text-center">Aurora CSS provides reusable utilities and elegant components.</p>
       <div class="grid-3">
         <article class="card">
-          <h3 class="text-accent">⬢ Reusable Utilities</h3>
+          <h3 class="text-accent">✦ Reusable Utilities</h3>
           <p>Build layouts faster using flexible utility classes for spacing, grids, alignment and sizing.</p>
         </article>
 
         <article class="card">
-          <h3 class="text-accent">◈ Modern Components</h3>
+          <h3 class="text-accent">✦ Modern Components</h3>
           <p>Elegant components designed with responsiveness,accessibility and clean aesthetics in mind.</p>
         </article>
 
@@ -121,7 +132,7 @@
         </article>
 
         <article class="card">
-          <h3 class="text-accent">◈ Interactive Buttons</h3>
+          <h3 class="text-accent">✦ Interactive Buttons</h3>
           <p>Beautiful buttons designed for elegant user interactions and responsive layouts.</p>
 
           <div class="row">
@@ -131,7 +142,7 @@
         </article>
 
         <article class="card">
-          <h3 class="text-accent">⬢ Alerts & Feedback</h3>
+          <h3 class="text-accent">✦ Alerts & Feedback</h3>
           <p>Reusable feedback components with accessible visual states.</p>
           <div class="alert">Aurora CSS components are fully reusable.</div>
         </article>
@@ -171,7 +182,8 @@
         <span class="badge">Developer Experience</span>
 
         <h2>Built for maintainable interfaces</h2>
-        <p>Aurora keeps your styles predictable with reusable primitives, scalable architecture and clean visual consistency.</p>
+        <p>Aurora keeps your styles predictable with reusable primitives, scalable architecture and clean visual
+          consistency.</p>
 
         <div class="developer__list">
           <div class="card text-left">✓ Reusable utilities</div>
@@ -238,4 +250,5 @@
     </div>
   </footer>
 </body>
+
 </html>

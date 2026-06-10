@@ -388,7 +388,7 @@
   padding:0.3rem 0.75rem;
   border-radius:10px;
   font:var(--font-text-sm);
-  background:color-mix(in srgb,var(--color-accent) 35%,var(--color-surface-1));
+  background:color-mix(in srgb,var(--color-accent) 60%,var(--color-surface-1));
   color:var(--color-on-accent);
   border:1px solid var(--color-accent);
   white-space:nowrap;
