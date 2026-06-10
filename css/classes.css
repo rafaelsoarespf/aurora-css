@@ -404,7 +404,6 @@
 /*badge ------------------------------------------------------*/
 .badge {
   display:inline-flex;
-  align-self:flex-start;
   align-items:center;
   justify-content:center;
   padding:0.3rem 0.75rem;
@@ -534,7 +533,7 @@
   display:flex;
   flex-direction:column;
   gap:.75rem;
-  transition:transform .25s ease,box-shadow .25s ease;
+  transition: box-shadow .25s ease;
 }
 
 .card:hover,.card-ghost:hover,.card-outline:hover,.card-soft:hover,.card-glow:hover{
@@ -557,10 +556,6 @@
   background:var(--color-surface-1);
   border:1px solid var(--color-border);
   box-shadow:var(--shadow-md);
-}
-
-.card:hover{
-  box-shadow:var(--shadow-lg);
 }
 
 .card-ghost{
@@ -864,7 +859,8 @@ pre.card-code code {
 
 .bg-gradient-accent {
   background-image:
-    linear-gradient(180deg,color-mix(in srgb,var(--color-accent) 10%,transparent),transparent);
+    linear-gradient(180deg,var(--color-accent),color-mix(in srgb,var(--color-accent) 80%,transparent),transparent);
+    color: var(--color-on-accent);
 }
 
 .bg-glass{
@@ -951,4 +947,253 @@ pre.card-code code {
 
 .text-right{
   text-align: right;
+}
+
+/*animation --------------------------------------*/
+
+/* Float*/
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse*/
+
+.pulse {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .65;
+  }
+}
+
+/* Breathe*/
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* Spin */
+.spin {
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* shine*/
+.shine{
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after{
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background:
+    linear-gradient(
+      120deg,
+      transparent 42%,
+      color-mix(in srgb,var(--color-on-accent) 30%,transparent) 50%,
+      transparent 58%
+    );
+
+  pointer-events: none;
+
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine{
+  0%{
+    transform: translateX(-100%);
+  }
+
+  16.66%{
+    transform: translateX(100%);
+  }
+
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+
+/* Glow Pulse */
+.glow-pulse{
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse{
+  0%,100%{
+    box-shadow:
+      0 0 10px color-mix(in srgb,var(--color-accent) 20%,transparent);
+  }
+
+  50%{
+    box-shadow:
+      0 0 24px color-mix(in srgb,var(--color-accent) 50%,transparent);
+  }
+}
+
+/* Border Glow */
+.border-glow{
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+@keyframes border-glow{
+  0%,100%{
+    border-color:
+      color-mix(in srgb,var(--color-accent) 20%,var(--color-border));
+  }
+
+  50%{
+    border-color:
+      color-mix(in srgb,var(--color-accent) 70%,var(--color-border));
+  }
+}
+
+
+/* Glow Breathe*/
+
+.glow-breathe{
+  animation: glow-breathe 4s ease-in-out infinite;
+}
+
+@keyframes glow-breathe{
+  0%,100%{
+    transform: scale(1);
+
+    box-shadow:
+      0 0 8px color-mix(
+        in srgb,
+        var(--color-accent) 20%,
+        transparent
+      );
+  }
+
+  50%{
+    transform: scale(1.02);
+
+    box-shadow:
+      0 0 28px color-mix(
+        in srgb,
+        var(--color-accent) 60%,
+        transparent
+      );
+  }
+}
+
+/*Tilt*/
+.tilt{
+  animation: tilt 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes tilt{
+  0%,100%{
+    transform: rotate(0deg);
+  }
+
+  25%{
+    transform: rotate(3deg);
+  }
+
+  75%{
+    transform: rotate(-3deg);
+  }
+}
+
+/*Border Shift*/
+.border-shift{
+  animation:border-shift 3s ease-in-out infinite;
+}
+
+@keyframes border-shift{
+  0%,100%{
+    border-radius:12px;
+  }
+
+  50%{
+    border-radius:32px;
+  }
+}
+
+/*Glow Sweep*/
+.glow-sweep{
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-sweep::before{
+  content: "";
+
+  position: absolute;
+
+  width: 200%;
+  aspect-ratio: 1;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent,
+      color-mix(
+        in srgb,
+        var(--color-accent) 40%,
+        transparent
+      ),
+      transparent
+    );
+
+  animation: glow-sweep 8s linear infinite;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes glow-sweep{
+  from{
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to{
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
 }
