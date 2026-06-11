@@ -17,6 +17,96 @@ section {
   font-size: 1.1rem;
 }
 
+
+/*============================================================*/
+/* themes ======================================================*/
+.themes{
+  gap:1rem;
+}
+
+.theme-preview{
+  width:min(900px,100%);
+  padding:2rem;
+  border-radius:20px;
+
+  background:var(--color-surface-1);
+
+  border:1px solid var(--color-border);
+
+  box-shadow:var(--shadow-lg);
+
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+}
+
+.theme-preview__navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.theme-preview__logo{
+  width:120px;
+  height:18px;
+
+  border-radius:999px;
+
+  background:var(--color-accent);
+}
+
+.theme-preview__menu{
+  width:220px;
+  height:10px;
+
+  border-radius:999px;
+
+  background:var(--color-surface-2);
+}
+
+.theme-preview__content{
+  display:grid;
+  grid-template-columns:1.4fr 1fr;
+  gap:1.5rem;
+}
+
+.theme-preview__card{
+  text-align:left;
+}
+
+.theme-preview__accent{
+  width:60px;
+  height:60px;
+  border-radius:12px;
+  margin-bottom:1rem;
+  background:var(--color-accent);
+}
+
+.theme-preview__stats{
+  display:grid;
+  gap:1rem;
+}
+
+.theme-preview__stat{
+  min-height:90px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+@media (max-width:768px){
+
+  .theme-preview__content{
+    grid-template-columns:1fr;
+  }
+
+  .theme-preview__menu{
+    width:120px;
+  }
+
+}
+
 /*============================================================*/
 /* features ==================================================*/
 .features .grid-3 {
