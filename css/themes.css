@@ -108,37 +108,301 @@
 }
 
 /*============================================================*/
-/* Dark Teal =================================================*/
-[data-theme="aurora"]{
+/* Aurora ====================================================*/
+[data-theme="aurora-light"] {
+  --color-background: linear-gradient(135deg, #EAF2FF, #DCE7F7);
+
+  --color-surface-1: rgba(255,255,255,0.55);
+  --color-surface-2: rgba(255,255,255,0.75);
+
+  --color-title: #162033;
+  --color-subtitle: #334155;
+  --color-text: #5B677A;
+
+  --color-border: rgba(120,140,180,0.18);
+  --color-accent: #7C9CFF;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(18px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(30,41,59,0.06);
+  --shadow-md: 0 8px 20px rgba(30,41,59,0.10);
+  --shadow-lg: 0 18px 40px rgba(30,41,59,0.14);
+}
+
+/*============================================================*/
+/* Aurora Dark ===============================================*/
+[data-theme="aurora-dark"] {
+  --color-background: linear-gradient(135deg,#03030A,#090B16);
+
+  --color-surface-1: rgba(255,255,255,0.04);
+  --color-surface-2: rgba(255,255,255,0.07);
+
+  --color-title: #F8FAFF;
+  --color-subtitle: #D6DEEA;
+  --color-text: #9FAEC2;
+
+  --color-border: rgba(124,156,255,0.15);
+
+  --color-accent: #8FA9FF;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(18px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.20);
+  --shadow-md: 0 8px 20px rgba(0,0,0,0.35);
+  --shadow-lg: 0 18px 40px rgba(0,0,0,0.55);
+}
+
+/*============================================================*/
+/* Coffee ====================================================*/
+
+[data-theme="coffee"] {
+  --color-background: linear-gradient(135deg, #D7C2AE, #BEA38A);
+
+  --color-surface-1: rgba(255,248,240,0.30);
+  --color-surface-2: rgba(255,248,240,0.45);
+
+  --color-title: #231A14;
+  --color-subtitle: #3A2D25;
+  --color-text: #5A4A40;
+
+  --color-border: rgba(90,70,55,0.15);
+  --color-accent: #8A5A3B;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(12px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 4px rgba(47,36,30,0.06);
+  --shadow-md: 0 4px 10px rgba(47,36,30,0.10);
+  --shadow-lg: 0 10px 30px rgba(47,36,30,0.16);
+}
+
+/*============================================================*/
+/* Paper =====================================================*/
+[data-theme="paper"] {
+  --color-background: #F7F4EC;
+
+  --color-surface-1: rgba(255,255,255,0.25);
+  --color-surface-2: rgba(255,255,255,0.40);
+
+  --color-title: #1F1F1F;
+  --color-subtitle: #3A3A3A;
+  --color-text: #5A5A5A;
+
+  --color-border: #D4CEC3;
+
+  --color-accent: #202020;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(2px);
+
+  --font-title: 700 2rem "Merriweather", Georgia, serif;
+  --font-subtitle: 500 1.4rem "Merriweather", Georgia, serif;
+  --font-text: 400 1rem Georgia, serif;
+  --font-text-sm: 400 0.875rem Georgia, serif;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-md: 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-lg: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/*============================================================*/
+/* Neumorphism ===============================================*/
+[data-theme="neumorphism"] {
+  --color-background: #E7EBF0;
+
+  --color-surface-1: #E7EBF0;
+  --color-surface-2: #E3E8EE;
+
+  --color-title: #2E3440;
+  --color-subtitle: #4C566A;
+  --color-text: #6B7280;
+
+  --color-border: transparent;
+
+  --color-accent: #8A94A6;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(0px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm:
+    2px 2px 4px rgba(163,177,198,0.25),
+    -2px -2px 4px rgba(255,255,255,0.9);
+
+  --shadow-md:
+    4px 4px 8px rgba(163,177,198,0.35),
+    -4px -4px 8px rgba(255,255,255,0.95);
+
+  --shadow-lg:
+    6px 6px 12px rgba(163,177,198,0.40),
+    -6px -6px 12px rgba(255,255,255,1);
+}
+
+/*============================================================*/
+/* Glass =====================================================*/
+[data-theme="glass"] {
   --color-background:
-    radial-gradient(circle at 20% 20%,rgba(120,255,200,.10),transparent 30%),
-    radial-gradient(circle at 80% 18%,rgba(120,190,255,.12),transparent 34%),
-    radial-gradient(circle at 75% 75%,rgba(210,140,255,.10),transparent 36%),
-    radial-gradient(circle at 30% 80%,rgba(255,220,140,.08),transparent 34%),
-    radial-gradient(circle at center,rgba(255,255,255,.035),transparent 55%),
-    linear-gradient(145deg,#0b0f14,#06080c);
+    radial-gradient(circle at 20% 20%, rgba(247, 252, 253, 0.55), transparent 35%),
+    radial-gradient(circle at 80% 30%, rgba(254, 255, 255, 0.35), transparent 40%),
+    linear-gradient(135deg, #D9E7F4, #BFD3E8);
 
-  --color-surface-1:rgba(255,255,255,.045);
-  --color-surface-2:rgba(255,255,255,.07);
+  --color-surface-1: rgba(255,255,255,0.18);
+  --color-surface-2: rgba(255,255,255,0.30);
 
-  --color-title:#f8fbff;
-  --color-subtitle:#dde6f0;
-  --color-text:#9baabc;
+  --color-title: #1E293B;
+  --color-subtitle: #475569;
+  --color-text: #64748B;
 
-  --color-border:rgba(255,255,255,.09);
+  --color-border: rgba(255,255,255,0.55);
 
-  /* diamond aurora */
-  --color-accent:#b2edff;
-  --color-on-accent:#0b1220;
+  --color-accent: #8FB7E8;
+  --color-on-accent: #FFFFFF;
 
-  --blur:blur(24px);
+  --blur: blur(28px);
 
-  --font-title:700 2rem "Montserrat",Verdana,Helvetica,sans-serif;
-  --font-subtitle:500 1.45rem "Roboto",Verdana,Helvetica,sans-serif;
-  --font-text:400 1rem "Inter",Verdana,Helvetica,sans-serif;
-  --font-text-sm:400 .875rem "Inter",Verdana,Helvetica,sans-serif;
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
 
-  --shadow-sm:0 2px 8px rgba(0,0,0,.18);
-  --shadow-md:0 14px 40px rgba(0,0,0,.36);
-  --shadow-lg:0 40px 100px rgba(0,0,0,.60);
+  --shadow-sm: 0 2px 8px rgba(15,23,42,.04);
+  --shadow-md: 0 8px 20px rgba(15,23,42,.06);
+  --shadow-lg: 0 20px 40px rgba(15,23,42,.10);
+}
+
+/*============================================================*/
+/* Forest ===================================================*/
+[data-theme="forest"] {
+  --color-background: linear-gradient(135deg, #2E3D31, #435347);
+
+  --color-surface-1: rgba(255,255,255,0.05);
+  --color-surface-2: rgba(255,255,255,0.08);
+
+  --color-title: #F2F5F0;
+  --color-subtitle: #D5DDD2;
+  --color-text: #AAB7A7;
+
+  --color-border: rgba(181,211,177,0.10);
+
+  --color-accent: #7FA37F;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(14px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 4px rgba(0,0,0,.12);
+  --shadow-md: 0 4px 10px rgba(0,0,0,.22);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,.34);
+}
+
+/*============================================================*/
+/* Nord =====================================================*/
+[data-theme="nord"] {
+  --color-background: linear-gradient(135deg, #A9B7C7, #D6DEE5);
+
+  --color-surface-1: rgba(255,255,255,0.22);
+  --color-surface-2: rgba(255,255,255,0.38);
+
+  --color-title: #24303D;
+  --color-subtitle: #455465;
+  --color-text: #67788A;
+
+  --color-border: rgba(70,90,110,0.15);
+
+  --color-accent: #5D84A2;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(18px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(20,30,40,0.05);
+  --shadow-md: 0 8px 20px rgba(20,30,40,0.10);
+  --shadow-lg: 0 18px 40px rgba(20,30,40,0.16);
+}
+
+/*============================================================*/
+/* Sakura ===================================================*/
+[data-theme="sakura"] {
+  --color-background: linear-gradient(135deg, #F8F1F4, #F3E8EC);
+
+  --color-surface-1: rgba(255,255,255,0.35);
+  --color-surface-2: rgba(255,255,255,0.55);
+
+  --color-title: #4A3640;
+  --color-subtitle: #6A5460;
+  --color-text: #8A7480;
+
+  --color-border: rgba(216,170,190,0.18);
+
+  --color-accent: #D8A3B6;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(14px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(74,54,64,.05);
+  --shadow-md: 0 8px 20px rgba(74,54,64,.08);
+  --shadow-lg: 0 18px 40px rgba(74,54,64,.12);
+}
+
+/*============================================================*/
+/* Gold ======================================================*/
+[data-theme="gold"] {
+  --color-background: linear-gradient(135deg,#caa64cd8,#c2a146d7,#aa842adc);
+
+  --color-surface-1: rgba(255,245,205,.18);
+--color-surface-2: rgba(255,248,220,.28);
+
+  --color-title: #FFF8E6;
+--color-subtitle: #F4E5B5;
+--color-text: #fffae2;
+
+  --color-border: rgba(255,235,170,.35);
+
+  --color-accent: #FFF1B8;
+--color-on-accent: #6B4200;
+
+  --blur: blur(18px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(120,85,10,.08);
+  --shadow-md: 0 8px 18px rgba(120,85,10,.12);
+  --shadow-lg: 0 18px 35px rgba(120,85,10,.18);
 }

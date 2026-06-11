@@ -42,7 +42,7 @@
   <script type="module" src="./dist/main.js"></script>
 </head>
 
-<body data-theme="aurora">
+<body data-theme="aurora-light">
   <header class="navbar">
     <nav class="navbar__content">
       <!--logo-->
@@ -60,7 +60,16 @@
         <option value="dark">Dark</option>
         <option value="light-teal">Light Teal</option>
         <option value="dark-teal">Dark Teal</option>
-        <option value="aurora" selected>Aurora</option>
+        <option value="aurora-light" selected>Aurora Light</option>
+        <option value="aurora-dark" selected>Aurora Dark</option>
+        <option value="coffee" selected>Coffee</option>
+        <option value="paper" selected>Paper</option>
+        <option value="neumorphism" selected>Neumorphism</option>
+        <option value="glass" selected>Glass</option>
+        <option value="forest" selected>Forest</option>
+        <option value="nord" selected>Nord</option>
+        <option value="sakura" selected>Sakura</option>
+        <option value="gold" selected>Gold</option>
       </select>
       <button class="navbar__toggle" aria-label="Open menu">☰</button>
     </nav>
@@ -89,12 +98,22 @@
       <h2 class="size-md">One framework. Multiple visual identities.</h2>
       <p class="size-md">Switch themes and watch the entire interface update instantly.</p>
 
-      <select class="theme-selector glow-pulse mb-lg ">
+      <!--themes-->
+      <select id="theme-selector" class="theme-selector">
         <option value="light">Light</option>
         <option value="dark">Dark</option>
         <option value="light-teal">Light Teal</option>
         <option value="dark-teal">Dark Teal</option>
-        <option value="aurora">Aurora</option>
+        <option value="aurora-light" selected>Aurora Light</option>
+        <option value="aurora-dark" selected>Aurora Dark</option>
+        <option value="coffee" selected>Coffee</option>
+        <option value="paper" selected>Paper</option>
+        <option value="neumorphism" selected>Neumorphism</option>
+        <option value="glass" selected>Glass</option>
+        <option value="forest" selected>Forest</option>
+        <option value="nord" selected>Nord</option>
+        <option value="sakura" selected>Sakura</option>
+        <option value="gold" selected>Gold</option>
       </select>
 
       <div class="theme-preview glow-pulse">

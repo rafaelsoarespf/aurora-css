@@ -836,10 +836,8 @@ pre.card-code code {
   color: var(--color-on-accent);
 }
 
-.bg-gradient-accent {
-  background-image:
-    linear-gradient(180deg,var(--color-accent),color-mix(in srgb,var(--color-accent) 80%,transparent),transparent);
-    color: var(--color-on-accent);
+.bg-accent :is(h1,h2,h3,h4,h5,h6,p,span,label,strong){
+  color: var(--color-on-accent);
 }
 
 .bg-glass{
@@ -853,7 +851,6 @@ pre.card-code code {
   box-shadow: var(--shadow-md);
   backdrop-filter: var(--blur);
 }
-
 
 /*size -------------------------------------------------------*/
 .mt{margin-top:1rem;}
