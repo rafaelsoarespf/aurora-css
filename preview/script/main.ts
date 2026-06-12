@@ -14,3 +14,15 @@ selectors.forEach((selector) => {
     selectors.forEach((s) => { s.value = theme; });
   });
 });
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".docs-menu-btn");
+  const sidebar = document.querySelector(".docs-sidebar");
+
+  if (menuBtn && sidebar) {
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("open");
+    });
+  }
+});

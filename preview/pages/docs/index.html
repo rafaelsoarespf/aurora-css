@@ -20,8 +20,7 @@
   <meta name="theme-color" content="#121212" />
 
   <!--Content Security Policy (CSP)-->
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
   <!--Referrer Policy-->
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <!-- Permissions Policy-->
@@ -39,15 +38,36 @@
   <link rel="stylesheet" href="../../../css/classes.css" />
   <link rel="stylesheet" href="../../styles/docs.css" />
   <!--Scripts-->
-  <script type="module" src="./dist/main.js"></script>
+  <script type="module" src="../../dist/main.js"></script>
 </head>
 
-<body data-theme="dark">
+<body data-theme="aurora-light">
   <main class="docs">
+    <button class="docs-menu-btn btn-none">☰</button>
     <!--aside ---------------------------------------------------------->
     <aside class="docs-sidebar">
 
-      <div class="docs-sidebar__group">
+      <!--themes-->
+      <div class="docs-sidebar__group mt">
+      <span class="mt-lg">Theme</span>
+      <select id="theme-selector" class="theme-selector glow-pulse">
+        <option value="aurora-light" selected>Aurora Light</option>
+        <option value="aurora-dark" selected>Aurora Dark</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="light-teal">Light Teal</option>
+        <option value="dark-teal">Dark Teal</option>
+        <option value="coffee" selected>Coffee</option>
+        <option value="paper" selected>Paper</option>
+        <option value="neumorphism" selected>Neumorphism</option>
+        <option value="glass" selected>Glass</option>
+        <option value="forest" selected>Forest</option>
+        <option value="nord" selected>Nord</option>
+        <option value="sakura" selected>Sakura</option>
+        <option value="gold" selected>Gold</option>
+      </select>
+      </div>
+      <div class="docs-sidebar__group mt">
         <span>Getting Started</span>
 
         <a href="#">Introduction</a>
@@ -108,9 +128,8 @@
         <a href="#backgrounds">Backgrounds</a>
         <a href="#effects">Effects</a>
       </div>
-
     </aside>
-
+    
     <!--content ---------------------------------------------------------->
     <section class="docs-content">
       <!--hero ---------------------------------------------------------->
