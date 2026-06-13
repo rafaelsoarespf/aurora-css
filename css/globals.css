@@ -45,8 +45,14 @@ p, label, span {
   color: var(--color-text);
 }
 
-main h1,main h2,main h3,main h4,main h5,main h6,main p {
-  margin-bottom: 1rem;
+main :is(h1,h2,h3,h4,h5,h6,p):not(
+  .card :is(h1,h2,h3,h4,h5,h6,p),
+  .card-ghost :is(h1,h2,h3,h4,h5,h6,p),
+  .card-outline :is(h1,h2,h3,h4,h5,h6,p),
+  .card-soft :is(h1,h2,h3,h4,h5,h6,p),
+  .card-glow :is(h1,h2,h3,h4,h5,h6,p)
+) {
+  margin-bottom: .85rem;
 }
 
 /*strong ----------------------------------------------------*/

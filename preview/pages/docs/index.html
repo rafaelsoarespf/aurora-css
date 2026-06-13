@@ -20,7 +20,8 @@
   <meta name="theme-color" content="#121212" />
 
   <!--Content Security Policy (CSP)-->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
   <!--Referrer Policy-->
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <!-- Permissions Policy-->
@@ -49,23 +50,23 @@
 
       <!--themes-->
       <div class="docs-sidebar__group mt">
-      <span class="mt">Theme</span>
-      <select id="theme-selector" class="theme-selector glow-pulse">
-        <option value="aurora-light" selected>Aurora Light</option>
-        <option value="aurora-dark" selected>Aurora Dark</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="light-teal">Light Teal</option>
-        <option value="dark-teal">Dark Teal</option>
-        <option value="coffee" selected>Coffee</option>
-        <option value="paper" selected>Paper</option>
-        <option value="neumorphism" selected>Neumorphism</option>
-        <option value="glass" selected>Glass</option>
-        <option value="forest" selected>Forest</option>
-        <option value="nord" selected>Nord</option>
-        <option value="sakura" selected>Sakura</option>
-        <option value="gold" selected>Gold</option>
-      </select>
+        <span class="mt">Theme</span>
+        <select id="theme-selector" class="theme-selector glow-pulse">
+          <option value="aurora-light" selected>Aurora Light</option>
+          <option value="aurora-dark" selected>Aurora Dark</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="light-teal">Light Teal</option>
+          <option value="dark-teal">Dark Teal</option>
+          <option value="coffee" selected>Coffee</option>
+          <option value="paper" selected>Paper</option>
+          <option value="neumorphism" selected>Neumorphism</option>
+          <option value="glass" selected>Glass</option>
+          <option value="forest" selected>Forest</option>
+          <option value="nord" selected>Nord</option>
+          <option value="sakura" selected>Sakura</option>
+          <option value="gold" selected>Gold</option>
+        </select>
       </div>
       <div class="docs-sidebar__group mt">
         <span>Getting Started</span>
@@ -129,27 +130,36 @@
         <a href="#effects">Effects</a>
       </div>
     </aside>
-    
+
     <!--content ---------------------------------------------------------->
     <section class="docs-content">
       <!--hero ---------------------------------------------------------->
       <section>
-        <span class="badge">Documentation</span>
+        <span class="badge mb-sm">Documentation</span>
         <h1>Aurora CSS</h1>
-        <p class="size-md">Official documentation and component reference.</p>
+        <p class="size-md">Everything you need to build modern interfaces with Aurora.</p>
       </section>
 
       <!--Instalation ---------------------------------------------------------->
       <section id="quick-start">
         <h2>Quick Start</h2>
-        <p>Include Aurora CSS in your project and start building modern interfaces immediately.</p>
-        <pre class="card-code"><code>npm install aurora-css</code></pre>
-        <pre class="card-code"><code>&lt;link rel="stylesheet" href="aurora.css" /&gt;</code></pre>
+        <p>Download the Aurora CSS files from the repository and add the<code>css</code> folder to your project.</p>
+        <pre class="card-code mb"><code>css/
+├─ reset.css
+├─ globals.css
+├─ classes.css
+└─ themes.css</code></pre>
+        <p>Then import the Aurora stylesheets:</p>
+        <pre class="card-code"><code>&lt;link rel="stylesheet" href="./css/reset.css"&gt;
+&lt;link rel="stylesheet" href="./css/globals.css"&gt;
+&lt;link rel="stylesheet" href="./css/classes.css"&gt;
+&lt;link rel="stylesheet" href="./css/themes.css"&gt;</code></pre>
       </section>
+
       <!--Layout ---------------------------------------------------------->
       <hr>
       <section>
-        <span class="badge">Layout</span>
+        <span class="badge mb-sm">Layout</span>
         <h2>Layout System</h2>
         <p>Utilities for building responsive and scalable page structures.</p>
       </section>
@@ -157,125 +167,50 @@
       <section id="container">
         <h2>Container</h2>
         <p>Center content and control maximum width.</p>
-        <div class="container card">Container</div>
+        <div class="container card mb">Container</div>
         <pre class="card-code"><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
       </section>
-      <!--grid ---------------------------------------------------------->
+      <!-- Grid ---------------------------------------------------------->
       <section id="grid">
         <h2>Grid</h2>
         <p>Flexible grid utilities for scalable and modern layouts.</p>
-        <!--grid-2---------------------------------------------------------->
-        <div class="card">
-          <p class="mb-sm">grid-2</p>
+
+        <!-- Grids ---------------------------------------------------------->
+        <div class="card mb-md">
+          <h3>Grids</h3>
+          <!--grid-2-->
+          <p class="mt">grid-2</p>
           <div class="grid-2 mb">
-            <div class="card">Column</div>
-            <div class="card">Column</div>
+            <div class="card">1</div>
+            <div class="card">2</div>
           </div>
-          <!--code-->
-          <pre class="card-code"><code>&lt;div class="grid-2"&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-
-        <!--grid-3---------------------------------------------------------->
-        <div class="card">
-          <p class="mb-sm">grid-3</p>
+          <!--grid-3-->
+          <p>grid-3</p>
           <div class="grid-3 mb">
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
           </div>
-          <!--code-->
-          <pre class="card-code"><code>&lt;div class="grid-3"&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-
-        <!--grid-4---------------------------------------------------------->
-        <div class="card">
-          <p class="mb-sm">grid-4</p>
+          <!--grid-4-->
+          <p>grid-4</p>
           <div class="grid-4 mb">
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
           </div>
-          <!--code-->
-          <pre class="card-code"><code>&lt;div class="grid-4"&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-
-        <!--grid-4 + col-3---------------------------------------------------------->
-        <div class="card">
-          <p class="mb-sm">grid-4 + col-3</p>
-          <div class="grid-4 mb">
-            <div class="card col-3">Column</div>
-            <div class="card">Column</div>
-          </div>
-          <!--code-->
-          <pre class="card-code"><code>&lt;div class="grid-4"&gt;
-  &lt;div class="col-3"&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-
-        <!--grid-5---------------------------------------------------------->
-        <div class="card">
-          <p class="mb-sm">grid-5</p>
+          <!--grid-5-->
+          <p>grid-5</p>
           <div class="grid-5 mb">
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-          </div>
-          <!--code-->
-          <pre class="card-code"><code>&lt;div class="grid-5"&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-
-        <!--grid-5 + span---------------------------------------------------------->
-        <div class="card">
-          <p class="mb-sm">grid-5 + col-2</p>
-          <div class="grid-5 mb">
-            <div class="card col-2">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-            <div class="card">Column</div>
-          </div>
-          <!--code-->
-          <pre class="card-code"><code>&lt;div class="grid-5"&gt;
-  &lt;div class="col-2"&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-  &lt;div&gt;Column&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-
-        <!--extended grids ---------------------------------------------------------->
-        <div class="card mt">
-          <p class="mb-sm">Extended Grids</p>
-          <div class="grid-5">
             <div class="card">1</div>
             <div class="card">2</div>
             <div class="card">3</div>
             <div class="card">4</div>
             <div class="card">5</div>
           </div>
-
-          <div class="grid-6 mb-sm">
+          <!--grid-6-->
+          <p>grid-6</p>
+          <div class="grid-6 mb">
             <div class="card">1</div>
             <div class="card">2</div>
             <div class="card">3</div>
@@ -283,8 +218,9 @@
             <div class="card">5</div>
             <div class="card">6</div>
           </div>
-
-          <div class="grid-7">
+          <!--grid-7-->
+          <p>grid-7</p>
+          <div class="grid-7 mb">
             <div class="card">1</div>
             <div class="card">2</div>
             <div class="card">3</div>
@@ -293,9 +229,44 @@
             <div class="card">6</div>
             <div class="card">7</div>
           </div>
+
+          <pre class="card-code mt"><code>&lt;div class="grid-2"&gt;...&lt;/div&gt;
+&lt;div class="grid-3"&gt;...&lt;/div&gt;
+&lt;div class="grid-4"&gt;...&lt;/div&gt;
+&lt;div class="grid-5"&gt;...&lt;/div&gt;
+&lt;div class="grid-6"&gt;...&lt;/div&gt;
+&lt;div class="grid-7"&gt;...&lt;/div&gt;</code></pre>
+        </div>
+
+        <!-- Column Span ---------------------------------------------------------->
+        <div class="card">
+          <h3>Column Span</h3>
+          <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
+
+          <p class="mb-sm">grid-4 + col-3</p>
+          <div class="grid-4 mb">
+            <div class="card col-3">col-3</div>
+            <div class="card">1</div>
+          </div>
+
+          <p class="mb-sm">grid-5 + col-2</p>
+          <div class="grid-5">
+            <div class="card col-2">col-2</div>
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+          </div>
+
+          <pre class="card-code"><code>&lt;div class="grid-4"&gt;
+  &lt;div class="col-3"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="grid-5"&gt;
+  &lt;div class="col-2"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </section>
-
+       
       <!--row ---------------------------------------------------------->
       <section id="row">
         <h2>Row</h2>
@@ -313,7 +284,7 @@
       <!--Typography ---------------------------------------------------------->
       <hr>
       <section id="typography">
-        <span class="badge">Typography</span>
+        <span class="badge mb-sm">Typography</span>
         <h2>Typography</h2>
         <p>Aurora provides a simplified typography system based on title, subtitle and text styles.</p>
       </section>
