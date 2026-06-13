@@ -378,22 +378,23 @@
   --shadow-lg: 0 18px 40px rgba(74,54,64,.12);
 }
 
+
 /*============================================================*/
 /* Gold ======================================================*/
 [data-theme="gold"] {
-  --color-background: linear-gradient(135deg,#caa64cd8,#c2a146d7,#aa842adc);
+  --color-background: linear-gradient( 135deg,#b48a2e 0%,#d8b85f 45%,#b88f36 100%);
 
-  --color-surface-1: rgba(255,245,205,.18);
---color-surface-2: rgba(255,248,220,.28);
+  --color-surface-1: rgba(255,248,220,.14);
+  --color-surface-2: rgba(255,250,230,.22);
 
-  --color-title: #FFF8E6;
---color-subtitle: #F4E5B5;
---color-text: #fffae2;
+  --color-title: #FFFDF6;
+  --color-subtitle: #F8EBC7;
+  --color-text: #FFF4D6;
 
-  --color-border: rgba(255,235,170,.35);
+  --color-border: rgba(255,235,180,.28);
 
-  --color-accent: #FFF1B8;
---color-on-accent: #6B4200;
+  --color-accent: #FFE7A3;
+  --color-on-accent: #5A3900;
 
   --blur: blur(18px);
 
@@ -402,7 +403,7 @@
   --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
   --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
 
-  --shadow-sm: 0 2px 6px rgba(120,85,10,.08);
-  --shadow-md: 0 8px 18px rgba(120,85,10,.12);
-  --shadow-lg: 0 18px 35px rgba(120,85,10,.18);
+  --shadow-sm: 0 2px 6px rgba(90,60,5,.08);
+  --shadow-md: 0 8px 18px rgba(90,60,5,.14);
+  --shadow-lg: 0 18px 35px rgba(90,60,5,.22);
 }

@@ -506,13 +506,14 @@
 
 /*card -------------------------------------------------------*/
 .card,.card-ghost,.card-outline,.card-soft,.card-glow{
-  padding:2rem;
+  padding:1.5rem;
   border-radius:12px;
   text-align:center;
   display:flex;
   flex-direction:column;
   gap:.75rem;
   transition: box-shadow .25s ease;
+  min-width: 0;
 }
 
 .card:hover,.card-ghost:hover,.card-outline:hover,.card-soft:hover,.card-glow:hover{
@@ -612,7 +613,8 @@ pre:not(.card-code) code {
 /* terminal card*/
 pre.card-code {
   position: relative;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   padding: 72px 24px 24px;
   text-align: left;
   line-height: 1.7;
