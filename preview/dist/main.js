@@ -21,5 +21,16 @@ window.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+//toast
+const toastBtn = document.querySelector("#toast-demo");
+toastBtn?.addEventListener("click", () => {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = "Toast message";
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
+});
 export {};
 //# sourceMappingURL=main.js.map

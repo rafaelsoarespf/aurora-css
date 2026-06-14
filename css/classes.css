@@ -13,8 +13,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  justify-self: center;
+  align-self: center;
   text-align: center;
   margin-inline: auto;
+}
+
+.center-self {
+  display: block;
+  margin-inline: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.center-items {
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 /*row --------------------------------------------------------*/
@@ -426,13 +441,13 @@
   color: var(--color-accent);
 }
 
-/*tooltip ---------------------------------------------------*/
-.tooltip {
+/* tooltip ---------------------------------------------------*/
+.tooltip,.tooltip-left,.tooltip-right,.tooltip-bottom {
   position: relative;
   cursor: help;
 }
 
-.tooltip::after {
+.tooltip::after,.tooltip-left::after,.tooltip-right::after,.tooltip-bottom::after {
   content: attr(data-tooltip);
   position: absolute;
   left: 50%;
@@ -450,43 +465,46 @@
   font: var(--font-text-sm);
   opacity: 0;
   pointer-events: none;
-  transition:opacity 0.2s ease,transform 0.2s ease;
-  z-index: 1000;
+  transition: opacity .2s ease, transform .2s ease; z-index: 1000;
 }
 
-.tooltip:hover::after {
+.tooltip:hover::after,.tooltip-left:hover::after,.tooltip-right:hover::after,.tooltip-bottom:hover::after {
   opacity: 1;
+}
+
+/*default*/
+.tooltip:hover::after {
   transform: translateX(-50%) translateY(-2px);
 }
 
 /*left*/
-.tooltip--left::after {
+.tooltip-left::after {
   left: 0;
   transform: translateX(0);
 }
 
-.tooltip--left:hover::after {
+.tooltip-left:hover::after {
   transform: translateY(-2px);
 }
 
 /*right*/
-.tooltip--right::after {
+.tooltip-right::after {
   left: auto;
   right: 0;
   transform: translateX(0);
 }
 
-.tooltip--right:hover::after {
+.tooltip-right:hover::after {
   transform: translateY(-2px);
 }
 
-/*bottom */
-.tooltip--bottom::after {
+/*bottom*/
+.tooltip-bottom::after {
   top: calc(100% + 0.6rem);
   bottom: auto;
 }
 
-.tooltip--bottom:hover::after {
+.tooltip-bottom:hover::after {
   transform: translateX(-50%) translateY(2px);
 }
 

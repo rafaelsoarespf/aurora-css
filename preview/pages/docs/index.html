@@ -243,13 +243,13 @@
           <h3>Column Span</h3>
           <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
 
-          <p class="mb-sm">grid-4 + col-3</p>
+          <p>grid-4 + col-3</p>
           <div class="grid-4 mb">
             <div class="card col-3">col-3</div>
             <div class="card">1</div>
           </div>
 
-          <p class="mb-sm">grid-5 + col-2</p>
+          <p>grid-5 + col-2</p>
           <div class="grid-5">
             <div class="card col-2">col-2</div>
             <div class="card">1</div>
@@ -257,7 +257,7 @@
             <div class="card">3</div>
           </div>
 
-          <pre class="card-code"><code>&lt;div class="grid-4"&gt;
+          <pre class="card-code mt"><code>&lt;div class="grid-4"&gt;
   &lt;div class="col-3"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 
@@ -266,20 +266,41 @@
 &lt;/div&gt;</code></pre>
         </div>
       </section>
-       
+
       <!--row ---------------------------------------------------------->
       <section id="row">
         <h2>Row</h2>
         <p>Horizontal alignment utilities for inline layouts.</p>
-        <div class="grid-5">
-          <div class="row mb center col-2">
-            <div class="card">Item</div>
-            <div class="card">Item</div>
-            <div class="card">Item</div>
+
+        <div class="grid-2">
+          <!--row-->
+          <div class="fx-dots">
+            <div class="row">
+              <div class="card bg-soft">1</div>
+              <div class="card bg-soft">2</div>
+              <div class="card bg-soft">3</div>
+            </div>
           </div>
-          <pre class="card-code col-3"><code>&lt;div class="row"&gt; ... &lt;/div&gt;</code></pre>
+          <pre class="card-code"><code>&lt;div class="row"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          <!--row+center-->
+          <div class="row center-items fx-dots mb">
+            <div class="card bg-soft">1</div>
+            <div class="card bg-soft">2</div>
+            <div class="card bg-soft">3</div>
+          </div>
+          <pre class="card-code"><code>&lt;div class="row center-items"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
       </section>
+
+
 
       <!--Typography ---------------------------------------------------------->
       <hr>
@@ -566,10 +587,12 @@
         <h2>Badges</h2>
         <p>Small highlight elements for labels and status.</p>
         <div class="grid-2">
-          <div class="center">
-            <span class="badge">Badge</span>
-          </div>
+          <!--badge-->
+          <span class="badge center-self">Badge</span>
           <pre class="card-code"><code>&lt;span class="badge"&gt;Badge&lt;/span&gt;</code></pre>
+          <!--badge accent-->
+          <span class="badge bg-accent center-self">Badge Accent</span>
+          <pre class="card-code"><code>&lt;span class="badge bg-accent"&gt;Badge&lt;/span&gt;</code></pre>
         </div>
       </section>
 
@@ -577,32 +600,34 @@
       <section id="alerts">
         <h2>Alert</h2>
         <p>Contextual message component for important information.</p>
-        <div class="alert mb">This is an alert message.</div>
-        <pre class="card-code"><code>&lt;div class="alert"&gt;This is an alert message.&lt;/div&gt;</code></pre>
+        <div class="alert mb">This is an <strong>alert message.</strong></div>
+        <div class="alert bg-accent mb">This is an <strong>alert message.</strong></div>
+        <pre class="card-code"><code>&lt;div class="alert"&gt;This is an &lt;strong&gt;alert message.&lt;/strong&gt;&lt;/div&gt;
+
+&lt;div class="alert bg-accent"&gt;This is an &lt;strong&gt;alert message.&lt;/strong&gt;&lt;/div&gt;</code></pre>
       </section>
 
       <!--Tooltip ---------------------------------------------------------->
       <section id="tooltips">
         <h2>Tooltip</h2>
         <p>Display contextual information on hover.</p>
-
         <div class="grid-4">
           <!--default-->
-          <div class="center"><span class="tooltip" data-tooltip="Default tooltip">Default</span></div>
+          <span class="tooltip center-self" data-tooltip="Default tooltip">Default</span>
           <pre
             class="card-code col-3"><code>&lt;span class="tooltip" data-tooltip="Default tooltip"&gt;Default&lt;/span&gt;</code></pre>
           <!--left-->
-          <div class="center"><span class="tooltip tooltip--left" data-tooltip="Left tooltip">Left</span></div>
+          <span class="tooltip-left center-self" data-tooltip="Left tooltip">Left</span>
           <pre
-            class="card-code col-3"><code>&lt;span class="tooltip tooltip--left" data-tooltip="Left tooltip"&gt;Left&lt;/span&gt;</code></pre>
+            class="card-code col-3"><code>&lt;span class="tooltip-left" data-tooltip="Left tooltip"&gt;Left&lt;/span&gt;</code></pre>
           <!--right-->
-          <div class="center"><span class="tooltip tooltip--right" data-tooltip="Right tooltip">Right</span></div>
+          <span class="tooltip-right center-self" data-tooltip="Right tooltip">Right</span>
           <pre
-            class="card-code col-3"><code>&lt;span class="tooltip tooltip--right" data-tooltip="Right tooltip"&gt;Right&lt;/span&gt;</code></pre>
+            class="card-code col-3"><code>&lt;span class="tooltip-right" data-tooltip="Right tooltip"&gt;Right&lt;/span&gt;</code></pre>
           <!--bottom-->
-          <div class="center"><span class="tooltip tooltip--bottom" data-tooltip="Bottom tooltip">Bottom</span></div>
+          <span class="tooltip-bottom center-self" data-tooltip="Bottom tooltip">Bottom</span>
           <pre
-            class="card-code col-3"><code>&lt;span class="tooltip tooltip--bottom" data-tooltip="Bottom tooltip"&gt;Bottom&lt;/span&gt;</code></pre>
+            class="card-code col-3"><code>&lt;span class="tooltip-bottom" data-tooltip="Bottom tooltip"&gt;Bottom&lt;/span&gt;</code></pre>
         </div>
       </section>
 
@@ -610,7 +635,10 @@
       <section id="toasts">
         <h2>Toast</h2>
         <p>Transient notification messages for user feedback.</p>
-        <pre class="card-code"><code>&lt;div class="toast"&gt;Toast message&lt;/div&gt;</code></pre>
+        <div class="grid-2">
+          <button class="center-self" id="toast-demo">Show Toast</button>
+          <pre class="card-code"><code>&lt;div class="toast"&gt;Toast message&lt;/div&gt;</code></pre>
+        </div>
       </section>
 
       <!--From ---------------------------------------------------------->
