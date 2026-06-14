@@ -46,13 +46,14 @@ p, label, span {
 }
 
 main :is(h1,h2,h3,h4,h5,h6,p):not(
+  .mb,.mb-none,.mb-sm,.mb-md,.mb-lg,
   .card :is(h1,h2,h3,h4,h5,h6,p),
   .card-ghost :is(h1,h2,h3,h4,h5,h6,p),
   .card-outline :is(h1,h2,h3,h4,h5,h6,p),
   .card-soft :is(h1,h2,h3,h4,h5,h6,p),
   .card-glow :is(h1,h2,h3,h4,h5,h6,p)
 ) {
-  margin-bottom: .85rem;
+  margin-bottom: .9rem;
 }
 
 /*strong ----------------------------------------------------*/
@@ -282,6 +283,12 @@ input[type="checkbox"]:checked:disabled {
   background: color-mix(in srgb,var(--color-accent) 55%,gray);
 }
 
+
+label:has(input[type="checkbox"]) {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
 /*radio -----------------------------------------------------*/
 input[type="radio"] {
   appearance: none;
@@ -304,6 +311,12 @@ input[type="radio"]:checked {
 
 input[type="radio"]:checked:disabled {
   background: color-mix(in srgb,var(--color-accent) 55%,gray);
+}
+
+label:has(input[type="radio"]) {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 /*table -----------------------------------------------------*/
