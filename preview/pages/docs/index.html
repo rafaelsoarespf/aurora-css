@@ -923,6 +923,10 @@
 
           <tbody>
             <tr>
+              <td>.mt-none / .mb-none</td>
+              <td>0</td>
+            </tr>
+            <tr>
               <td>.mt-sm / .mb-sm</td>
               <td>0.5rem</td>
             </tr>
@@ -941,19 +945,42 @@
           </tbody>
         </table>
 
-        <pre class="card-code"><code>&lt;section class="mb-lg"&gt; ... &lt;/section&gt;</code></pre>
-        </div>
+        <pre class="card-code mt"><code>&lt;section class="mb-lg"&gt; ... &lt;/section&gt;</code></pre>
       </section>
 
       <!--center ---------------------------------------------------------->
       <section id="center">
-        <h2>Center</h2>
-        <p>Utility class for centering content using flexbox.</p>
+        <h2 class="mb-lg">Center Utilities</h2>
+
+        <!-- center -->
+        <p><code>.center</code> centers content horizontally and vertically inside a container.</p>
         <div class="grid-2">
-          <div class="center demo-center size-full">
-            <button class="btn">Centered</button>
+          <div class="center">
+            <div class="card">Center</div>
           </div>
-          <pre class="card-code"><code>&lt;div class="center"&gt; ... &lt;/div&gt;</code></pre>
+          <pre class="card-code"><code>&lt;div class="center"&gt;
+  &lt;div class="card"&gt;Center&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!-- center-items -->
+        <p class="mt-lg"><code>.center-items</code> centers multiple children inside a flex or grid container.</p>
+        <div class="grid-2">
+          <div class="center-items">
+            <div class="card">Center Items</div>
+            <div class="card">Center Items</div>
+          </div>
+          <pre class="card-code"><code>&lt;div class="center-items"&gt;
+  &lt;div class="card"&gt;Center Items&lt;/div&gt;
+  &lt;div class="card"&gt;Center Items&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <!-- center-self -->
+        <p class="mt-lg"><code>.center-self</code> centers the element itself within its parent container.</p>
+        <div class="grid-2">
+          <div class="card center-self">Center Self</div>
+          <pre class="card-code"><code>&lt;div class="card center-self"&gt;Center Self&lt;/div&gt;</code></pre>
         </div>
       </section>
 
@@ -963,29 +990,22 @@
         <p>Utilities for controlling text alignment.</p>
 
         <div class="grid-3">
-          <!--text left-->
           <div class="card">
             <p class="text-left">Left aligned text</p>
-            <pre class="card-code"><code>&lt;p class="text-left"&gt;
-  Left aligned text
-&lt;/p&gt;</code></pre>
           </div>
 
-          <!--text center-->
           <div class="card">
             <p class="text-center">Centered text</p>
-            <pre class="card-code"><code>&lt;p class="text-center"&gt;
-  Centered text
-&lt;/p&gt;</code></pre>
           </div>
 
-          <!--text right-->
           <div class="card">
             <p class="text-right">Right aligned text</p>
-            <pre class="card-code"><code>&lt;p class="text-right"&gt;
-  Right aligned text
-&lt;/p&gt;</code></pre>
           </div>
+        </div>
+
+        <pre class="card-code mt"><code>&lt;p class="text-left"&gt;...&lt;/p&gt;
+&lt;p class="text-center"&gt;...&lt;/p&gt;
+&lt;p class="text-right"&gt;...&lt;/p&gt;</code></pre>
 
         </div>
       </section>
@@ -994,40 +1014,54 @@
       <section id="size">
         <h2>Size</h2>
         <p>Utilities for controlling element width.</p>
+        <table class="mb-md">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Width</th>
+            </tr>
+          </thead>
 
-        <div class="grid-2">
+          <tbody>
+            <tr>
+              <td>.size-sm</td>
+              <td>320px</td>
+            </tr>
+            <tr>
+              <td>.size-md</td>
+              <td>640px</td>
+            </tr>
+            <tr>
+              <td>.size-lg</td>
+              <td>960px</td>
+            </tr>
+            <tr>
+              <td>.size-xl</td>
+              <td>1280px</td>
+            </tr>
+            <tr>
+              <td>.size-full</td>
+              <td>100%</td>
+            </tr>
+          </tbody>
+        </table>
 
-          <div class="card">
-            <p>.size-sm</p>
-            <div class="bg-accent size-sm center">320px</div>
-            <pre class="card-code"><code>&lt;div class="size-sm"&gt;...&lt;/div&gt;</code></pre>
-          </div>
-
-          <div class="card">
-            <p>.size-md</p>
-            <div class="bg-accent size-md">640px</div>
-            <pre class="card-code"><code>&lt;div class="size-md"&gt;...&lt;/div&gt;</code></pre>
-          </div>
-
-          <div class="card">
-            <p>.size-lg</p>
-            <div class="bg-accent size-lg">960px</div>
-            <pre class="card-code"><code>&lt;div class="size-lg"&gt;...&lt;/div&gt;</code></pre>
-          </div>
-
-          <div class="card">
-            <p>.size-xl</p>
-            <div class="bg-accent size-xl">1280px</div>
-            <pre class="card-code"><code>&lt;div class="size-xl"&gt;...&lt;/div&gt;</code></pre>
-          </div>
-
-          <div class="card">
-            <p>.size-full</p>
-            <div class="bg-accent size-full">100%</div>
-            <pre class="card-code"><code>&lt;div class="size-full"&gt;...&lt;/div&gt;</code></pre>
-          </div>
-
+        <div class="card">
+          <p>.size-sm</p>
+          <div class="bg-accent size-sm">320px</div>
+          <p>.size-md</p>
+          <div class="bg-accent size-md">640px</div>
+          <p>.size-lg</p>
+          <div class="bg-accent size-lg">960px</div>
+          <p>.size-xl</p>
+          <div class="bg-accent size-xl">1280px</div>
+          <p>.size-full</p>
+          <div class="bg-accent size-full">100%</div>
         </div>
+
+        <pre class="card-code mt"><code>&lt;div class="size-md"&gt;
+  Content
+&lt;/div&gt;</code></pre>
       </section>
 
       <!--visuals ---------------------------------------------------------->
