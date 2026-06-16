@@ -51,7 +51,7 @@
       <!--themes-->
       <div class="docs-sidebar__group mt">
         <span class="mt">Theme</span>
-        <select id="theme-selector" class="theme-selector glow-pulse">
+        <select id="theme-selector" class="theme-selector border-pulse">
           <option value="aurora-light" selected>Aurora Light</option>
           <option value="aurora-dark" selected>Aurora Dark</option>
           <option value="light">Light</option>
@@ -471,7 +471,7 @@
       <!--Components ---------------------------------------------------------->
       <hr>
       <section>
-        <span class="badge">Components</span>
+        <span class="badge mb-sm">Components</span>
         <h2>Components</h2>
         <p>Reusable interface elements for building consistent user experiences.</p>
       </section>
@@ -642,7 +642,7 @@
       <!--From ---------------------------------------------------------->
       <hr>
       <section id="form">
-        <span class="badge">Form</span>
+        <span class="badge mb-sm">Form</span>
         <h2>Form</h2>
         <p>Form controls for collecting and validating user input.</p>
       </section>
@@ -904,7 +904,7 @@
       <!--Utilities ---------------------------------------------------------->
       <hr>
       <section>
-        <span class="badge">Utilities</span>
+        <span class="badge mb-sm">Utilities</span>
         <h2>Utilities</h2>
         <p>Small helper classes for spacing, alignment and layout adjustments.</p>
       </section>
@@ -1067,7 +1067,7 @@
       <!--visuals ---------------------------------------------------------->
       <hr>
       <section>
-        <span class="badge">Visuals</span>
+        <span class="badge mb-sm">Visuals</span>
         <h2>Visuals</h2>
         <p>Backgrounds and visual effects for creating atmospheric interfaces.</p>
       </section>
@@ -1103,7 +1103,7 @@
       <!--Effects ---------------------------------------------------------->
       <hr>
       <section>
-        <span id="effects" class="badge">Effects</span>
+        <span id="effects" class="badge mb-sm">Effects</span>
         <h2>Effects</h2>
         <p>Visual effects for adding atmosphere and depth to interfaces.</p>
 
@@ -1130,19 +1130,16 @@
 
         <div class="grid-2">
           <!--grid-->
-          <div class="fx-grid card center size-sm">.fx-grid</div>
+          <div class="fx-grid card center-items">.fx-grid</div>
           <pre class="card-code"><code>&lt;div class="fx-grid"&gt;&lt;/div&gt;</code></pre>
           <!--noise-->
-          <div class="fx-noise card center size-sm">.fx-noise</div>
+          <div class="fx-noise card center-items">.fx-noise</div>
           <pre class="card-code"><code>&lt;div class="fx-noise"&gt;&lt;/div&gt;</code></pre>
-          <!--shine-->
-          <div class="fx-shine card center size-sm">.fx-shine</div>
-          <pre class="card-code"><code>&lt;div class="fx-shine"&gt;&lt;/div&gt;</code></pre>
           <!--dots-->
-          <div class="fx-dots card center size-sm">.fx-dots</div>
+          <div class="fx-dots card center-items">.fx-dots</div>
           <pre class="card-code"><code>&lt;div class="fx-dots"&gt;&lt;/div&gt;</code></pre>
           <!--beam-->
-          <div class="fx-beam card center size-sm">.fx-beam</div>
+          <div class="fx-beam card center-items">.fx-beam</div>
           <pre class="card-code"><code>&lt;div class="fx-beam"&gt;&lt;/div&gt;</code></pre>
         </div>
       </section>
@@ -1150,7 +1147,7 @@
       <!--Animations ---------------------------------------------------------->
       <hr>
       <section>
-        <span class="badge">Animations</span>
+        <span class="badge mb-sm">Animations</span>
         <h2>Animations</h2>
         <p>Continuous motion utilities for creating dynamic and atmospheric interfaces.</p>
       </section>
@@ -1161,91 +1158,298 @@
         <p><strong>Motion</strong> animations add movement and transform effects.</p>
 
         <div class="grid-2">
-
           <!--float-->
           <div class="card">
-            <div class="float card bg-soft center">.float</div>
+            <div class="float card bg-soft center">float</div>
             <pre class="card-code"><code>&lt;div class="float"&gt;&lt;/div&gt;</code></pre>
           </div>
-
+          <!--bounce-->
+          <div class="card">
+            <div class="bounce card bg-soft center">bounce</div>
+            <pre class="card-code"><code>&lt;div class="bounce"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--flip-->
+          <div class="card">
+            <div class="flip card bg-soft center">flip</div>
+            <pre class="card-code"><code>&lt;div class="flip"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--drift-->
+          <div class="card">
+            <div class="drift card bg-soft center">drift</div>
+            <pre class="card-code"><code>&lt;div class="drift"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--drift-->
+          <div class="card">
+            <div class="orbit card bg-soft center">orbit</div>
+            <pre class="card-code"><code>&lt;div class="orbit"&gt;&lt;/div&gt;</code></pre>
+          </div>
           <!--pulse-->
           <div class="card">
-            <div class="pulse card bg-soft center">.pulse</div>
+            <div class="pulse card bg-soft center">pulse</div>
             <pre class="card-code"><code>&lt;div class="pulse"&gt;&lt;/div&gt;</code></pre>
           </div>
-
           <!--breathe-->
           <div class="card">
-            <div class="breathe card bg-soft center">.breathe</div>
+            <div class="breathe card bg-soft center">breathe</div>
             <pre class="card-code"><code>&lt;div class="breathe"&gt;&lt;/div&gt;</code></pre>
           </div>
-
           <!--spin-->
           <div class="card">
-            <div class="spin card bg-soft center">.spin</div>
+            <div class="spin card bg-soft center">spin</div>
             <pre class="card-code"><code>&lt;div class="spin"&gt;&lt;/div&gt;</code></pre>
           </div>
-
           <!--tilt-->
           <div class="card">
-            <div class="tilt card bg-soft center size-sm">.tilt</div>
+            <div class="tilt card bg-soft center size-sm">tilt</div>
             <pre class="card-code"><code>&lt;div class="tilt"&gt;&lt;/div&gt;</code></pre>
           </div>
-
         </div>
 
-        <!-- Light Effects -->
-        <p class="mt-lg">
-          <strong>Light Effects</strong> animations create glow and highlight effects.
-        </p>
+        <!-- Overlay Effects -->
+        <p class="mt-lg"><strong>Overlay Effects</strong> animations add dynamic visual elements above components.</p>
 
         <div class="grid-2">
-
           <!--shine-->
           <div class="card">
-            <div class="shine card bg-soft center">.shine</div>
+            <div class="shine card bg-soft center">shine</div>
             <pre class="card-code"><code>&lt;div class="shine"&gt;&lt;/div&gt;</code></pre>
           </div>
-
-          <!--glow-pulse-->
+          <!--scanline-->
           <div class="card">
-            <div class="glow-pulse card bg-soft center">.glow-pulse</div>
-            <pre class="card-code"><code>&lt;div class="glow-pulse"&gt;&lt;/div&gt;</code></pre>
+            <div class="scanline card bg-soft center">scanline</div>
+            <pre class="card-code"><code>&lt;div class="scanline"&gt;&lt;/div&gt;</code></pre>
           </div>
-
-          <!--glow-breathe-->
+          <!--beacon-->
           <div class="card">
-            <div class="glow-breathe card bg-soft center">.glow-breathe</div>
-            <pre class="card-code"><code>&lt;div class="glow-breathe"&gt;&lt;/div&gt;</code></pre>
+            <div class="beacon card bg-soft center">beacon</div>
+            <pre class="card-code"><code>&lt;div class="beacon"&gt;&lt;/div&gt;</code></pre>
           </div>
-
-          <!--glow-sweep-->
-          <div class="card">
-            <div class="glow-sweep card bg-soft center">.glow-sweep</div>
-            <pre class="card-code"><code>&lt;div class="glow-sweep"&gt;&lt;/div&gt;</code></pre>
-          </div>
-
         </div>
 
         <!-- Border Effects -->
-        <p class="mt-lg">
-          <strong>Border Effects</strong> animations enhance borders and outlines.
-        </p>
-
+        <p class="mt-lg"><strong>Border Effects</strong> animations enhance borders and outlines.</p>
         <div class="grid-2">
-
-          <!--border-glow-->
+          <!--border-neon-->
           <div class="card">
-            <div class="border-glow card bg-soft center">.border-glow</div>
-            <pre class="card-code"><code>&lt;div class="border-glow"&gt;&lt;/div&gt;</code></pre>
+            <div class="border-neon card bg-soft center">border-neon</div>
+            <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
           </div>
-
+          <!--border-pulse-->
+          <div class="card">
+            <div class="border-pulse card bg-soft center">border-pulse</div>
+            <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-flicker-->
+          <div class="card">
+            <div class="border-flicker card bg-soft center">border-flicker</div>
+            <pre class="card-code"><code>&lt;div class="border-flicker"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-static-->
+          <div class="card">
+            <div class="border-static card bg-soft center">border-static</div>
+            <pre class="card-code"><code>&lt;div class="border-static"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-glitch-->
+          <div class="card">
+            <div class="border-glitch card bg-soft center">border-glitch</div>
+            <pre class="card-code"><code>&lt;div class="border-glitch"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-draw-->
+          <div class="card">
+            <div class="border-draw card center">border-draw</div>
+            <pre class="card-code"><code>&lt;div class="border-draw"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-scan-->
+          <div class="card">
+            <div class="border-scan card bg-soft center">border-scan</div>
+            <pre class="card-code"><code>&lt;div class="border-scan"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-orbit-->
+          <div class="card">
+            <div class="border-orbit card bg-soft center">border-orbit</div>
+            <pre class="card-code"><code>&lt;div class="border-orbit"&gt;&lt;/div&gt;</code></pre>
+          </div>
           <!--border-shift-->
           <div class="card">
-            <div class="border-shift card bg-soft center">.border-shift</div>
-            <pre class="card-code"><code>&lt;div class="border-shift"&gt;&lt;/div&gt;</code></pre>
+            <div class="border-shift card bg-soft center">border-shift</div>
+            <pre class="card-code mb"><code>&lt;div class="border-shift"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-width-->
+          <div class="card">
+            <div class="border-width card bg-soft center">border-width</div>
+            <pre class="card-code"><code>&lt;div class="border-width"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--border-corners-->
+          <div class="card">
+            <div class="border-corners card bg-soft center">border-corners</div>
+            <pre class="card-code"><code>&lt;div class="border-corners"&gt;&lt;/div&gt;</code></pre>
           </div>
 
+        </div>
+
+        <!-- Entrance Effects -->
+        <p class="mt-lg"><strong>Entrance Effects</strong> animations played when components first appear.</p>
+        <div class="grid-2">
+          <!--fade-in-->
+          <div class="card">
+            <div class="fade-in entrance-demo card bg-soft center">fade-in</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="fade-in"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--slide-up-->
+          <div class="card">
+            <div class="slide-up entrance-demo card bg-soft center">slide-up</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="slide-up"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--slide-down-->
+          <div class="card">
+            <div class="slide-down entrance-demo card bg-soft center">slide-down</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="slide-down"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--slide-left-->
+          <div class="card">
+            <div class="slide-left entrance-demo card bg-soft center">slide-left</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="slide-left"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--slide-right-->
+          <div class="card">
+            <div class="slide-right entrance-demo card bg-soft center">slide-right</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="slide-right"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--zoom-in-->
+          <div class="card">
+            <div class="zoom-in entrance-demo card bg-soft center">zoom-in</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="zoom-in"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--pop-in-->
+          <div class="card">
+            <div class="pop-in entrance-demo card bg-soft center">pop-in</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="pop-in"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--blur-in-->
+          <div class="card">
+            <div class="blur-in entrance-demo card bg-soft center">blur-in</div>
+            <button class="btn replay-animation">Replay</button>
+            <pre class="card-code"><code>&lt;div class="blur-in"&gt;&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+
+        <!--hover effects-->
+        <p class="mt-lg"><strong>Hover Effects</strong> animations triggered when the pointer hovers over a component.
+        </p>
+        <div class="grid-2">
+          <!--hover-lift-->
+          <div class="card">
+            <div class="hover-lift card bg-soft center">hover-lift</div>
+            <pre class="card-code"><code>&lt;div class="hover-lift"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-grow-->
+          <div class="card">
+            <div class="hover-grow card bg-soft center">hover-grow</div>
+            <pre class="card-code"><code>&lt;div class="hover-grow"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-shrink-->
+          <div class="card">
+            <div class="hover-shrink card bg-soft center">hover-shrink</div>
+            <pre class="card-code"><code>&lt;div class="hover-shrink"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-glow-->
+          <div class="card">
+            <div class="hover-glow card bg-soft center">hover-glow</div>
+            <pre class="card-code"><code>&lt;div class="hover-glow"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-border-->
+          <div class="card">
+            <div class="hover-border card bg-soft center">hover-border</div>
+            <pre class="card-code"><code>&lt;div class="hover-border"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-tilt-->
+          <div class="card">
+            <div class="hover-tilt card bg-soft center">hover-tilt</div>
+            <pre class="card-code"><code>&lt;div class="hover-tilt"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-shine-->
+          <div class="card">
+            <div class="hover-shine card bg-soft center">hover-shine</div>
+            <pre class="card-code"><code>&lt;div class="hover-shine"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-scan-->
+          <div class="card">
+            <div class="hover-scan card bg-soft center">hover-scan</div>
+            <pre class="card-code"><code>&lt;div class="hover-scan"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--hover-ripple-->
+          <div class="card">
+            <div class="hover-ripple card bg-soft center">hover-ripple</div>
+            <pre class="card-code"><code>&lt;div class="hover-ripple"&gt;&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+
+        <!-- Loading Effects -->
+        <p class="mt-lg"><strong>Loading Effects</strong>animations used to indicate loading and processing states.</p>
+        <div class="grid-2">
+          <!--loading-spin-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <div class="loading-spin"></div>
+            </div>
+            <pre class="card-code"><code>&lt;div class="loading-spin"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--loading-pulse-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <div class="loading-pulse"></div>
+            </div>
+            <pre class="card-code"><code>&lt;div class="loading-pulse"&gt;&lt;/div&gt;</code></pre>
+          </div>
+          <!--loading-dots-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <pre class="card-code"><code>&lt;div class="loading-dots"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+
+          <!--loading-wave-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <div class="loading-wave">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <pre class="card-code"><code>&lt;div class="loading-wave"&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+  &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+          <!--loading-orbit-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <div class="loading-orbit"></div>
+            </div>
+            <pre class="card-code"><code>&lt;div class="loading-orbit"&gt;&lt;/div&gt;</code></pre>
+          </div>
         </div>
 
       </section>

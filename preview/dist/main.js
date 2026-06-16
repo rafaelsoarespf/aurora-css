@@ -22,15 +22,41 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 });
 //toast
-const toastBtn = document.querySelector("#toast-demo");
-toastBtn?.addEventListener("click", () => {
+export function showToast(message, duration = 3000) {
     const toast = document.createElement("div");
     toast.className = "toast";
-    toast.textContent = "Toast message";
+    toast.textContent = message;
     document.body.appendChild(toast);
     setTimeout(() => {
         toast.remove();
-    }, 3000);
+    }, duration);
+}
+//buttton animation 
+window.addEventListener('DOMContentLoaded', () => {
+    const animations = [
+        'fade-in',
+        'slide-up',
+        'slide-down',
+        'slide-left',
+        'slide-right',
+        'zoom-in',
+        'pop-in',
+        'blur-in'
+    ];
+    document.querySelectorAll('.replay-animation').forEach(button => {
+        button.addEventListener('click', () => {
+            const demo = button
+                .parentElement
+                ?.querySelector('.entrance-demo');
+            if (!demo)
+                return;
+            const animationClass = animations.find(name => demo.classList.contains(name));
+            if (!animationClass)
+                return;
+            demo.classList.remove(animationClass);
+            void demo.offsetWidth;
+            demo.classList.add(animationClass);
+        });
+    });
 });
-export {};
 //# sourceMappingURL=main.js.map
