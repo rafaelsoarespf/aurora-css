@@ -13,6 +13,17 @@
   display: flex;
   flex-direction: column;
   height: max-content;
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;
+}
+
+.docs-sidebar::-webkit-scrollbar{
+  width:6px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb{
+  background:var(--color-border);
+  border-radius:999px;
 }
 
 .docs-sidebar__group {

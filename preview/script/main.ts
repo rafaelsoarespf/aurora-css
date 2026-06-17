@@ -15,7 +15,7 @@ selectors.forEach((selector) => {
   });
 });
 
-
+//
 window.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".docs-menu-btn");
   const sidebar = document.querySelector(".docs-sidebar");

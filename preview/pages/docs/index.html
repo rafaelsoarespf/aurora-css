@@ -70,14 +70,17 @@
       </div>
       <div class="docs-sidebar__group mt">
         <span>Getting Started</span>
-
         <a href="#">Introduction</a>
         <a href="#quick-start">Quick Start</a>
       </div>
 
+      <div class="docs-sidebar__group mt">
+        <span>Themes</span>
+        <a href="#themes">Themes</a>
+      </div>
+
       <div class="docs-sidebar__group">
         <span>Layout</span>
-
         <a href="#container">Container</a>
         <a href="#grid">Grid</a>
         <a href="#row">Row</a>
@@ -85,7 +88,6 @@
 
       <div class="docs-sidebar__group">
         <span>Typography</span>
-
         <a href="#typography-system">System</a>
         <a href="#typography-utilities">Utilities</a>
         <a href="#text-elements">Text Elements</a>
@@ -95,7 +97,6 @@
 
       <div class="docs-sidebar__group">
         <span>Components</span>
-
         <a href="#cards">Cards</a>
         <a href="#buttons">Buttons</a>
         <a href="#badges">Badges</a>
@@ -106,7 +107,6 @@
 
       <div class="docs-sidebar__group">
         <span>Forms</span>
-
         <a href="#form-elements">Elements</a>
         <a href="#tables">Tables</a>
         <a href="#modal">Modal</a>
@@ -116,7 +116,6 @@
 
       <div class="docs-sidebar__group">
         <span>Utilities</span>
-
         <a href="#spacing">Spacing</a>
         <a href="#center">Center</a>
         <a href="#text-alignment">Text Align</a>
@@ -125,9 +124,9 @@
 
       <div class="docs-sidebar__group">
         <span>Visuals</span>
-
         <a href="#backgrounds">Backgrounds</a>
         <a href="#effects">Effects</a>
+        <a href="#animations">Animations</a>
       </div>
     </aside>
 
@@ -156,6 +155,196 @@
 &lt;link rel="stylesheet" href="./css/themes.css"&gt;</code></pre>
       </section>
 
+      <!--Themes ---------------------------------------------------------->
+      <hr>
+      <section>
+        <span class="badge mb-sm">Themes</span>
+        <h2>Themes</h2>
+        <p>Utilities for building responsive and scalable page structures.</p>
+      </section>
+      <section>
+
+        <!--theme selector-->
+        <div class="card">
+          <h4>Theme Selector</h4>
+
+          <select class="theme-selector border-pulse">
+            <option value="aurora-light">Aurora Light</option>
+            <option value="aurora-dark">Aurora Dark</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="light-teal">Light Teal</option>
+            <option value="dark-teal">Dark Teal</option>
+            <option value="coffee">Coffee</option>
+            <option value="paper">Paper</option>
+            <option value="neumorphism">Neumorphism</option>
+            <option value="glass">Glass</option>
+            <option value="forest">Forest</option>
+            <option value="nord">Nord</option>
+            <option value="sakura">Sakura</option>
+            <option value="gold">Gold</option>
+          </select>
+
+          <span class="text mt">HTML</span>
+          <pre class="card-code"><code>&lt;select class="theme-selector"&gt;
+  &lt;option value="aurora-light"&gt;Aurora Light&lt;/option&gt;
+  &lt;option value="aurora-dark"&gt;Aurora Dark&lt;/option&gt;
+  &lt;option value="light"&gt;Light&lt;/option&gt;
+  &lt;option value="dark"&gt;Dark&lt;/option&gt;
+  &lt;option value="light-teal"&gt;Light Teal&lt;/option&gt;
+  &lt;option value="dark-teal"&gt;Dark Teal&lt;/option&gt;
+  &lt;option value="coffee"&gt;Coffee&lt;/option&gt;
+  &lt;option value="paper"&gt;Paper&lt;/option&gt;
+  &lt;option value="neumorphism"&gt;Neumorphism&lt;/option&gt;
+  &lt;option value="glass"&gt;Glass&lt;/option&gt;
+  &lt;option value="forest"&gt;Forest&lt;/option&gt;
+  &lt;option value="nord"&gt;Nord&lt;/option&gt;
+  &lt;option value="sakura"&gt;Sakura&lt;/option&gt;
+  &lt;option value="gold"&gt;Gold&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+          <span class="text mt">TypeScript</span>
+          <pre class="card-code"><code>const selectors=document.querySelectorAll&lt;HTMLSelectElement&gt;('.theme-selector');
+const savedTheme=localStorage.getItem('aurora-theme');
+
+if(savedTheme){
+  document.body.setAttribute('data-theme',savedTheme);
+  selectors.forEach(selector=&gt;selector.value=savedTheme);
+}
+
+selectors.forEach(selector=&gt;{
+  selector.addEventListener('change',()=&gt;{
+    const theme=selector.value;
+
+    document.body.setAttribute('data-theme',theme);
+    localStorage.setItem('aurora-theme',theme);
+
+    selectors.forEach(s=&gt;s.value=theme);
+  });
+});</code></pre>
+        </div>
+
+      </section>
+      <section id="themes">
+        <p class="mt-lg"><strong>Themes</strong> predefined visual styles for Aurora applications.</p>
+        <span class="text">Usage</span>
+        <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
+        <div class="grid-2">
+          <!--aurora-light-->
+          <div class="card bg" data-theme="aurora-light">
+            <h4>aurora-light</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="aurora-light"</code></pre>
+          </div>
+          <!--aurora-dark-->
+          <div class="card bg" data-theme="aurora-dark">
+            <h4>aurora-dark</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="aurora-dark"</code></pre>
+          </div>
+          <!--light-->
+          <div class="card" data-theme="light">
+            <h4>light</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="light"</code></pre>
+          </div>
+          <!--dark-->
+          <div class="card" data-theme="dark">
+            <h4>dark</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="dark"</code></pre>
+          </div>
+          <!--light-teal-->
+          <div class="card" data-theme="light-teal">
+            <h4>light-teal</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="light-teal"</code></pre>
+          </div>
+          <!--dark-teal-->
+          <div class="card" data-theme="dark-teal">
+            <h4>dark-teal</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="dark-teal"</code></pre>
+          </div>
+          <!--glass-->
+          <div class="card bg" data-theme="glass">
+            <h4>glass</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="glass"</code></pre>
+          </div>
+          <!--forest-->
+          <div class="card bg" data-theme="forest">
+            <h4>forest</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="forest"</code></pre>
+          </div>
+          <!--nord-->
+          <div class="card bg" data-theme="nord">
+            <h4>nord</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="nord"</code></pre>
+          </div>
+          <!--sakura-->
+          <div class="card bg" data-theme="sakura">
+            <h4>sakura</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="sakura"</code></pre>
+          </div>
+          <!--gold-->
+          <div class="card bg" data-theme="gold">
+            <h4>gold</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="gold"</code></pre>
+          </div>
+          <!--coffee-->
+          <div class="card bg" data-theme="coffee">
+            <h4>coffee</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="coffee"</code></pre>
+          </div>
+          <!--paper-->
+          <div class="card bg" data-theme="paper">
+            <h4>paper</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="paper"</code></pre>
+          </div>
+          <!--neumorphism-->
+          <div class="card bg" data-theme="neumorphism">
+            <h4>neumorphism</h4>
+            <p>The quick brown fox jumps over the lazy dog.</p>
+            <button class="btn">Button</button>
+            <span class="badge">Badge</span>
+            <pre class="card-code"><code>data-theme="neumorphism"</code></pre>
+          </div>
+
+        </div>
+      </section>
       <!--Layout ---------------------------------------------------------->
       <hr>
       <section>
@@ -1077,22 +1266,21 @@
         <p>Utilities for applying predefined backgrounds and surface styles.</p>
 
         <div class="grid-2">
+          <!--background-->
+          <div class="bg card size-full center-items">Background</div>
+          <pre class="card-code"><code>&lt;div class="bg"&gt;&lt;/div&gt;</code></pre>
           <!--surface-->
           <div class="bg-surface card size-full center-items">Surface</div>
           <pre class="card-code"><code>&lt;div class="bg-surface"&gt;&lt;/div&gt;</code></pre>
-
           <!--surface2-->
           <div class="bg-surface-2 card size-full center-items">Surface 2</div>
           <pre class="card-code"><code>&lt;div class="bg-surface-2"&gt;&lt;/div&gt;</code></pre>
-
           <!--soft-->
           <div class="bg-soft card size-full center-items">Soft</div>
           <pre class="card-code"><code>&lt;div class="bg-soft"&gt;&lt;/div&gt;</code></pre>
-
           <!--accent-->
           <div class="bg-accent card size-full center-items">Accent</div>
           <pre class="card-code"><code>&lt;div class="bg-accent"&gt;&lt;/div&gt;</code></pre>
-
           <!--glass-->
           <div class="bg-glass card size-full center-items">Glass</div>
           <pre class="card-code"><code>&lt;div class="bg-glass"&gt;&lt;/div&gt;</code></pre>
@@ -1146,13 +1334,13 @@
 
       <!--Animations ---------------------------------------------------------->
       <hr>
-      <section>
+      <section id="animations">
         <span class="badge mb-sm">Animations</span>
         <h2>Animations</h2>
         <p>Continuous motion utilities for creating dynamic and atmospheric interfaces.</p>
       </section>
 
-      <section id="animations">
+      <section id="">
 
         <!-- Motion -->
         <p><strong>Motion</strong> animations add movement and transform effects.</p>
@@ -1266,7 +1454,7 @@
           </div>
           <!--border-orbit-->
           <div class="card">
-            <div class="border-orbit card bg-soft center">border-orbit</div>
+            <div class="border-orbit  card bg-soft center">border-orbit</div>
             <pre class="card-code"><code>&lt;div class="border-orbit"&gt;&lt;/div&gt;</code></pre>
           </div>
           <!--border-shift-->
@@ -1452,7 +1640,61 @@
           </div>
         </div>
 
+        <!-- Text Effects -->
+        <p class="mt-lg">
+          <strong>Text Effects</strong>
+          animations that enhance text visibility and emphasis.
+        </p>
+
+        <div class="grid-2">
+
+          <!--text-glow-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <span class="text-glow">text-glow</span>
+            </div>
+            <pre class="card-code"><code>&lt;span class="text-glow"&gt;text&lt;/span&gt;</code></pre>
+          </div>
+
+          <!--text-pulse-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <span class="text-pulse">text-pulse</span>
+            </div>
+            <pre class="card-code"><code>&lt;span class="text-pulse"&gt;text&lt;/span&gt;</code></pre>
+          </div>
+
+          <!--text-flicker-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <span class="text-flicker">text-flicker</span>
+            </div>
+            <pre class="card-code"><code>&lt;span class="text-flicker"&gt;text&lt;/span&gt;</code></pre>
+          </div>
+
+          <!--text-shimmer-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <span class="text-shimmer">text-shimmer</span>
+            </div>
+            <pre class="card-code"><code>&lt;span class="text-shimmer"&gt;text&lt;/span&gt;</code></pre>
+          </div>
+
+          <!--text-wave-->
+          <div class="card">
+            <div class="card bg-soft center">
+              <span class="text-wave">text-wave</span>
+            </div>
+            <pre class="card-code"><code>&lt;span class="text-wave"&gt;text&lt;/span&gt;</code></pre>
+          </div>
+
+        </div>
+
       </section>
+
+
+
+
     </section>
 
   </main>

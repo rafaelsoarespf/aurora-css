@@ -809,7 +809,7 @@ pre.card-code code {
 
 /*background -------------------------------------------------*/
 .bg{
-  background-color: var(--color-background);
+  background: var(--color-background); 
 }
 
 .bg-surface {
@@ -909,17 +909,9 @@ pre.card-code code {
   color: var(--color-accent);
 }
 
-.text-center {
-  text-align: center;
-}
-
-.text-left{
-  text-align: left;
-}
-
-.text-right{
-  text-align: right;
-}
+.text-center { text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
 
 /*animation --------------------------------------*/
 
@@ -1418,4 +1410,50 @@ pre.card-code code {
 }
 @keyframes loading-orbit{
   to{transform:rotate(360deg);}
+}
+
+
+/*text -------------------------------*/
+/*text glow*/
+.text-glow{ animation:text-glow 3s ease-in-out infinite;}
+@keyframes text-glow{
+  0%,100%{ text-shadow:none;}
+  50%{ text-shadow:0 0 12px var(--color-accent);}
+}
+
+/*text pulse*/
+.text-pulse{ animation:text-pulse 4s ease-in-out infinite;}
+@keyframes text-pulse{
+  0%,100%{ opacity:.2;}
+  50%{ opacity:1;}
+}
+
+/*text flicker*/
+.text-flicker{ animation:text-flicker 4s infinite;}
+@keyframes text-flicker{
+  0%,18%,22%,60%,100%{ opacity:1;}
+  20%,21%,62%{ opacity:.4;}
+}
+
+/*text shimmer*/
+.text-shimmer{
+  background: linear-gradient(90deg,currentColor, var(--color-accent), currentColor);
+  background-size:200% 100%;
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:text-shimmer 3s linear infinite;
+}
+@keyframes text-shimmer{
+  to{ background-position:200% 0;}
+}
+
+/*text wave*/
+.text-wave{
+  display:inline-block;
+  animation:text-wave 2s ease-in-out infinite;
+}
+@keyframes text-wave{
+  0%,100%{ transform:translateY(0);}
+  50%{ transform:translateY(-4px);}
 }
