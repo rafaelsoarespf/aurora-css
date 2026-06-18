@@ -155,12 +155,30 @@
 }
 
 /*fx-grid*/
-.fx-grid {
+.fx-grid{
+  position:relative;
+  isolation:isolate;
+}
+
+.fx-grid::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px);
+  background-size:40px 40px;
+  z-index:-1;
+  pointer-events:none;
+}
+
+/*fx-grid-radial*/
+.fx-grid-radial {
   position: relative;
   isolation: isolate;
 }
 
-.fx-grid::after {
+.fx-grid-radial::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -186,9 +204,7 @@
   opacity:.04;
   pointer-events:none;
   z-index:-1;
-
-  background-image:
-    radial-gradient(circle,#fff 1px,transparent 1px);
+  background-image:radial-gradient(circle,var(--color-text) 1px,transparent 1px);
   background-size:8px 8px;
 }
 
