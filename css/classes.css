@@ -229,9 +229,6 @@
   background-size:24px 24px;
 }
 
-
-
-
 .fx-beam{
   position:relative;
   isolation:isolate;
@@ -876,6 +873,13 @@ pre.card-code code {
 .mb-sm{margin-bottom:.5rem;}
 .mb-md{margin-bottom:1.5rem;}
 .mb-lg{margin-bottom:3rem;}
+
+/*gap ----------------------------------------------------------*/
+.gap-none{gap:0;}
+.gap-sm{gap:.5rem;}
+.gap{gap:1rem;}
+.gap-md{gap:1.5rem;}
+.gap-lg{gap:3rem;}
 
 /*size -------------------------------------------------------*/
 .size-sm {
