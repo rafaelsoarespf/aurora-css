@@ -1066,6 +1066,27 @@ selectors.forEach(selector=&gt;{
     &lt;button class="navbar__toggle"&gt;☰&lt;/button&gt;
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
+
+         
+    <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the
+    navbar inside a <code>&lt;header&gt;</code> element.</p>
+
+  <pre class="card-code mt"><code>&lt;header class="navbar"&gt;
+  &lt;nav class="navbar__content" aria-label="Main navigation"&gt;
+
+    &lt;a href="#" class="navbar__logo"&gt;Logo&lt;/a&gt;
+
+    &lt;ul class="navbar__menu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;button class="navbar__toggle"&gt;☰&lt;/button&gt;
+
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre> 
+
       </section>
 
       <!--Footer ---------------------------------------------------------->
