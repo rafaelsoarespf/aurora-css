@@ -120,6 +120,7 @@
         <a href="#center">Center</a>
         <a href="#text-alignment">Text Align</a>
         <a href="#size">Size</a>
+        <a href="#border">Border</a>
       </div>
 
       <div class="docs-sidebar__group">
@@ -1310,6 +1311,70 @@ selectors.forEach(selector=&gt;{
 
         <pre class="card-code mt"><code>&lt;div class="size-md"&gt;
   Content
+&lt;/div&gt;</code></pre>
+      </section>
+
+      <!-- Border ---------------------------------------------------------->
+      <section id="border">
+        <h2>Border Utilities</h2>
+        <p>Utilities for adding borders and customizing their color.</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>.border</td>
+              <td>Adds a 1px border using <code>--color-border</code>.</td>
+            </tr>
+            <tr>
+              <td>.border-none</td>
+              <td>Removes all borders.</td>
+            </tr>
+            <tr>
+              <td>.border-top</td>
+              <td>Adds a top border.</td>
+            </tr>
+            <tr>
+              <td>.border-right</td>
+              <td>Adds a right border.</td>
+            </tr>
+            <tr>
+              <td>.border-bottom</td>
+              <td>Adds a bottom border.</td>
+            </tr>
+            <tr>
+              <td>.border-left</td>
+              <td>Adds a left border.</td>
+            </tr>
+            <tr>
+              <td>.border-accent</td>
+              <td>Changes the border color to <code>--color-accent</code>. Use together with a border utility.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="grid-2 mt">
+          <div class="card border">
+            Default Border
+          </div>
+
+          <div class="card border border-accent">
+            Accent Border
+          </div>
+        </div>
+
+        <pre class="card-code mt"><code>&lt;div class="border"&gt;
+  Default Border
+&lt;/div&gt;
+
+&lt;div class="border border-accent"&gt;
+  Accent Border
 &lt;/div&gt;</code></pre>
       </section>
 
