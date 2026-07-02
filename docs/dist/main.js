@@ -12,6 +12,7 @@ selectors.forEach((selector) => {
         selectors.forEach((s) => { s.value = theme; });
     });
 });
+//
 window.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.querySelector(".docs-menu-btn");
     const sidebar = document.querySelector(".docs-sidebar");
@@ -59,4 +60,29 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+//sidebar
+const sidebar = document.querySelector(".sidebar");
+const toggle = document.querySelector(".sidebar__toggle");
+if (sidebar instanceof HTMLElement &&
+    toggle instanceof HTMLButtonElement) {
+    toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        toggle.classList.toggle("active");
+    });
+    document.addEventListener("click", (event) => {
+        const target = event.target;
+        if (sidebar.classList.contains("active") &&
+            !sidebar.contains(target) &&
+            !toggle.contains(target)) {
+            sidebar.classList.remove("active");
+            toggle.classList.remove("active");
+        }
+    });
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            sidebar.classList.remove("active");
+            toggle.classList.remove("active");
+        }
+    });
+}
 //# sourceMappingURL=main.js.map

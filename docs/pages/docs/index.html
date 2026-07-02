@@ -1068,11 +1068,11 @@ selectors.forEach(selector=&gt;{
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
 
-         
-    <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the
-    navbar inside a <code>&lt;header&gt;</code> element.</p>
 
-  <pre class="card-code mt"><code>&lt;header class="navbar"&gt;
+        <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the
+          navbar inside a <code>&lt;header&gt;</code> element.</p>
+
+        <pre class="card-code mt"><code>&lt;header class="navbar"&gt;
   &lt;nav class="navbar__content" aria-label="Main navigation"&gt;
 
     &lt;a href="#" class="navbar__logo"&gt;Logo&lt;/a&gt;
@@ -1086,9 +1086,54 @@ selectors.forEach(selector=&gt;{
     &lt;button class="navbar__toggle"&gt;☰&lt;/button&gt;
 
   &lt;/nav&gt;
-&lt;/header&gt;</code></pre> 
+&lt;/header&gt;</code></pre>
 
       </section>
+
+      <!--Sidebar ---------------------------------------------------------->
+<section id="sidebar">
+  <h2>Sidebar</h2>
+
+  <p class="mb-md">Responsive sidebar for dashboards and application layouts.</p>
+
+  <div class="card">
+    <button class="sidebar__toggle">☰</button>
+    
+    <aside class="sidebar">
+      <div class="sidebar__header"><h3>Logo</h3></div>
+      <nav class="sidebar__menu">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">Projects</a>
+        <a href="#">Settings</a>
+        <a href="#">Profile</a>
+      </nav>
+      <div class="sidebar__footer">
+        <button class="btn size-full">Logout</button>
+      </div>
+    </aside>
+
+  </div>
+
+  <pre class="card-code mt"><code>&lt;button class="sidebar__toggle"&gt;☰&lt;/button&gt;
+
+&lt;aside class="sidebar"&gt;
+  &lt;div class="sidebar__header"&gt;
+    &lt;h3&gt;Logo&lt;/h3&gt;
+  &lt;/div&gt;
+
+  &lt;nav class="sidebar__menu"&gt;
+    &lt;a href="#" class="active"&gt;Dashboard&lt;/a&gt;
+    &lt;a href="#"&gt;Projects&lt;/a&gt;
+    &lt;a href="#"&gt;Settings&lt;/a&gt;
+    &lt;a href="#"&gt;Profile&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;div class="sidebar__footer"&gt;
+    &lt;button class="btn size-full"&gt;Logout&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/aside&gt;</code></pre>
+
+</section>
 
       <!--Footer ---------------------------------------------------------->
       <section id="footer">
