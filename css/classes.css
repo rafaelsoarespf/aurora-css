@@ -849,7 +849,7 @@ pre.card-code code {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  padding: .65rem 0.85rem;
+  padding: .65rem 0.8rem;
   border-radius: 8px;
   color: var(--color-text);
   transition: background-color .2s ease, color .2s ease,transform .2s ease;

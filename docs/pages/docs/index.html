@@ -44,9 +44,7 @@
 
 <body class="sidebar-layout" data-theme="aurora-light">
   <!--sidebar ---------------------------------------------------------->
-
   <aside class="sidebar">
-
     <!--header-->
     <div class="sidebar__header">
       <a href="#" class="subtitle">Aurora CSS</a>
@@ -125,7 +123,7 @@
       </select>
     </footer>
   </aside>
-  <main class="docs content container">
+  <main class="docs content container gap-lg">
     <!--button sidebar-->
     <button class="sidebar__toggle">☰</button>
     <!--hero ---------------------------------------------------------->
@@ -158,15 +156,19 @@
     <section id="themes">
       <span class="badge mb-sm">Themes</span>
       <h2>Themes</h2>
-      <p>Utilities for building responsive and scalable page structures.</p>
+      <p>Customize the appearance of your application by applying one of Aurora's built-in themes through the
+        <code>data-theme</code> attribute.
+      </p>
+      <span class="text">Usage:</span>
+      <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
     </section>
+
+    <!--theme selector-->
     <section>
-
-      <!--theme selector-->
+      <h3>Theme Selector</h3>
+      <p>Use the Theme Selector to preview and switch between Aurora's built-in themes.</p>
       <div class="card">
-        <h4>Theme Selector</h4>
-
-        <select class="theme-selector border-pulse">
+        <select class="theme-selector">
           <option value="aurora-light">Aurora Light</option>
           <option value="aurora-dark">Aurora Dark</option>
           <option value="light">Light</option>
@@ -182,7 +184,7 @@
           <option value="sakura">Sakura</option>
           <option value="gold">Gold</option>
         </select>
-
+        <!--code html-->
         <span class="text mt">HTML</span>
         <pre class="card-code"><code>&lt;select class="theme-selector"&gt;
   &lt;option value="aurora-light"&gt;Aurora Light&lt;/option&gt;
@@ -200,7 +202,7 @@
   &lt;option value="sakura"&gt;Sakura&lt;/option&gt;
   &lt;option value="gold"&gt;Gold&lt;/option&gt;
 &lt;/select&gt;</code></pre>
-
+        <!--code typescript-->
         <span class="text mt">TypeScript</span>
         <pre class="card-code"><code>const selectors=document.querySelectorAll&lt;HTMLSelectElement&gt;('.theme-selector');
 const savedTheme=localStorage.getItem('aurora-theme');
@@ -221,12 +223,12 @@ selectors.forEach(selector=&gt;{
   });
 });</code></pre>
       </div>
-
     </section>
-    <section id="">
-      <p class="mt-lg"><strong>Themes</strong> predefined visual styles for Aurora applications.</p>
-      <span class="text">Usage</span>
-      <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
+
+    <!--built-in themes-->
+    <section>
+      <h3>Built-in Themes</h3>
+      <p>Explore all themes included with Aurora CSS.</p>
       <div class="grid-2">
         <!--aurora-light-->
         <div class="card bg" data-theme="aurora-light">
@@ -340,7 +342,6 @@ selectors.forEach(selector=&gt;{
           <span class="badge">Badge</span>
           <pre class="card-code"><code>data-theme="neumorphism"</code></pre>
         </div>
-
       </div>
     </section>
     <!--Layout ---------------------------------------------------------->
@@ -721,7 +722,6 @@ selectors.forEach(selector=&gt;{
 
       </div>
     </section>
-
 
     <!--Buttons ---------------------------------------------------------->
     <section id="buttons">
