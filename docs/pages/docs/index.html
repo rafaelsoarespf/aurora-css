@@ -42,60 +42,59 @@
   <script type="module" src="../../dist/main.js"></script>
 </head>
 
-<body data-theme="aurora-light">
-  <main class="docs">
-    <button class="docs-menu-btn btn-none">☰</button>
-    <!--aside ---------------------------------------------------------->
-    <aside class="docs-sidebar">
-
+<body class="sidebar-layout" data-theme="aurora-light">
+  <!--sidebar ---------------------------------------------------------->
+  
+  <aside class="sidebar">
+    
+    <!--header-->
+    <div class="sidebar__header">
+      <h2>Aurora CSS</h2>
+    </div>
+    <!--sidebar menu-->
+    <nav class="sidebar__menu">
       <!--themes-->
-      <div class="docs-sidebar__group mt">
-        <span class="mt">Theme</span>
-        <select id="theme-selector" class="theme-selector border-flicker">
-          <option value="aurora-light" selected>Aurora Light</option>
-          <option value="aurora-dark" selected>Aurora Dark</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-          <option value="light-teal">Light Teal</option>
-          <option value="dark-teal">Dark Teal</option>
-          <option value="coffee" selected>Coffee</option>
-          <option value="paper" selected>Paper</option>
-          <option value="neumorphism" selected>Neumorphism</option>
-          <option value="glass" selected>Glass</option>
-          <option value="forest" selected>Forest</option>
-          <option value="nord" selected>Nord</option>
-          <option value="sakura" selected>Sakura</option>
-          <option value="gold" selected>Gold</option>
-        </select>
-      </div>
-      <div class="docs-sidebar__group mt">
-        <span>Getting Started</span>
-        <a href="#">Introduction</a>
-        <a href="#quick-start">Quick Start</a>
-      </div>
-
-      <div class="docs-sidebar__group mt">
-        <span>Themes</span>
-        <a href="#themes">Themes</a>
-      </div>
-
-      <div class="docs-sidebar__group">
-        <span>Layout</span>
-        <a href="#container">Container</a>
-        <a href="#grid">Grid</a>
-        <a href="#row">Row</a>
-      </div>
-
-      <div class="docs-sidebar__group">
-        <span>Typography</span>
-        <a href="#typography-system">System</a>
-        <a href="#typography-utilities">Utilities</a>
-        <a href="#text-elements">Text Elements</a>
-        <a href="#code">Code</a>
-        <a href="#quotes">Quotes</a>
-      </div>
-
-      <div class="docs-sidebar__group">
+      <span class="mt">Themes</span>
+      <select id="theme-selector" class="theme-selector border-flicker">
+        <option value="aurora-light" selected>Aurora Light</option>
+        <option value="aurora-dark" selected>Aurora Dark</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="light-teal">Light Teal</option>
+        <option value="dark-teal">Dark Teal</option>
+        <option value="coffee" selected>Coffee</option>
+        <option value="paper" selected>Paper</option>
+        <option value="neumorphism" selected>Neumorphism</option>
+        <option value="glass" selected>Glass</option>
+        <option value="forest" selected>Forest</option>
+        <option value="nord" selected>Nord</option>
+        <option value="sakura" selected>Sakura</option>
+        <option value="gold" selected>Gold</option>
+      </select>
+      <!--Getting Started-->
+      <hr class="mt mb">
+      <span>Getting Started</span>
+      <a href="#">Introduction</a>
+      <a href="#quick-start">Quick Start</a>
+      <!--Themes-->
+      <hr class="mt mb">
+      <a href="#themes">Themes</a>
+      <!--Layout-->
+      <hr class="mt mb">
+      <span>Layout</span>
+      <a href="#container">Container</a>
+      <a href="#grid">Grid</a>
+      <a href="#row">Row</a>
+      <!--Typography-->
+      <hr class="mt mb">
+      <span>Typography</span>
+      <a href="#typography-system">System</a>
+      <a href="#typography-utilities">Utilities</a>
+      <a href="#text-elements">Text Elements</a>
+      <a href="#code">Code</a>
+      <a href="#quotes">Quotes</a>
+      <!--Components-->
+      <hr class="mt mb">
         <span>Components</span>
         <a href="#cards">Cards</a>
         <a href="#buttons">Buttons</a>
@@ -103,36 +102,35 @@
         <a href="#alerts">Alerts</a>
         <a href="#tooltips">Tooltips</a>
         <a href="#toasts">Toasts</a>
-      </div>
-
-      <div class="docs-sidebar__group">
+      <!--Forms-->
+      <hr class="mt mb">  
         <span>Forms</span>
         <a href="#form-elements">Elements</a>
         <a href="#tables">Tables</a>
         <a href="#modal">Modal</a>
         <a href="#navbar">Navbar</a>
         <a href="#footer">Footer</a>
-      </div>
-
-      <div class="docs-sidebar__group">
-        <span>Utilities</span>
-        <a href="#spacing">Spacing</a>
-        <a href="#center">Center</a>
-        <a href="#text-alignment">Text Align</a>
-        <a href="#size">Size</a>
-        <a href="#border">Border</a>
-      </div>
-
-      <div class="docs-sidebar__group">
-        <span>Visuals</span>
-        <a href="#backgrounds">Backgrounds</a>
-        <a href="#effects">Effects</a>
-        <a href="#animations">Animations</a>
-      </div>
-    </aside>
-
+      <!--Utilities-->
+      <hr class="mt mb">
+      <span>Utilities</span>
+      <a href="#spacing">Spacing</a>
+      <a href="#center">Center</a>
+      <a href="#text-alignment">Text Align</a>
+      <a href="#size">Size</a>
+      <a href="#border">Border</a>
+      <!--Visuals-->
+      <hr class="mt mb">
+      <span>Visuals</span>
+      <a href="#backgrounds">Backgrounds</a>
+      <a href="#effects">Effects</a>
+      <a href="#animations">Animations</a>
+    </nav>
+  </aside>
+  <main class="docs content">
+    <!--button sidebar-->
+    <button class="sidebar__toggle">☰</button>
     <!--content ---------------------------------------------------------->
-    <section class="docs-content">
+    <section class=>
       <!--hero ---------------------------------------------------------->
       <section>
         <span class="badge mb-sm">Documentation</span>
@@ -1091,47 +1089,50 @@ selectors.forEach(selector=&gt;{
       </section>
 
       <!--Sidebar ---------------------------------------------------------->
+      <!--Sidebar ---------------------------------------------------------->
 <section id="sidebar">
   <h2>Sidebar</h2>
 
-  <p class="mb-md">Responsive sidebar for dashboards and application layouts.</p>
+  <p class="mb-md">
+    Responsive sidebar for dashboards and application layouts. On mobile,
+    use <code>.sidebar__toggle</code> to open and close the sidebar.
+  </p>
 
   <div class="card">
-    <button class="sidebar__toggle">☰</button>
-    
-    <aside class="sidebar">
-      <div class="sidebar__header"><h3>Logo</h3></div>
-      <nav class="sidebar__menu">
-        <a href="#" class="active">Dashboard</a>
-        <a href="#">Projects</a>
-        <a href="#">Settings</a>
-        <a href="#">Profile</a>
-      </nav>
-      <div class="sidebar__footer">
-        <button class="btn size-full">Logout</button>
-      </div>
-    </aside>
+
+<pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
+  &lt;aside class="sidebar"&gt;
+
+    &lt;div class="sidebar__header"&gt;
+      &lt;h3&gt;Logo&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;nav class="sidebar__menu"&gt;
+      &lt;a href="#" class="active"&gt;Dashboard&lt;/a&gt;
+      &lt;a href="#"&gt;Projects&lt;/a&gt;
+      &lt;a href="#"&gt;Settings&lt;/a&gt;
+      &lt;a href="#"&gt;Profile&lt;/a&gt;
+    &lt;/nav&gt;
+
+    &lt;div class="sidebar__footer"&gt;
+      &lt;button class="btn size-full"&gt;Logout&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/aside&gt;
+
+  &lt;main class="content"&gt;
+    &lt;button class="sidebar__toggle"&gt;☰&lt;/button&gt;
+    ...
+  &lt;/main&gt;
+
+&lt;/body&gt;</code></pre>
 
   </div>
 
-  <pre class="card-code mt"><code>&lt;button class="sidebar__toggle"&gt;☰&lt;/button&gt;
-
-&lt;aside class="sidebar"&gt;
-  &lt;div class="sidebar__header"&gt;
-    &lt;h3&gt;Logo&lt;/h3&gt;
-  &lt;/div&gt;
-
-  &lt;nav class="sidebar__menu"&gt;
-    &lt;a href="#" class="active"&gt;Dashboard&lt;/a&gt;
-    &lt;a href="#"&gt;Projects&lt;/a&gt;
-    &lt;a href="#"&gt;Settings&lt;/a&gt;
-    &lt;a href="#"&gt;Profile&lt;/a&gt;
-  &lt;/nav&gt;
-
-  &lt;div class="sidebar__footer"&gt;
-    &lt;button class="btn size-full"&gt;Logout&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/aside&gt;</code></pre>
+  <p class="mt">
+    <strong>Layout:</strong> Wrap the page with
+    <code>.sidebar-layout</code>. The sidebar occupies the left column,
+    while the main content uses the <code>.content</code> container.
+  </p>
 
 </section>
 
