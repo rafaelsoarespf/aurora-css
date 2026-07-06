@@ -44,9 +44,9 @@
 
 <body class="sidebar-layout" data-theme="aurora-light">
   <!--sidebar ---------------------------------------------------------->
-  
+
   <aside class="sidebar">
-    
+
     <!--header-->
     <div class="sidebar__header">
       <h2>Aurora CSS</h2>
@@ -95,21 +95,21 @@
       <a href="#quotes">Quotes</a>
       <!--Components-->
       <hr class="mt mb">
-        <span>Components</span>
-        <a href="#cards">Cards</a>
-        <a href="#buttons">Buttons</a>
-        <a href="#badges">Badges</a>
-        <a href="#alerts">Alerts</a>
-        <a href="#tooltips">Tooltips</a>
-        <a href="#toasts">Toasts</a>
+      <span>Components</span>
+      <a href="#cards">Cards</a>
+      <a href="#buttons">Buttons</a>
+      <a href="#badges">Badges</a>
+      <a href="#alerts">Alerts</a>
+      <a href="#tooltips">Tooltips</a>
+      <a href="#toasts">Toasts</a>
       <!--Forms-->
-      <hr class="mt mb">  
-        <span>Forms</span>
-        <a href="#form-elements">Elements</a>
-        <a href="#tables">Tables</a>
-        <a href="#modal">Modal</a>
-        <a href="#navbar">Navbar</a>
-        <a href="#footer">Footer</a>
+      <hr class="mt mb">
+      <span>Forms</span>
+      <a href="#form-elements">Elements</a>
+      <a href="#tables">Tables</a>
+      <a href="#modal">Modal</a>
+      <a href="#navbar">Navbar</a>
+      <a href="#footer">Footer</a>
       <!--Utilities-->
       <hr class="mt mb">
       <span>Utilities</span>
@@ -827,6 +827,14 @@ selectors.forEach(selector=&gt;{
         </div>
       </section>
 
+      <!--Horizontal Rule ---------------------------------------------------------->
+      <section id="horizontal-rule">
+        <h2>Horizontal Rule</h2>
+        <p>The <code>&lt;hr&gt;</code> element represents a thematic break between sections of content. Aurora CSS automatically styles it to match the active theme.</p>
+        <hr>
+        <pre class="card-code"><code>&lt;hr&gt;</code></pre>
+      </section>
+
       <!--From ---------------------------------------------------------->
       <hr>
       <section id="form">
@@ -1089,18 +1097,17 @@ selectors.forEach(selector=&gt;{
       </section>
 
       <!--Sidebar ---------------------------------------------------------->
-      <!--Sidebar ---------------------------------------------------------->
-<section id="sidebar">
-  <h2>Sidebar</h2>
+      <section id="sidebar">
+        <h2>Sidebar</h2>
 
-  <p class="mb-md">
-    Responsive sidebar for dashboards and application layouts. On mobile,
-    use <code>.sidebar__toggle</code> to open and close the sidebar.
-  </p>
+        <p class="mb-md">
+          Responsive sidebar for dashboards and application layouts. On mobile,
+          use <code>.sidebar__toggle</code> to open and close the sidebar.
+        </p>
 
-  <div class="card">
+        <div class="card">
 
-<pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
+          <pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
   &lt;aside class="sidebar"&gt;
 
     &lt;div class="sidebar__header"&gt;
@@ -1126,15 +1133,15 @@ selectors.forEach(selector=&gt;{
 
 &lt;/body&gt;</code></pre>
 
-  </div>
+        </div>
 
-  <p class="mt">
-    <strong>Layout:</strong> Wrap the page with
-    <code>.sidebar-layout</code>. The sidebar occupies the left column,
-    while the main content uses the <code>.content</code> container.
-  </p>
+        <p class="mt">
+          <strong>Layout:</strong> Wrap the page with
+          <code>.sidebar-layout</code>. The sidebar occupies the left column,
+          while the main content uses the <code>.content</code> container.
+        </p>
 
-</section>
+      </section>
 
       <!--Footer ---------------------------------------------------------->
       <section id="footer">

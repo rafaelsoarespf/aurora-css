@@ -167,6 +167,14 @@ pre code {
   text-align: left;
 }
 
+/*hr ------------------------------------------------*/
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  opacity: .9;
+  margin: 2rem 0;
+}
+
 /*q ---------------------------------------------------------*/
 q {
   color: color-mix(in srgb,var(--color-accent) 70%,rgba(68, 68, 68, 0.01));
