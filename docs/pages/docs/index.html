@@ -49,7 +49,7 @@
 
     <!--header-->
     <div class="sidebar__header">
-      <h2>Aurora CSS</h2>
+      <a href="#" class="subtitle">Aurora CSS</a>
     </div>
     <!--sidebar menu-->
     <nav class="sidebar__menu">
@@ -73,9 +73,7 @@
       </select>
       <!--Getting Started-->
       <hr class="mt mb">
-      <span>Getting Started</span>
-      <a href="#">Introduction</a>
-      <a href="#quick-start">Quick Start</a>
+      <a href="#installation">Installation</a>
       <!--Themes-->
       <hr class="mt mb">
       <a href="#themes">Themes</a>
@@ -126,66 +124,66 @@
       <a href="#animations">Animations</a>
     </nav>
   </aside>
-  <main class="docs content">
+  <main class="docs content container">
     <!--button sidebar-->
     <button class="sidebar__toggle">☰</button>
-    <!--content ---------------------------------------------------------->
-    <section class=>
-      <!--hero ---------------------------------------------------------->
-      <section>
-        <span class="badge mb-sm">Documentation</span>
-        <h1>Aurora CSS</h1>
-        <p class="size-md">Everything you need to build modern interfaces with Aurora.</p>
-      </section>
+    <!--hero ---------------------------------------------------------->
+    <section>
+      <span class="badge mb-sm">Documentation</span>
+      <h1>Aurora CSS</h1>
+      <p>Learn how to use Aurora CSS, explore its components, and build consistent interfaces with the framework.</p>
+    </section>
 
-      <!--Instalation ---------------------------------------------------------->
-      <section id="quick-start">
-        <h2>Quick Start</h2>
-        <p>Download the Aurora CSS files from the repository and add the<code>css</code> folder to your project.</p>
-        <pre class="card-code mb"><code>css/
+    <!--Instalation ---------------------------------------------------------->
+    <hr>
+    <section id="installation">
+      <span class="badge mb-sm">Installation</span>
+      <h2>Installation</h2>
+      <p>Download the Aurora CSS files from the repository and add the<code>css</code> folder to your project.</p>
+      <pre class="card-code mb"><code>css/
 ├─ reset.css
 ├─ globals.css
 ├─ classes.css
 └─ themes.css</code></pre>
-        <p>Then import the Aurora stylesheets:</p>
-        <pre class="card-code"><code>&lt;link rel="stylesheet" href="./css/reset.css"&gt;
+      <p>Then import the Aurora stylesheets:</p>
+      <pre class="card-code"><code>&lt;link rel="stylesheet" href="./css/reset.css"&gt;
 &lt;link rel="stylesheet" href="./css/globals.css"&gt;
 &lt;link rel="stylesheet" href="./css/classes.css"&gt;
 &lt;link rel="stylesheet" href="./css/themes.css"&gt;</code></pre>
-      </section>
+    </section>
 
-      <!--Themes ---------------------------------------------------------->
-      <hr>
-      <section>
-        <span class="badge mb-sm">Themes</span>
-        <h2>Themes</h2>
-        <p>Utilities for building responsive and scalable page structures.</p>
-      </section>
-      <section>
+    <!--Themes ---------------------------------------------------------->
+    <hr>
+    <section id="themes">
+      <span class="badge mb-sm">Themes</span>
+      <h2>Themes</h2>
+      <p>Utilities for building responsive and scalable page structures.</p>
+    </section>
+    <section>
 
-        <!--theme selector-->
-        <div class="card">
-          <h4>Theme Selector</h4>
+      <!--theme selector-->
+      <div class="card">
+        <h4>Theme Selector</h4>
 
-          <select class="theme-selector border-pulse">
-            <option value="aurora-light">Aurora Light</option>
-            <option value="aurora-dark">Aurora Dark</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-            <option value="light-teal">Light Teal</option>
-            <option value="dark-teal">Dark Teal</option>
-            <option value="coffee">Coffee</option>
-            <option value="paper">Paper</option>
-            <option value="neumorphism">Neumorphism</option>
-            <option value="glass">Glass</option>
-            <option value="forest">Forest</option>
-            <option value="nord">Nord</option>
-            <option value="sakura">Sakura</option>
-            <option value="gold">Gold</option>
-          </select>
+        <select class="theme-selector border-pulse">
+          <option value="aurora-light">Aurora Light</option>
+          <option value="aurora-dark">Aurora Dark</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="light-teal">Light Teal</option>
+          <option value="dark-teal">Dark Teal</option>
+          <option value="coffee">Coffee</option>
+          <option value="paper">Paper</option>
+          <option value="neumorphism">Neumorphism</option>
+          <option value="glass">Glass</option>
+          <option value="forest">Forest</option>
+          <option value="nord">Nord</option>
+          <option value="sakura">Sakura</option>
+          <option value="gold">Gold</option>
+        </select>
 
-          <span class="text mt">HTML</span>
-          <pre class="card-code"><code>&lt;select class="theme-selector"&gt;
+        <span class="text mt">HTML</span>
+        <pre class="card-code"><code>&lt;select class="theme-selector"&gt;
   &lt;option value="aurora-light"&gt;Aurora Light&lt;/option&gt;
   &lt;option value="aurora-dark"&gt;Aurora Dark&lt;/option&gt;
   &lt;option value="light"&gt;Light&lt;/option&gt;
@@ -202,8 +200,8 @@
   &lt;option value="gold"&gt;Gold&lt;/option&gt;
 &lt;/select&gt;</code></pre>
 
-          <span class="text mt">TypeScript</span>
-          <pre class="card-code"><code>const selectors=document.querySelectorAll&lt;HTMLSelectElement&gt;('.theme-selector');
+        <span class="text mt">TypeScript</span>
+        <pre class="card-code"><code>const selectors=document.querySelectorAll&lt;HTMLSelectElement&gt;('.theme-selector');
 const savedTheme=localStorage.getItem('aurora-theme');
 
 if(savedTheme){
@@ -221,721 +219,722 @@ selectors.forEach(selector=&gt;{
     selectors.forEach(s=&gt;s.value=theme);
   });
 });</code></pre>
+      </div>
+
+    </section>
+    <section id="">
+      <p class="mt-lg"><strong>Themes</strong> predefined visual styles for Aurora applications.</p>
+      <span class="text">Usage</span>
+      <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
+      <div class="grid-2">
+        <!--aurora-light-->
+        <div class="card bg" data-theme="aurora-light">
+          <h4>aurora-light</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="aurora-light"</code></pre>
+        </div>
+        <!--aurora-dark-->
+        <div class="card bg" data-theme="aurora-dark">
+          <h4>aurora-dark</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="aurora-dark"</code></pre>
+        </div>
+        <!--light-->
+        <div class="card" data-theme="light">
+          <h4>light</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="light"</code></pre>
+        </div>
+        <!--dark-->
+        <div class="card" data-theme="dark">
+          <h4>dark</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="dark"</code></pre>
+        </div>
+        <!--light-teal-->
+        <div class="card" data-theme="light-teal">
+          <h4>light-teal</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="light-teal"</code></pre>
+        </div>
+        <!--dark-teal-->
+        <div class="card" data-theme="dark-teal">
+          <h4>dark-teal</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="dark-teal"</code></pre>
+        </div>
+        <!--glass-->
+        <div class="card bg" data-theme="glass">
+          <h4>glass</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="glass"</code></pre>
+        </div>
+        <!--forest-->
+        <div class="card bg" data-theme="forest">
+          <h4>forest</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="forest"</code></pre>
+        </div>
+        <!--nord-->
+        <div class="card bg" data-theme="nord">
+          <h4>nord</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="nord"</code></pre>
+        </div>
+        <!--sakura-->
+        <div class="card bg" data-theme="sakura">
+          <h4>sakura</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="sakura"</code></pre>
+        </div>
+        <!--gold-->
+        <div class="card bg" data-theme="gold">
+          <h4>gold</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="gold"</code></pre>
+        </div>
+        <!--coffee-->
+        <div class="card bg" data-theme="coffee">
+          <h4>coffee</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="coffee"</code></pre>
+        </div>
+        <!--paper-->
+        <div class="card bg" data-theme="paper">
+          <h4>paper</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="paper"</code></pre>
+        </div>
+        <!--neumorphism-->
+        <div class="card bg" data-theme="neumorphism">
+          <h4>neumorphism</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="neumorphism"</code></pre>
         </div>
 
-      </section>
-      <section id="themes">
-        <p class="mt-lg"><strong>Themes</strong> predefined visual styles for Aurora applications.</p>
-        <span class="text">Usage</span>
-        <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
-        <div class="grid-2">
-          <!--aurora-light-->
-          <div class="card bg" data-theme="aurora-light">
-            <h4>aurora-light</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="aurora-light"</code></pre>
-          </div>
-          <!--aurora-dark-->
-          <div class="card bg" data-theme="aurora-dark">
-            <h4>aurora-dark</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="aurora-dark"</code></pre>
-          </div>
-          <!--light-->
-          <div class="card" data-theme="light">
-            <h4>light</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="light"</code></pre>
-          </div>
-          <!--dark-->
-          <div class="card" data-theme="dark">
-            <h4>dark</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="dark"</code></pre>
-          </div>
-          <!--light-teal-->
-          <div class="card" data-theme="light-teal">
-            <h4>light-teal</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="light-teal"</code></pre>
-          </div>
-          <!--dark-teal-->
-          <div class="card" data-theme="dark-teal">
-            <h4>dark-teal</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="dark-teal"</code></pre>
-          </div>
-          <!--glass-->
-          <div class="card bg" data-theme="glass">
-            <h4>glass</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="glass"</code></pre>
-          </div>
-          <!--forest-->
-          <div class="card bg" data-theme="forest">
-            <h4>forest</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="forest"</code></pre>
-          </div>
-          <!--nord-->
-          <div class="card bg" data-theme="nord">
-            <h4>nord</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="nord"</code></pre>
-          </div>
-          <!--sakura-->
-          <div class="card bg" data-theme="sakura">
-            <h4>sakura</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="sakura"</code></pre>
-          </div>
-          <!--gold-->
-          <div class="card bg" data-theme="gold">
-            <h4>gold</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="gold"</code></pre>
-          </div>
-          <!--coffee-->
-          <div class="card bg" data-theme="coffee">
-            <h4>coffee</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="coffee"</code></pre>
-          </div>
-          <!--paper-->
-          <div class="card bg" data-theme="paper">
-            <h4>paper</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="paper"</code></pre>
-          </div>
-          <!--neumorphism-->
-          <div class="card bg" data-theme="neumorphism">
-            <h4>neumorphism</h4>
-            <p>The quick brown fox jumps over the lazy dog.</p>
-            <button class="btn">Button</button>
-            <span class="badge">Badge</span>
-            <pre class="card-code"><code>data-theme="neumorphism"</code></pre>
-          </div>
+      </div>
+    </section>
+    <!--Layout ---------------------------------------------------------->
+    <hr>
+    <section>
+      <span class="badge mb-sm">Layout</span>
+      <h2>Layout System</h2>
+      <p>Utilities for building responsive and scalable page structures.</p>
+    </section>
+    <!--Container ---------------------------------------------------------->
+    <section id="container">
+      <h2>Container</h2>
+      <p>Center content and control maximum width.</p>
+      <div class="container card mb center-items">Container</div>
+      <pre class="card-code"><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
+    </section>
+    <!-- Grid ---------------------------------------------------------->
+    <section id="grid">
+      <h2>Grid</h2>
+      <p>Flexible grid utilities for scalable and modern layouts.</p>
 
+      <!-- Grids ---------------------------------------------------------->
+      <div class="card mb-md">
+        <h3>Grids</h3>
+        <!--grid-2-->
+        <p class="mt center-self">grid-2</p>
+        <div class="grid-2 mb">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
         </div>
-      </section>
-      <!--Layout ---------------------------------------------------------->
-      <hr>
-      <section>
-        <span class="badge mb-sm">Layout</span>
-        <h2>Layout System</h2>
-        <p>Utilities for building responsive and scalable page structures.</p>
-      </section>
-      <!--Container ---------------------------------------------------------->
-      <section id="container">
-        <h2>Container</h2>
-        <p>Center content and control maximum width.</p>
-        <div class="container card mb center-items">Container</div>
-        <pre class="card-code"><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
-      </section>
-      <!-- Grid ---------------------------------------------------------->
-      <section id="grid">
-        <h2>Grid</h2>
-        <p>Flexible grid utilities for scalable and modern layouts.</p>
+        <!--grid-3-->
+        <p class="center-self">grid-3</p>
+        <div class="grid-3 mb">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+        </div>
+        <!--grid-4-->
+        <p class="center-self">grid-4</p>
+        <div class="grid-4 mb">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+        </div>
+        <!--grid-5-->
+        <p class="center-self">grid-5</p>
+        <div class="grid-5 mb">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+          <div class="card center-items">5</div>
+        </div>
+        <!--grid-6-->
+        <p class="center-self">grid-6</p>
+        <div class="grid-6 mb">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+          <div class="card center-items">5</div>
+          <div class="card center-items">6</div>
+        </div>
+        <!--grid-7-->
+        <p class="center-self">grid-7</p>
+        <div class="grid-7 mb">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+          <div class="card center-items">5</div>
+          <div class="card center-items">6</div>
+          <div class="card center-items">7</div>
+        </div>
 
-        <!-- Grids ---------------------------------------------------------->
-        <div class="card mb-md">
-          <h3>Grids</h3>
-          <!--grid-2-->
-          <p class="mt center-self">grid-2</p>
-          <div class="grid-2 mb">
-            <div class="card center-items">1</div>
-            <div class="card center-items">2</div>
-          </div>
-          <!--grid-3-->
-          <p class="center-self">grid-3</p>
-          <div class="grid-3 mb">
-            <div class="card center-items">1</div>
-            <div class="card center-items">2</div>
-            <div class="card center-items">3</div>
-          </div>
-          <!--grid-4-->
-          <p class="center-self">grid-4</p>
-          <div class="grid-4 mb">
-            <div class="card center-items">1</div>
-            <div class="card center-items">2</div>
-            <div class="card center-items">3</div>
-            <div class="card center-items">4</div>
-          </div>
-          <!--grid-5-->
-          <p class="center-self">grid-5</p>
-          <div class="grid-5 mb">
-            <div class="card center-items">1</div>
-            <div class="card center-items">2</div>
-            <div class="card center-items">3</div>
-            <div class="card center-items">4</div>
-            <div class="card center-items">5</div>
-          </div>
-          <!--grid-6-->
-          <p class="center-self">grid-6</p>
-          <div class="grid-6 mb">
-            <div class="card center-items">1</div>
-            <div class="card center-items">2</div>
-            <div class="card center-items">3</div>
-            <div class="card center-items">4</div>
-            <div class="card center-items">5</div>
-            <div class="card center-items">6</div>
-          </div>
-          <!--grid-7-->
-          <p class="center-self">grid-7</p>
-          <div class="grid-7 mb">
-            <div class="card center-items">1</div>
-            <div class="card center-items">2</div>
-            <div class="card center-items">3</div>
-            <div class="card center-items">4</div>
-            <div class="card center-items">5</div>
-            <div class="card center-items">6</div>
-            <div class="card center-items">7</div>
-          </div>
-
-          <pre class="card-code mt"><code>&lt;div class="grid-2"&gt;...&lt;/div&gt;
+        <pre class="card-code mt"><code>&lt;div class="grid-2"&gt;...&lt;/div&gt;
 &lt;div class="grid-3"&gt;...&lt;/div&gt;
 &lt;div class="grid-4"&gt;...&lt;/div&gt;
 &lt;div class="grid-5"&gt;...&lt;/div&gt;
 &lt;div class="grid-6"&gt;...&lt;/div&gt;
 &lt;div class="grid-7"&gt;...&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Column Span ---------------------------------------------------------->
+      <div class="card">
+        <h3>Column Span</h3>
+        <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
+
+        <p class="center-self">grid-4 + col-3</p>
+        <div class="grid-4 mb">
+          <div class="card col-3 center-items">col-3</div>
+          <div class="card center-items">1</div>
         </div>
 
-        <!-- Column Span ---------------------------------------------------------->
-        <div class="card">
-          <h3>Column Span</h3>
-          <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
+        <p class="center-self">grid-5 + col-2</p>
+        <div class="grid-5">
+          <div class="card col-2 center-items">col-2</div>
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+        </div>
 
-          <p class="center-self">grid-4 + col-3</p>
-          <div class="grid-4 mb">
-            <div class="card col-3 center-items">col-3</div>
-            <div class="card center-items">1</div>
-          </div>
-
-          <p class="center-self">grid-5 + col-2</p>
-          <div class="grid-5">
-            <div class="card col-2 center-items">col-2</div>
-            <div class="card center-items">1</div>
-            <div class="card center-items">2</div>
-            <div class="card center-items">3</div>
-          </div>
-
-          <pre class="card-code mt"><code>&lt;div class="grid-4"&gt;
+        <pre class="card-code mt"><code>&lt;div class="grid-4"&gt;
   &lt;div class="col-3"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class="grid-5"&gt;
   &lt;div class="col-2"&gt;...&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <!--row ---------------------------------------------------------->
-      <section id="row">
-        <h2>Row</h2>
-        <p>Horizontal alignment utilities for inline layouts.</p>
+    <!--row ---------------------------------------------------------->
+    <section id="row">
+      <h2>Row</h2>
+      <p>Horizontal alignment utilities for inline layouts.</p>
 
-        <div class="grid-2">
-          <!--row-->
-          <div class="fx-dots">
-            <div class="row">
-              <div class="card bg-soft">1</div>
-              <div class="card bg-soft">2</div>
-              <div class="card bg-soft">3</div>
-            </div>
-          </div>
-          <pre class="card-code"><code>&lt;div class="row"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-          <!--row+center-->
-          <div class="row center-items fx-dots mb">
+      <div class="grid-2">
+        <!--row-->
+        <div class="fx-dots">
+          <div class="row">
             <div class="card bg-soft">1</div>
             <div class="card bg-soft">2</div>
             <div class="card bg-soft">3</div>
           </div>
-          <pre class="card-code"><code>&lt;div class="row center-items"&gt;
+        </div>
+        <pre class="card-code"><code>&lt;div class="row"&gt;
   &lt;div&gt;1&lt;/div&gt;
   &lt;div&gt;2&lt;/div&gt;
   &lt;div&gt;3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+        <!--row+center-->
+        <div class="row center-items fx-dots mb">
+          <div class="card bg-soft">1</div>
+          <div class="card bg-soft">2</div>
+          <div class="card bg-soft">3</div>
         </div>
-      </section>
+        <pre class="card-code"><code>&lt;div class="row center-items"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
 
-      <!--Typography ---------------------------------------------------------->
-      <hr>
-      <section id="typography">
-        <span class="badge mb-sm">Typography</span>
-        <h2>Typography</h2>
-        <p>Aurora provides a simplified typography system based on title, subtitle and text styles.</p>
-      </section>
+    <!--Typography ---------------------------------------------------------->
+    <hr>
+    <section id="typography">
+      <span class="badge mb-sm">Typography</span>
+      <h2>Typography</h2>
+      <p>Aurora provides a simplified typography system based on title, subtitle and text styles.</p>
+    </section>
 
-      <!--Typography System ---------------------------------------------------------->
-      <section id="typography-system">
-        <h2>Typography System</h2>
-        <p>Semantic elements already include Aurora typography styles by default.</p>
+    <!--Typography System ---------------------------------------------------------->
+    <section id="typography-system">
+      <h2>Typography System</h2>
+      <p>Semantic elements already include Aurora typography styles by default.</p>
 
-        <div class="grid-3">
-          <!--title-->
-          <div class="card">
-            <p class="mb-sm center-self">Title</p>
-            <h1 class="center-self">Title</h1>
-            <pre class="card-code"><code>&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
-          </div>
-          <!--subtitle-->
-          <div class="card">
-            <p class="mb-sm center-self">Subtitle</p>
-            <h2 class="center-self">Subtitle</h2>
-            <pre class="card-code"><code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code></pre>
-          </div>
-          <!--text-->
-          <div class="card">
-            <p class="mb-sm center-self">Text</p>
-            <p class="center-self">Text</p>
-            <pre class="card-code"><code>&lt;p&gt;Text&lt;/p&gt;</code></pre>
-          </div>
+      <div class="grid-3">
+        <!--title-->
+        <div class="card">
+          <p class="mb-sm center-self">Title</p>
+          <h1 class="center-self">Title</h1>
+          <pre class="card-code"><code>&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
         </div>
-      </section>
-
-      <!--Typography Classes ---------------------------------------------------------->
-      <section id="typography-utilities">
-        <h2>Typography Utilities</h2>
-        <p>Apply Aurora typography styles to any element.</p>
-
-        <div class="grid-2">
-          <div class="card text-center">
-            <p class="mb-sm">.title</p>
-            <span class="title">Title</span>
-            <pre class="card-code"><code>&lt;span class="title"&gt;Title&lt;/span&gt;</code></pre>
-          </div>
-
-          <div class="card text-center">
-            <p class="mb-sm">.subtitle</p>
-            <span class="subtitle">Subtitle</span>
-            <pre class="card-code"><code>&lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;</code></pre>
-          </div>
-
-          <div class="card text-center">
-            <p class="mb-sm">.text</p>
-            <span class="text">Text</span>
-            <pre class="card-code"><code>&lt;span class="text"&gt;Text&lt;/span&gt;</code></pre>
-          </div>
-
-          <div class="card text-center">
-            <p class="mb-sm">.text-accent</p>
-            <span class="text-accent">Accent Text</span>
-            <pre class="card-code"><code>&lt;span class="text-accent"&gt;Accent Text&lt;/span&gt;</code></pre>
-          </div>
-
+        <!--subtitle-->
+        <div class="card">
+          <p class="mb-sm center-self">Subtitle</p>
+          <h2 class="center-self">Subtitle</h2>
+          <pre class="card-code"><code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code></pre>
         </div>
-      </section>
-
-      <!--Text Elements ---------------------------------------------------------->
-      <section id="text-elements">
-        <h2>Text Elements</h2>
-        <p>Semantic elements for emphasis and annotations.</p>
-        <div class="grid-2">
-
-          <div class="card text-center">
-            <p class="mb-sm">&lt;strong&gt;</p>
-            <p><strong>Strong Text</strong></p>
-            <pre class="card-code"><code>&lt;strong&gt;Strong Text&lt;/strong&gt;</code></pre>
-          </div>
-
-          <div class="card text-center">
-            <p class="mb-sm">&lt;mark&gt;</p>
-            <p><mark>Highlighted Text</mark></p>
-            <pre class="card-code"><code>&lt;mark&gt;Highlighted Text&lt;/mark&gt;</code></pre>
-          </div>
-
-          <div class="card text-center">
-            <p class="mb-sm">&lt;abbr&gt;</p>
-            <p><abbr title="Cascading Style Sheets">CSS</abbr></p>
-            <pre class="card-code"><code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;</code></pre>
-          </div>
-
+        <!--text-->
+        <div class="card">
+          <p class="mb-sm center-self">Text</p>
+          <p class="center-self">Text</p>
+          <pre class="card-code"><code>&lt;p&gt;Text&lt;/p&gt;</code></pre>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--Code ---------------------------------------------------------->
-      <section id="code">
-        <h2>Code</h2>
-        <p>Inline and block code formatting.</p>
+    <!--Typography Classes ---------------------------------------------------------->
+    <section id="typography-utilities">
+      <h2>Typography Utilities</h2>
+      <p>Apply Aurora typography styles to any element.</p>
 
-        <div class="grid-2">
-          <!--Inline Code-->
-          <div class="card">
-            <p class="mb center-self">Inline Code</p>
-            <p class="mb-sm">Use <code>code</code> for inline code snippets.</p>
-            <pre class="card-code"><code>&lt;code&gt;code&lt;/code&gt;</code></pre>
-          </div>
+      <div class="grid-2">
+        <div class="card text-center">
+          <p class="mb-sm">.title</p>
+          <span class="title">Title</span>
+          <pre class="card-code"><code>&lt;span class="title"&gt;Title&lt;/span&gt;</code></pre>
+        </div>
 
-          <!--Code Block-->
-          <div class="card">
-            <p class="mb-sm center-self">Code Block</p>
-            <pre><code>Example block content</code></pre>
-            <pre class="card-code"><code>&lt;pre&gt;
+        <div class="card text-center">
+          <p class="mb-sm">.subtitle</p>
+          <span class="subtitle">Subtitle</span>
+          <pre class="card-code"><code>&lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;</code></pre>
+        </div>
+
+        <div class="card text-center">
+          <p class="mb-sm">.text</p>
+          <span class="text">Text</span>
+          <pre class="card-code"><code>&lt;span class="text"&gt;Text&lt;/span&gt;</code></pre>
+        </div>
+
+        <div class="card text-center">
+          <p class="mb-sm">.text-accent</p>
+          <span class="text-accent">Accent Text</span>
+          <pre class="card-code"><code>&lt;span class="text-accent"&gt;Accent Text&lt;/span&gt;</code></pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!--Text Elements ---------------------------------------------------------->
+    <section id="text-elements">
+      <h2>Text Elements</h2>
+      <p>Semantic elements for emphasis and annotations.</p>
+      <div class="grid-2">
+
+        <div class="card text-center">
+          <p class="mb-sm">&lt;strong&gt;</p>
+          <p><strong>Strong Text</strong></p>
+          <pre class="card-code"><code>&lt;strong&gt;Strong Text&lt;/strong&gt;</code></pre>
+        </div>
+
+        <div class="card text-center">
+          <p class="mb-sm">&lt;mark&gt;</p>
+          <p><mark>Highlighted Text</mark></p>
+          <pre class="card-code"><code>&lt;mark&gt;Highlighted Text&lt;/mark&gt;</code></pre>
+        </div>
+
+        <div class="card text-center">
+          <p class="mb-sm">&lt;abbr&gt;</p>
+          <p><abbr title="Cascading Style Sheets">CSS</abbr></p>
+          <pre class="card-code"><code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;</code></pre>
+        </div>
+
+      </div>
+    </section>
+
+    <!--Code ---------------------------------------------------------->
+    <section id="code">
+      <h2>Code</h2>
+      <p>Inline and block code formatting.</p>
+
+      <div class="grid-2">
+        <!--Inline Code-->
+        <div class="card">
+          <p class="mb center-self">Inline Code</p>
+          <p class="mb-sm">Use <code>code</code> for inline code snippets.</p>
+          <pre class="card-code"><code>&lt;code&gt;code&lt;/code&gt;</code></pre>
+        </div>
+
+        <!--Code Block-->
+        <div class="card">
+          <p class="mb-sm center-self">Code Block</p>
+          <pre><code>Example block content</code></pre>
+          <pre class="card-code"><code>&lt;pre&gt;
   &lt;code&gt;Example block content&lt;/code&gt;
 &lt;/pre&gt;</code></pre>
-          </div>
-
         </div>
-      </section>
 
-      <!--Code Card ---------------------------------------------------------->
-      <section>
-        <h2>Code Card</h2>
-        <p>Display formatted code snippets inside a styled container.</p>
+      </div>
+    </section>
 
-        <div class="grid-2">
-          <div class="card text-center">
-            <p class="mb-sm">Preview</p>
-            <pre class="card-code"><code>Example code snippet</code></pre>
-          </div>
+    <!--Code Card ---------------------------------------------------------->
+    <section>
+      <h2>Code Card</h2>
+      <p>Display formatted code snippets inside a styled container.</p>
 
-          <div class="card text-center">
-            <p class="mb-sm">Usage</p>
-            <pre class="card-code"><code>&lt;pre class="card-code"&gt;
+      <div class="grid-2">
+        <div class="card text-center">
+          <p class="mb-sm">Preview</p>
+          <pre class="card-code"><code>Example code snippet</code></pre>
+        </div>
+
+        <div class="card text-center">
+          <p class="mb-sm">Usage</p>
+          <pre class="card-code"><code>&lt;pre class="card-code"&gt;
   &lt;code&gt;Example code snippet&lt;/code&gt;
 &lt;/pre&gt;</code></pre>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--Quotes ---------------------------------------------------------->
-      <section id="quotes">
-        <h2>Quotes</h2>
-        <p>Elements for quotations and citations.</p>
-        <div class="grid-2">
-          <!--Inline Quote-->
-          <div class="card">
-            <p class="mb-sm text-center">Inline Quote</p>
-            <p><q>Inline Quote.</q></p>
-            <pre class="card-code"><code>&lt;q&gt;Inline Quote.&lt;/q&gt;</code></pre>
-          </div>
+    <!--Quotes ---------------------------------------------------------->
+    <section id="quotes">
+      <h2>Quotes</h2>
+      <p>Elements for quotations and citations.</p>
+      <div class="grid-2">
+        <!--Inline Quote-->
+        <div class="card">
+          <p class="mb-sm text-center">Inline Quote</p>
+          <p><q>Inline Quote.</q></p>
+          <pre class="card-code"><code>&lt;q&gt;Inline Quote.&lt;/q&gt;</code></pre>
+        </div>
 
-          <!--Blockquote-->
-          <div class="card">
-            <p class="mb-sm text-center">Blockquote</p>
-            <blockquote>Aurora CSS focuses on atmospheric interfaces,
-              reusable utilities and scalable design systems.
-              <footer>Aurora Documentation</footer>
-            </blockquote>
-            <pre class="card-code"><code>&lt;blockquote&gt;
+        <!--Blockquote-->
+        <div class="card">
+          <p class="mb-sm text-center">Blockquote</p>
+          <blockquote>Aurora CSS focuses on atmospheric interfaces,
+            reusable utilities and scalable design systems.
+            <footer>Aurora Documentation</footer>
+          </blockquote>
+          <pre class="card-code"><code>&lt;blockquote&gt;
   Aurora CSS focuses on atmospheric interfaces,
   reusable utilities and scalable design systems.
   &lt;footer&gt;Aurora Documentation&lt;/footer&gt;
 &lt;/blockquote&gt;</code></pre>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--Components ---------------------------------------------------------->
-      <hr>
-      <section>
-        <span class="badge mb-sm">Components</span>
-        <h2>Components</h2>
-        <p>Reusable interface elements for building consistent user experiences.</p>
-      </section>
+    <!--Components ---------------------------------------------------------->
+    <hr>
+    <section>
+      <span class="badge mb-sm">Components</span>
+      <h2>Components</h2>
+      <p>Reusable interface elements for building consistent user experiences.</p>
+    </section>
 
-      <!--Cards---------------------------------------------------------->
-      <section id="cards">
-        <h2>Card</h2>
-        <p>Flexible container for grouping related content.</p>
-        <div class="grid-2">
+    <!--Cards---------------------------------------------------------->
+    <section id="cards">
+      <h2>Card</h2>
+      <p>Flexible container for grouping related content.</p>
+      <div class="grid-2">
 
-          <!--Card-->
-          <div class="card center">
-            <h1>Card</h1>
-            <p>Default card style.</p>
-          </div>
-          <pre class="card-code"><code>&lt;div class="card"&gt;
+        <!--Card-->
+        <div class="card center">
+          <h1>Card</h1>
+          <p>Default card style.</p>
+        </div>
+        <pre class="card-code"><code>&lt;div class="card"&gt;
   &lt;h1&gt;Card&lt;/h1&gt;
   &lt;p&gt;Default card style.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
-          <!--Card Ghost-->
-          <div class="card-ghost center">
-            <h1>Card Ghost</h1>
-            <p>Minimal appearance.</p>
-          </div>
-          <pre class="card-code"><code>&lt;div class="card-ghost"&gt;
+        <!--Card Ghost-->
+        <div class="card-ghost center">
+          <h1>Card Ghost</h1>
+          <p>Minimal appearance.</p>
+        </div>
+        <pre class="card-code"><code>&lt;div class="card-ghost"&gt;
   &lt;h1&gt;Card Ghost&lt;/h1&gt;
   &lt;p&gt;Minimal appearance.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
-          <!--Card Outline-->
-          <div class="card-outline center">
-            <h1>Card Outline</h1>
-            <p>Accent border style.</p>
-          </div>
-          <pre class="card-code"><code>&lt;div class="card-outline"&gt;
+        <!--Card Outline-->
+        <div class="card-outline center">
+          <h1>Card Outline</h1>
+          <p>Accent border style.</p>
+        </div>
+        <pre class="card-code"><code>&lt;div class="card-outline"&gt;
   &lt;h1&gt;Card Outline&lt;/h1&gt;
   &lt;p&gt;Accent border style.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
-          <!--Card Soft-->
-          <div class="card-soft center">
-            <h1>Card Soft</h1>
-            <p>Subtle accent background.</p>
-          </div>
-          <pre class="card-code"><code>&lt;div class="card-soft"&gt;
+        <!--Card Soft-->
+        <div class="card-soft center">
+          <h1>Card Soft</h1>
+          <p>Subtle accent background.</p>
+        </div>
+        <pre class="card-code"><code>&lt;div class="card-soft"&gt;
   &lt;h1&gt;Card Soft&lt;/h1&gt;
   &lt;p&gt;Subtle accent background.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
-          <!--Card Glow-->
-          <div class="card-glow center">
-            <h1>Card Glow</h1>
-            <p>Highlighted content.</p>
-          </div>
-          <pre class="card-code"><code>&lt;div class="card-glow"&gt;
+        <!--Card Glow-->
+        <div class="card-glow center">
+          <h1>Card Glow</h1>
+          <p>Highlighted content.</p>
+        </div>
+        <pre class="card-code"><code>&lt;div class="card-glow"&gt;
   &lt;h1&gt;Card Glow&lt;/h1&gt;
   &lt;p&gt;Highlighted content.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
 
+      </div>
+    </section>
+
+
+    <!--Buttons ---------------------------------------------------------->
+    <section id="buttons">
+      <h2>Buttons</h2>
+      <p>Interactive actions with multiple visual styles.</p>
+
+      <div class="grid-2">
+        <!--btn-->
+        <div class="card">
+          <button class="btn center mb">Button</button>
+          <pre class="card-code"><code>&lt;button class="btn"&gt;Button&lt;/button&gt;</code></pre>
         </div>
-      </section>
 
-
-      <!--Buttons ---------------------------------------------------------->
-      <section id="buttons">
-        <h2>Buttons</h2>
-        <p>Interactive actions with multiple visual styles.</p>
-
-        <div class="grid-2">
-          <!--btn-->
-          <div class="card">
-            <button class="btn center mb">Button</button>
-            <pre class="card-code"><code>&lt;button class="btn"&gt;Button&lt;/button&gt;</code></pre>
-          </div>
-
-          <!--btn ghost-->
-          <div class="card">
-            <button class="btn-ghost center mb">Ghost</button>
-            <pre class="card-code"><code>&lt;button class="btn-ghost"&gt;Ghost&lt;/button&gt;</code></pre>
-          </div>
-
-          <!--btn outline-->
-          <div class="card">
-            <button class="btn-outline center mb">Outline</button>
-            <pre class="card-code"><code>&lt;button class="btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
-          </div>
-
-          <!--btn soft-->
-          <div class="card">
-            <button class="btn-soft center mb">Soft</button>
-            <pre class="card-code"><code>&lt;button class="btn-soft"&gt;Soft&lt;/button&gt;</code></pre>
-          </div>
-
-          <!--btn glow-->
-          <div class="card">
-            <button class="btn-glow center mb">Glow</button>
-            <pre class="card-code"><code>&lt;button class="btn-glow"&gt;Glow&lt;/button&gt;</code></pre>
-          </div>
-
-          <!--btn none-->
-          <div class="card">
-            <button class="btn-none center mb">None</button>
-            <pre class="card-code"><code>&lt;button class="btn-none"&gt;None&lt;/button&gt;</code></pre>
-          </div>
+        <!--btn ghost-->
+        <div class="card">
+          <button class="btn-ghost center mb">Ghost</button>
+          <pre class="card-code"><code>&lt;button class="btn-ghost"&gt;Ghost&lt;/button&gt;</code></pre>
         </div>
-      </section>
 
-      <!--Badges ---------------------------------------------------------->
-      <section id="badges">
-        <h2>Badges</h2>
-        <p>Small highlight elements for labels and status.</p>
-        <div class="grid-2">
-          <!--badge-->
-          <span class="badge center-self">Badge</span>
-          <pre class="card-code"><code>&lt;span class="badge"&gt;Badge&lt;/span&gt;</code></pre>
-          <!--badge accent-->
-          <span class="badge bg-accent center-self">Badge Accent</span>
-          <pre class="card-code"><code>&lt;span class="badge bg-accent"&gt;Badge&lt;/span&gt;</code></pre>
+        <!--btn outline-->
+        <div class="card">
+          <button class="btn-outline center mb">Outline</button>
+          <pre class="card-code"><code>&lt;button class="btn-outline"&gt;Outline&lt;/button&gt;</code></pre>
         </div>
-      </section>
 
-      <!--Alert ---------------------------------------------------------->
-      <section id="alerts">
-        <h2>Alert</h2>
-        <p>Contextual message component for important information.</p>
-        <div class="alert mb">This is an <strong>alert message.</strong></div>
-        <div class="alert bg-accent mb">This is an <strong>alert message.</strong></div>
-        <pre class="card-code"><code>&lt;div class="alert"&gt;This is an &lt;strong&gt;alert message.&lt;/strong&gt;&lt;/div&gt;
+        <!--btn soft-->
+        <div class="card">
+          <button class="btn-soft center mb">Soft</button>
+          <pre class="card-code"><code>&lt;button class="btn-soft"&gt;Soft&lt;/button&gt;</code></pre>
+        </div>
+
+        <!--btn glow-->
+        <div class="card">
+          <button class="btn-glow center mb">Glow</button>
+          <pre class="card-code"><code>&lt;button class="btn-glow"&gt;Glow&lt;/button&gt;</code></pre>
+        </div>
+
+        <!--btn none-->
+        <div class="card">
+          <button class="btn-none center mb">None</button>
+          <pre class="card-code"><code>&lt;button class="btn-none"&gt;None&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!--Badges ---------------------------------------------------------->
+    <section id="badges">
+      <h2>Badges</h2>
+      <p>Small highlight elements for labels and status.</p>
+      <div class="grid-2">
+        <!--badge-->
+        <span class="badge center-self">Badge</span>
+        <pre class="card-code"><code>&lt;span class="badge"&gt;Badge&lt;/span&gt;</code></pre>
+        <!--badge accent-->
+        <span class="badge bg-accent center-self">Badge Accent</span>
+        <pre class="card-code"><code>&lt;span class="badge bg-accent"&gt;Badge&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--Alert ---------------------------------------------------------->
+    <section id="alerts">
+      <h2>Alert</h2>
+      <p>Contextual message component for important information.</p>
+      <div class="alert mb">This is an <strong>alert message.</strong></div>
+      <div class="alert bg-accent mb">This is an <strong>alert message.</strong></div>
+      <pre class="card-code"><code>&lt;div class="alert"&gt;This is an &lt;strong&gt;alert message.&lt;/strong&gt;&lt;/div&gt;
 
 &lt;div class="alert bg-accent"&gt;This is an &lt;strong&gt;alert message.&lt;/strong&gt;&lt;/div&gt;</code></pre>
-      </section>
+    </section>
 
-      <!--Tooltip ---------------------------------------------------------->
-      <section id="tooltips">
-        <h2>Tooltip</h2>
-        <p>Display contextual information on hover.</p>
-        <div class="grid-4">
-          <!--default-->
-          <span class="tooltip center-self" data-tooltip="Default tooltip">Default</span>
-          <pre
-            class="card-code col-3"><code>&lt;span class="tooltip" data-tooltip="Default tooltip"&gt;Default&lt;/span&gt;</code></pre>
-          <!--left-->
-          <span class="tooltip-left center-self" data-tooltip="Left tooltip">Left</span>
-          <pre
-            class="card-code col-3"><code>&lt;span class="tooltip-left" data-tooltip="Left tooltip"&gt;Left&lt;/span&gt;</code></pre>
-          <!--right-->
-          <span class="tooltip-right center-self" data-tooltip="Right tooltip">Right</span>
-          <pre
-            class="card-code col-3"><code>&lt;span class="tooltip-right" data-tooltip="Right tooltip"&gt;Right&lt;/span&gt;</code></pre>
-          <!--bottom-->
-          <span class="tooltip-bottom center-self" data-tooltip="Bottom tooltip">Bottom</span>
-          <pre
-            class="card-code col-3"><code>&lt;span class="tooltip-bottom" data-tooltip="Bottom tooltip"&gt;Bottom&lt;/span&gt;</code></pre>
-        </div>
-      </section>
+    <!--Tooltip ---------------------------------------------------------->
+    <section id="tooltips">
+      <h2>Tooltip</h2>
+      <p>Display contextual information on hover.</p>
+      <div class="grid-4">
+        <!--default-->
+        <span class="tooltip center-self" data-tooltip="Default tooltip">Default</span>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip" data-tooltip="Default tooltip"&gt;Default&lt;/span&gt;</code></pre>
+        <!--left-->
+        <span class="tooltip-left center-self" data-tooltip="Left tooltip">Left</span>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip-left" data-tooltip="Left tooltip"&gt;Left&lt;/span&gt;</code></pre>
+        <!--right-->
+        <span class="tooltip-right center-self" data-tooltip="Right tooltip">Right</span>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip-right" data-tooltip="Right tooltip"&gt;Right&lt;/span&gt;</code></pre>
+        <!--bottom-->
+        <span class="tooltip-bottom center-self" data-tooltip="Bottom tooltip">Bottom</span>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip-bottom" data-tooltip="Bottom tooltip"&gt;Bottom&lt;/span&gt;</code></pre>
+      </div>
+    </section>
 
-      <!--Toast ---------------------------------------------------------->
-      <section id="toasts">
-        <h2>Toast</h2>
-        <p>Transient notification messages for user feedback.</p>
-        <div class="grid-2">
-          <button class="center-self" id="toast-demo">Show Toast</button>
-          <pre class="card-code"><code>&lt;div class="toast"&gt;Toast message&lt;/div&gt;</code></pre>
-        </div>
-      </section>
+    <!--Toast ---------------------------------------------------------->
+    <section id="toasts">
+      <h2>Toast</h2>
+      <p>Transient notification messages for user feedback.</p>
+      <div class="grid-2">
+        <button class="center-self" id="toast-demo">Show Toast</button>
+        <pre class="card-code"><code>&lt;div class="toast"&gt;Toast message&lt;/div&gt;</code></pre>
+      </div>
+    </section>
 
-      <!--Horizontal Rule ---------------------------------------------------------->
-      <section id="horizontal-rule">
-        <h2>Horizontal Rule</h2>
-        <p>The <code>&lt;hr&gt;</code> element represents a thematic break between sections of content. Aurora CSS automatically styles it to match the active theme.</p>
-        <hr>
-        <pre class="card-code"><code>&lt;hr&gt;</code></pre>
-      </section>
-
-      <!--From ---------------------------------------------------------->
+    <!--Horizontal Rule ---------------------------------------------------------->
+    <section id="horizontal-rule">
+      <h2>Horizontal Rule</h2>
+      <p>The <code>&lt;hr&gt;</code> element represents a thematic break between sections of content. Aurora CSS
+        automatically styles it to match the active theme.</p>
       <hr>
-      <section id="form">
-        <span class="badge mb-sm">Form</span>
-        <h2>Form</h2>
-        <p>Form controls for collecting and validating user input.</p>
-      </section>
+      <pre class="card-code"><code>&lt;hr&gt;</code></pre>
+    </section>
 
-      <!--Elements ---------------------------------------------------------->
-      <section id="form-elements">
-        <h2>Form Elements</h2>
-        <p>Form elements styled automatically by Aurora.</p>
+    <!--From ---------------------------------------------------------->
+    <hr>
+    <section id="form">
+      <span class="badge mb-sm">Form</span>
+      <h2>Form</h2>
+      <p>Form controls for collecting and validating user input.</p>
+    </section>
 
-        <div class="grid-2">
-          <!--Input-->
-          <div class="card text-center">
-            <p>Input</p>
-            <input type="text" placeholder="Text">
-            <pre class="card-code"><code>&lt;input type="text" placeholder="Text"&gt;</code></pre>
-          </div>
-          <!--Textarea-->
-          <div class="card text-center">
-            <p>Textarea</p>
-            <textarea placeholder="Textarea"></textarea>
-            <pre class="card-code"><code>&lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;</code></pre>
-          </div>
+    <!--Elements ---------------------------------------------------------->
+    <section id="form-elements">
+      <h2>Form Elements</h2>
+      <p>Form elements styled automatically by Aurora.</p>
 
-          <!--select-->
-          <div class="card text-center">
-            <p>Select</p>
-            <select>
-              <option>Select Option</option>
-              <option>Select Option 2</option>
-            </select>
-            <pre class="card-code"><code>&lt;select&gt;
+      <div class="grid-2">
+        <!--Input-->
+        <div class="card text-center">
+          <p>Input</p>
+          <input type="text" placeholder="Text">
+          <pre class="card-code"><code>&lt;input type="text" placeholder="Text"&gt;</code></pre>
+        </div>
+        <!--Textarea-->
+        <div class="card text-center">
+          <p>Textarea</p>
+          <textarea placeholder="Textarea"></textarea>
+          <pre class="card-code"><code>&lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;</code></pre>
+        </div>
+
+        <!--select-->
+        <div class="card text-center">
+          <p>Select</p>
+          <select>
+            <option>Select Option</option>
+            <option>Select Option 2</option>
+          </select>
+          <pre class="card-code"><code>&lt;select&gt;
   &lt;option&gt;Select Option&lt;/option&gt;
   &lt;option&gt;Select Option 2&lt;/option&gt;
 &lt;/select&gt;</code></pre>
-          </div>
+        </div>
 
-          <!--checkbox-->
-          <div class="card text-center">
-            <p>Checkbox</p>
-            <input type="checkbox" class="center-self" checked>
-            <pre class="card-code"><code>&lt;input type="checkbox"&gt;</code></pre>
-          </div>
+        <!--checkbox-->
+        <div class="card text-center">
+          <p>Checkbox</p>
+          <input type="checkbox" class="center-self" checked>
+          <pre class="card-code"><code>&lt;input type="checkbox"&gt;</code></pre>
+        </div>
 
-          <!--radio-->
-          <div class="card">
-            <p class="text-center">Radio</p>
-            <label><input type="radio" name="radio" checked>Option</label>
-            <label><input type="radio" name="radio">Option 2</label>
-            <pre class="card-code"><code>&lt;input type="radio" name="radio" checked&gt;
+        <!--radio-->
+        <div class="card">
+          <p class="text-center">Radio</p>
+          <label><input type="radio" name="radio" checked>Option</label>
+          <label><input type="radio" name="radio">Option 2</label>
+          <pre class="card-code"><code>&lt;input type="radio" name="radio" checked&gt;
 &lt;input type="radio" name="radio"&gt;</code></pre>
-          </div>
+        </div>
 
-          <!--field-->
-          <div class="card text-center">
-            <p>Field</p>
-            <div class="field">
-              <input type="text" placeholder=" ">
-              <label>Floating Label</label>
-            </div>
-            <pre class="card-code"><code>&lt;div class="field"&gt;
+        <!--field-->
+        <div class="card text-center">
+          <p>Field</p>
+          <div class="field">
+            <input type="text" placeholder=" ">
+            <label>Floating Label</label>
+          </div>
+          <pre class="card-code"><code>&lt;div class="field"&gt;
   &lt;input type="text" placeholder=" "&gt;
   &lt;label&gt;Floating Label&lt;/label&gt;
 &lt;/div&gt;</code></pre>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--Form ---------------------------------------------------------->
-      <section id="form-example">
-        <h2>Form Example</h2>
-        <p>Example of a complete form using Aurora form controls.</p>
-        <!--form-->
-        <form class="card center-self size-md mt-md">
-          <h2 class="mb-sm">Form</h2>
-          <!--name-->
-          <div class="field">
-            <input type="text" placeholder=" ">
-            <label>Full Name</label>
-          </div>
-          <!--email-->
-          <div class="field">
-            <input type="email" placeholder=" ">
-            <label>Email</label>
-          </div>
-          <!--select-->
-          <select>
-            <option>Select</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-          </select>
-          <!--textarea-->
-          <textarea class="mb-sm" placeholder="Message"></textarea>
-          <!--checkbox-->
-          <label><input type="checkbox">I agree to the terms.</label>
-          <button class="mt">Submit</button>
-        </form>
-        <pre class="card-code mt-md"><code>&lt;form class="size-md center-self"&gt;
+    <!--Form ---------------------------------------------------------->
+    <section id="form-example">
+      <h2>Form Example</h2>
+      <p>Example of a complete form using Aurora form controls.</p>
+      <!--form-->
+      <form class="card center-self size-md mt-md">
+        <h2 class="mb-sm">Form</h2>
+        <!--name-->
+        <div class="field">
+          <input type="text" placeholder=" ">
+          <label>Full Name</label>
+        </div>
+        <!--email-->
+        <div class="field">
+          <input type="email" placeholder=" ">
+          <label>Email</label>
+        </div>
+        <!--select-->
+        <select>
+          <option>Select</option>
+          <option>Option 1</option>
+          <option>Option 2</option>
+        </select>
+        <!--textarea-->
+        <textarea class="mb-sm" placeholder="Message"></textarea>
+        <!--checkbox-->
+        <label><input type="checkbox">I agree to the terms.</label>
+        <button class="mt">Submit</button>
+      </form>
+      <pre class="card-code mt-md"><code>&lt;form class="size-md center-self"&gt;
   &lt;h2&gt;Form&lt;/h2&gt;
 
   &lt;div class="field"&gt;
@@ -963,35 +962,35 @@ selectors.forEach(selector=&gt;{
 
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</code></pre>
-      </section>
+    </section>
 
-      <!--Tables ---------------------------------------------------------->
-      <section id="tables">
-        <h2>Tables</h2>
-        <p>Structured data displayed with Aurora table styling.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Role</th>
-            </tr>
-          </thead>
+    <!--Tables ---------------------------------------------------------->
+    <section id="tables">
+      <h2>Tables</h2>
+      <p>Structured data displayed with Aurora table styling.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <tr>
-              <td>Alice</td>
-              <td>Developer</td>
-            </tr>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>Developer</td>
+          </tr>
 
-            <tr>
-              <td>Bob</td>
-              <td>Designer</td>
-            </tr>
-          </tbody>
-        </table>
+          <tr>
+            <td>Bob</td>
+            <td>Designer</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <!--code-->
-        <pre class="card-code mt"><code>&lt;table&gt;
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;Name&lt;/th&gt;
@@ -1011,25 +1010,25 @@ selectors.forEach(selector=&gt;{
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</code></pre>
-      </section>
+    </section>
 
-      <!--Modal ---------------------------------------------------------->
-      <section id="modal">
-        <h2>Modal</h2>
-        <p>Overlay dialog for focused interactions.</p>
+    <!--Modal ---------------------------------------------------------->
+    <section id="modal">
+      <h2>Modal</h2>
+      <p>Overlay dialog for focused interactions.</p>
 
-        <div class="grid-2">
-          <a href="#demo-modal" class="btn center-self">Open Modal</a>
+      <div class="grid-2">
+        <a href="#demo-modal" class="btn center-self">Open Modal</a>
 
-          <div id="demo-modal" class="modal">
-            <div class="modal__content">
-              <a href="##" class="modal__close">&times;</a>
-              <h2>Modal Title</h2>
-              <p>Modal content.</p>
-            </div>
-
+        <div id="demo-modal" class="modal">
+          <div class="modal__content">
+            <a href="##" class="modal__close">&times;</a>
+            <h2>Modal Title</h2>
+            <p>Modal content.</p>
           </div>
-          <pre class="card-code"><code>&lt;a href="#modal" class="btn"&gt;Open Modal&lt;/a&gt;
+
+        </div>
+        <pre class="card-code"><code>&lt;a href="#modal" class="btn"&gt;Open Modal&lt;/a&gt;
 
 &lt;div id="modal" class="modal"&gt;
   &lt;div class="modal__content"&gt;
@@ -1038,28 +1037,28 @@ selectors.forEach(selector=&gt;{
     &lt;p&gt;Modal content.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--Navbar ---------------------------------------------------------->
+    <section id="navbar">
+      <h2>Navbar</h2>
+      <p class="mb-md">Responsive navigation bar with desktop and mobile support. Resize the viewport to see the
+        mobile menu.</p>
+
+      <nav class="navbar">
+        <div class="navbar__content">
+          <a href="##" class="navbar__logo">Logo</a>
+          <ul class="navbar__menu">
+            <li><a href="##">Link1</a></li>
+            <li><a href="##">Link2</a></li>
+            <li><a href="##">Link3</a></li>
+          </ul>
+          <button class="navbar__toggle">☰</button>
         </div>
-      </section>
+      </nav>
 
-      <!--Navbar ---------------------------------------------------------->
-      <section id="navbar">
-        <h2>Navbar</h2>
-        <p class="mb-md">Responsive navigation bar with desktop and mobile support. Resize the viewport to see the
-          mobile menu.</p>
-
-        <nav class="navbar">
-          <div class="navbar__content">
-            <a href="##" class="navbar__logo">Logo</a>
-            <ul class="navbar__menu">
-              <li><a href="##">Link1</a></li>
-              <li><a href="##">Link2</a></li>
-              <li><a href="##">Link3</a></li>
-            </ul>
-            <button class="navbar__toggle">☰</button>
-          </div>
-        </nav>
-
-        <pre class="card-code mt"><code>&lt;nav class="navbar"&gt;
+      <pre class="card-code mt"><code>&lt;nav class="navbar"&gt;
   &lt;div class="navbar__content"&gt;
 
     &lt;a href="#" class="navbar__logo"&gt;Logo&lt;/a&gt;
@@ -1075,10 +1074,10 @@ selectors.forEach(selector=&gt;{
 &lt;/nav&gt;</code></pre>
 
 
-        <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the
-          navbar inside a <code>&lt;header&gt;</code> element.</p>
+      <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the
+        navbar inside a <code>&lt;header&gt;</code> element.</p>
 
-        <pre class="card-code mt"><code>&lt;header class="navbar"&gt;
+      <pre class="card-code mt"><code>&lt;header class="navbar"&gt;
   &lt;nav class="navbar__content" aria-label="Main navigation"&gt;
 
     &lt;a href="#" class="navbar__logo"&gt;Logo&lt;/a&gt;
@@ -1094,20 +1093,20 @@ selectors.forEach(selector=&gt;{
   &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
 
-      </section>
+    </section>
 
-      <!--Sidebar ---------------------------------------------------------->
-      <section id="sidebar">
-        <h2>Sidebar</h2>
+    <!--Sidebar ---------------------------------------------------------->
+    <section id="sidebar">
+      <h2>Sidebar</h2>
 
-        <p class="mb-md">
-          Responsive sidebar for dashboards and application layouts. On mobile,
-          use <code>.sidebar__toggle</code> to open and close the sidebar.
-        </p>
+      <p class="mb-md">
+        Responsive sidebar for dashboards and application layouts. On mobile,
+        use <code>.sidebar__toggle</code> to open and close the sidebar.
+      </p>
 
-        <div class="card">
+      <div class="card">
 
-          <pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
+        <pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
   &lt;aside class="sidebar"&gt;
 
     &lt;div class="sidebar__header"&gt;
@@ -1133,745 +1132,745 @@ selectors.forEach(selector=&gt;{
 
 &lt;/body&gt;</code></pre>
 
+      </div>
+
+      <p class="mt">
+        <strong>Layout:</strong> Wrap the page with
+        <code>.sidebar-layout</code>. The sidebar occupies the left column,
+        while the main content uses the <code>.content</code> container.
+      </p>
+
+    </section>
+
+    <!--Footer ---------------------------------------------------------->
+    <section id="footer">
+      <h2>Footer</h2>
+      <p>Footer section for copyright and secondary information.</p>
+      <!--footer-->
+      <footer class="footer">
+        <p>© Footer</p>
+        <div>
+          <a href="##">Link 1</a>
+          <a href="##">Link 2</a>
         </div>
-
-        <p class="mt">
-          <strong>Layout:</strong> Wrap the page with
-          <code>.sidebar-layout</code>. The sidebar occupies the left column,
-          while the main content uses the <code>.content</code> container.
-        </p>
-
-      </section>
-
-      <!--Footer ---------------------------------------------------------->
-      <section id="footer">
-        <h2>Footer</h2>
-        <p>Footer section for copyright and secondary information.</p>
-        <!--footer-->
-        <footer class="footer">
-          <p>© Footer</p>
-          <div>
-            <a href="##">Link 1</a>
-            <a href="##">Link 2</a>
-          </div>
-        </footer>
-        <!--code-->
-        <pre class="card-code mt-md"><code>&lt;footer class="footer"&gt;
+      </footer>
+      <!--code-->
+      <pre class="card-code mt-md"><code>&lt;footer class="footer"&gt;
   &lt;p&gt;© Footer&lt;/p&gt;
   &lt;div&gt;
     &lt;a href="#"&gt;Link 1&lt;/a&gt;
     &lt;a href="#"&gt;Link 2&lt;/a&gt;
   &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
-      </section>
+    </section>
 
-      <!--Utilities ---------------------------------------------------------->
-      <hr>
-      <section>
-        <span class="badge mb-sm">Utilities</span>
-        <h2>Utilities</h2>
-        <p>Small helper classes for spacing, alignment and layout adjustments.</p>
-      </section>
+    <!--Utilities ---------------------------------------------------------->
+    <hr>
+    <section>
+      <span class="badge mb-sm">Utilities</span>
+      <h2>Utilities</h2>
+      <p>Small helper classes for spacing, alignment and layout adjustments.</p>
+    </section>
 
-      <!--Spacing ---------------------------------------------------------->
-      <section id="spacing">
-        <h2>Spacing Utilities</h2>
-        <p>Margin utilities for consistent vertical spacing between sections and components.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-            </tr>
-          </thead>
+    <!--Spacing ---------------------------------------------------------->
+    <section id="spacing">
+      <h2>Spacing Utilities</h2>
+      <p>Margin utilities for consistent vertical spacing between sections and components.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Value</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <tr>
-              <td>.mt-none / .mb-none</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>.mt-sm / .mb-sm</td>
-              <td>0.5rem</td>
-            </tr>
-            <tr>
-              <td>.mt / .mb</td>
-              <td>1rem</td>
-            </tr>
-            <tr>
-              <td>.mt-md / .mb-md</td>
-              <td>1.5rem</td>
-            </tr>
-            <tr>
-              <td>.mt-lg / .mb-lg</td>
-              <td>3rem</td>
-            </tr>
-          </tbody>
-        </table>
+        <tbody>
+          <tr>
+            <td>.mt-none / .mb-none</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>.mt-sm / .mb-sm</td>
+            <td>0.5rem</td>
+          </tr>
+          <tr>
+            <td>.mt / .mb</td>
+            <td>1rem</td>
+          </tr>
+          <tr>
+            <td>.mt-md / .mb-md</td>
+            <td>1.5rem</td>
+          </tr>
+          <tr>
+            <td>.mt-lg / .mb-lg</td>
+            <td>3rem</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <pre class="card-code mt"><code>&lt;section class="mb-lg"&gt; ... &lt;/section&gt;</code></pre>
-      </section>
+      <pre class="card-code mt"><code>&lt;section class="mb-lg"&gt; ... &lt;/section&gt;</code></pre>
+    </section>
 
-      <!--Gap ---------------------------------------------------------->
-      <section id="gap">
-        <h2>Gap Utilities</h2>
-        <p>Gap utilities for controlling spacing between grid and flex items.</p>
+    <!--Gap ---------------------------------------------------------->
+    <section id="gap">
+      <h2>Gap Utilities</h2>
+      <p>Gap utilities for controlling spacing between grid and flex items.</p>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Value</th>
-            </tr>
-          </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Value</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <tr>
-              <td>.gap-none</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>.gap-sm</td>
-              <td>0.5rem</td>
-            </tr>
-            <tr>
-              <td>.gap</td>
-              <td>1rem</td>
-            </tr>
-            <tr>
-              <td>.gap-md</td>
-              <td>1.5rem</td>
-            </tr>
-            <tr>
-              <td>.gap-lg</td>
-              <td>3rem</td>
-            </tr>
-          </tbody>
-        </table>
-        <pre class="card-code mt"><code>&lt;div class="gap-md"&gt;...&lt;/div&gt;</code></pre>
-      </section>
+        <tbody>
+          <tr>
+            <td>.gap-none</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>.gap-sm</td>
+            <td>0.5rem</td>
+          </tr>
+          <tr>
+            <td>.gap</td>
+            <td>1rem</td>
+          </tr>
+          <tr>
+            <td>.gap-md</td>
+            <td>1.5rem</td>
+          </tr>
+          <tr>
+            <td>.gap-lg</td>
+            <td>3rem</td>
+          </tr>
+        </tbody>
+      </table>
+      <pre class="card-code mt"><code>&lt;div class="gap-md"&gt;...&lt;/div&gt;</code></pre>
+    </section>
 
-      <!--center ---------------------------------------------------------->
-      <section id="center">
-        <h2 class="mb-lg">Center Utilities</h2>
+    <!--center ---------------------------------------------------------->
+    <section id="center">
+      <h2 class="mb-lg">Center Utilities</h2>
 
-        <!-- center -->
-        <p><code>.center</code> centers content horizontally and vertically inside a container.</p>
-        <div class="grid-2">
-          <div class="center">
-            <div class="card">Center</div>
-          </div>
-          <pre class="card-code"><code>&lt;div class="center"&gt;
+      <!-- center -->
+      <p><code>.center</code> centers content horizontally and vertically inside a container.</p>
+      <div class="grid-2">
+        <div class="center">
+          <div class="card">Center</div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="center"&gt;
   &lt;div class="card"&gt;Center&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        </div>
+      </div>
 
-        <!-- center-items -->
-        <p class="mt-lg"><code>.center-items</code> centers multiple children inside a flex or grid container.</p>
-        <div class="grid-2">
-          <div class="center-items">
-            <div class="card">Center Items</div>
-            <div class="card">Center Items</div>
-          </div>
-          <pre class="card-code"><code>&lt;div class="center-items"&gt;
+      <!-- center-items -->
+      <p class="mt-lg"><code>.center-items</code> centers multiple children inside a flex or grid container.</p>
+      <div class="grid-2">
+        <div class="center-items">
+          <div class="card">Center Items</div>
+          <div class="card">Center Items</div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="center-items"&gt;
   &lt;div class="card"&gt;Center Items&lt;/div&gt;
   &lt;div class="card"&gt;Center Items&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- center-self -->
+      <p class="mt-lg"><code>.center-self</code> centers the element itself within its parent container.</p>
+      <div class="grid-2">
+        <div class="card center-self">Center Self</div>
+        <pre class="card-code"><code>&lt;div class="card center-self"&gt;Center Self&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--Text Alignment ---------------------------------------------------------->
+    <section id="text-alignment">
+      <h2>Text Alignment</h2>
+      <p>Utilities for controlling text alignment.</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <p class="text-left">Left aligned text</p>
         </div>
 
-        <!-- center-self -->
-        <p class="mt-lg"><code>.center-self</code> centers the element itself within its parent container.</p>
-        <div class="grid-2">
-          <div class="card center-self">Center Self</div>
-          <pre class="card-code"><code>&lt;div class="card center-self"&gt;Center Self&lt;/div&gt;</code></pre>
-        </div>
-      </section>
-
-      <!--Text Alignment ---------------------------------------------------------->
-      <section id="text-alignment">
-        <h2>Text Alignment</h2>
-        <p>Utilities for controlling text alignment.</p>
-
-        <div class="grid-3">
-          <div class="card">
-            <p class="text-left">Left aligned text</p>
-          </div>
-
-          <div class="card">
-            <p class="text-center">Centered text</p>
-          </div>
-
-          <div class="card">
-            <p class="text-right">Right aligned text</p>
-          </div>
+        <div class="card">
+          <p class="text-center">Centered text</p>
         </div>
 
-        <pre class="card-code mt"><code>&lt;p class="text-left"&gt;...&lt;/p&gt;
+        <div class="card">
+          <p class="text-right">Right aligned text</p>
+        </div>
+      </div>
+
+      <pre class="card-code mt"><code>&lt;p class="text-left"&gt;...&lt;/p&gt;
 &lt;p class="text-center"&gt;...&lt;/p&gt;
 &lt;p class="text-right"&gt;...&lt;/p&gt;</code></pre>
 
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Size ---------------------------------------------------------->
-      <section id="size">
-        <h2>Size</h2>
-        <p>Utilities for controlling element width.</p>
-        <table class="mb-md">
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Width</th>
-            </tr>
-          </thead>
+    <!-- Size ---------------------------------------------------------->
+    <section id="size">
+      <h2>Size</h2>
+      <p>Utilities for controlling element width.</p>
+      <table class="mb-md">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Width</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <tr>
-              <td>.size-sm</td>
-              <td>320px</td>
-            </tr>
-            <tr>
-              <td>.size-md</td>
-              <td>640px</td>
-            </tr>
-            <tr>
-              <td>.size-lg</td>
-              <td>960px</td>
-            </tr>
-            <tr>
-              <td>.size-xl</td>
-              <td>1280px</td>
-            </tr>
-            <tr>
-              <td>.size-full</td>
-              <td>100%</td>
-            </tr>
-          </tbody>
-        </table>
+        <tbody>
+          <tr>
+            <td>.size-sm</td>
+            <td>320px</td>
+          </tr>
+          <tr>
+            <td>.size-md</td>
+            <td>640px</td>
+          </tr>
+          <tr>
+            <td>.size-lg</td>
+            <td>960px</td>
+          </tr>
+          <tr>
+            <td>.size-xl</td>
+            <td>1280px</td>
+          </tr>
+          <tr>
+            <td>.size-full</td>
+            <td>100%</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <div class="card">
-          <p>.size-sm</p>
-          <div class="bg-accent size-sm">320px</div>
-          <p>.size-md</p>
-          <div class="bg-accent size-md">640px</div>
-          <p>.size-lg</p>
-          <div class="bg-accent size-lg">960px</div>
-          <p>.size-xl</p>
-          <div class="bg-accent size-xl">1280px</div>
-          <p>.size-full</p>
-          <div class="bg-accent size-full">100%</div>
-        </div>
+      <div class="card">
+        <p>.size-sm</p>
+        <div class="bg-accent size-sm">320px</div>
+        <p>.size-md</p>
+        <div class="bg-accent size-md">640px</div>
+        <p>.size-lg</p>
+        <div class="bg-accent size-lg">960px</div>
+        <p>.size-xl</p>
+        <div class="bg-accent size-xl">1280px</div>
+        <p>.size-full</p>
+        <div class="bg-accent size-full">100%</div>
+      </div>
 
-        <pre class="card-code mt"><code>&lt;div class="size-md"&gt;
+      <pre class="card-code mt"><code>&lt;div class="size-md"&gt;
   Content
 &lt;/div&gt;</code></pre>
-      </section>
+    </section>
 
-      <!-- Border ---------------------------------------------------------->
-      <section id="border">
-        <h2>Border Utilities</h2>
-        <p>Utilities for adding borders and customizing their color.</p>
+    <!-- Border ---------------------------------------------------------->
+    <section id="border">
+      <h2>Border Utilities</h2>
+      <p>Utilities for adding borders and customizing their color.</p>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Description</th>
-            </tr>
-          </thead>
+      <table>
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
 
-          <tbody>
-            <tr>
-              <td>.border</td>
-              <td>Adds a 1px border using <code>--color-border</code>.</td>
-            </tr>
-            <tr>
-              <td>.border-none</td>
-              <td>Removes all borders.</td>
-            </tr>
-            <tr>
-              <td>.border-top</td>
-              <td>Adds a top border.</td>
-            </tr>
-            <tr>
-              <td>.border-right</td>
-              <td>Adds a right border.</td>
-            </tr>
-            <tr>
-              <td>.border-bottom</td>
-              <td>Adds a bottom border.</td>
-            </tr>
-            <tr>
-              <td>.border-left</td>
-              <td>Adds a left border.</td>
-            </tr>
-            <tr>
-              <td>.border-accent</td>
-              <td>Changes the border color to <code>--color-accent</code>. Use together with a border utility.</td>
-            </tr>
-          </tbody>
-        </table>
+        <tbody>
+          <tr>
+            <td>.border</td>
+            <td>Adds a 1px border using <code>--color-border</code>.</td>
+          </tr>
+          <tr>
+            <td>.border-none</td>
+            <td>Removes all borders.</td>
+          </tr>
+          <tr>
+            <td>.border-top</td>
+            <td>Adds a top border.</td>
+          </tr>
+          <tr>
+            <td>.border-right</td>
+            <td>Adds a right border.</td>
+          </tr>
+          <tr>
+            <td>.border-bottom</td>
+            <td>Adds a bottom border.</td>
+          </tr>
+          <tr>
+            <td>.border-left</td>
+            <td>Adds a left border.</td>
+          </tr>
+          <tr>
+            <td>.border-accent</td>
+            <td>Changes the border color to <code>--color-accent</code>. Use together with a border utility.</td>
+          </tr>
+        </tbody>
+      </table>
 
-        <div class="grid-2 mt">
-          <div class="card border">
-            Default Border
-          </div>
-
-          <div class="card border border-accent">
-            Accent Border
-          </div>
+      <div class="grid-2 mt">
+        <div class="card border">
+          Default Border
         </div>
 
-        <pre class="card-code mt"><code>&lt;div class="border"&gt;
+        <div class="card border border-accent">
+          Accent Border
+        </div>
+      </div>
+
+      <pre class="card-code mt"><code>&lt;div class="border"&gt;
   Default Border
 &lt;/div&gt;
 
 &lt;div class="border border-accent"&gt;
   Accent Border
 &lt;/div&gt;</code></pre>
-      </section>
+    </section>
 
-      <!--visuals ---------------------------------------------------------->
-      <hr>
-      <section>
-        <span class="badge mb-sm">Visuals</span>
-        <h2>Visuals</h2>
-        <p>Backgrounds and visual effects for creating atmospheric interfaces.</p>
-      </section>
+    <!--visuals ---------------------------------------------------------->
+    <hr>
+    <section>
+      <span class="badge mb-sm">Visuals</span>
+      <h2>Visuals</h2>
+      <p>Backgrounds and visual effects for creating atmospheric interfaces.</p>
+    </section>
 
-      <section id="backgrounds">
-        <h2>Backgrounds</h2>
-        <p>Utilities for applying predefined backgrounds and surface styles.</p>
+    <section id="backgrounds">
+      <h2>Backgrounds</h2>
+      <p>Utilities for applying predefined backgrounds and surface styles.</p>
 
-        <div class="grid-2">
-          <!--background-->
-          <div class="bg card size-full center-items">Background</div>
-          <pre class="card-code"><code>&lt;div class="bg"&gt;&lt;/div&gt;</code></pre>
-          <!--surface-->
-          <div class="bg-surface card size-full center-items">Surface</div>
-          <pre class="card-code"><code>&lt;div class="bg-surface"&gt;&lt;/div&gt;</code></pre>
-          <!--surface2-->
-          <div class="bg-surface-2 card size-full center-items">Surface 2</div>
-          <pre class="card-code"><code>&lt;div class="bg-surface-2"&gt;&lt;/div&gt;</code></pre>
-          <!--soft-->
-          <div class="bg-soft card size-full center-items">Soft</div>
-          <pre class="card-code"><code>&lt;div class="bg-soft"&gt;&lt;/div&gt;</code></pre>
-          <!--accent-->
-          <div class="bg-accent card size-full center-items">Accent</div>
-          <pre class="card-code"><code>&lt;div class="bg-accent"&gt;&lt;/div&gt;</code></pre>
-          <!--glass-->
-          <div class="bg-glass card size-full center-items">Glass</div>
-          <pre class="card-code"><code>&lt;div class="bg-glass"&gt;&lt;/div&gt;</code></pre>
+      <div class="grid-2">
+        <!--background-->
+        <div class="bg card size-full center-items">Background</div>
+        <pre class="card-code"><code>&lt;div class="bg"&gt;&lt;/div&gt;</code></pre>
+        <!--surface-->
+        <div class="bg-surface card size-full center-items">Surface</div>
+        <pre class="card-code"><code>&lt;div class="bg-surface"&gt;&lt;/div&gt;</code></pre>
+        <!--surface2-->
+        <div class="bg-surface-2 card size-full center-items">Surface 2</div>
+        <pre class="card-code"><code>&lt;div class="bg-surface-2"&gt;&lt;/div&gt;</code></pre>
+        <!--soft-->
+        <div class="bg-soft card size-full center-items">Soft</div>
+        <pre class="card-code"><code>&lt;div class="bg-soft"&gt;&lt;/div&gt;</code></pre>
+        <!--accent-->
+        <div class="bg-accent card size-full center-items">Accent</div>
+        <pre class="card-code"><code>&lt;div class="bg-accent"&gt;&lt;/div&gt;</code></pre>
+        <!--glass-->
+        <div class="bg-glass card size-full center-items">Glass</div>
+        <pre class="card-code"><code>&lt;div class="bg-glass"&gt;&lt;/div&gt;</code></pre>
+      </div>
+
+      </div>
+    </section>
+    <!--Effects ---------------------------------------------------------->
+    <hr>
+    <section>
+      <span id="effects" class="badge mb-sm">Effects</span>
+      <h2>Effects</h2>
+      <p>Visual effects for adding atmosphere and depth to interfaces.</p>
+
+      <!-- Glow Effects -->
+      <p class="mt-lg"><strong>Glow Effects</strong> add colored light and emphasis.</p>
+
+      <div class="grid-2">
+        <!--glow-->
+        <div class="fx-glow card center size-sm">.fx-glow</div>
+        <pre class="card-code"><code>&lt;div class="fx-glow"&gt;&lt;/div&gt;</code></pre>
+        <!--glow-sm-->
+        <div class="fx-glow-sm card center size-sm">.fx-glow-sm</div>
+        <pre class="card-code"><code>&lt;div class="fx-glow-sm"&gt;&lt;/div&gt;</code></pre>
+        <!--glow-md-->
+        <div class="fx-glow-md card center size-sm">.fx-glow-md</div>
+        <pre class="card-code"><code>&lt;div class="fx-glow-md"&gt;&lt;/div&gt;</code></pre>
+        <!--glow-lg-->
+        <div class="fx-glow-lg card center size-sm">.fx-glow-lg</div>
+        <pre class="card-code"><code>&lt;div class="fx-glow-lg"&gt;&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Pattern Effects -->
+      <p class="mt-lg"><strong>Pattern Effects</strong> add texture and visual detail.</p>
+
+      <div class="grid-2">
+        <!--grid-->
+        <div class="fx-grid card center-items">fx-grid</div>
+        <pre class="card-code"><code>&lt;div class="fx-grid"&gt;&lt;/div&gt;</code></pre>
+        <!--grid-radial-->
+        <div class="fx-grid-radial card center-items">fx-grid-radial</div>
+        <pre class="card-code"><code>&lt;div class="fx-grid-radial"&gt;&lt;/div&gt;</code></pre>
+        <!--noise-->
+        <div class="fx-noise card center-items">fx-noise</div>
+        <pre class="card-code"><code>&lt;div class="fx-noise"&gt;&lt;/div&gt;</code></pre>
+        <!--dots-->
+        <div class="fx-dots card center-items">fx-dots</div>
+        <pre class="card-code"><code>&lt;div class="fx-dots"&gt;&lt;/div&gt;</code></pre>
+        <!--beam-->
+        <div class="fx-beam card center-items">fx-beam</div>
+        <pre class="card-code"><code>&lt;div class="fx-beam"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--Animations ---------------------------------------------------------->
+    <hr>
+    <section id="animations">
+      <span class="badge mb-sm">Animations</span>
+      <h2>Animations</h2>
+      <p>Continuous motion utilities for creating dynamic and atmospheric interfaces.</p>
+    </section>
+
+    <section id="">
+
+      <!-- Motion -->
+      <p><strong>Motion</strong> animations add movement and transform effects.</p>
+
+      <div class="grid-2">
+        <!--float-->
+        <div class="card">
+          <div class="float card bg-soft center">float</div>
+          <pre class="card-code"><code>&lt;div class="float"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--bounce-->
+        <div class="card">
+          <div class="bounce card bg-soft center">bounce</div>
+          <pre class="card-code"><code>&lt;div class="bounce"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--flip-->
+        <div class="card">
+          <div class="flip card bg-soft center">flip</div>
+          <pre class="card-code"><code>&lt;div class="flip"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--drift-->
+        <div class="card">
+          <div class="drift card bg-soft center">drift</div>
+          <pre class="card-code"><code>&lt;div class="drift"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--drift-->
+        <div class="card">
+          <div class="orbit card bg-soft center">orbit</div>
+          <pre class="card-code"><code>&lt;div class="orbit"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--pulse-->
+        <div class="card">
+          <div class="pulse card bg-soft center">pulse</div>
+          <pre class="card-code"><code>&lt;div class="pulse"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--breathe-->
+        <div class="card">
+          <div class="breathe card bg-soft center">breathe</div>
+          <pre class="card-code"><code>&lt;div class="breathe"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--spin-->
+        <div class="card">
+          <div class="spin card bg-soft center">spin</div>
+          <pre class="card-code"><code>&lt;div class="spin"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--tilt-->
+        <div class="card">
+          <div class="tilt card bg-soft center size-sm">tilt</div>
+          <pre class="card-code"><code>&lt;div class="tilt"&gt;&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Overlay Effects -->
+      <p class="mt-lg"><strong>Overlay Effects</strong> animations add dynamic visual elements above components.</p>
+
+      <div class="grid-2">
+        <!--shine-->
+        <div class="card">
+          <div class="shine card bg-soft center">shine</div>
+          <pre class="card-code"><code>&lt;div class="shine"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--scanline-->
+        <div class="card">
+          <div class="scanline card bg-soft center">scanline</div>
+          <pre class="card-code"><code>&lt;div class="scanline"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--beacon-->
+        <div class="card">
+          <div class="beacon card bg-soft center">beacon</div>
+          <pre class="card-code"><code>&lt;div class="beacon"&gt;&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Border Effects -->
+      <p class="mt-lg"><strong>Border Effects</strong> animations enhance borders and outlines.</p>
+      <div class="grid-2">
+        <!--border-neon-->
+        <div class="card">
+          <div class="border-neon card bg-soft center">border-neon</div>
+          <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-pulse-->
+        <div class="card">
+          <div class="border-pulse card bg-soft center">border-pulse</div>
+          <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-flicker-->
+        <div class="card">
+          <div class="border-flicker card bg-soft center">border-flicker</div>
+          <pre class="card-code"><code>&lt;div class="border-flicker"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-static-->
+        <div class="card">
+          <div class="border-static card bg-soft center">border-static</div>
+          <pre class="card-code"><code>&lt;div class="border-static"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-glitch-->
+        <div class="card">
+          <div class="border-glitch card bg-soft center">border-glitch</div>
+          <pre class="card-code"><code>&lt;div class="border-glitch"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-draw-->
+        <div class="card">
+          <div class="border-draw card center">border-draw</div>
+          <pre class="card-code"><code>&lt;div class="border-draw"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-scan-->
+        <div class="card">
+          <div class="border-scan card bg-soft center">border-scan</div>
+          <pre class="card-code"><code>&lt;div class="border-scan"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-orbit-->
+        <div class="card">
+          <div class="border-orbit  card bg-soft center">border-orbit</div>
+          <pre class="card-code"><code>&lt;div class="border-orbit"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-shift-->
+        <div class="card">
+          <div class="border-shift card bg-soft center">border-shift</div>
+          <pre class="card-code mb"><code>&lt;div class="border-shift"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-width-->
+        <div class="card">
+          <div class="border-width card bg-soft center">border-width</div>
+          <pre class="card-code"><code>&lt;div class="border-width"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--border-corners-->
+        <div class="card">
+          <div class="border-corners card bg-soft center">border-corners</div>
+          <pre class="card-code"><code>&lt;div class="border-corners"&gt;&lt;/div&gt;</code></pre>
         </div>
 
+      </div>
+
+      <!-- Entrance Effects -->
+      <p class="mt-lg"><strong>Entrance Effects</strong> animations played when components first appear.</p>
+      <div class="grid-2">
+        <!--fade-in-->
+        <div class="card">
+          <div class="fade-in entrance-demo card bg-soft center">fade-in</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="fade-in"&gt;&lt;/div&gt;</code></pre>
         </div>
-      </section>
-      <!--Effects ---------------------------------------------------------->
-      <hr>
-      <section>
-        <span id="effects" class="badge mb-sm">Effects</span>
-        <h2>Effects</h2>
-        <p>Visual effects for adding atmosphere and depth to interfaces.</p>
-
-        <!-- Glow Effects -->
-        <p class="mt-lg"><strong>Glow Effects</strong> add colored light and emphasis.</p>
-
-        <div class="grid-2">
-          <!--glow-->
-          <div class="fx-glow card center size-sm">.fx-glow</div>
-          <pre class="card-code"><code>&lt;div class="fx-glow"&gt;&lt;/div&gt;</code></pre>
-          <!--glow-sm-->
-          <div class="fx-glow-sm card center size-sm">.fx-glow-sm</div>
-          <pre class="card-code"><code>&lt;div class="fx-glow-sm"&gt;&lt;/div&gt;</code></pre>
-          <!--glow-md-->
-          <div class="fx-glow-md card center size-sm">.fx-glow-md</div>
-          <pre class="card-code"><code>&lt;div class="fx-glow-md"&gt;&lt;/div&gt;</code></pre>
-          <!--glow-lg-->
-          <div class="fx-glow-lg card center size-sm">.fx-glow-lg</div>
-          <pre class="card-code"><code>&lt;div class="fx-glow-lg"&gt;&lt;/div&gt;</code></pre>
+        <!--slide-up-->
+        <div class="card">
+          <div class="slide-up entrance-demo card bg-soft center">slide-up</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="slide-up"&gt;&lt;/div&gt;</code></pre>
         </div>
-
-        <!-- Pattern Effects -->
-        <p class="mt-lg"><strong>Pattern Effects</strong> add texture and visual detail.</p>
-
-        <div class="grid-2">
-          <!--grid-->
-          <div class="fx-grid card center-items">fx-grid</div>
-          <pre class="card-code"><code>&lt;div class="fx-grid"&gt;&lt;/div&gt;</code></pre>
-          <!--grid-radial-->
-          <div class="fx-grid-radial card center-items">fx-grid-radial</div>
-          <pre class="card-code"><code>&lt;div class="fx-grid-radial"&gt;&lt;/div&gt;</code></pre>
-          <!--noise-->
-          <div class="fx-noise card center-items">fx-noise</div>
-          <pre class="card-code"><code>&lt;div class="fx-noise"&gt;&lt;/div&gt;</code></pre>
-          <!--dots-->
-          <div class="fx-dots card center-items">fx-dots</div>
-          <pre class="card-code"><code>&lt;div class="fx-dots"&gt;&lt;/div&gt;</code></pre>
-          <!--beam-->
-          <div class="fx-beam card center-items">fx-beam</div>
-          <pre class="card-code"><code>&lt;div class="fx-beam"&gt;&lt;/div&gt;</code></pre>
+        <!--slide-down-->
+        <div class="card">
+          <div class="slide-down entrance-demo card bg-soft center">slide-down</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="slide-down"&gt;&lt;/div&gt;</code></pre>
         </div>
-      </section>
-
-      <!--Animations ---------------------------------------------------------->
-      <hr>
-      <section id="animations">
-        <span class="badge mb-sm">Animations</span>
-        <h2>Animations</h2>
-        <p>Continuous motion utilities for creating dynamic and atmospheric interfaces.</p>
-      </section>
-
-      <section id="">
-
-        <!-- Motion -->
-        <p><strong>Motion</strong> animations add movement and transform effects.</p>
-
-        <div class="grid-2">
-          <!--float-->
-          <div class="card">
-            <div class="float card bg-soft center">float</div>
-            <pre class="card-code"><code>&lt;div class="float"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--bounce-->
-          <div class="card">
-            <div class="bounce card bg-soft center">bounce</div>
-            <pre class="card-code"><code>&lt;div class="bounce"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--flip-->
-          <div class="card">
-            <div class="flip card bg-soft center">flip</div>
-            <pre class="card-code"><code>&lt;div class="flip"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--drift-->
-          <div class="card">
-            <div class="drift card bg-soft center">drift</div>
-            <pre class="card-code"><code>&lt;div class="drift"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--drift-->
-          <div class="card">
-            <div class="orbit card bg-soft center">orbit</div>
-            <pre class="card-code"><code>&lt;div class="orbit"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--pulse-->
-          <div class="card">
-            <div class="pulse card bg-soft center">pulse</div>
-            <pre class="card-code"><code>&lt;div class="pulse"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--breathe-->
-          <div class="card">
-            <div class="breathe card bg-soft center">breathe</div>
-            <pre class="card-code"><code>&lt;div class="breathe"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--spin-->
-          <div class="card">
-            <div class="spin card bg-soft center">spin</div>
-            <pre class="card-code"><code>&lt;div class="spin"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--tilt-->
-          <div class="card">
-            <div class="tilt card bg-soft center size-sm">tilt</div>
-            <pre class="card-code"><code>&lt;div class="tilt"&gt;&lt;/div&gt;</code></pre>
-          </div>
+        <!--slide-left-->
+        <div class="card">
+          <div class="slide-left entrance-demo card bg-soft center">slide-left</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="slide-left"&gt;&lt;/div&gt;</code></pre>
         </div>
-
-        <!-- Overlay Effects -->
-        <p class="mt-lg"><strong>Overlay Effects</strong> animations add dynamic visual elements above components.</p>
-
-        <div class="grid-2">
-          <!--shine-->
-          <div class="card">
-            <div class="shine card bg-soft center">shine</div>
-            <pre class="card-code"><code>&lt;div class="shine"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--scanline-->
-          <div class="card">
-            <div class="scanline card bg-soft center">scanline</div>
-            <pre class="card-code"><code>&lt;div class="scanline"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--beacon-->
-          <div class="card">
-            <div class="beacon card bg-soft center">beacon</div>
-            <pre class="card-code"><code>&lt;div class="beacon"&gt;&lt;/div&gt;</code></pre>
-          </div>
+        <!--slide-right-->
+        <div class="card">
+          <div class="slide-right entrance-demo card bg-soft center">slide-right</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="slide-right"&gt;&lt;/div&gt;</code></pre>
         </div>
-
-        <!-- Border Effects -->
-        <p class="mt-lg"><strong>Border Effects</strong> animations enhance borders and outlines.</p>
-        <div class="grid-2">
-          <!--border-neon-->
-          <div class="card">
-            <div class="border-neon card bg-soft center">border-neon</div>
-            <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-pulse-->
-          <div class="card">
-            <div class="border-pulse card bg-soft center">border-pulse</div>
-            <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-flicker-->
-          <div class="card">
-            <div class="border-flicker card bg-soft center">border-flicker</div>
-            <pre class="card-code"><code>&lt;div class="border-flicker"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-static-->
-          <div class="card">
-            <div class="border-static card bg-soft center">border-static</div>
-            <pre class="card-code"><code>&lt;div class="border-static"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-glitch-->
-          <div class="card">
-            <div class="border-glitch card bg-soft center">border-glitch</div>
-            <pre class="card-code"><code>&lt;div class="border-glitch"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-draw-->
-          <div class="card">
-            <div class="border-draw card center">border-draw</div>
-            <pre class="card-code"><code>&lt;div class="border-draw"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-scan-->
-          <div class="card">
-            <div class="border-scan card bg-soft center">border-scan</div>
-            <pre class="card-code"><code>&lt;div class="border-scan"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-orbit-->
-          <div class="card">
-            <div class="border-orbit  card bg-soft center">border-orbit</div>
-            <pre class="card-code"><code>&lt;div class="border-orbit"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-shift-->
-          <div class="card">
-            <div class="border-shift card bg-soft center">border-shift</div>
-            <pre class="card-code mb"><code>&lt;div class="border-shift"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-width-->
-          <div class="card">
-            <div class="border-width card bg-soft center">border-width</div>
-            <pre class="card-code"><code>&lt;div class="border-width"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--border-corners-->
-          <div class="card">
-            <div class="border-corners card bg-soft center">border-corners</div>
-            <pre class="card-code"><code>&lt;div class="border-corners"&gt;&lt;/div&gt;</code></pre>
-          </div>
-
+        <!--zoom-in-->
+        <div class="card">
+          <div class="zoom-in entrance-demo card bg-soft center">zoom-in</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="zoom-in"&gt;&lt;/div&gt;</code></pre>
         </div>
-
-        <!-- Entrance Effects -->
-        <p class="mt-lg"><strong>Entrance Effects</strong> animations played when components first appear.</p>
-        <div class="grid-2">
-          <!--fade-in-->
-          <div class="card">
-            <div class="fade-in entrance-demo card bg-soft center">fade-in</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="fade-in"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--slide-up-->
-          <div class="card">
-            <div class="slide-up entrance-demo card bg-soft center">slide-up</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="slide-up"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--slide-down-->
-          <div class="card">
-            <div class="slide-down entrance-demo card bg-soft center">slide-down</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="slide-down"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--slide-left-->
-          <div class="card">
-            <div class="slide-left entrance-demo card bg-soft center">slide-left</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="slide-left"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--slide-right-->
-          <div class="card">
-            <div class="slide-right entrance-demo card bg-soft center">slide-right</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="slide-right"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--zoom-in-->
-          <div class="card">
-            <div class="zoom-in entrance-demo card bg-soft center">zoom-in</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="zoom-in"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--pop-in-->
-          <div class="card">
-            <div class="pop-in entrance-demo card bg-soft center">pop-in</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="pop-in"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--blur-in-->
-          <div class="card">
-            <div class="blur-in entrance-demo card bg-soft center">blur-in</div>
-            <button class="btn replay-animation">Replay</button>
-            <pre class="card-code"><code>&lt;div class="blur-in"&gt;&lt;/div&gt;</code></pre>
-          </div>
+        <!--pop-in-->
+        <div class="card">
+          <div class="pop-in entrance-demo card bg-soft center">pop-in</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="pop-in"&gt;&lt;/div&gt;</code></pre>
         </div>
-
-        <!--hover effects-->
-        <p class="mt-lg"><strong>Hover Effects</strong> animations triggered when the pointer hovers over a component.
-        </p>
-        <div class="grid-2">
-          <!--hover-lift-->
-          <div class="card">
-            <div class="hover-lift card bg-soft center">hover-lift</div>
-            <pre class="card-code"><code>&lt;div class="hover-lift"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-grow-->
-          <div class="card">
-            <div class="hover-grow card bg-soft center">hover-grow</div>
-            <pre class="card-code"><code>&lt;div class="hover-grow"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-shrink-->
-          <div class="card">
-            <div class="hover-shrink card bg-soft center">hover-shrink</div>
-            <pre class="card-code"><code>&lt;div class="hover-shrink"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-glow-->
-          <div class="card">
-            <div class="hover-glow card bg-soft center">hover-glow</div>
-            <pre class="card-code"><code>&lt;div class="hover-glow"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-border-->
-          <div class="card">
-            <div class="hover-border card bg-soft center">hover-border</div>
-            <pre class="card-code"><code>&lt;div class="hover-border"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-tilt-->
-          <div class="card">
-            <div class="hover-tilt card bg-soft center">hover-tilt</div>
-            <pre class="card-code"><code>&lt;div class="hover-tilt"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-shine-->
-          <div class="card">
-            <div class="hover-shine card bg-soft center">hover-shine</div>
-            <pre class="card-code"><code>&lt;div class="hover-shine"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-scan-->
-          <div class="card">
-            <div class="hover-scan card bg-soft center">hover-scan</div>
-            <pre class="card-code"><code>&lt;div class="hover-scan"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--hover-ripple-->
-          <div class="card">
-            <div class="hover-ripple card bg-soft center">hover-ripple</div>
-            <pre class="card-code"><code>&lt;div class="hover-ripple"&gt;&lt;/div&gt;</code></pre>
-          </div>
+        <!--blur-in-->
+        <div class="card">
+          <div class="blur-in entrance-demo card bg-soft center">blur-in</div>
+          <button class="btn replay-animation">Replay</button>
+          <pre class="card-code"><code>&lt;div class="blur-in"&gt;&lt;/div&gt;</code></pre>
         </div>
+      </div>
 
-        <!-- Loading Effects -->
-        <p class="mt-lg"><strong>Loading Effects</strong>animations used to indicate loading and processing states.</p>
-        <div class="grid-2">
-          <!--loading-spin-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <div class="loading-spin"></div>
+      <!--hover effects-->
+      <p class="mt-lg"><strong>Hover Effects</strong> animations triggered when the pointer hovers over a component.
+      </p>
+      <div class="grid-2">
+        <!--hover-lift-->
+        <div class="card">
+          <div class="hover-lift card bg-soft center">hover-lift</div>
+          <pre class="card-code"><code>&lt;div class="hover-lift"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-grow-->
+        <div class="card">
+          <div class="hover-grow card bg-soft center">hover-grow</div>
+          <pre class="card-code"><code>&lt;div class="hover-grow"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-shrink-->
+        <div class="card">
+          <div class="hover-shrink card bg-soft center">hover-shrink</div>
+          <pre class="card-code"><code>&lt;div class="hover-shrink"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-glow-->
+        <div class="card">
+          <div class="hover-glow card bg-soft center">hover-glow</div>
+          <pre class="card-code"><code>&lt;div class="hover-glow"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-border-->
+        <div class="card">
+          <div class="hover-border card bg-soft center">hover-border</div>
+          <pre class="card-code"><code>&lt;div class="hover-border"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-tilt-->
+        <div class="card">
+          <div class="hover-tilt card bg-soft center">hover-tilt</div>
+          <pre class="card-code"><code>&lt;div class="hover-tilt"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-shine-->
+        <div class="card">
+          <div class="hover-shine card bg-soft center">hover-shine</div>
+          <pre class="card-code"><code>&lt;div class="hover-shine"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-scan-->
+        <div class="card">
+          <div class="hover-scan card bg-soft center">hover-scan</div>
+          <pre class="card-code"><code>&lt;div class="hover-scan"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--hover-ripple-->
+        <div class="card">
+          <div class="hover-ripple card bg-soft center">hover-ripple</div>
+          <pre class="card-code"><code>&lt;div class="hover-ripple"&gt;&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Loading Effects -->
+      <p class="mt-lg"><strong>Loading Effects</strong>animations used to indicate loading and processing states.</p>
+      <div class="grid-2">
+        <!--loading-spin-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <div class="loading-spin"></div>
+          </div>
+          <pre class="card-code"><code>&lt;div class="loading-spin"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--loading-pulse-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <div class="loading-pulse"></div>
+          </div>
+          <pre class="card-code"><code>&lt;div class="loading-pulse"&gt;&lt;/div&gt;</code></pre>
+        </div>
+        <!--loading-dots-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <div class="loading-dots">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <pre class="card-code"><code>&lt;div class="loading-spin"&gt;&lt;/div&gt;</code></pre>
           </div>
-          <!--loading-pulse-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <div class="loading-pulse"></div>
-            </div>
-            <pre class="card-code"><code>&lt;div class="loading-pulse"&gt;&lt;/div&gt;</code></pre>
-          </div>
-          <!--loading-dots-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <div class="loading-dots">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <pre class="card-code"><code>&lt;div class="loading-dots"&gt;
+          <pre class="card-code"><code>&lt;div class="loading-dots"&gt;
   &lt;span&gt;&lt;/span&gt;
   &lt;span&gt;&lt;/span&gt;
   &lt;span&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
-          </div>
+        </div>
 
-          <!--loading-wave-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <div class="loading-wave">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+        <!--loading-wave-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <div class="loading-wave">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <pre class="card-code"><code>&lt;div class="loading-wave"&gt;
+          </div>
+          <pre class="card-code"><code>&lt;div class="loading-wave"&gt;
   &lt;span&gt;&lt;/span&gt;
   &lt;span&gt;&lt;/span&gt;
   &lt;span&gt;&lt;/span&gt;
   &lt;span&gt;&lt;/span&gt;
   &lt;span&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
+        </div>
+        <!--loading-orbit-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <div class="loading-orbit"></div>
           </div>
-          <!--loading-orbit-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <div class="loading-orbit"></div>
-            </div>
-            <pre class="card-code"><code>&lt;div class="loading-orbit"&gt;&lt;/div&gt;</code></pre>
+          <pre class="card-code"><code>&lt;div class="loading-orbit"&gt;&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+
+      <!-- Text Effects -->
+      <p class="mt-lg">
+        <strong>Text Effects</strong>
+        animations that enhance text visibility and emphasis.
+      </p>
+
+      <div class="grid-2">
+
+        <!--text-glow-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <span class="text-glow">text-glow</span>
           </div>
+          <pre class="card-code"><code>&lt;span class="text-glow"&gt;text&lt;/span&gt;</code></pre>
         </div>
 
-        <!-- Text Effects -->
-        <p class="mt-lg">
-          <strong>Text Effects</strong>
-          animations that enhance text visibility and emphasis.
-        </p>
-
-        <div class="grid-2">
-
-          <!--text-glow-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <span class="text-glow">text-glow</span>
-            </div>
-            <pre class="card-code"><code>&lt;span class="text-glow"&gt;text&lt;/span&gt;</code></pre>
+        <!--text-pulse-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <span class="text-pulse">text-pulse</span>
           </div>
-
-          <!--text-pulse-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <span class="text-pulse">text-pulse</span>
-            </div>
-            <pre class="card-code"><code>&lt;span class="text-pulse"&gt;text&lt;/span&gt;</code></pre>
-          </div>
-
-          <!--text-flicker-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <span class="text-flicker">text-flicker</span>
-            </div>
-            <pre class="card-code"><code>&lt;span class="text-flicker"&gt;text&lt;/span&gt;</code></pre>
-          </div>
-
-          <!--text-shimmer-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <span class="text-shimmer">text-shimmer</span>
-            </div>
-            <pre class="card-code"><code>&lt;span class="text-shimmer"&gt;text&lt;/span&gt;</code></pre>
-          </div>
-
-          <!--text-wave-->
-          <div class="card">
-            <div class="card bg-soft center">
-              <span class="text-wave">text-wave</span>
-            </div>
-            <pre class="card-code"><code>&lt;span class="text-wave"&gt;text&lt;/span&gt;</code></pre>
-          </div>
-
+          <pre class="card-code"><code>&lt;span class="text-pulse"&gt;text&lt;/span&gt;</code></pre>
         </div>
 
-      </section>
+        <!--text-flicker-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <span class="text-flicker">text-flicker</span>
+          </div>
+          <pre class="card-code"><code>&lt;span class="text-flicker"&gt;text&lt;/span&gt;</code></pre>
+        </div>
+
+        <!--text-shimmer-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <span class="text-shimmer">text-shimmer</span>
+          </div>
+          <pre class="card-code"><code>&lt;span class="text-shimmer"&gt;text&lt;/span&gt;</code></pre>
+        </div>
+
+        <!--text-wave-->
+        <div class="card">
+          <div class="card bg-soft center">
+            <span class="text-wave">text-wave</span>
+          </div>
+          <pre class="card-code"><code>&lt;span class="text-wave"&gt;text&lt;/span&gt;</code></pre>
+        </div>
+
+      </div>
+
+    </section>
 
 
 
