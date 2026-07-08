@@ -156,17 +156,15 @@
     <section id="themes">
       <span class="badge mb-sm">Themes</span>
       <h2>Themes</h2>
-      <p>Customize the appearance of your application by applying one of Aurora's built-in themes through the
-        <code>data-theme</code> attribute.
-      </p>
-      <span class="text">Usage:</span>
+      <p>Customize the appearance of your application by setting the <code>data-theme</code> attribute to one of Aurora's built-in themes.</p>
+      <span class="text">Usage</span>
       <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
     </section>
 
     <!--theme selector-->
     <section>
       <h3>Theme Selector</h3>
-      <p>Use the Theme Selector to preview and switch between Aurora's built-in themes.</p>
+      <p>Use this example to add a theme selector that lets users switch between Aurora's built-in themes.</p>
       <div class="card">
         <select class="theme-selector">
           <option value="aurora-light">Aurora Light</option>
@@ -353,35 +351,38 @@ selectors.forEach(selector=&gt;{
     </section>
     <!--Container ---------------------------------------------------------->
     <section id="container">
-      <h2>Container</h2>
-      <p>Center content and control maximum width.</p>
-      <div class="container card mb center-items">Container</div>
+      <h3>Container</h3>
+      <p>Center content while controlling the maximum layout width.</p>
+      <div class="container card mb center-items">
+        <p>Container</p>
+        <code>1200px</code>
+      </div>
       <pre class="card-code"><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
     </section>
     <!-- Grid ---------------------------------------------------------->
     <section id="grid">
-      <h2>Grid</h2>
+      <h3>Grid</h3>
       <p>Flexible grid utilities for scalable and modern layouts.</p>
 
       <!-- Grids ---------------------------------------------------------->
       <div class="card mb-md">
-        <h3>Grids</h3>
+        <h4>Grid Utilities</h4>
         <!--grid-2-->
-        <p class="mt center-self">grid-2</p>
-        <div class="grid-2 mb">
+        <p class="mt-sm center-self">grid-2</p>
+        <div class="grid-2 mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
         </div>
         <!--grid-3-->
         <p class="center-self">grid-3</p>
-        <div class="grid-3 mb">
+        <div class="grid-3 mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
         </div>
         <!--grid-4-->
         <p class="center-self">grid-4</p>
-        <div class="grid-4 mb">
+        <div class="grid-4 mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
@@ -389,7 +390,7 @@ selectors.forEach(selector=&gt;{
         </div>
         <!--grid-5-->
         <p class="center-self">grid-5</p>
-        <div class="grid-5 mb">
+        <div class="grid-5 mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
@@ -398,7 +399,7 @@ selectors.forEach(selector=&gt;{
         </div>
         <!--grid-6-->
         <p class="center-self">grid-6</p>
-        <div class="grid-6 mb">
+        <div class="grid-6 mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
@@ -408,7 +409,7 @@ selectors.forEach(selector=&gt;{
         </div>
         <!--grid-7-->
         <p class="center-self">grid-7</p>
-        <div class="grid-7 mb">
+        <div class="grid-7 mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
@@ -428,11 +429,11 @@ selectors.forEach(selector=&gt;{
 
       <!-- Column Span ---------------------------------------------------------->
       <div class="card">
-        <h3>Column Span</h3>
+        <h4>Column Span</h4>
         <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
 
         <p class="center-self">grid-4 + col-3</p>
-        <div class="grid-4 mb">
+        <div class="grid-4 mb-sm">
           <div class="card col-3 center-items">col-3</div>
           <div class="card center-items">1</div>
         </div>
@@ -457,7 +458,7 @@ selectors.forEach(selector=&gt;{
 
     <!--row ---------------------------------------------------------->
     <section id="row">
-      <h2>Row</h2>
+      <h3>Row</h3>
       <p>Horizontal alignment utilities for inline layouts.</p>
 
       <div class="grid-2">
