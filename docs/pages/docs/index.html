@@ -66,7 +66,6 @@
       <hr class="mt-sm mb-sm">
       <span>Typography</span>
       <a href="#typography-system">System</a>
-      <a href="#typography-utilities">Utilities</a>
       <a href="#text-elements">Text Elements</a>
       <a href="#code">Code</a>
       <a href="#quotes">Quotes</a>
@@ -156,7 +155,8 @@
     <section id="themes">
       <span class="badge mb-sm">Themes</span>
       <h2>Themes</h2>
-      <p>Customize the appearance of your application by setting the <code>data-theme</code> attribute to one of Aurora's built-in themes.</p>
+      <p>Customize the appearance of your application by setting the <code>data-theme</code> attribute to one of
+        Aurora's built-in themes.</p>
       <span class="text">Usage</span>
       <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
     </section>
@@ -494,135 +494,95 @@ selectors.forEach(selector=&gt;{
     <section id="typography">
       <span class="badge mb-sm">Typography</span>
       <h2>Typography</h2>
-      <p>Aurora provides a simplified typography system based on title, subtitle and text styles.</p>
+      <p>urora provides a simple typography system with semantic elements,utility classes, and text formatting styles.
+      </p>
     </section>
 
     <!--Typography System ---------------------------------------------------------->
     <section id="typography-system">
-      <h2>Typography System</h2>
-      <p>Semantic elements already include Aurora typography styles by default.</p>
+      <h3>Typography System</h3>
+      <p>Semantic elements are styled automatically, or the same styles can be applied using Aurora typography classes.
+      </p>
 
-      <div class="grid-3">
+      <div class="grid-2">
         <!--title-->
         <div class="card">
-          <p class="mb-sm center-self">Title</p>
           <h1 class="center-self">Title</h1>
           <pre class="card-code"><code>&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
+          <pre class="card-code"><code>&lt;span class="title"&gt;Title&lt;/span&gt;</code></pre>
         </div>
         <!--subtitle-->
         <div class="card">
-          <p class="mb-sm center-self">Subtitle</p>
           <h2 class="center-self">Subtitle</h2>
           <pre class="card-code"><code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code></pre>
+          <pre class="card-code"><code>&lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;</code></pre>
         </div>
         <!--text-->
         <div class="card">
-          <p class="mb-sm center-self">Text</p>
           <p class="center-self">Text</p>
           <pre class="card-code"><code>&lt;p&gt;Text&lt;/p&gt;</code></pre>
-        </div>
-      </div>
-    </section>
-
-    <!--Typography Classes ---------------------------------------------------------->
-    <section id="typography-utilities">
-      <h2>Typography Utilities</h2>
-      <p>Apply Aurora typography styles to any element.</p>
-
-      <div class="grid-2">
-        <div class="card text-center">
-          <p class="mb-sm">.title</p>
-          <span class="title">Title</span>
-          <pre class="card-code"><code>&lt;span class="title"&gt;Title&lt;/span&gt;</code></pre>
-        </div>
-
-        <div class="card text-center">
-          <p class="mb-sm">.subtitle</p>
-          <span class="subtitle">Subtitle</span>
-          <pre class="card-code"><code>&lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;</code></pre>
-        </div>
-
-        <div class="card text-center">
-          <p class="mb-sm">.text</p>
-          <span class="text">Text</span>
           <pre class="card-code"><code>&lt;span class="text"&gt;Text&lt;/span&gt;</code></pre>
         </div>
-
+        <!--text-accent-->
         <div class="card text-center">
-          <p class="mb-sm">.text-accent</p>
-          <span class="text-accent">Accent Text</span>
-          <pre class="card-code"><code>&lt;span class="text-accent"&gt;Accent Text&lt;/span&gt;</code></pre>
+          <span class="text-accent">Text Accent</span>
+          <pre class="card-code"><code>&lt;span class="text-accent"&gt;Text Accent&lt;/span&gt;</code></pre>
         </div>
-
       </div>
     </section>
 
     <!--Text Elements ---------------------------------------------------------->
     <section id="text-elements">
-      <h2>Text Elements</h2>
-      <p>Semantic elements for emphasis and annotations.</p>
-      <div class="grid-2">
-
+      <h3>Text Elements</h3>
+      <p>Common semantic HTML elements for text formatting and annotations.</p>
+      <div class="grid-3">
+        <!--strong-->
         <div class="card text-center">
-          <p class="mb-sm">&lt;strong&gt;</p>
           <p><strong>Strong Text</strong></p>
           <pre class="card-code"><code>&lt;strong&gt;Strong Text&lt;/strong&gt;</code></pre>
         </div>
-
+        <!--mark-->
         <div class="card text-center">
-          <p class="mb-sm">&lt;mark&gt;</p>
           <p><mark>Highlighted Text</mark></p>
           <pre class="card-code"><code>&lt;mark&gt;Highlighted Text&lt;/mark&gt;</code></pre>
         </div>
-
+        <!--abbr-->
         <div class="card text-center">
-          <p class="mb-sm">&lt;abbr&gt;</p>
-          <p><abbr title="Cascading Style Sheets">CSS</abbr></p>
-          <pre class="card-code"><code>&lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;</code></pre>
+          <p><abbr title="Abbreviation">abbr</abbr></p>
+          <pre class="card-code"><code>&lt;abbr title="Abbreviation"&gt;abbr&lt;/abbr&gt;</code></pre>
         </div>
-
       </div>
     </section>
 
     <!--Code ---------------------------------------------------------->
     <section id="code">
-      <h2>Code</h2>
-      <p>Inline and block code formatting.</p>
+      <h3>Code</h3>
+      <p>Utilities for displaying inline and block code snippets.</p>
 
-      <div class="grid-2">
-        <!--Inline Code-->
+      <div class="grid-3">
+        <!-- Inline Code -->
         <div class="card">
-          <p class="mb center-self">Inline Code</p>
-          <p class="mb-sm">Use <code>code</code> for inline code snippets.</p>
+          <p class="mb-sm center-self">Inline Code</p>
+          <p class="mb">Use <code>code</code> for inline snippets.</p>
           <pre class="card-code"><code>&lt;code&gt;code&lt;/code&gt;</code></pre>
         </div>
-
-        <!--Code Block-->
+        <!-- Code Block -->
         <div class="card">
           <p class="mb-sm center-self">Code Block</p>
           <pre><code>Example block content</code></pre>
-          <pre class="card-code"><code>&lt;pre&gt;
+          <pre class="card-code">
+<code>&lt;pre&gt;
   &lt;code&gt;Example block content&lt;/code&gt;
 &lt;/pre&gt;</code></pre>
         </div>
-
-      </div>
-    </section>
-
-    <!--Code Card ---------------------------------------------------------->
-    <section>
-      <h2>Code Card</h2>
-      <p>Display formatted code snippets inside a styled container.</p>
-
-      <div class="grid-2">
-        <div class="card text-center">
-          <p class="mb-sm">Preview</p>
+        <!-- card-code -->
+        <div class="card">
+          <p class="center-self mb-sm">card-code</p>
+          <p class="center-self">Example</p>
           <pre class="card-code"><code>Example code snippet</code></pre>
-        </div>
-
-        <div class="card text-center">
-          <p class="mb-sm">Usage</p>
-          <pre class="card-code"><code>&lt;pre class="card-code"&gt;
+          <p class="center-self">HTML</p>
+          <pre class="card-code">
+<code>&lt;pre class="card-code"&gt;
   &lt;code&gt;Example code snippet&lt;/code&gt;
 &lt;/pre&gt;</code></pre>
         </div>
@@ -631,19 +591,17 @@ selectors.forEach(selector=&gt;{
 
     <!--Quotes ---------------------------------------------------------->
     <section id="quotes">
-      <h2>Quotes</h2>
-      <p>Elements for quotations and citations.</p>
+      <h3>Quotes</h3>
+      <p>Semantic elements for inline and block quotations.</p>
       <div class="grid-2">
         <!--Inline Quote-->
         <div class="card">
-          <p class="mb-sm text-center">Inline Quote</p>
-          <p><q>Inline Quote.</q></p>
+          <p class="center-self mb-sm"><q>Inline Quote</q></p>
           <pre class="card-code"><code>&lt;q&gt;Inline Quote.&lt;/q&gt;</code></pre>
         </div>
-
         <!--Blockquote-->
         <div class="card">
-          <p class="mb-sm text-center">Blockquote</p>
+          <p class="mb-sm center-self">Blockquote</p>
           <blockquote>Aurora CSS focuses on atmospheric interfaces,
             reusable utilities and scalable design systems.
             <footer>Aurora Documentation</footer>
