@@ -79,14 +79,13 @@
       <a href="#tooltips">Tooltips</a>
       <a href="#toasts">Toasts</a>
       <a href="#horizontal-rule">Horizontal Rule</a>
-      <!--Forms-->
-      <hr class="mt-sm mb-sm">
-      <span>Forms</span>
-      <a href="#form-elements">Elements</a>
+      <a href="#form">Form</a>
       <a href="#tables">Tables</a>
       <a href="#modal">Modal</a>
       <a href="#navbar">Navbar</a>
+      <a href="#sidebar">Sidebar</a>
       <a href="#footer">Footer</a>
+
       <!--Utilities-->
       <hr class="mt-sm mb-sm">
       <span>Utilities</span>
@@ -502,7 +501,8 @@ selectors.forEach(selector=&gt;{
     <!--Typography System ---------------------------------------------------------->
     <section id="typography-system">
       <h3>Typography System</h3>
-      <p>Semantic elements are styled automatically, or the same styles can be applied using Aurora typography classes.</p>
+      <p>Semantic elements are styled automatically, or the same styles can be applied using Aurora typography classes.
+      </p>
 
       <div class="grid-2">
         <!--title-->
@@ -748,16 +748,20 @@ selectors.forEach(selector=&gt;{
       <div class="grid-4">
         <!--default-->
         <span class="tooltip center-self" data-tooltip="Default tooltip">Default</span>
-        <pre class="card-code col-3"><code>&lt;span class="tooltip" data-tooltip="Default tooltip"&gt;Default&lt;/span&gt;</code></pre>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip" data-tooltip="Default tooltip"&gt;Default&lt;/span&gt;</code></pre>
         <!--left-->
         <span class="tooltip-left center-self" data-tooltip="Left tooltip">Left</span>
-        <pre class="card-code col-3"><code>&lt;span class="tooltip-left" data-tooltip="Left tooltip"&gt;Left&lt;/span&gt;</code></pre>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip-left" data-tooltip="Left tooltip"&gt;Left&lt;/span&gt;</code></pre>
         <!--right-->
         <span class="tooltip-right center-self" data-tooltip="Right tooltip">Right</span>
-        <pre class="card-code col-3"><code>&lt;span class="tooltip-right" data-tooltip="Right tooltip"&gt;Right&lt;/span&gt;</code></pre>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip-right" data-tooltip="Right tooltip"&gt;Right&lt;/span&gt;</code></pre>
         <!--bottom-->
         <span class="tooltip-bottom center-self" data-tooltip="Bottom tooltip">Bottom</span>
-        <pre class="card-code col-3"><code>&lt;span class="tooltip-bottom" data-tooltip="Bottom tooltip"&gt;Bottom&lt;/span&gt;</code></pre>
+        <pre
+          class="card-code col-3"><code>&lt;span class="tooltip-bottom" data-tooltip="Bottom tooltip"&gt;Bottom&lt;/span&gt;</code></pre>
       </div>
     </section>
 
@@ -774,85 +778,15 @@ selectors.forEach(selector=&gt;{
     <!--Horizontal Rule ---------------------------------------------------------->
     <section id="horizontal-rule">
       <h3>Horizontal Rule</h3>
-      <p>The <code>&lt;hr&gt;</code> element represents a thematic break between sections of content. Aurora CSSautomatically styles it to match the active theme.</p>
+      <p>The <code>&lt;hr&gt;</code> element represents a thematic break between sections of content. Aurora
+        CSSautomatically styles it to match the active theme.</p>
       <hr class="mt-lg mb-lg">
       <pre class="card-code"><code>&lt;hr&gt;</code></pre>
     </section>
 
-    <!--From ---------------------------------------------------------->
-    <hr>
-    <section id="form">
-      <span class="badge mb-sm">Form</span>
-      <h2>Form</h2>
-      <p>Form controls for collecting and validating user input.</p>
-    </section>
-
-    <!--Elements ---------------------------------------------------------->
-    <section id="form-elements">
-      <h2>Form Elements</h2>
-      <p>Form elements styled automatically by Aurora.</p>
-
-      <div class="grid-2">
-        <!--Input-->
-        <div class="card text-center">
-          <p>Input</p>
-          <input type="text" placeholder="Text">
-          <pre class="card-code"><code>&lt;input type="text" placeholder="Text"&gt;</code></pre>
-        </div>
-        <!--Textarea-->
-        <div class="card text-center">
-          <p>Textarea</p>
-          <textarea placeholder="Textarea"></textarea>
-          <pre class="card-code"><code>&lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;</code></pre>
-        </div>
-
-        <!--select-->
-        <div class="card text-center">
-          <p>Select</p>
-          <select>
-            <option>Select Option</option>
-            <option>Select Option 2</option>
-          </select>
-          <pre class="card-code"><code>&lt;select&gt;
-  &lt;option&gt;Select Option&lt;/option&gt;
-  &lt;option&gt;Select Option 2&lt;/option&gt;
-&lt;/select&gt;</code></pre>
-        </div>
-
-        <!--checkbox-->
-        <div class="card text-center">
-          <p>Checkbox</p>
-          <input type="checkbox" class="center-self" checked>
-          <pre class="card-code"><code>&lt;input type="checkbox"&gt;</code></pre>
-        </div>
-
-        <!--radio-->
-        <div class="card">
-          <p class="text-center">Radio</p>
-          <label><input type="radio" name="radio" checked>Option</label>
-          <label><input type="radio" name="radio">Option 2</label>
-          <pre class="card-code"><code>&lt;input type="radio" name="radio" checked&gt;
-&lt;input type="radio" name="radio"&gt;</code></pre>
-        </div>
-
-        <!--field-->
-        <div class="card text-center">
-          <p>Field</p>
-          <div class="field">
-            <input type="text" placeholder=" ">
-            <label>Floating Label</label>
-          </div>
-          <pre class="card-code"><code>&lt;div class="field"&gt;
-  &lt;input type="text" placeholder=" "&gt;
-  &lt;label&gt;Floating Label&lt;/label&gt;
-&lt;/div&gt;</code></pre>
-        </div>
-      </div>
-    </section>
-
     <!--Form ---------------------------------------------------------->
-    <section id="form-example">
-      <h2>Form Example</h2>
+    <section id="form">
+      <h3>Form</h3>
       <p>Example of a complete form using Aurora form controls.</p>
       <!--form-->
       <form class="card center-self size-md mt-md">
@@ -879,6 +813,8 @@ selectors.forEach(selector=&gt;{
         <label><input type="checkbox">I agree to the terms.</label>
         <button class="mt">Submit</button>
       </form>
+
+      <!--code-->
       <pre class="card-code mt-md"><code>&lt;form class="size-md center-self"&gt;
   &lt;h2&gt;Form&lt;/h2&gt;
 
@@ -909,24 +845,84 @@ selectors.forEach(selector=&gt;{
 &lt;/form&gt;</code></pre>
     </section>
 
+    <!--Elements ---------------------------------------------------------->
+    <section id="form-elements">
+      <h3>Form Elements</h3>
+      <p>Form elements styled automatically by Aurora.</p>
+
+      <div class="grid-2">
+        <!--Input-->
+        <div class="card text-center">
+          <p>Input</p>
+          <input type="text" placeholder="Text">
+          <pre class="card-code"><code>&lt;input type="text" placeholder="Text"&gt;</code></pre>
+        </div>
+        <!--Textarea-->
+        <div class="card text-center">
+          <p>Textarea</p>
+          <textarea placeholder="Textarea"></textarea>
+          <pre class="card-code"><code>&lt;textarea placeholder="Textarea"&gt;&lt;/textarea&gt;</code></pre>
+        </div>
+        <!--select-->
+        <div class="card text-center">
+          <p>Select</p>
+          <select>
+            <option>Select Option</option>
+            <option>Select Option 2</option>
+          </select>
+          <pre class="card-code"><code>&lt;select&gt;
+  &lt;option&gt;Select Option&lt;/option&gt;
+  &lt;option&gt;Select Option 2&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+        </div>
+        <!--checkbox-->
+        <div class="card text-center">
+          <p>Checkbox</p>
+          <input type="checkbox" class="center-self" checked>
+          <pre class="card-code"><code>&lt;input type="checkbox"&gt;</code></pre>
+        </div>
+        <!--radio-->
+        <div class="card">
+          <p class="text-center">Radio</p>
+          <label><input type="radio" name="radio" checked>Option</label>
+          <label><input type="radio" name="radio">Option 2</label>
+          <pre class="card-code"><code>&lt;input type="radio" name="radio" checked&gt;
+&lt;input type="radio" name="radio"&gt;</code></pre>
+        </div>
+        <!--field-->
+        <div class="card text-center">
+          <p>Field</p>
+          <div class="field">
+            <input type="text" placeholder=" ">
+            <label>Floating Label</label>
+          </div>
+          <pre class="card-code"><code>&lt;div class="field"&gt;
+  &lt;input type="text" placeholder=" "&gt;
+  &lt;label&gt;Floating Label&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
     <!--Tables ---------------------------------------------------------->
     <section id="tables">
-      <h2>Tables</h2>
+      <h3>Tables</h3>
       <p>Structured data displayed with Aurora table styling.</p>
+      <!--table-->
       <table>
+        <!--thead-->
         <thead>
           <tr>
             <th>Name</th>
             <th>Role</th>
           </tr>
         </thead>
-
+        <!--tbody-->
         <tbody>
           <tr>
             <td>Alice</td>
             <td>Developer</td>
           </tr>
-
           <tr>
             <td>Bob</td>
             <td>Designer</td>
@@ -959,21 +955,21 @@ selectors.forEach(selector=&gt;{
 
     <!--Modal ---------------------------------------------------------->
     <section id="modal">
-      <h2>Modal</h2>
+      <h3>Modal</h3>
       <p>Overlay dialog for focused interactions.</p>
-
-      <div class="grid-2">
+      <div class="grid-3">
+        <!--link-->
         <a href="#demo-modal" class="btn center-self">Open Modal</a>
-
+        <!--modal-->
         <div id="demo-modal" class="modal">
           <div class="modal__content">
             <a href="##" class="modal__close">&times;</a>
             <h2>Modal Title</h2>
             <p>Modal content.</p>
           </div>
-
         </div>
-        <pre class="card-code"><code>&lt;a href="#modal" class="btn"&gt;Open Modal&lt;/a&gt;
+        <!--code-->
+        <pre class="card-code col-2"><code>&lt;a href="#modal" class="btn"&gt;Open Modal&lt;/a&gt;
 
 &lt;div id="modal" class="modal"&gt;
   &lt;div class="modal__content"&gt;
@@ -987,10 +983,10 @@ selectors.forEach(selector=&gt;{
 
     <!--Navbar ---------------------------------------------------------->
     <section id="navbar">
-      <h2>Navbar</h2>
-      <p class="mb-md">Responsive navigation bar with desktop and mobile support. Resize the viewport to see the
-        mobile menu.</p>
-
+      <h3>Navbar</h3>
+      <p class="mb-md">Responsive navigation bar with desktop and mobile support. Resize the viewport to see the mobile
+        menu.</p>
+      <!--navbar-->
       <nav class="navbar">
         <div class="navbar__content">
           <a href="##" class="navbar__logo">Logo</a>
@@ -1002,10 +998,9 @@ selectors.forEach(selector=&gt;{
           <button class="navbar__toggle">☰</button>
         </div>
       </nav>
-
+      <!--code-->
       <pre class="card-code mt"><code>&lt;nav class="navbar"&gt;
   &lt;div class="navbar__content"&gt;
-
     &lt;a href="#" class="navbar__logo"&gt;Logo&lt;/a&gt;
 
     &lt;ul class="navbar__menu"&gt;
@@ -1018,13 +1013,13 @@ selectors.forEach(selector=&gt;{
   &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
 
-
-      <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the
-        navbar inside a <code>&lt;header&gt;</code> element.</p>
-
+      <!--text-->
+      <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the navbar inside a
+        <code>&lt;header&gt;</code> element.
+      </p>
+      <!--code-->
       <pre class="card-code mt"><code>&lt;header class="navbar"&gt;
   &lt;nav class="navbar__content" aria-label="Main navigation"&gt;
-
     &lt;a href="#" class="navbar__logo"&gt;Logo&lt;/a&gt;
 
     &lt;ul class="navbar__menu"&gt;
@@ -1034,7 +1029,6 @@ selectors.forEach(selector=&gt;{
     &lt;/ul&gt;
 
     &lt;button class="navbar__toggle"&gt;☰&lt;/button&gt;
-
   &lt;/nav&gt;
 &lt;/header&gt;</code></pre>
 
@@ -1042,16 +1036,11 @@ selectors.forEach(selector=&gt;{
 
     <!--Sidebar ---------------------------------------------------------->
     <section id="sidebar">
-      <h2>Sidebar</h2>
-
-      <p class="mb-md">
-        Responsive sidebar for dashboards and application layouts. On mobile,
-        use <code>.sidebar__toggle</code> to open and close the sidebar.
-      </p>
-
-      <div class="card">
-
-        <pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
+      <h3>Sidebar</h3>
+      <p class="mb-md">Responsive sidebar for dashboards and application layouts. On mobile, use
+        <code>.sidebar__toggle</code> to open and close the sidebar.</p>
+      <!--code-->
+      <pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
   &lt;aside class="sidebar"&gt;
 
     &lt;div class="sidebar__header"&gt;
@@ -1076,20 +1065,14 @@ selectors.forEach(selector=&gt;{
   &lt;/main&gt;
 
 &lt;/body&gt;</code></pre>
-
-      </div>
-
-      <p class="mt">
-        <strong>Layout:</strong> Wrap the page with
-        <code>.sidebar-layout</code>. The sidebar occupies the left column,
-        while the main content uses the <code>.content</code> container.
-      </p>
-
+      <!--text-->
+      <p class="mt"><strong>Layout:</strong> Wrap the page with <code>.sidebar-layout</code>. The sidebar occupies the
+        left column, while the main content uses the <code>.content</code> container.</p>
     </section>
 
     <!--Footer ---------------------------------------------------------->
     <section id="footer">
-      <h2>Footer</h2>
+      <h3>Footer</h3>
       <p>Footer section for copyright and secondary information.</p>
       <!--footer-->
       <footer class="footer">
