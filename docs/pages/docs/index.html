@@ -90,6 +90,7 @@
       <hr class="mt-sm mb-sm">
       <span>Utilities</span>
       <a href="#spacing">Spacing</a>
+      <a href="#gap">Gap</a>
       <a href="#center">Center</a>
       <a href="#text-alignment">Text Align</a>
       <a href="#size">Size</a>
@@ -1038,7 +1039,8 @@ selectors.forEach(selector=&gt;{
     <section id="sidebar">
       <h3>Sidebar</h3>
       <p class="mb-md">Responsive sidebar for dashboards and application layouts. On mobile, use
-        <code>.sidebar__toggle</code> to open and close the sidebar.</p>
+        <code>.sidebar__toggle</code> to open and close the sidebar.
+      </p>
       <!--code-->
       <pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;
   &lt;aside class="sidebar"&gt;
@@ -1097,21 +1099,23 @@ selectors.forEach(selector=&gt;{
     <section>
       <span class="badge mb-sm">Utilities</span>
       <h2>Utilities</h2>
-      <p>Small helper classes for spacing, alignment and layout adjustments.</p>
+      <p>Utility classes for spacing, alignment, sizing, and layout adjustments.</p>
     </section>
 
     <!--Spacing ---------------------------------------------------------->
     <section id="spacing">
-      <h2>Spacing Utilities</h2>
-      <p>Margin utilities for consistent vertical spacing between sections and components.</p>
+      <h3>Spacing</h3>
+      <p>Margin utility classes for consistent spacing between elements.</p>
+      <!--table-->
       <table>
+        <!--thead-->
         <thead>
           <tr>
             <th>Class</th>
             <th>Value</th>
           </tr>
         </thead>
-
+        <!--tbody-->
         <tbody>
           <tr>
             <td>.mt-none / .mb-none</td>
@@ -1135,23 +1139,24 @@ selectors.forEach(selector=&gt;{
           </tr>
         </tbody>
       </table>
-
-      <pre class="card-code mt"><code>&lt;section class="mb-lg"&gt; ... &lt;/section&gt;</code></pre>
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;div class="mb-lg"&gt; ... &lt;/div&gt;</code></pre>
     </section>
 
-    <!--Gap ---------------------------------------------------------->
+    <!--gap ---------------------------------------------------------->
     <section id="gap">
-      <h2>Gap Utilities</h2>
-      <p>Gap utilities for controlling spacing between grid and flex items.</p>
-
+      <h3>Gap</h3>
+      <p>Gap utility classes for controlling spacing between flex and grid items.</p>
+      <!--table-->
       <table>
+        <!--thead-->
         <thead>
           <tr>
             <th>Class</th>
             <th>Value</th>
           </tr>
         </thead>
-
+        <!--tbody-->
         <tbody>
           <tr>
             <td>.gap-none</td>
@@ -1175,83 +1180,88 @@ selectors.forEach(selector=&gt;{
           </tr>
         </tbody>
       </table>
+      <!--code-->
       <pre class="card-code mt"><code>&lt;div class="gap-md"&gt;...&lt;/div&gt;</code></pre>
     </section>
 
     <!--center ---------------------------------------------------------->
     <section id="center">
-      <h2 class="mb-lg">Center Utilities</h2>
-
-      <!-- center -->
-      <p><code>.center</code> centers content horizontally and vertically inside a container.</p>
-      <div class="grid-2">
+      <h3>Center</h3>
+      <p>Utility classes for centering elements and content.</p>
+      <!--center-->
+      <p class="mt"><code>.center</code> centers content horizontally and vertically inside a container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
         <div class="center">
           <div class="card">Center</div>
         </div>
+        <!--code-->
         <pre class="card-code"><code>&lt;div class="center"&gt;
   &lt;div class="card"&gt;Center&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
-
-      <!-- center-items -->
+      <!--center items-->
       <p class="mt-lg"><code>.center-items</code> centers multiple children inside a flex or grid container.</p>
-      <div class="grid-2">
+      <div class="grid-2 fx-dots">
+        <!--div-->
         <div class="center-items">
           <div class="card">Center Items</div>
           <div class="card">Center Items</div>
         </div>
+        <!--code-->
         <pre class="card-code"><code>&lt;div class="center-items"&gt;
   &lt;div class="card"&gt;Center Items&lt;/div&gt;
   &lt;div class="card"&gt;Center Items&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
-
-      <!-- center-self -->
+      <!--center self-->
       <p class="mt-lg"><code>.center-self</code> centers the element itself within its parent container.</p>
-      <div class="grid-2">
+      <div class="grid-2 fx-dots">
+        <!--div-->
         <div class="card center-self">Center Self</div>
+        <!--code-->
         <pre class="card-code"><code>&lt;div class="card center-self"&gt;Center Self&lt;/div&gt;</code></pre>
       </div>
     </section>
 
-    <!--Text Alignment ---------------------------------------------------------->
+    <!--text alignment ---------------------------------------------------------->
     <section id="text-alignment">
-      <h2>Text Alignment</h2>
-      <p>Utilities for controlling text alignment.</p>
-
+      <h3>Text Alignment</h3>
+      <p>Utility classes for horizontal text alignment.</p>
       <div class="grid-3">
+        <!--text left-->
         <div class="card">
           <p class="text-left">Left aligned text</p>
         </div>
-
+        <!--text center-->
         <div class="card">
           <p class="text-center">Centered text</p>
         </div>
-
+        <!--text right-->
         <div class="card">
           <p class="text-right">Right aligned text</p>
         </div>
       </div>
-
-      <pre class="card-code mt"><code>&lt;p class="text-left"&gt;...&lt;/p&gt;
-&lt;p class="text-center"&gt;...&lt;/p&gt;
-&lt;p class="text-right"&gt;...&lt;/p&gt;</code></pre>
-
-      </div>
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;p class="text-left"&gt;Left aligned text&lt;/p&gt;
+&lt;p class="text-center"&gt;Centered text&lt;/p&gt;
+&lt;p class="text-right"&gt;Right aligned text&lt;/p&gt;</code></pre>
     </section>
 
-    <!-- Size ---------------------------------------------------------->
+    <!-- size ---------------------------------------------------------->
     <section id="size">
-      <h2>Size</h2>
-      <p>Utilities for controlling element width.</p>
+      <h3>Size</h3>
+      <p>Width utility classes for common layout sizes.</p>
+      <!--table-->
       <table class="mb-md">
+        <!--thead-->
         <thead>
           <tr>
             <th>Class</th>
             <th>Width</th>
           </tr>
         </thead>
-
+        <!--tbody-->
         <tbody>
           <tr>
             <td>.size-sm</td>
@@ -1276,37 +1286,42 @@ selectors.forEach(selector=&gt;{
         </tbody>
       </table>
 
+      <!--preview-->
       <div class="card">
+        <!--size-sm-->
         <p>.size-sm</p>
         <div class="bg-accent size-sm">320px</div>
+        <!--size-md-->
         <p>.size-md</p>
         <div class="bg-accent size-md">640px</div>
+        <!--size-lg-->
         <p>.size-lg</p>
         <div class="bg-accent size-lg">960px</div>
+        <!--size-xl-->
         <p>.size-xl</p>
         <div class="bg-accent size-xl">1280px</div>
+        <!--size-full-->
         <p>.size-full</p>
         <div class="bg-accent size-full">100%</div>
       </div>
-
-      <pre class="card-code mt"><code>&lt;div class="size-md"&gt;
-  Content
-&lt;/div&gt;</code></pre>
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;div class="size-md"&gt; ... &lt;/div&gt;</code></pre>
     </section>
 
-    <!-- Border ---------------------------------------------------------->
+    <!--Border ---------------------------------------------------------->
     <section id="border">
-      <h2>Border Utilities</h2>
-      <p>Utilities for adding borders and customizing their color.</p>
-
+      <h3>Border</h3>
+      <p>Utility classes for adding and customizing borders.</p>
+      <!--table-->
       <table>
+        <!--thead-->
         <thead>
           <tr>
             <th>Class</th>
             <th>Description</th>
           </tr>
         </thead>
-
+        <!--tbody-->
         <tbody>
           <tr>
             <td>.border</td>
@@ -1338,24 +1353,14 @@ selectors.forEach(selector=&gt;{
           </tr>
         </tbody>
       </table>
-
+      <!--preview-->
       <div class="grid-2 mt">
-        <div class="card border">
-          Default Border
-        </div>
-
-        <div class="card border border-accent">
-          Accent Border
-        </div>
+        <div class="card border">Default Border</div>
+        <div class="card border border-accent">Accent Border</div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="border"&gt;Default Border&lt;/div&gt;</code></pre>
+        <pre class="card-code"><code>&lt;div class="border border-accent"&gt;Accent Border&lt;/div&gt;</code></pre>
       </div>
-
-      <pre class="card-code mt"><code>&lt;div class="border"&gt;
-  Default Border
-&lt;/div&gt;
-
-&lt;div class="border border-accent"&gt;
-  Accent Border
-&lt;/div&gt;</code></pre>
     </section>
 
     <!--visuals ---------------------------------------------------------->
