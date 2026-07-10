@@ -617,42 +617,41 @@ pre.card-code {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 72px 16px 24px;
-  text-align: left;
   line-height: 1.7;
+  text-align: left;
   border: 1px solid var(--color-border);
   border-radius: 16px;
-  background: color-mix(in srgb,var(--color-surface-1) 30%,transparent);
+  color: var(--color-text);
   backdrop-filter: var(--blur);
   box-shadow: var(--shadow-md);
-  color: var(--color-text);
-}
-
-pre.card-code::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 48px;
-  border-bottom: 1px solid var(--color-border);
   background:
-    radial-gradient(circle at 20px center, #ff5f56 6px, transparent 7px),
-    radial-gradient(circle at 44px center, #ffbd2e 6px, transparent 7px),
-    radial-gradient(circle at 68px center, #27c93f 6px, transparent 7px);
-  background-color: rgba(255,255,255,0.015);
+    /* macOS buttons */
+    radial-gradient(circle at 20px 24px, #ff5f56 6px, transparent 7px),
+    radial-gradient(circle at 44px 24px, #ffbd2e 6px, transparent 7px),
+    radial-gradient(circle at 68px 24px, #27c93f 6px, transparent 7px),
+    linear-gradient(var(--color-border),var(--color-border)) top 48px left / 100% 1px no-repeat,
+    linear-gradient( rgba(255,255,255,.015),rgba(255,255,255,.015)) top / 100% 48px no-repeat,
+    color-mix(in srgb, var(--color-surface-1) 30%, transparent);
 }
 
 pre.card-code code {
   display: block;
+  min-width: max-content;
+
   background: transparent;
   backdrop-filter: none;
+
   color: inherit;
+
   padding: 0;
   margin: 0;
   border: 0;
   border-radius: 0;
-  font-size: 0.95rem;
+
+  font: inherit;
   font-family: monospace;
+  font-size: 0.95rem;
+
   white-space: pre;
 }
 
