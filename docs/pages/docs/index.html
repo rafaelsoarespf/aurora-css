@@ -100,7 +100,15 @@
       <span>Visuals</span>
       <a href="#backgrounds">Backgrounds</a>
       <a href="#effects">Effects</a>
-      <a href="#animations">Animations</a>
+      <!--animations-->
+      <hr class="mt-sm mb-sm">
+      <span>Animations</span>
+      <a href="#motion">Motion</a>
+      <a href="#overlay">Overlay</a>
+      <a href="#border-animations">Border Animations</a>
+      <a href="#hover-animations">Hover Animations</a>
+      <a href="#loading-animations">Loading Animations</a>
+      <a href="#text-animations">Text Animations</a>
     </nav>
     <footer class="sidebar__footer">
       <!--themes-->
@@ -1368,97 +1376,96 @@ selectors.forEach(selector=&gt;{
     <section>
       <span class="badge mb-sm">Visuals</span>
       <h2>Visuals</h2>
-      <p>Backgrounds and visual effects for creating atmospheric interfaces.</p>
+      <p>Backgrounds and visual effects for enhancing interface appearance.</p>
     </section>
 
+    <!--backgrounds ---------------------------------------------------------->
     <section id="backgrounds">
-      <h2>Backgrounds</h2>
-      <p>Utilities for applying predefined backgrounds and surface styles.</p>
+      <h3>Backgrounds</h3>
+      <p>Utility classes for applying predefined backgrounds and surface styles.</p>
 
       <div class="grid-2">
         <!--background-->
-        <div class="bg card size-full center-items">Background</div>
-        <pre class="card-code"><code>&lt;div class="bg"&gt;&lt;/div&gt;</code></pre>
+        <div class="card bg center-items">Background</div>
+        <pre class="card-code"><code>&lt;div class="bg"&gt;Background&lt;/div&gt;</code></pre>
         <!--surface-->
-        <div class="bg-surface card size-full center-items">Surface</div>
-        <pre class="card-code"><code>&lt;div class="bg-surface"&gt;&lt;/div&gt;</code></pre>
-        <!--surface2-->
-        <div class="bg-surface-2 card size-full center-items">Surface 2</div>
-        <pre class="card-code"><code>&lt;div class="bg-surface-2"&gt;&lt;/div&gt;</code></pre>
+        <div class="card bg-surface center-items">Surface</div>
+        <pre class="card-code"><code>&lt;div class="bg-surface"&gt;Surface&lt;/div&gt;</code></pre>
+        <!--surface 2-->
+        <div class="card bg-surface-2 center-items">Surface 2</div>
+        <pre class="card-code"><code>&lt;div class="bg-surface-2"&gt;Surface 2&lt;/div&gt;</code></pre>
         <!--soft-->
-        <div class="bg-soft card size-full center-items">Soft</div>
-        <pre class="card-code"><code>&lt;div class="bg-soft"&gt;&lt;/div&gt;</code></pre>
+        <div class="card bg-soft center-items">Soft</div>
+        <pre class="card-code"><code>&lt;div class="bg-soft"&gt;Soft&lt;/div&gt;</code></pre>
         <!--accent-->
-        <div class="bg-accent card size-full center-items">Accent</div>
-        <pre class="card-code"><code>&lt;div class="bg-accent"&gt;&lt;/div&gt;</code></pre>
+        <div class="card bg-accent center-items">Accent</div>
+        <pre class="card-code"><code>&lt;div class="bg-accent"&gt;Accent&lt;/div&gt;</code></pre>
         <!--glass-->
-        <div class="bg-glass card size-full center-items">Glass</div>
-        <pre class="card-code"><code>&lt;div class="bg-glass"&gt;&lt;/div&gt;</code></pre>
-      </div>
-
+        <div class="card bg-glass center-items">Glass</div>
+        <pre class="card-code"><code>&lt;div class="bg-glass"&gt;Glass&lt;/div&gt;</code></pre>
       </div>
     </section>
-    <!--Effects ---------------------------------------------------------->
-    <hr>
-    <section>
-      <span id="effects" class="badge mb-sm">Effects</span>
-      <h2>Effects</h2>
-      <p>Visual effects for adding atmosphere and depth to interfaces.</p>
 
-      <!-- Glow Effects -->
-      <p class="mt-lg"><strong>Glow Effects</strong> add colored light and emphasis.</p>
+    <!--Effects ---------------------------------------------------------->
+    <section id="effects">
+      <h3>Effects</h3>
+      <p>Visual effect classes for adding depth, lighting, and decorative patterns.</p>
+
+      <!--glow-->
+      <h4 class="mt-lg">Glow</h4>
+      <p>Glow effects for adding colored light and emphasis.</p>
 
       <div class="grid-2">
         <!--glow-->
-        <div class="fx-glow card center size-sm">.fx-glow</div>
+        <div class="card fx-glow center">.fx-glow</div>
         <pre class="card-code"><code>&lt;div class="fx-glow"&gt;&lt;/div&gt;</code></pre>
         <!--glow-sm-->
-        <div class="fx-glow-sm card center size-sm">.fx-glow-sm</div>
+        <div class="card fx-glow-sm center">.fx-glow-sm</div>
         <pre class="card-code"><code>&lt;div class="fx-glow-sm"&gt;&lt;/div&gt;</code></pre>
         <!--glow-md-->
-        <div class="fx-glow-md card center size-sm">.fx-glow-md</div>
+        <div class="card fx-glow-md center">.fx-glow-md</div>
         <pre class="card-code"><code>&lt;div class="fx-glow-md"&gt;&lt;/div&gt;</code></pre>
         <!--glow-lg-->
-        <div class="fx-glow-lg card center size-sm">.fx-glow-lg</div>
+        <div class="card fx-glow-lg center">.fx-glow-lg</div>
         <pre class="card-code"><code>&lt;div class="fx-glow-lg"&gt;&lt;/div&gt;</code></pre>
       </div>
 
-      <!-- Pattern Effects -->
-      <p class="mt-lg"><strong>Pattern Effects</strong> add texture and visual detail.</p>
-
+      <!--patterns-->
+      <h4 class="mt-lg">Patterns</h4>
+      <p>Pattern effects for adding texture and decorative backgrounds.</p>
       <div class="grid-2">
         <!--grid-->
-        <div class="fx-grid card center-items">fx-grid</div>
+        <div class="card fx-grid center-items">.fx-grid</div>
         <pre class="card-code"><code>&lt;div class="fx-grid"&gt;&lt;/div&gt;</code></pre>
         <!--grid-radial-->
-        <div class="fx-grid-radial card center-items">fx-grid-radial</div>
+        <div class="card fx-grid-radial center-items">.fx-grid-radial</div>
         <pre class="card-code"><code>&lt;div class="fx-grid-radial"&gt;&lt;/div&gt;</code></pre>
         <!--noise-->
-        <div class="fx-noise card center-items">fx-noise</div>
+        <div class="card fx-noise center-items">.fx-noise</div>
         <pre class="card-code"><code>&lt;div class="fx-noise"&gt;&lt;/div&gt;</code></pre>
         <!--dots-->
-        <div class="fx-dots card center-items">fx-dots</div>
+        <div class="card fx-dots center-items">.fx-dots</div>
         <pre class="card-code"><code>&lt;div class="fx-dots"&gt;&lt;/div&gt;</code></pre>
         <!--beam-->
-        <div class="fx-beam card center-items">fx-beam</div>
+        <div class="card fx-beam center-items">.fx-beam</div>
         <pre class="card-code"><code>&lt;div class="fx-beam"&gt;&lt;/div&gt;</code></pre>
       </div>
     </section>
 
-    <!--Animations ---------------------------------------------------------->
+    <!-- animations ---------------------------------------------------------->
     <hr>
-    <section id="animations">
+    <section>
       <span class="badge mb-sm">Animations</span>
       <h2>Animations</h2>
-      <p>Continuous motion utilities for creating dynamic and atmospheric interfaces.</p>
+      <p>Animation utility classes for adding motion and interactive transitions.</p>
     </section>
 
-    <section id="">
+    <!-- motion ---------------------------------------------------------->
+    <section id="motion">
+      <h3>Motion</h3>
+      <p>Continuous animation classes for adding movement and dynamic visual effects.</p>
 
-      <!-- Motion -->
-      <p><strong>Motion</strong> animations add movement and transform effects.</p>
-
-      <div class="grid-2">
+      <div class="grid-3">
         <!--float-->
         <div class="card">
           <div class="float card bg-soft center">float</div>
@@ -1479,7 +1486,7 @@ selectors.forEach(selector=&gt;{
           <div class="drift card bg-soft center">drift</div>
           <pre class="card-code"><code>&lt;div class="drift"&gt;&lt;/div&gt;</code></pre>
         </div>
-        <!--drift-->
+        <!--orbit-->
         <div class="card">
           <div class="orbit card bg-soft center">orbit</div>
           <pre class="card-code"><code>&lt;div class="orbit"&gt;&lt;/div&gt;</code></pre>
@@ -1505,11 +1512,13 @@ selectors.forEach(selector=&gt;{
           <pre class="card-code"><code>&lt;div class="tilt"&gt;&lt;/div&gt;</code></pre>
         </div>
       </div>
+    </section>
 
-      <!-- Overlay Effects -->
-      <p class="mt-lg"><strong>Overlay Effects</strong> animations add dynamic visual elements above components.</p>
-
-      <div class="grid-2">
+    <!--Overlay ---------------------------------------------------------->
+    <section id="overlay">
+      <h3>Overlay</h3>
+      <p>Animation classes that render animated overlays and light effects above elements.</p>
+      <div class="grid-3">
         <!--shine-->
         <div class="card">
           <div class="shine card bg-soft center">shine</div>
@@ -1526,19 +1535,22 @@ selectors.forEach(selector=&gt;{
           <pre class="card-code"><code>&lt;div class="beacon"&gt;&lt;/div&gt;</code></pre>
         </div>
       </div>
+    </section>
 
-      <!-- Border Effects -->
-      <p class="mt-lg"><strong>Border Effects</strong> animations enhance borders and outlines.</p>
-      <div class="grid-2">
+    <!--border ---------------------------------------------------------->
+    <section id="border-animations">
+      <h3>Border Animations</h3>
+      <p>Animation classes for creating dynamic border and outline effects.</p>
+      <div class="grid-3">
         <!--border-neon-->
         <div class="card">
           <div class="border-neon card bg-soft center">border-neon</div>
-          <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
+          <pre class="card-code"><code>&lt;div class="border-neon"&gt;&lt;/div&gt;</code></pre>
         </div>
         <!--border-pulse-->
         <div class="card">
           <div class="border-pulse card bg-soft center">border-pulse</div>
-          <pre class="card-code"><code>&lt;div class="border-trail"&gt;&lt;/div&gt;</code></pre>
+          <pre class="card-code"><code>&lt;div class="border-pulse"&gt;&lt;/div&gt;</code></pre>
         </div>
         <!--border-flicker-->
         <div class="card">
@@ -1567,13 +1579,13 @@ selectors.forEach(selector=&gt;{
         </div>
         <!--border-orbit-->
         <div class="card">
-          <div class="border-orbit  card bg-soft center">border-orbit</div>
+          <div class="border-orbit card bg-soft center">border-orbit</div>
           <pre class="card-code"><code>&lt;div class="border-orbit"&gt;&lt;/div&gt;</code></pre>
         </div>
         <!--border-shift-->
         <div class="card">
           <div class="border-shift card bg-soft center">border-shift</div>
-          <pre class="card-code mb"><code>&lt;div class="border-shift"&gt;&lt;/div&gt;</code></pre>
+          <pre class="card-code"><code>&lt;div class="border-shift"&gt;&lt;/div&gt;</code></pre>
         </div>
         <!--border-width-->
         <div class="card">
@@ -1582,15 +1594,18 @@ selectors.forEach(selector=&gt;{
         </div>
         <!--border-corners-->
         <div class="card">
-          <div class="border-corners card bg-soft center">border-corners</div>
+          <div class="border-corners card bg-soft center mb">border-corners</div>
           <pre class="card-code"><code>&lt;div class="border-corners"&gt;&lt;/div&gt;</code></pre>
         </div>
-
       </div>
+    </section>
 
-      <!-- Entrance Effects -->
-      <p class="mt-lg"><strong>Entrance Effects</strong> animations played when components first appear.</p>
-      <div class="grid-2">
+    <!--Entrance ---------------------------------------------------------->
+    <section id="entrance">
+      <h3>Entrance</h3>
+      <p>Animation classes for smoothly revealing elements when they appear.</p>
+
+      <div class="grid-3">
         <!--fade-in-->
         <div class="card">
           <div class="fade-in entrance-demo card bg-soft center">fade-in</div>
@@ -1640,11 +1655,14 @@ selectors.forEach(selector=&gt;{
           <pre class="card-code"><code>&lt;div class="blur-in"&gt;&lt;/div&gt;</code></pre>
         </div>
       </div>
+    </section>
 
-      <!--hover effects-->
-      <p class="mt-lg"><strong>Hover Effects</strong> animations triggered when the pointer hovers over a component.
-      </p>
-      <div class="grid-2">
+    <!--Hover Animations ---------------------------------------------------------->
+    <section id="hover-animations">
+      <h3>Hover Animations</h3>
+      <p>Animations triggered when the pointer hovers over a component.</p>
+
+      <div class="grid-3">
         <!--hover-lift-->
         <div class="card">
           <div class="hover-lift card bg-soft center">hover-lift</div>
@@ -1691,10 +1709,14 @@ selectors.forEach(selector=&gt;{
           <pre class="card-code"><code>&lt;div class="hover-ripple"&gt;&lt;/div&gt;</code></pre>
         </div>
       </div>
+    </section>
 
-      <!-- Loading Effects -->
-      <p class="mt-lg"><strong>Loading Effects</strong>animations used to indicate loading and processing states.</p>
-      <div class="grid-2">
+    <!-- loading animations ---------------------------------------------------------->
+    <section id="loading-animations">
+      <h3>Loading Animations</h3>
+      <p>Animations used to indicate loading, waiting, and processing states.</p>
+
+      <div class="grid-3">
         <!--loading-spin-->
         <div class="card">
           <div class="card bg-soft center">
@@ -1724,7 +1746,6 @@ selectors.forEach(selector=&gt;{
   &lt;span&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
         </div>
-
         <!--loading-wave-->
         <div class="card">
           <div class="card bg-soft center">
@@ -1752,15 +1773,14 @@ selectors.forEach(selector=&gt;{
           <pre class="card-code"><code>&lt;div class="loading-orbit"&gt;&lt;/div&gt;</code></pre>
         </div>
       </div>
+    </section>
 
-      <!-- Text Effects -->
-      <p class="mt-lg">
-        <strong>Text Effects</strong>
-        animations that enhance text visibility and emphasis.
-      </p>
+    <!-- text animations ---------------------------------------------------------->
+    <section id="text-animations">
+      <h3>Text Animations</h3>
+      <p>Animations that enhance text visibility and emphasis.</p>
 
       <div class="grid-2">
-
         <!--text-glow-->
         <div class="card">
           <div class="card bg-soft center">
@@ -1768,7 +1788,6 @@ selectors.forEach(selector=&gt;{
           </div>
           <pre class="card-code"><code>&lt;span class="text-glow"&gt;text&lt;/span&gt;</code></pre>
         </div>
-
         <!--text-pulse-->
         <div class="card">
           <div class="card bg-soft center">
@@ -1776,7 +1795,6 @@ selectors.forEach(selector=&gt;{
           </div>
           <pre class="card-code"><code>&lt;span class="text-pulse"&gt;text&lt;/span&gt;</code></pre>
         </div>
-
         <!--text-flicker-->
         <div class="card">
           <div class="card bg-soft center">
@@ -1784,7 +1802,6 @@ selectors.forEach(selector=&gt;{
           </div>
           <pre class="card-code"><code>&lt;span class="text-flicker"&gt;text&lt;/span&gt;</code></pre>
         </div>
-
         <!--text-shimmer-->
         <div class="card">
           <div class="card bg-soft center">
@@ -1792,7 +1809,6 @@ selectors.forEach(selector=&gt;{
           </div>
           <pre class="card-code"><code>&lt;span class="text-shimmer"&gt;text&lt;/span&gt;</code></pre>
         </div>
-
         <!--text-wave-->
         <div class="card">
           <div class="card bg-soft center">
@@ -1800,14 +1816,7 @@ selectors.forEach(selector=&gt;{
           </div>
           <pre class="card-code"><code>&lt;span class="text-wave"&gt;text&lt;/span&gt;</code></pre>
         </div>
-
       </div>
-
-    </section>
-
-
-
-
     </section>
 
   </main>
