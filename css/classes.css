@@ -1,43 +1,14 @@
 /*============================================================*/
 /*Classes ====================================================*/
 
+
+/*============================================================*/
+/*Layout ====================================================*/
+
 /*container --------------------------------------------------*/
 .container {
   width: min(1200px, 100%);
   margin-inline: auto;
-}
-
-/*center ----------------------------------------------------*/
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  align-self: center;
-  text-align: center;
-  margin-inline: auto;
-}
-
-.center-self {
-  display: block;
-  margin-inline: auto;
-  justify-self: center;
-  align-self: center;
-}
-
-.center-items {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-/*row --------------------------------------------------------*/
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 1rem;
 }
 
 /*grid -------------------------------------------------------*/
@@ -110,6 +81,40 @@
     grid-template-columns: 1fr;
   }
 }
+
+/*row --------------------------------------------------------*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/*center ----------------------------------------------------*/
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.center-self {
+  display: block;
+  margin-inline: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.center-items {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
 
 /*efects -----------------------------------------------------*/
 .fx-glow,.fx-glow-sm,.fx-glow-md,.fx-glow-lg {
@@ -625,7 +630,6 @@ pre.card-code {
   backdrop-filter: var(--blur);
   box-shadow: var(--shadow-md);
   background:
-    /* macOS buttons */
     radial-gradient(circle at 20px 24px, #ff5f56 6px, transparent 7px),
     radial-gradient(circle at 44px 24px, #ffbd2e 6px, transparent 7px),
     radial-gradient(circle at 68px 24px, #27c93f 6px, transparent 7px),
@@ -637,21 +641,16 @@ pre.card-code {
 pre.card-code code {
   display: block;
   min-width: max-content;
-
   background: transparent;
   backdrop-filter: none;
-
   color: inherit;
-
   padding: 0;
   margin: 0;
   border: 0;
   border-radius: 0;
-
   font: inherit;
   font-family: monospace;
   font-size: 0.95rem;
-
   white-space: pre;
 }
 

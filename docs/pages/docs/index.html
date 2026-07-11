@@ -43,17 +43,24 @@
 </head>
 
 <body class="sidebar-layout" data-theme="aurora-light">
-  
+
   <!--sidebar ---------------------------------------------------------->
   <aside class="sidebar">
     <!--header-->
     <div class="sidebar__header">
       <a href="#" class="subtitle">Aurora CSS</a>
     </div>
+    <details class="accordion">
+      <summary>What is Aurora CSS?</summary>
+      <div class="accordion-body">
+        Aurora CSS is a lightweight CSS framework focused on modern interfaces and reusable components.
+      </div>
+    </details>
     <!--sidebar menu-->
     <nav class="sidebar__menu">
       <!--Installation-->
       <a href="#installation">Installation</a>
+
       <!--Themes-->
       <hr class="mt-sm mb-sm">
       <a href="#themes">Themes</a>
@@ -83,10 +90,10 @@
       <a href="#form">Form</a>
       <a href="#tables">Tables</a>
       <a href="#modal">Modal</a>
+      <a href="#accordion">Accordion</a>
       <a href="#navbar">Navbar</a>
       <a href="#sidebar">Sidebar</a>
       <a href="#footer">Footer</a>
-
       <!--Utilities-->
       <hr class="mt-sm mb-sm">
       <span>Utilities</span>
@@ -133,6 +140,7 @@
     </footer>
   </aside>
   <main class="docs content container gap-lg">
+
     <!--button sidebar-->
     <button class="sidebar__toggle">☰</button>
     <!--hero ---------------------------------------------------------->
@@ -988,6 +996,26 @@ selectors.forEach(selector=&gt;{
     &lt;p&gt;Modal content.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--Accordion ---------------------------------------------------------->
+    <section id="accordion">
+      <h2>Accordion</h2>
+      <p>Expandable content sections using the native <code>&lt;details&gt;</code> element.</p>
+
+      <div class="grid-2">
+        <!--preview-->
+        <div class="card"><details>
+          <summary>Accordion Summary</summary>
+          <p>The accordion content becomes visible when the summary is expanded.</p>
+        </details></div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;details&gt;
+  &lt;summary&gt;Accordion Summary&lt;/summary&gt;
+  &lt;p&gt;The accordion content becomes visible when the summary is expanded.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
       </div>
     </section>
 
