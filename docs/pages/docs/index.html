@@ -50,12 +50,6 @@
     <div class="sidebar__header">
       <a href="#" class="subtitle">Aurora CSS</a>
     </div>
-    <details class="accordion">
-      <summary>What is Aurora CSS?</summary>
-      <div class="accordion-body">
-        Aurora CSS is a lightweight CSS framework focused on modern interfaces and reusable components.
-      </div>
-    </details>
     <!--sidebar menu-->
     <nav class="sidebar__menu">
       <!--Installation-->
@@ -91,6 +85,7 @@
       <a href="#tables">Tables</a>
       <a href="#modal">Modal</a>
       <a href="#accordion">Accordion</a>
+      <a href="#tree">Accordion</a>
       <a href="#navbar">Navbar</a>
       <a href="#sidebar">Sidebar</a>
       <a href="#footer">Footer</a>
@@ -1002,18 +997,71 @@ selectors.forEach(selector=&gt;{
     <!--Accordion ---------------------------------------------------------->
     <section id="accordion">
       <h2>Accordion</h2>
-      <p>Expandable content sections using the native <code>&lt;details&gt;</code> element.</p>
+      <p>Displays expandable sections using the native <code>&lt;details&gt;</code> element.</p>
 
       <div class="grid-2">
         <!--preview-->
-        <div class="card"><details>
-          <summary>Accordion Summary</summary>
-          <p>The accordion content becomes visible when the summary is expanded.</p>
-        </details></div>
+        <div class="card">
+          <details class="accordion">
+            <summary>Accordion Summary</summary>
+            <p>The accordion content becomes visible when the summary is expanded.</p>
+          </details>
+        </div>
+
         <!--code-->
-        <pre class="card-code"><code>&lt;details&gt;
+        <pre class="card-code"><code>&lt;details class="accordion"&gt;
   &lt;summary&gt;Accordion Summary&lt;/summary&gt;
   &lt;p&gt;The accordion content becomes visible when the summary is expanded.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
+      </div>
+    </section>
+
+    <!--Tree ---------------------------------------------------------->
+    <section id="tree">
+      <h2>Tree</h2>
+      <p>Displays content in a hierarchical structure using expandable sections.</p>
+
+      <div class="grid-2">
+        <!--tree-->
+        <div class="card">
+          <details class="tree" open>
+            <summary>Main Item</summary>
+            <div>Child Item</div>
+            <div>Child Item</div>
+            
+            <details>
+              <summary>Nested Item</summary>
+              <div>Child Item</div>
+              <div>Child Item</div>
+            </details>
+
+          </details>
+
+          <details class="tree">
+            <summary>Another Item</summary>
+
+            <div>Child Item</div>
+          </details>
+        </div>
+
+        <!--code-->
+        <pre class="card-code"><code>&lt;details class="tree" open&gt;
+  &lt;summary&gt;Main Item&lt;/summary&gt;
+  &lt;div&gt;Child Item&lt;/div&gt;
+  &lt;div&gt;Child Item&lt;/div&gt;
+
+  &lt;details&gt;
+    &lt;summary&gt;Nested Item&lt;/summary&gt;
+    &lt;div&gt;Child Item&lt;/div&gt;
+    &lt;div&gt;Child Item&lt;/div&gt;
+  &lt;/details&gt;
+
+&lt;/details&gt;
+
+&lt;details class="tree"&gt;
+  &lt;summary&gt;Another Item&lt;/summary&gt;
+  &lt;div&gt;Child Item&lt;/div&gt;
 &lt;/details&gt;</code></pre>
 
       </div>

@@ -1,65 +1,6 @@
 /*===========================================================*/
 /*Global Styles =============================================*/
 
-
-details {
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--color-surface-1) 30%, transparent);
-  backdrop-filter: var(--blur);
-  box-shadow: var(--shadow-md);
-  transition:
-    border-color .25s ease,
-    box-shadow .25s ease;
-}
-
-details[open] {
-  border-color: color-mix(in srgb, var(--color-accent) 40%, var(--color-border));
-}
-
-details summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  cursor: pointer;
-  user-select: none;
-  list-style: none;
-  color: var(--color-title);
-}
-
-details summary:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 4px;
-}
-
-details summary::-webkit-details-marker {
-  display: none;
-}
-
-details summary::after {
-  content: "";
-  width: .65rem;
-  height: .65rem;
-  flex-shrink: 0;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  transition: transform .25s ease;
-  transform-origin: center;
-}
-
-details[open] summary::after {
-  transform: rotate(225deg);
-}
-
-details > :not(summary) {
-  padding: 1.25rem;
-  border-top: 1px solid var(--color-border);
-}
-
 /*html, body ------------------------------------------------*/
 html, body {
   min-height: 100dvh;
