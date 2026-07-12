@@ -87,6 +87,7 @@
         <a href="#accordion">Accordion</a>
         <a href="#tree">Tree</a>
         <a href="#progress">Progress</a>
+        <a href="#tabs">Tabs</a>
         <a href="#navbar">Navbar</a>
         <a href="#sidebar">Sidebar</a>
         <a href="#footer">Footer</a>
@@ -1078,12 +1079,64 @@ selectors.forEach(selector=&gt;{
       </div>
     </section>
 
-    <!--progress-->
+    <!-- progress ------------------------------------------------------------>
     <section id="progress">
       <h2>Progress</h2>
       <p>Displays the progress of a task using the native <code>&lt;progress&gt;</code> element.</p>
       <progress class="mt mb-md" value="50" max="100"></progress>
       <pre class="card-code"><code>&lt;progress value="50" max="100"&gt;&lt;/progress&gt;</code></pre>
+    </section>
+
+    <!--Tabs ---------------------------------------------------------->
+    <section id="tabs">
+      <h2>Tabs</h2>
+      <p>Organizes related content into selectable sections using radio inputs and labels.</p>
+        <div class="tabs mb">
+          <input type="radio" name="example-tabs" id="tab-overview" checked>
+          <label for="tab-overview">Overview</label>
+          <section>
+            <p>Overview content.</p>
+          </section>
+
+          <input type="radio" name="example-tabs" id="tab-features">
+          <label for="tab-features">Features</label>
+          <section>
+            <p>Features content.</p>
+          </section>
+
+          <input type="radio" name="example-tabs" id="tab-settings">
+          <label for="tab-settings">Settings</label>
+          <section>
+            <p>Settings content.</p>
+          </section>
+
+        </div>
+
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="tabs"&gt;
+
+  &lt;input type="radio" name="example-tabs" id="tab-overview" checked&gt;
+  &lt;label for="tab-overview"&gt;Overview&lt;/label&gt;
+  &lt;section&gt;
+    &lt;p&gt;Overview content.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;input type="radio" name="example-tabs" id="tab-features"&gt;
+  &lt;label for="tab-features"&gt;Features&lt;/label&gt;
+  &lt;section&gt;
+    &lt;p&gt;Features content.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;input type="radio" name="example-tabs" id="tab-settings"&gt;
+  &lt;label for="tab-settings"&gt;Settings&lt;/label&gt;
+  &lt;section&gt;
+    &lt;p&gt;Settings content.&lt;/p&gt;
+  &lt;/section&gt;
+
+&lt;/div&gt;</code></pre>
+
+      </div>
+      <p class="alert mt"><strong>Note:</strong> All radio inputs must share the same <code>name</code> value to work as a single tab group.</p>
     </section>
 
     <!--Navbar ---------------------------------------------------------->

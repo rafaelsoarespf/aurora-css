@@ -836,6 +836,53 @@ details.tree details > :not(summary):not(details) {
   color: var(--color-text);
 }
 
+/* tabs ----------------------------------------------------------------------*/
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-surface-1) 30%, transparent);
+  box-shadow: var(--shadow-md);
+}
+
+.tabs input {
+  display: none;
+}
+
+.tabs label {
+  padding: .9rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  color: var(--color-text);
+  transition:
+    color .2s ease,
+    background-color .2s ease;
+}
+
+.tabs label:hover {
+  color: var(--color-accent);
+}
+
+.tabs input:checked + label {
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.tabs section {
+  display: none;
+  order: 999;
+  width: 100%;
+  padding: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.tabs input:checked + label + section {
+  display: block;
+}
+
 /*navbar -----------------------------------------------------*/
 .navbar {
   position: sticky;
