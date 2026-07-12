@@ -371,6 +371,48 @@ tbody tr:last-child td {
   border-bottom: none;
 }
 
+/* progress ----------------------------------------------------------------------*/
+progress {
+  width: 100%;
+  height: .75rem;
+  appearance: none;
+  -webkit-appearance: none;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: color-mix( in srgb, var(--color-surface-1) 30%,transparent);
+  box-shadow: var(--shadow-sm);
+}
+
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+
+progress::-webkit-progress-value {
+  border-radius: inherit;
+  background: linear-gradient( 90deg,color-mix(in srgb, var(--color-accent) 75%, white),var(--color-accent));
+}
+
+progress::-moz-progress-bar {
+  border-radius: inherit;
+  background: linear-gradient( 90deg,color-mix(in srgb, var(--color-accent) 75%, white),var(--color-accent));
+}
+
+progress:indeterminate::-webkit-progress-value {
+  background: linear-gradient(90deg,transparent, var(--color-accent),transparent);
+  animation: progress-indeterminate 1.25s linear infinite;
+}
+
+progress:indeterminate::-moz-progress-bar {
+  background: linear-gradient(90deg,transparent,var(--color-accent),transparent);
+  animation: progress-indeterminate 1.25s linear infinite;
+}
+
+@keyframes progress-indeterminate {
+  from { background-position: -200% 0;}
+  to { background-position: 200% 0;}
+}
+
 /*scrollbar -------------------------------------------------*/
 html { 
   scrollbar-width: thin;
@@ -387,7 +429,7 @@ html {
   border-radius: 5px;
 }
 
-/* Accessibility -------------------------------------------*/
+/* accessibility -------------------------------------------*/
 
 /* smooth scrolling for internal anchors */
 @media (prefers-reduced-motion: no-preference) {html {scroll-behavior: smooth;}}
