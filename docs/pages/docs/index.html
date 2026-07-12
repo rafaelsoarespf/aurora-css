@@ -52,88 +52,99 @@
     </div>
     <!--sidebar menu-->
     <nav class="sidebar__menu">
-      <!--Installation-->
+      <!--installation-->
       <a href="#installation">Installation</a>
-
-      <!--Themes-->
-      <hr class="mt-sm mb-sm">
+      <!--themes-->
       <a href="#themes">Themes</a>
-      <!--Layout-->
-      <hr class="mt-sm mb-sm">
-      <span>Layout</span>
-      <a href="#container">Container</a>
-      <a href="#grid">Grid</a>
-      <a href="#row">Row</a>
-      <!--Typography-->
-      <hr class="mt-sm mb-sm">
-      <span>Typography</span>
-      <a href="#typography-system">System</a>
-      <a href="#text-elements">Text Elements</a>
-      <a href="#code">Code</a>
-      <a href="#quotes">Quotes</a>
-      <!--Components-->
-      <hr class="mt-sm mb-sm">
-      <span>Components</span>
-      <a href="#cards">Cards</a>
-      <a href="#buttons">Buttons</a>
-      <a href="#badges">Badges</a>
-      <a href="#alerts">Alerts</a>
-      <a href="#tooltips">Tooltips</a>
-      <a href="#toasts">Toasts</a>
-      <a href="#horizontal-rule">Horizontal Rule</a>
-      <a href="#form">Form</a>
-      <a href="#tables">Tables</a>
-      <a href="#modal">Modal</a>
-      <a href="#accordion">Accordion</a>
-      <a href="#tree">Accordion</a>
-      <a href="#navbar">Navbar</a>
-      <a href="#sidebar">Sidebar</a>
-      <a href="#footer">Footer</a>
-      <!--Utilities-->
-      <hr class="mt-sm mb-sm">
-      <span>Utilities</span>
-      <a href="#spacing">Spacing</a>
-      <a href="#gap">Gap</a>
-      <a href="#center">Center</a>
-      <a href="#text-alignment">Text Align</a>
-      <a href="#size">Size</a>
-      <a href="#border">Border</a>
-      <!--Visuals-->
-      <hr class="mt-sm mb-sm">
-      <span>Visuals</span>
-      <a href="#backgrounds">Backgrounds</a>
-      <a href="#effects">Effects</a>
+      <!--layout-->
+      <details class="tree">
+        <summary>Layout</summary>
+        <a href="#container">Container</a>
+        <a href="#grid">Grid</a>
+        <a href="#row">Row</a>
+      </details>
+      <!--typography-->
+      <details class="tree">
+        <summary>Typography</summary>
+        <a href="#typography-system">System</a>
+        <a href="#text-elements">Text Elements</a>
+        <a href="#code">Code</a>
+        <a href="#quotes">Quotes</a>
+      </details>
+      <!--components-->
+      <details class="tree">
+        <summary>Components</summary>
+        <a href="#cards">Cards</a>
+        <a href="#buttons">Buttons</a>
+        <a href="#badges">Badges</a>
+        <a href="#alerts">Alerts</a>
+        <a href="#tooltips">Tooltips</a>
+        <a href="#toasts">Toasts</a>
+        <a href="#horizontal-rule">Horizontal Rule</a>
+        <a href="#form">Form</a>
+        <a href="#tables">Tables</a>
+        <a href="#modal">Modal</a>
+        <a href="#accordion">Accordion</a>
+        <a href="#tree">Tree</a>
+        <a href="#navbar">Navbar</a>
+        <a href="#sidebar">Sidebar</a>
+        <a href="#footer">Footer</a>
+      </details>
+      <!--utilities-->
+      <details class="tree">
+        <summary>Utilities</summary>
+        <a href="#spacing">Spacing</a>
+        <a href="#gap">Gap</a>
+        <a href="#center">Center</a>
+        <a href="#text-alignment">Text Align</a>
+        <a href="#size">Size</a>
+        <a href="#border">Border</a>
+      </details>
+      <!--visuals-->
+      <details class="tree">
+        <summary>Visuals</summary>
+        <a href="#backgrounds">Backgrounds</a>
+        <a href="#effects">Effects</a>
+      </details>
       <!--animations-->
-      <hr class="mt-sm mb-sm">
-      <span>Animations</span>
-      <a href="#motion">Motion</a>
-      <a href="#overlay">Overlay</a>
-      <a href="#border-animations">Border Animations</a>
-      <a href="#hover-animations">Hover Animations</a>
-      <a href="#loading-animations">Loading Animations</a>
-      <a href="#text-animations">Text Animations</a>
+      <details class="tree">
+        <summary>Animations</summary>
+        <a href="#motion">Motion</a>
+        <a href="#overlay">Overlay</a>
+        <a href="#border-animations">Border Animations</a>
+        <a href="#hover-animations">Hover Animations</a>
+        <a href="#loading-animations">Loading Animations</a>
+        <a href="#text-animations">Text Animations</a>
+      </details>
     </nav>
+
+    <!--footer-->
     <footer class="sidebar__footer">
+
       <!--themes-->
       <span class="mt">Themes</span>
+
       <select id="theme-selector" class="theme-selector border-flicker">
         <option value="aurora-light" selected>Aurora Light</option>
-        <option value="aurora-dark" selected>Aurora Dark</option>
+        <option value="aurora-dark">Aurora Dark</option>
         <option value="light">Light</option>
         <option value="dark">Dark</option>
         <option value="light-teal">Light Teal</option>
         <option value="dark-teal">Dark Teal</option>
-        <option value="coffee" selected>Coffee</option>
-        <option value="paper" selected>Paper</option>
-        <option value="neumorphism" selected>Neumorphism</option>
-        <option value="glass" selected>Glass</option>
-        <option value="forest" selected>Forest</option>
-        <option value="nord" selected>Nord</option>
-        <option value="sakura" selected>Sakura</option>
-        <option value="gold" selected>Gold</option>
+        <option value="coffee">Coffee</option>
+        <option value="paper">Paper</option>
+        <option value="neumorphism">Neumorphism</option>
+        <option value="glass">Glass</option>
+        <option value="forest">Forest</option>
+        <option value="nord">Nord</option>
+        <option value="sakura">Sakura</option>
+        <option value="gold">Gold</option>
       </select>
+
     </footer>
+
   </aside>
+
   <main class="docs content container gap-lg">
 
     <!--button sidebar-->
@@ -1029,7 +1040,7 @@ selectors.forEach(selector=&gt;{
             <summary>Main Item</summary>
             <div>Child Item</div>
             <div>Child Item</div>
-            
+
             <details>
               <summary>Nested Item</summary>
               <div>Child Item</div>
