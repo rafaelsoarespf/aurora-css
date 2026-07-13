@@ -1389,6 +1389,64 @@ details.tree details > :not(summary):not(details) {
 .text-left{text-align: left;}
 .text-right{text-align: right;}
 
+/*text color*/
+.text-red { color: #c62852;}
+
+.text-salmon { color: #d85f63;}
+
+.text-orange { color: #c97a24;}
+
+.text-yellow { color: #c9a321;}
+
+.text-lime { color: #90a92e;}
+
+.text-green { color: #3b9659;}
+
+.text-teal { color: #2d8b7f;}
+
+.text-cyan { color: #2d90b0;}
+
+.text-blue { color: #3f73cf;}
+
+.text-indigo { color: #5e63cf;}
+
+.text-purple { color: #8758c6;}
+
+.text-pink { color: #c53f74;}
+
+.text-brown { color: #9b6848;}
+
+.text-gray { color: #66707d;}
+
+.text-black { color: #222831;}
+
+.text-white { color: #ffffff;}
+
+.text-gold {
+  background: linear-gradient( 135deg,#8f6520 0%, #c99b3a 30%,#f2d16b 50%, #c99b3a 70%,#8f6520 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-silver {
+  background: linear-gradient( 135deg, #6d7680 0%, #b5bec7 30%, #eef2f5 50%, #b5bec7 70%, #6d7680 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-bronze {
+  background: linear-gradient( 135deg,#5f3c22 0%,#996339 30%, #cb9157 50%, #996339 70%, #5f3c22 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
 /*animation --------------------------------------*/
 
 /* Float*/
