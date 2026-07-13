@@ -1091,29 +1091,29 @@ selectors.forEach(selector=&gt;{
     <section id="tabs">
       <h2>Tabs</h2>
       <p>Organizes related content into selectable sections using radio inputs and labels.</p>
-        <div class="tabs mb">
-          <input type="radio" name="example-tabs" id="tab-overview" checked>
-          <label for="tab-overview">Overview</label>
-          <section>
-            <p>Overview content.</p>
-          </section>
+      <div class="tabs mb">
+        <input type="radio" name="example-tabs" id="tab-overview" checked>
+        <label for="tab-overview">Overview</label>
+        <section>
+          <p>Overview content.</p>
+        </section>
 
-          <input type="radio" name="example-tabs" id="tab-features">
-          <label for="tab-features">Features</label>
-          <section>
-            <p>Features content.</p>
-          </section>
+        <input type="radio" name="example-tabs" id="tab-features">
+        <label for="tab-features">Features</label>
+        <section>
+          <p>Features content.</p>
+        </section>
 
-          <input type="radio" name="example-tabs" id="tab-settings">
-          <label for="tab-settings">Settings</label>
-          <section>
-            <p>Settings content.</p>
-          </section>
+        <input type="radio" name="example-tabs" id="tab-settings">
+        <label for="tab-settings">Settings</label>
+        <section>
+          <p>Settings content.</p>
+        </section>
 
-        </div>
+      </div>
 
-        <!--code-->
-        <pre class="card-code"><code>&lt;div class="tabs"&gt;
+      <!--code-->
+      <pre class="card-code"><code>&lt;div class="tabs"&gt;
 
   &lt;input type="radio" name="example-tabs" id="tab-overview" checked&gt;
   &lt;label for="tab-overview"&gt;Overview&lt;/label&gt;
@@ -1136,7 +1136,8 @@ selectors.forEach(selector=&gt;{
 &lt;/div&gt;</code></pre>
 
       </div>
-      <p class="alert mt"><strong>Note:</strong> All radio inputs must share the same <code>name</code> value to work as a single tab group.</p>
+      <p class="alert mt"><strong>Note:</strong> All radio inputs must share the same <code>name</code> value to work as
+        a single tab group.</p>
     </section>
 
     <!--Navbar ---------------------------------------------------------->
@@ -1528,32 +1529,122 @@ selectors.forEach(selector=&gt;{
       <p>Backgrounds and visual effects for enhancing interface appearance.</p>
     </section>
 
-    <!--backgrounds ---------------------------------------------------------->
+    <!--Backgrounds ---------------------------------------------------------->
     <section id="backgrounds">
       <h3>Backgrounds</h3>
-      <p>Utility classes for applying predefined backgrounds and surface styles.</p>
+      <p>Utility classes for applying predefined backgrounds.</p>
 
       <div class="grid-2">
         <!--background-->
         <div class="card bg center-items">Background</div>
         <pre class="card-code"><code>&lt;div class="bg"&gt;Background&lt;/div&gt;</code></pre>
+
         <!--surface-->
         <div class="card bg-surface center-items">Surface</div>
         <pre class="card-code"><code>&lt;div class="bg-surface"&gt;Surface&lt;/div&gt;</code></pre>
+
         <!--surface 2-->
         <div class="card bg-surface-2 center-items">Surface 2</div>
         <pre class="card-code"><code>&lt;div class="bg-surface-2"&gt;Surface 2&lt;/div&gt;</code></pre>
+
         <!--soft-->
         <div class="card bg-soft center-items">Soft</div>
         <pre class="card-code"><code>&lt;div class="bg-soft"&gt;Soft&lt;/div&gt;</code></pre>
+
         <!--accent-->
         <div class="card bg-accent center-items">Accent</div>
         <pre class="card-code"><code>&lt;div class="bg-accent"&gt;Accent&lt;/div&gt;</code></pre>
-        <!--glass-->
-        <div class="card bg-glass center-items">Glass</div>
-        <pre class="card-code"><code>&lt;div class="bg-glass"&gt;Glass&lt;/div&gt;</code></pre>
+
+        <!--none-->
+        <div class="card bg-none border center-items">None</div>
+        <pre class="card-code"><code>&lt;div class="bg-none"&gt;None&lt;/div&gt;</code></pre>
+      </div>
+
+      <h3 class="mt-lg">Fixed Background Colors</h3>
+      <p>Utility classes for applying fixed background colors.</p>
+
+      <div class="alert mb">These background colors are fixed and are not affected by the active theme.</div>
+
+      <div class="grid-2">
+        <!--red-->
+        <div class="card bg-red center-items">Red</div>
+        <pre class="card-code"><code>&lt;div class="bg-red"&gt;Red&lt;/div&gt;</code></pre>
+
+        <!--salmon-->
+        <div class="card bg-salmon center-items">Salmon</div>
+        <pre class="card-code"><code>&lt;div class="bg-salmon"&gt;Salmon&lt;/div&gt;</code></pre>
+
+        <!--orange-->
+        <div class="card bg-orange center-items">Orange</div>
+        <pre class="card-code"><code>&lt;div class="bg-orange"&gt;Orange&lt;/div&gt;</code></pre>
+
+        <!--yellow-->
+        <div class="card bg-yellow center-items">Yellow</div>
+        <pre class="card-code"><code>&lt;div class="bg-yellow"&gt;Yellow&lt;/div&gt;</code></pre>
+
+        <!--lime-->
+        <div class="card bg-lime center-items">Lime</div>
+        <pre class="card-code"><code>&lt;div class="bg-lime"&gt;Lime&lt;/div&gt;</code></pre>
+
+        <!--green-->
+        <div class="card bg-green center-items">Green</div>
+        <pre class="card-code"><code>&lt;div class="bg-green"&gt;Green&lt;/div&gt;</code></pre>
+
+        <!--teal-->
+        <div class="card bg-teal center-items">Teal</div>
+        <pre class="card-code"><code>&lt;div class="bg-teal"&gt;Teal&lt;/div&gt;</code></pre>
+
+        <!--cyan-->
+        <div class="card bg-cyan center-items">Cyan</div>
+        <pre class="card-code"><code>&lt;div class="bg-cyan"&gt;Cyan&lt;/div&gt;</code></pre>
+
+        <!--blue-->
+        <div class="card bg-blue center-items">Blue</div>
+        <pre class="card-code"><code>&lt;div class="bg-blue"&gt;Blue&lt;/div&gt;</code></pre>
+
+        <!--indigo-->
+        <div class="card bg-indigo center-items">Indigo</div>
+        <pre class="card-code"><code>&lt;div class="bg-indigo"&gt;Indigo&lt;/div&gt;</code></pre>
+
+        <!--purple-->
+        <div class="card bg-purple center-items">Purple</div>
+        <pre class="card-code"><code>&lt;div class="bg-purple"&gt;Purple&lt;/div&gt;</code></pre>
+
+        <!--pink-->
+        <div class="card bg-pink center-items">Pink</div>
+        <pre class="card-code"><code>&lt;div class="bg-pink"&gt;Pink&lt;/div&gt;</code></pre>
+
+        <!--brown-->
+        <div class="card bg-brown center-items">Brown</div>
+        <pre class="card-code"><code>&lt;div class="bg-brown"&gt;Brown&lt;/div&gt;</code></pre>
+
+        <!--gray-->
+        <div class="card bg-gray center-items">Gray</div>
+        <pre class="card-code"><code>&lt;div class="bg-gray"&gt;Gray&lt;/div&gt;</code></pre>
+
+        <!--black-->
+        <div class="card bg-black center-items">Black</div>
+        <pre class="card-code"><code>&lt;div class="bg-black"&gt;Black&lt;/div&gt;</code></pre>
+
+        <!--white-->
+        <div class="card bg-white border center-items">White</div>
+        <pre class="card-code"><code>&lt;div class="bg-white"&gt;White&lt;/div&gt;</code></pre>
+
+        <!--gold-->
+        <div class="card bg-gold center-items">Gold</div>
+        <pre class="card-code"><code>&lt;div class="bg-gold"&gt;Gold&lt;/div&gt;</code></pre>
+
+        <!--silver-->
+        <div class="card bg-silver center-items">Silver</div>
+        <pre class="card-code"><code>&lt;div class="bg-silver"&gt;Silver&lt;/div&gt;</code></pre>
+
+        <!--bronze-->
+        <div class="card bg-bronze center-items">Bronze</div>
+        <pre class="card-code"><code>&lt;div class="bg-bronze"&gt;Bronze&lt;/div&gt;</code></pre>
       </div>
     </section>
+
+
 
     <!--Effects ---------------------------------------------------------->
     <section id="effects">

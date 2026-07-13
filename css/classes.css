@@ -1138,19 +1138,21 @@ details.tree details > :not(summary):not(details) {
 
 .bg-surface {
   background: var(--color-surface-1);
-  box-shadow: var(--shadow-md);
   backdrop-filter: var(--blur);
 }
 
 .bg-surface-2 {
   background: var(--color-surface-2);
-  box-shadow: var(--shadow-md);
+  backdrop-filter: var(--blur);
+}
+
+.bg-soft{
+  background:color-mix(in srgb,var(--color-accent) 30%,transparent);
   backdrop-filter: var(--blur);
 }
 
 .bg-accent{
   background: var(--color-accent);
-  box-shadow: var(--shadow-md);
   backdrop-filter: var(--blur);
   color: var(--color-on-accent);
 }
@@ -1162,13 +1164,102 @@ details.tree details > :not(summary):not(details) {
 .bg-glass{
   background: color-mix(in srgb,var(--color-surface-1) 60%,transparent);
   backdrop-filter:var(--blur);
-  box-shadow: var(--shadow-md);
 }
 
-.bg-soft{
-  background:color-mix(in srgb,var(--color-accent) 12%,transparent);
-  box-shadow: var(--shadow-md);
-  backdrop-filter: var(--blur);
+/* fixed background colors ---------------------------------------------------*/
+.bg-red {
+  background: #c62852;
+  color: #fff;
+}
+
+.bg-salmon {
+  background: #dc655f;
+  color: #fff;
+}
+
+.bg-orange {
+  background: #c97a24;
+  color: #fff;
+}
+
+.bg-yellow {
+  background: #c9a321;
+  color: #fff;
+}
+
+.bg-lime {
+  background: #90a92e;
+  color: #fff;
+}
+
+.bg-green {
+  background: #3b9659;
+  color: #fff;
+}
+
+.bg-teal {
+  background: #2d8b7f;
+  color: #fff;
+}
+
+.bg-cyan {
+  background: #2d90b0;
+  color: #fff;
+}
+
+.bg-blue {
+  background: #3f73cf;
+  color: #fff;
+}
+
+.bg-indigo {
+  background: #5e63cf;
+  color: #fff;
+}
+
+.bg-purple {
+  background: #8758c6;
+  color: #fff;
+}
+
+.bg-pink {
+  background: #c53f74;
+  color: #fff;
+}
+
+.bg-brown {
+  background: #9b6848;
+  color: #fff;
+}
+
+.bg-gray {
+  background: #66707d;
+  color: #fff;
+}
+
+.bg-black {
+  background: #222831;
+  color: #fff;
+}
+
+.bg-white {
+  background: #ffffff;
+  color: #222831;
+}
+
+.bg-gold {
+  background: linear-gradient( 135deg,#8f6520 0%,#c99b3a 25%,#f2d16b 50%,#c99b3a 75%,#8f6520 100%);
+  color: #fff;
+}
+
+.bg-silver {
+  background: linear-gradient(135deg,#6d7680 0%,#b5bec7 25%,#eef2f5 50%,#b5bec7 75%,#6d7680 100%);
+  color: #222831;
+}
+
+.bg-bronze {
+  background: linear-gradient( 135deg,#5f3c22 0%,#996339 25%,#cb9157 50%,#996339 75%,#5f3c22 100%);
+  color: #fff;
 }
 
 /*border -------------------------------------------------------*/
