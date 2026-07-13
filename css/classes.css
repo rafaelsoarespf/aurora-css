@@ -1263,33 +1263,58 @@ details.tree details > :not(summary):not(details) {
 }
 
 /*border -------------------------------------------------------*/
-.border-none {
-  border: none;
-}
+.border-none { border: none;}
 
-.border {
-  border: 1px solid var(--color-border);
-}
+.border { border: 1px solid var(--color-border);}
 
-.border-top {
-  border-top: 1px solid var(--color-border);
-}
+.border-top { border-top: 1px solid var(--color-border);}
 
-.border-right {
-  border-right: 1px solid var(--color-border);
-}
+.border-right { border-right: 1px solid var(--color-border);}
 
-.border-bottom {
-  border-bottom: 1px solid var(--color-border);
-}
+.border-bottom { border-bottom: 1px solid var(--color-border);}
 
-.border-left {
-  border-left: 1px solid var(--color-border);
-}
+.border-left { border-left: 1px solid var(--color-border);}
 
-.border-accent {
-  border-color: var(--color-accent);
-}
+.border-accent { border-color: var(--color-accent);}
+
+/* colored borders*/
+.border-red { border-color: #c62852;}
+
+.border-salmon { border-color: #d85f63;}
+
+.border-orange { border-color: #c97a24;}
+
+.border-yellow {  border-color: #c9a321;}
+
+.border-lime {  border-color: #90a92e;}
+
+.border-green {  border-color: #3b9659;}
+
+.border-teal {  border-color: #2d8b7f;}
+
+.border-cyan {  border-color: #2d90b0;}
+
+.border-blue {  border-color: #3f73cf;}
+
+.border-indigo {  border-color: #5e63cf;}
+
+.border-purple {  border-color: #8758c6;}
+
+.border-pink {  border-color: #c53f74;}
+
+.border-brown {  border-color: #9b6848;}
+
+.border-gray {  border-color: #66707d;}
+
+.border-black {  border-color: #222831;}
+
+.border-white {  border-color: #ffffff;}
+
+.border-gold {  border-color: #c89b3c;}
+
+.border-silver {  border-color: #aeb8c2;}
+
+.border-bronze {  border-color: #9c6b3f;}
 
 /*margin -------------------------------------------------------*/
 .mt{margin-top:1rem;}
