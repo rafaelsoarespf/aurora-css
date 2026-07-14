@@ -239,9 +239,9 @@ input:hover,textarea:hover,select:hover {
   border-color: var(--color-accent);
 }
 
-input:focus,textarea:focus,select:focus {
+input:not([type="range"]):focus,textarea:focus,select:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb,var(--color-accent) 18%,transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 
 input:disabled,textarea:disabled,select:disabled {
@@ -370,6 +370,67 @@ label:has(input[type="radio"]) {
   gap: .5rem;
 }
 
+/*range -----------------------------------------------------*/
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-border);
+  cursor: pointer;
+  outline: none;
+}
+
+/*chrome ----------------------------------------------------*/
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 999px;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  margin-top: calc((8px - 1rem) / 2);
+  border: none;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+}
+
+/*firefox ---------------------------------------------------*/
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-border);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.08);
+}
+
 /*table -----------------------------------------------------*/
 table {
   width: 100%;
@@ -478,7 +539,7 @@ html {
 @media (prefers-reduced-motion: no-preference) {html {scroll-behavior: smooth;}}
 
 /* focused element state */
-:focus-visible, input:focus,textarea:focus,select:focus, button:focus-visible {
+:focus-visible, input:not([type="range"]):focus,textarea:focus,select:focus, button:focus-visible {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
   outline-offset: 4px;
   outline: none;
