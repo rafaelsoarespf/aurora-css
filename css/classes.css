@@ -432,6 +432,57 @@
   color: var(--color-accent);
 }
 
+/*switch ----------------------------------------------------*/
+input.switch {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 2.8rem;
+  height: 1.5rem;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border: none;
+  border-radius: 999px;
+  background: var(--color-border);
+  cursor: pointer;
+  transition: background-color .25s ease;
+}
+
+input.switch::before {
+  content: "";
+  position: absolute;
+  top: .15rem;
+  left: .15rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--color-surface-1);
+  box-shadow: var(--shadow-sm);
+  transition: left .25s ease,background-color .25s ease;
+}
+
+input.switch:checked {
+  background: var(--color-accent);
+}
+
+input.switch:checked::before {
+  left: calc(100% - 1.2rem - .15rem);
+  background: var(--color-on-accent);
+}
+
+input.switch:focus-visible {
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+input.switch:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+
+
 /* tooltip ---------------------------------------------------*/
 .tooltip,.tooltip-left,.tooltip-right,.tooltip-bottom {
   position: relative;
