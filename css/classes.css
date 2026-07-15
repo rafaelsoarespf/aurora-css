@@ -481,8 +481,6 @@ input.switch:disabled {
   cursor: not-allowed;
 }
 
-
-
 /* tooltip ---------------------------------------------------*/
 .tooltip,.tooltip-left,.tooltip-right,.tooltip-bottom {
   position: relative;
