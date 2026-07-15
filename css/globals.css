@@ -2,7 +2,8 @@
 /*Global Styles =============================================*/
 
 /*html, body ------------------------------------------------*/
-html, body {
+html,
+body {
   min-height: 100dvh;
   line-height: 1.6;
   letter-spacing: 0.02em;
@@ -15,49 +16,57 @@ html, body {
 }
 
 /*main  -----------------------------------------------------*/
-main{
+main {
   width: 100%;
   min-height: 100%;
   padding: 1.2rem;
 }
 
 /*typography ------------------------------------------------*/
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.1;
 }
 
-h1{
+h1 {
   font: var(--font-title);
   color: var(--color-title);
 }
 
-h2{
+h2 {
   font: var(--font-subtitle);
   color: var(--color-subtitle);
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-subtitle);
 }
 
-p, label, span {
+p,
+label,
+span {
   font: var(--font-text);
   color: var(--color-text);
 }
 
-main :is(h1,h2,h3,h4,h5,h6,p):not(
-  .mb,.mb-none,.mb-sm,.mb-md,.mb-lg,
-  .card :is(h1,h2,h3,h4,h5,h6,p),
-  .card-ghost :is(h1,h2,h3,h4,h5,h6,p),
-  .card-outline :is(h1,h2,h3,h4,h5,h6,p),
-  .card-soft :is(h1,h2,h3,h4,h5,h6,p),
-  .card-glow :is(h1,h2,h3,h4,h5,h6,p)
-) {
+main :is(h1, h2, h3, h4, h5, h6, p):not(.mb, .mb-none, .mb-sm, .mb-md, .mb-lg,
+  .card :is(h1, h2, h3, h4, h5, h6, p),
+  .card-ghost :is(h1, h2, h3, h4, h5, h6, p),
+  .card-outline :is(h1, h2, h3, h4, h5, h6, p),
+  .card-soft :is(h1, h2, h3, h4, h5, h6, p),
+  .card-glow :is(h1, h2, h3, h4, h5, h6, p)) {
   margin-bottom: .9rem;
 }
 
 /*strong ----------------------------------------------------*/
-strong{
+strong {
   font-weight: 600;
   color: var(--color-accent);
 }
@@ -73,13 +82,13 @@ abbr {
 /*mark ------------------------------------------------------*/
 mark {
   background-color: color-mix(in srgb, var(--color-accent) 40%, rgba(255, 255, 255, 0) 60%);
-  color: var(--color-on-accent);  
+  color: var(--color-on-accent);
   padding: 0.1em 0.25em;
   border-radius: 6px;
 }
 
 /*a ---------------------------------------------------------*/
-a{
+a {
   cursor: pointer;
   color: var(--color-accent);
   text-decoration: none;
@@ -109,18 +118,18 @@ button {
   line-height: 1;
   user-select: none;
   white-space: nowrap;
-  min-width:110px;
-  transition: transform .2s ease,opacity .2s ease,box-shadow .2s ease,background-color .2s ease,color .2s ease;
+  min-width: 110px;
+  transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
 }
 
 button:hover {
   opacity: 0.8;
-  transform: translateY(-1px);  
+  transform: translateY(-1px);
   box-shadow: var(--shadow-lg);
 }
 
-button:active { 
-    transform:translateY(0);
+button:active {
+  transform: translateY(0);
 }
 
 button:disabled {
@@ -133,7 +142,7 @@ button:disabled {
 
 /*code ------------------------------------------------------*/
 code {
-  background:color-mix(in srgb,var(--color-accent) 20%,rgba(255,255,255,0.06));
+  background: color-mix(in srgb, var(--color-accent) 20%, rgba(255, 255, 255, 0.06));
   color: var(--color-accent);
   padding: 0.2em 0.45em;
   border-radius: 6px;
@@ -143,14 +152,14 @@ code {
 
 /* code block */
 pre {
-  background:color-mix(in srgb,var(--color-accent) 35%,rgba(117,117,117,0.5));
+  background: color-mix(in srgb, var(--color-accent) 35%, rgba(117, 117, 117, 0.5));
   backdrop-filter: var(--blur);
-  color: color-mix(in srgb,var(--color-on-accent) 80%,rgba(248,248,248,0.5));
+  color: color-mix(in srgb, var(--color-on-accent) 80%, rgba(248, 248, 248, 0.5));
   padding: 1.25rem;
   border-radius: 12px;
   overflow-x: auto;
   line-height: 1.7;
-  border: 1px solid color-mix(in srgb,var(--color-accent) 40%,transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
   box-shadow: var(--shadow-md);
 }
 
@@ -177,7 +186,7 @@ hr {
 
 /*q ---------------------------------------------------------*/
 q {
-  color: color-mix(in srgb,var(--color-accent) 70%,rgba(68, 68, 68, 0.01));
+  color: color-mix(in srgb, var(--color-accent) 70%, rgba(68, 68, 68, 0.01));
   font-style: italic;
   position: relative;
 }
@@ -201,7 +210,7 @@ blockquote footer {
 }
 
 /*label -----------------------------------------------------*/
-label{
+label {
   display: inline-block;
   cursor: pointer;
 }
@@ -212,7 +221,9 @@ label:has(input:disabled) {
 }
 
 /*input, textarea, select -----------------------------------*/
-input, textarea, select {
+input,
+textarea,
+select {
   font: var(--font-text);
   background-color: color-mix(in srgb, var(--color-surface-2) 10%, transparent);
   backdrop-filter: var(--blur);
@@ -235,29 +246,38 @@ select {
   padding-right: 2.8rem;
 }
 
-input:hover,textarea:hover,select:hover {
+input:hover,
+textarea:hover,
+select:hover {
   border-color: var(--color-accent);
 }
 
-input:not([type="range"]):focus,textarea:focus,select:focus {
+input:not([type="range"]):focus,
+textarea:focus,
+select:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 
-input:disabled,textarea:disabled,select:disabled {
+input:disabled,
+textarea:disabled,
+select:disabled {
   cursor: not-allowed;
   opacity: .45;
   box-shadow: none;
   border-color: var(--color-border);
 }
 
-input:disabled:hover,textarea:disabled:hover,select:disabled:hover {
+input:disabled:hover,
+textarea:disabled:hover,
+select:disabled:hover {
   transform: none;
   border-color: var(--color-border);
 }
 
 /*placeholder -----------------------------------------------*/
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   opacity: 0.9;
 }
 
@@ -300,7 +320,7 @@ input[type="checkbox"]:not(.switch):checked::before {
 }
 
 input[type="checkbox"]:not(.switch):checked:disabled {
-  background: color-mix(in srgb,var(--color-accent) 55%,gray);
+  background: color-mix(in srgb, var(--color-accent) 55%, gray);
 }
 
 
@@ -451,8 +471,7 @@ input[type="file"]:hover {
 
 input[type="file"]:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px
-    color-mix(in srgb, var(--color-accent) 18%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 
 input[type="file"]::file-selector-button {
@@ -464,7 +483,7 @@ input[type="file"]::file-selector-button {
   color: var(--color-on-accent);
   font: inherit;
   cursor: pointer;
-  transition: filter .2s ease,transform .2s ease;
+  transition: filter .2s ease, transform .2s ease;
 }
 
 input[type="file"]::file-selector-button:hover {
@@ -473,6 +492,46 @@ input[type="file"]::file-selector-button:hover {
 
 input[type="file"]::file-selector-button:active {
   transform: scale(.98);
+}
+
+/*color -----------------------------------------------------*/
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 3.5rem;
+  height: 3rem;
+  padding: .2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--color-surface-2) 10%, transparent);
+  backdrop-filter: var(--blur);
+  cursor: pointer;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+input[type="color"]:hover {
+  border-color: var(--color-accent);
+}
+
+input[type="color"]:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+/*Chrome, Edge, Safari*/
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 8px;
+}
+
+/*Firefox*/
+input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 8px;
 }
 
 /*table -----------------------------------------------------*/
@@ -528,7 +587,7 @@ progress {
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: 999px;
-  background: color-mix( in srgb, var(--color-surface-1) 30%,transparent);
+  background: color-mix(in srgb, var(--color-surface-1) 30%, transparent);
   box-shadow: var(--shadow-sm);
 }
 
@@ -538,31 +597,36 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
   border-radius: inherit;
-  background: linear-gradient( 90deg,color-mix(in srgb, var(--color-accent) 75%, white),var(--color-accent));
+  background: linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 75%, white), var(--color-accent));
 }
 
 progress::-moz-progress-bar {
   border-radius: inherit;
-  background: linear-gradient( 90deg,color-mix(in srgb, var(--color-accent) 75%, white),var(--color-accent));
+  background: linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 75%, white), var(--color-accent));
 }
 
 progress:indeterminate::-webkit-progress-value {
-  background: linear-gradient(90deg,transparent, var(--color-accent),transparent);
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
   animation: progress-indeterminate 1.25s linear infinite;
 }
 
 progress:indeterminate::-moz-progress-bar {
-  background: linear-gradient(90deg,transparent,var(--color-accent),transparent);
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
   animation: progress-indeterminate 1.25s linear infinite;
 }
 
 @keyframes progress-indeterminate {
-  from { background-position: -200% 0;}
-  to { background-position: 200% 0;}
+  from {
+    background-position: -200% 0;
+  }
+
+  to {
+    background-position: 200% 0;
+  }
 }
 
 /*scrollbar -------------------------------------------------*/
-html { 
+html {
   scrollbar-width: thin;
   scrollbar-color: var(--color-surface-2) var(--color-surface-1);
 }
@@ -571,6 +635,7 @@ html {
   background-color: var(--color-surface-1);
   width: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-surface-2);
   border: solid 1px var(--color-border);
@@ -580,10 +645,18 @@ html {
 /* accessibility -------------------------------------------*/
 
 /* smooth scrolling for internal anchors */
-@media (prefers-reduced-motion: no-preference) {html {scroll-behavior: smooth;}}
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 /* focused element state */
-:focus-visible, input:not([type="range"]):focus,textarea:focus,select:focus, button:focus-visible {
+:focus-visible,
+input:not([type="range"]):focus,
+textarea:focus,
+select:focus,
+button:focus-visible {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 25%, transparent);
   outline-offset: 4px;
   outline: none;
