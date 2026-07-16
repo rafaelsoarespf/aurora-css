@@ -189,20 +189,27 @@ js/
     </section>
 
     <!--Themes ---------------------------------------------------------->
+    <!--Themes ---------------------------------------------------------->
     <hr>
     <section id="themes">
       <span class="badge mb-sm">Themes</span>
+
       <h2>Themes</h2>
-      <p>Customize the appearance of your application by setting the <code>data-theme</code> attribute to one of
-        Aurora's built-in themes.</p>
+
+      <p>
+        Customize the appearance of your application by setting the
+        <code>data-theme</code> attribute to one of Aurora's built-in themes.
+      </p>
+
       <span class="text">Usage</span>
+
       <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
     </section>
 
-    <!--theme selector-->
+    <!--Theme Selector-->
     <section>
       <h3>Theme Selector</h3>
-      <p>Use this example to add a theme selector that lets users switch between Aurora's built-in themes.</p>
+      <p>Use this example to let users switch between Aurora's built-in themes.</p>
       <div class="card">
         <select class="theme-selector">
           <option value="aurora-light">Aurora Light</option>
@@ -220,8 +227,7 @@ js/
           <option value="sakura">Sakura</option>
           <option value="gold">Gold</option>
         </select>
-        <!--code html-->
-        <span class="text mt">HTML</span>
+        <!--code-->
         <pre class="card-code"><code>&lt;select class="theme-selector"&gt;
   &lt;option value="aurora-light"&gt;Aurora Light&lt;/option&gt;
   &lt;option value="aurora-dark"&gt;Aurora Dark&lt;/option&gt;
@@ -238,26 +244,10 @@ js/
   &lt;option value="sakura"&gt;Sakura&lt;/option&gt;
   &lt;option value="gold"&gt;Gold&lt;/option&gt;
 &lt;/select&gt;</code></pre>
-        <!--code typescript-->
-        <span class="text mt">TypeScript</span>
-        <pre class="card-code"><code>const selectors=document.querySelectorAll&lt;HTMLSelectElement&gt;('.theme-selector');
-const savedTheme=localStorage.getItem('aurora-theme');
 
-if(savedTheme){
-  document.body.setAttribute('data-theme',savedTheme);
-  selectors.forEach(selector=&gt;selector.value=savedTheme);
-}
-
-selectors.forEach(selector=&gt;{
-  selector.addEventListener('change',()=&gt;{
-    const theme=selector.value;
-
-    document.body.setAttribute('data-theme',theme);
-    localStorage.setItem('aurora-theme',theme);
-
-    selectors.forEach(s=&gt;s.value=theme);
-  });
-});</code></pre>
+        <div class="alert mt">
+          This component requires the optional <code>aurora.js</code> file.
+        </div>
       </div>
     </section>
 
