@@ -32,11 +32,14 @@
 
   <!--Favicon-->
   <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico" />
-  <!--CSS-->
+  <!--Aurora CSS-->
   <link rel="stylesheet" href="../../../css/reset.css" />
   <link rel="stylesheet" href="../../../css/themes.css" />
   <link rel="stylesheet" href="../../../css/globals.css" />
   <link rel="stylesheet" href="../../../css/classes.css" />
+  <!--Aurora JS-->
+  <script src="../../../js/aurora.js" defer></script>
+  <!--CSS-->
   <link rel="stylesheet" href="../../styles/docs.css" />
   <!--Scripts-->
   <script type="module" src="../../dist/main.js"></script>
@@ -158,22 +161,31 @@
       <p>Learn how to use Aurora CSS, explore its components, and build consistent interfaces with the framework.</p>
     </section>
 
-    <!--Instalation ---------------------------------------------------------->
+    <!--Installation ---------------------------------------------------------->
     <hr>
     <section id="installation">
       <span class="badge mb-sm">Installation</span>
+
       <h2>Installation</h2>
-      <p>Download the Aurora CSS files from the repository and add the<code>css</code> folder to your project.</p>
+      <p>Download the Aurora files and add them to your project.</p>
+      <!--code-->
       <pre class="card-code mb"><code>css/
 ├─ reset.css
 ├─ globals.css
 ├─ classes.css
-└─ themes.css</code></pre>
-      <p>Then import the Aurora stylesheets:</p>
+└─ themes.css
+
+js/
+└─ aurora.js <span class="text-muted">// Optional</span></code></pre>
+      <!--text-->
+      <p>Import the Aurora files:</p>
+      <!--code-->
       <pre class="card-code"><code>&lt;link rel="stylesheet" href="./css/reset.css"&gt;
 &lt;link rel="stylesheet" href="./css/globals.css"&gt;
 &lt;link rel="stylesheet" href="./css/classes.css"&gt;
-&lt;link rel="stylesheet" href="./css/themes.css"&gt;</code></pre>
+&lt;link rel="stylesheet" href="./css/themes.css"&gt;
+&lt;!-- Optional --&gt;
+&lt;script src="./js/aurora.js" defer&gt;&lt;/script&gt;</code></pre>
     </section>
 
     <!--Themes ---------------------------------------------------------->

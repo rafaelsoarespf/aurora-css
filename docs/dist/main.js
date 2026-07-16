@@ -1,37 +1,3 @@
-const selectors = document.querySelectorAll(".theme-selector");
-const savedTheme = localStorage.getItem("aurora-theme");
-if (savedTheme) {
-    document.body.setAttribute("data-theme", savedTheme);
-    selectors.forEach((selector) => { selector.value = savedTheme; });
-}
-selectors.forEach((selector) => {
-    selector.addEventListener("change", () => {
-        const theme = selector.value;
-        document.body.setAttribute("data-theme", theme);
-        localStorage.setItem("aurora-theme", theme);
-        selectors.forEach((s) => { s.value = theme; });
-    });
-});
-//
-window.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.querySelector(".docs-menu-btn");
-    const sidebar = document.querySelector(".docs-sidebar");
-    if (menuBtn && sidebar) {
-        menuBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-        });
-    }
-});
-//toast
-export function showToast(message, duration = 3000) {
-    const toast = document.createElement("div");
-    toast.className = "toast";
-    toast.textContent = message;
-    document.body.appendChild(toast);
-    setTimeout(() => {
-        toast.remove();
-    }, duration);
-}
 //buttton animation 
 window.addEventListener('DOMContentLoaded', () => {
     const animations = [
@@ -60,29 +26,5 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-//sidebar
-const sidebar = document.querySelector(".sidebar");
-const toggle = document.querySelector(".sidebar__toggle");
-if (sidebar instanceof HTMLElement &&
-    toggle instanceof HTMLButtonElement) {
-    toggle.addEventListener("click", () => {
-        sidebar.classList.toggle("active");
-        toggle.classList.toggle("active");
-    });
-    document.addEventListener("click", (event) => {
-        const target = event.target;
-        if (sidebar.classList.contains("active") &&
-            !sidebar.contains(target) &&
-            !toggle.contains(target)) {
-            sidebar.classList.remove("active");
-            toggle.classList.remove("active");
-        }
-    });
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            sidebar.classList.remove("active");
-            toggle.classList.remove("active");
-        }
-    });
-}
+export {};
 //# sourceMappingURL=main.js.map
