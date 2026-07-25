@@ -18,17 +18,12 @@ body {
 /*main  -----------------------------------------------------*/
 main {
   width: 100%;
-  min-height: 100%;
   padding: 1.2rem;
+  min-height: 100%;
 }
 
 /*typography ------------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1,h2,h3,h4,h5,h6 {
   line-height: 1.1;
 }
 
@@ -42,16 +37,11 @@ h2 {
   color: var(--color-subtitle);
 }
 
-h3,
-h4,
-h5,
-h6 {
+h3,h4,h5,h6 {
   color: var(--color-subtitle);
 }
 
-p,
-label,
-span {
+p,label,span {
   font: var(--font-text);
   color: var(--color-text);
 }

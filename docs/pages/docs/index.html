@@ -99,6 +99,7 @@
       <!--utilities-->
       <details class="tree">
         <summary>Utilities</summary>
+        <a href="#position">Position</a>
         <a href="#spacing">Spacing</a>
         <a href="#gap">Gap</a>
         <a href="#center">Center</a>
@@ -145,6 +146,8 @@
         <option value="nord">Nord</option>
         <option value="sakura">Sakura</option>
         <option value="gold">Gold</option>
+        <option value="light-slate-mist">Light Slate Mist</option>
+        <option value="dark-slate-mist">Dark Slate Mist</option>
       </select>
     </footer>
 
@@ -193,7 +196,8 @@ js/
     <section id="themes">
       <span class="badge mb-sm">Themes</span>
       <h2>Themes</h2>
-      <p>Customize the appearance of your application by setting the <code>data-theme</code> attribute to one of Aurora's built-in themes.</p>
+      <p>Customize the appearance of your application by setting the <code>data-theme</code> attribute to one of
+        Aurora's built-in themes.</p>
       <span class="text">Usage</span>
       <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
     </section>
@@ -1378,6 +1382,29 @@ js/
       <span class="badge mb-sm">Utilities</span>
       <h2>Utilities</h2>
       <p>Utility classes for spacing, alignment, sizing, and layout adjustments.</p>
+    </section>
+
+    <!--Position ---------------------------------------------------------->
+    <section id="position">
+      <span class="badge mb-sm">Position</span>
+      <h2>Position</h2>
+      <p>Position elements inside a parent element.</p>
+
+      <div class="card center-self" style="height: 150px; width: 350px;">
+        <span class="badge position-t">.position-t</span>
+        <span class="badge position-r">.position-r</span>
+        <span class="badge position-b">.position-b</span>
+        <span class="badge position-l">.position-l</span>
+        <span class="badge position-tl">.position-tl</span>
+        <span class="badge position-tr">.position-tr</span>
+        <span class="badge position-bl">.position-bl</span>
+        <span class="badge position-br">.position-br</span>
+      </div>
+      <pre class="card-code mt"><code>&lt;div class="card"&gt;
+  &lt;span class="badge position-tr"&gt;New&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+      <div class="alert mt">Position classes require the parent element to use <code>position: relative</code> (or another positioned value).</div>
     </section>
 
     <!--Spacing ---------------------------------------------------------->

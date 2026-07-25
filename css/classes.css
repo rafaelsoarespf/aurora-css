@@ -598,29 +598,16 @@ input.switch:disabled {
   transform: translateX(-50%) translateY(2px);
 }
 
-/*form -------------------------------------------------------*/
-.form {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  background: var(--color-surface-1);
-  box-shadow: var(--shadow-md);
-}
-
 /*card -------------------------------------------------------*/
 .card,.card-ghost,.card-outline,.card-soft,.card-glow{
+  position: relative;
   padding: 1.5rem 1.2rem;
   border-radius:12px;
-  display:flex;
+  display: flex;
   flex-direction:column;
-  transition: box-shadow .25s ease;
   min-width: 0;
   gap: 0.65rem;
+  transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
 .card:hover,.card-ghost:hover,.card-outline:hover,.card-soft:hover,.card-glow:hover{
@@ -1545,8 +1532,70 @@ details.tree details > :not(summary):not(details) {
   -webkit-text-fill-color: transparent;
 }
 
+/*position ---------------------------------------------------*/
+/*position ---------------------------------------------------*/
+.position-t,
+.position-r,
+.position-b,
+.position-l,
+.position-tl,
+.position-tr,
+.position-bl,
+.position-br{
+  position:absolute;
+}
 
-/*animation --------------------------------------*/
+/*top --------------------------------------------------------*/
+.position-t{
+  top:8px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/*right ------------------------------------------------------*/
+.position-r{
+  top:50%;
+  right:8px;
+  transform:translateY(-50%);
+}
+
+/*bottom -----------------------------------------------------*/
+.position-b{
+  bottom:8px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/*left -------------------------------------------------------*/
+.position-l{
+  top:50%;
+  left:8px;
+  transform:translateY(-50%);
+}
+
+/*top left ---------------------------------------------------*/
+.position-tl{
+  top:8px;
+  left:8px;
+}
+
+/*top right --------------------------------------------------*/
+.position-tr{
+  top:8px;
+  right:8px;
+}
+
+/*bottom left ------------------------------------------------*/
+.position-bl{
+  bottom:8px;
+  left:8px;
+}
+
+/*bottom right -----------------------------------------------*/
+.position-br{
+  bottom:8px;
+  right:8px;
+}
 
 /* Float*/
 .float { animation: float 4s ease-in-out infinite;}

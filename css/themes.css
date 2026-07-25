@@ -407,3 +407,63 @@
   --shadow-md: 0 8px 18px rgba(90,60,5,.14);
   --shadow-lg: 0 18px 35px rgba(90,60,5,.22);
 }
+
+/*============================================================*/
+/* light slate mist ==========================================*/
+[data-theme="light-slate-mist"] {
+  --color-background: linear-gradient(135deg, #F6F9FB 0%, #EDF2F5 48%, #E4EBF0 100%);
+
+  --color-surface-1: rgba(255, 255, 255, 0.82);
+  --color-surface-2: #F0F4F7;
+
+  --color-title: #1A232B;
+  --color-subtitle: #41505B;
+  --color-text: #63717B;
+
+  --color-border: #C9D3DA;
+
+  --color-accent: #5F7686;
+  --color-on-accent: #FFFFFF;
+
+  --blur: blur(18px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.45rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(20, 28, 34, 0.06);
+  --shadow-md: 0 10px 24px rgba(20, 28, 34, 0.10);
+  --shadow-lg: 0 22px 48px rgba(20, 28, 34, 0.14);
+}
+
+
+/*============================================================*/
+/* dark slate mist ===========================================*/
+
+  [data-theme="dark-slate-mist"] {
+  --color-background: linear-gradient( 135deg, #0E1318 0%, #131A21 50%, #18222B 100%);
+
+  --color-surface-1: rgba(20, 27, 34, 0.82);
+  --color-surface-2: #1C2630;
+
+  --color-title: #E6EDF2;
+  --color-subtitle: #C9D3DA;
+  --color-text: #9AA8B0;
+
+  --color-border: #2F3C46;
+
+  --color-accent: #5F7686;
+  --color-on-accent: #F2F7FA;
+
+  --blur: blur(18px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.45rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(3, 6, 10, 0.30);
+  --shadow-md: 0 10px 24px rgba(3, 6, 10, 0.42);
+  --shadow-lg: 0 22px 48px rgba(3, 6, 10, 0.55);
+  }
