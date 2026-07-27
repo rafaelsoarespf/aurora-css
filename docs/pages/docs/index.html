@@ -95,6 +95,7 @@
         <a href="#navbar">Navbar</a>
         <a href="#sidebar">Sidebar</a>
         <a href="#footer">Footer</a>
+        <a href="#panel">Panel</a>
       </details>
       <!--utilities-->
       <details class="tree">
@@ -1375,57 +1376,42 @@ js/
 &lt;/footer&gt;</code></pre>
     </section>
 
-    <!--Panel -------------------------------------------------------------->
+    <!-- Panel -------------------------------------------------------------->
     <section id="panel">
-      <span class="badge mb-sm">Panel</span>
       <h2>Panel</h2>
-      <p>Create collapsible side panels for forms, filters, settings, or any custom content.</p>
-
-      <div class="panel-container panel-demo">
-        <main class="center">
+      <p>Panels can contain forms, settings, filters, documentation, or any custom content.</p>
+      <!--alert-->
+      <div class="alert mb">
+        <strong>Note:</strong> Use <code>.panel-left</code> or <code>.panel-right</code> inside a
+        <code>.panel-layout</code>. The panel can be collapsed using the <code>.panel-toggle</code> button.
+      </div>
+      <!--panel-->
+      <div class="panel-layout">
+        <main class="card-soft">
           <h3>Main Content</h3>
-          <p>
-            The panel automatically adjusts the available space when opened or closed.
-          </p>
+          <p>The main content automatically expands or shrinks when the panel is opened or collapsed</p>
         </main>
-
         <aside class="panel-right">
-
-          <button class="panel-toggle">◀</button>
-
-          <div class="p">
-            <h3>Settings</h3>
-
-            <label>Name</label>
-            <input type="text" placeholder="John Doe">
-
-            <label>Email</label>
-            <input type="email" placeholder="john@example.com">
-
-            <button class="btn mt">Save</button>
-          </div>
-
+          <button class="panel-toggle" type="button">❮</button>
+          <h3>Panel</h3>
+          <p> Panels can contain forms, settings, filters, documentation or any custom content.</p>
+          <button class="btn">Action</button>
         </aside>
       </div>
-
-      <span class="text mt">HTML</span>
-
-      <pre class="card-code"><code>&lt;div class="panel-container"&gt;
+      <!--code-->
+      <pre class="card-code mb"><code>&lt;div class="panel-layout"&gt;
   &lt;main&gt;
-    ...
+    Main content
   &lt;/main&gt;
 
   &lt;aside class="panel-right"&gt;
-    &lt;button class="panel-toggle"&gt;◀&lt;/button&gt;
+    &lt;button class="panel-toggle" type="button"&gt;❮&lt;/button&gt;
 
-    ...
-
+    &lt;h2&gt;Settings&lt;/h2&gt;
+    &lt;p&gt;Any content can be placed inside the panel.&lt;/p&gt;
   &lt;/aside&gt;
-&lt;/div&gt;</code></pre>
-
-      <div class="alert mt">
-        Panels require a <code>.panel-container</code> to automatically adjust the page layout.
-      </div>
+&lt;/div&gt;
+</code></pre>
     </section>
 
     <!--Utilities ---------------------------------------------------------->
