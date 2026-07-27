@@ -211,9 +211,7 @@ label:has(input:disabled) {
 }
 
 /*input, textarea, select -----------------------------------*/
-input,
-textarea,
-select {
+input,textarea,select {
   font: var(--font-text);
   background-color: color-mix(in srgb, var(--color-surface-2) 10%, transparent);
   backdrop-filter: var(--blur);
@@ -236,31 +234,23 @@ select {
   padding-right: 2.8rem;
 }
 
-input:hover,
-textarea:hover,
-select:hover {
+input:hover,textarea:hover,select:hover {
   border-color: var(--color-accent);
 }
 
-input:not([type="range"]):focus,
-textarea:focus,
-select:focus {
+input:not([type="range"]):focus,textarea:focus,select:focus {
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
 }
 
-input:disabled,
-textarea:disabled,
-select:disabled {
+input:disabled,textarea:disabled,select:disabled {
   cursor: not-allowed;
   opacity: .45;
   box-shadow: none;
   border-color: var(--color-border);
 }
 
-input:disabled:hover,
-textarea:disabled:hover,
-select:disabled:hover {
+input:disabled:hover,textarea:disabled:hover,select:disabled:hover {
   transform: none;
   border-color: var(--color-border);
 }

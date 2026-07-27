@@ -1576,8 +1576,15 @@ details.tree details > :not(summary):not(details) {
 }
 
 .text-accent{
-  font-weight: 600;
   color: var(--color-accent);
+}
+
+.text-on-accent{
+  color: var(--color-on-accent);
+}
+
+.text-bold{
+  font-weight:700;
 }
 
 .text-center { text-align: center;}
