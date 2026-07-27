@@ -395,6 +395,8 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  align-self: start;
+  justify-self: start;
   padding:0.25rem 0.65rem;
   border-radius:10px;
   font:var(--font-text-sm);
@@ -409,6 +411,8 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  align-self: start;
+  justify-self: start;
   padding:0.25rem 0.65rem;
   border-radius:10px;
   font:var(--font-text-sm);
@@ -423,6 +427,8 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  align-self: start;
+  justify-self: start;
   padding:0.25rem 0.65rem;
   border-radius:10px;
   font:var(--font-text-sm);
@@ -437,6 +443,8 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  align-self: start;
+  justify-self: start;
   padding:0.25rem 0.65rem;
   border-radius:10px;
   font:var(--font-text-sm);
@@ -451,6 +459,8 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  align-self: start;
+  justify-self: start;
   padding:0.25rem 0.65rem;
   border-radius:10px;
   font:var(--font-text-sm);
