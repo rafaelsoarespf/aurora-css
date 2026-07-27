@@ -256,7 +256,7 @@
 
 
 /*button -----------------------------------------------------*/
-.btn, .btn-ghost, .btn-outline, .btn-soft, .btn-glow, .btn-none{
+.btn, .btn-ghost, .btn-outline, .btn-soft, .btn-glow{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -326,6 +326,10 @@
 }
 
 .btn-none{
+  padding:0;
+  min-width:0;
+  border-radius:0;
+  gap:0;
   background:transparent;
   border:none;
   box-shadow:none;
