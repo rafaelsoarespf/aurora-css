@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeSelector();
   initNavbar();
   initSidebar();
+  initPanel();
 });
 
 //theme selector ----------------------------------------------------------
@@ -96,6 +97,38 @@ function initSidebar() {
   });
 }
 
+//panel --------------------------------------------------------------------
+function initPanel() {
+  const panels = document.querySelectorAll(".panel-left, .panel-right");
+
+  panels.forEach((panel) => {
+    const toggle = panel.querySelector(".panel-toggle");
+
+    if (!(panel instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    const updateToggle = () => {
+      const isClosed = panel.classList.contains("closed");
+      const isLeft = panel.classList.contains("panel-left");
+
+      toggle.textContent = isLeft
+        ? (isClosed ? "❯" : "❮")
+        : (isClosed ? "❮" : "❯");
+
+      toggle.setAttribute("aria-expanded", String(!isClosed));
+    };
+
+    updateToggle();
+
+    toggle.addEventListener("click", () => {
+      panel.classList.toggle("closed");
+      updateToggle();
+    });
+
+  });
+}
+
 //toast -----------------------------------------------------------
 function showToast(message, duration = 3000) {
   const toast = document.createElement("div");
@@ -110,6 +143,4 @@ function showToast(message, duration = 3000) {
   }, duration);
 }
 
-window.Aurora = {
-  showToast
-};
+window.Aurora = { showToast };
