@@ -101,17 +101,25 @@
   margin-inline: auto;
 }
 
+.center > *{
+  align-self: center !important;
+}
+
 .center-self {
-  display: block;
-  margin-inline: auto;
-  justify-self: center;
-  align-self: center;
+  display:block;
+  margin-inline:auto !important;
+  justify-self:center !important;
+  align-self:center !important;
 }
 
 .center-items {
   display:flex;
   align-items:center;
   justify-content:center;
+}
+
+.center-items > *{
+  align-self:center !important;
 }
 
 
@@ -470,7 +478,6 @@
   white-space:nowrap;
   gap:0.35rem;
 }
-
 
 /*field ------------------------------------------------------*/
 .field {
