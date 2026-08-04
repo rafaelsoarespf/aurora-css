@@ -1,3 +1,9 @@
+// init functions ====================================================
+document.addEventListener("DOMContentLoaded", init);
+function init() {
+    initSidebar();
+}
+//==================================================================
 //buttton animation 
 window.addEventListener('DOMContentLoaded', () => {
     const animations = [
@@ -26,5 +32,15 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-export {};
+//initSidebar =============================================
+export async function initSidebar() {
+    const sidebar = document.querySelector("#doc-sidebar");
+    if (!sidebar)
+        return;
+    const response = await fetch("../../components/sidebar.html");
+    if (!response.ok) {
+        throw new Error("Unable to load sidebar.");
+    }
+    sidebar.innerHTML = await response.text();
+}
 //# sourceMappingURL=main.js.map
