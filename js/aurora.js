@@ -1,12 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => { 
-  setTimeout(() => {
-    
+document.addEventListener("DOMContentLoaded", () => {     
     initThemeSelector();
     initNavbar();
     initSidebar();
     initPanel();
-  
-  }, 100);
+    setTimeout(() => {initThemeSelector()}, 100);
 });
 
 //theme selector ----------------------------------------------------------
