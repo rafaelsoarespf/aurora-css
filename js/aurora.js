@@ -1,8 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
-  initThemeSelector();
-  initNavbar();
-  initSidebar();
-  initPanel();
+document.addEventListener("DOMContentLoaded", () => { 
+  setTimeout(() => {
+    
+    initThemeSelector();
+    initNavbar();
+    initSidebar();
+    initPanel();
+  
+  }, 100);
 });
 
 //theme selector ----------------------------------------------------------

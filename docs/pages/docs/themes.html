@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Aurora CSS</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, aurora css" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Aurora CSS" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico" />
+  <!--Aurora CSS-->
+  <link rel="stylesheet" href="../../../css/reset.css" />
+  <link rel="stylesheet" href="../../../css/themes.css" />
+  <link rel="stylesheet" href="../../../css/globals.css" />
+  <link rel="stylesheet" href="../../../css/classes.css" />
+  <!--Aurora JS-->
+  <script src="../../../js/aurora.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../styles/docs.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body class="sidebar-layout" data-theme="aurora-light">
+
+  <!--sidebar ---------------------------------------------------------->
+  <aside id="doc-sidebar" class="sidebar"></aside>
+
+  <main class="docs content container gap-lg">
+
+    <!--button sidebar-->
+    <button class="sidebar__toggle">☰</button>
+
+    <!--Themes ---------------------------------------------------------->
+    <hr>
+    <section id="themes">
+      <span class="badge mb-sm">Themes</span>
+      <h2>Themes</h2>
+      <p>Customize the appearance of your application by setting the <code>data-theme</code> attribute to one of
+        Aurora's built-in themes.</p>
+      <span class="text">Usage</span>
+      <pre class="card-code mt-sm mb"><code>&lt;body data-theme="aurora-light"&gt;</code></pre>
+    </section>
+
+    <!--Theme Selector-->
+    <section>
+      <h3>Theme Selector</h3>
+      <p>Use this example to let users switch between Aurora's built-in themes.</p>
+      <div class="card">
+        <select class="theme-selector">
+          <option value="aurora-light">Aurora Light</option>
+          <option value="aurora-dark">Aurora Dark</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="light-teal">Light Teal</option>
+          <option value="dark-teal">Dark Teal</option>
+          <option value="coffee">Coffee</option>
+          <option value="paper">Paper</option>
+          <option value="neumorphism">Neumorphism</option>
+          <option value="glass">Glass</option>
+          <option value="forest">Forest</option>
+          <option value="nord">Nord</option>
+          <option value="sakura">Sakura</option>
+          <option value="gold">Gold</option>
+          <option value="light-slate-mist">Light Slate Mist</option>
+        <option value="dark-slate-mist">Dark Slate Mist</option>
+        </select>
+        <!--code-->
+        <pre class="card-code"><code>&lt;select class="theme-selector"&gt;
+  &lt;option value="aurora-light"&gt;Aurora Light&lt;/option&gt;
+  &lt;option value="aurora-dark"&gt;Aurora Dark&lt;/option&gt;
+  &lt;option value="light"&gt;Light&lt;/option&gt;
+  &lt;option value="dark"&gt;Dark&lt;/option&gt;
+  &lt;option value="light-teal"&gt;Light Teal&lt;/option&gt;
+  &lt;option value="dark-teal"&gt;Dark Teal&lt;/option&gt;
+  &lt;option value="coffee"&gt;Coffee&lt;/option&gt;
+  &lt;option value="paper"&gt;Paper&lt;/option&gt;
+  &lt;option value="neumorphism"&gt;Neumorphism&lt;/option&gt;
+  &lt;option value="glass"&gt;Glass&lt;/option&gt;
+  &lt;option value="forest"&gt;Forest&lt;/option&gt;
+  &lt;option value="nord"&gt;Nord&lt;/option&gt;
+  &lt;option value="sakura"&gt;Sakura&lt;/option&gt;
+  &lt;option value="gold"&gt;Gold&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+
+        <div class="alert mt">
+          This component requires the optional <code>aurora.js</code> file.
+        </div>
+      </div>
+    </section>
+
+    <!--built-in themes-->
+    <section>
+      <h3>Built-in Themes</h3>
+      <p>Explore all themes included with Aurora CSS.</p>
+      <div class="grid-3">
+        <!--aurora-light-->
+        <div class="card bg" data-theme="aurora-light">
+          <h4>aurora-light</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="aurora-light"</code></pre>
+        </div>
+        <!--aurora-dark-->
+        <div class="card bg" data-theme="aurora-dark">
+          <h4>aurora-dark</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="aurora-dark"</code></pre>
+        </div>
+        <!--light-->
+        <div class="card" data-theme="light">
+          <h4>light</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="light"</code></pre>
+        </div>
+        <!--dark-->
+        <div class="card" data-theme="dark">
+          <h4>dark</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="dark"</code></pre>
+        </div>
+        <!--light-teal-->
+        <div class="card" data-theme="light-teal">
+          <h4>light-teal</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="light-teal"</code></pre>
+        </div>
+        <!--dark-teal-->
+        <div class="card" data-theme="dark-teal">
+          <h4>dark-teal</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="dark-teal"</code></pre>
+        </div>
+        <!--glass-->
+        <div class="card bg" data-theme="glass">
+          <h4>glass</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="glass"</code></pre>
+        </div>
+        <!--forest-->
+        <div class="card bg" data-theme="forest">
+          <h4>forest</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="forest"</code></pre>
+        </div>
+        <!--nord-->
+        <div class="card bg" data-theme="nord">
+          <h4>nord</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="nord"</code></pre>
+        </div>
+        <!--sakura-->
+        <div class="card bg" data-theme="sakura">
+          <h4>sakura</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="sakura"</code></pre>
+        </div>
+        <!--gold-->
+        <div class="card bg" data-theme="gold">
+          <h4>gold</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="gold"</code></pre>
+        </div>
+        <!--coffee-->
+        <div class="card bg" data-theme="coffee">
+          <h4>coffee</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="coffee"</code></pre>
+        </div>
+        <!--paper-->
+        <div class="card bg" data-theme="paper">
+          <h4>paper</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="paper"</code></pre>
+        </div>
+        <!--neumorphism-->
+        <div class="card bg" data-theme="neumorphism">
+          <h4>neumorphism</h4>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+          <button class="btn">Button</button>
+          <span class="badge">Badge</span>
+          <pre class="card-code"><code>data-theme="neumorphism"</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>

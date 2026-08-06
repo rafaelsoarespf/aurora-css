@@ -5,6 +5,17 @@ function init(): void {
   initSidebar();
 }
 
+//initSidebar =============================================
+export async function initSidebar(): Promise<void> {
+  const sidebar = document.querySelector<HTMLElement>("#doc-sidebar");
+  if (!sidebar) return;
+
+  const response = await fetch("../../components/sidebar.html");
+   if (!response.ok) { throw new Error("Unable to load sidebar.");}
+  
+  sidebar.innerHTML = await response.text();
+}
+
 //==================================================================
 //buttton animation 
 window.addEventListener('DOMContentLoaded', () => {
@@ -47,13 +58,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-//initSidebar =============================================
-export async function initSidebar(): Promise<void> {
-  const sidebar = document.querySelector<HTMLElement>("#doc-sidebar");
-  if (!sidebar) return;
-
-  const response = await fetch("../../components/sidebar.html");
-   if (!response.ok) { throw new Error("Unable to load sidebar.");}
-  
-  sidebar.innerHTML = await response.text();
-}

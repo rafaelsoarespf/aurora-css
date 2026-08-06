@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Aurora CSS</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, aurora css" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Aurora CSS" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico" />
+  <!--Aurora CSS-->
+  <link rel="stylesheet" href="../../../css/reset.css" />
+  <link rel="stylesheet" href="../../../css/themes.css" />
+  <link rel="stylesheet" href="../../../css/globals.css" />
+  <link rel="stylesheet" href="../../../css/classes.css" />
+  <!--Aurora JS-->
+  <script src="../../../js/aurora.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../styles/docs.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body class="sidebar-layout" data-theme="aurora-light">
+
+  <!--sidebar ---------------------------------------------------------->
+  <aside id="doc-sidebar" class="sidebar"></aside>
+
+  <main class="docs content container gap-lg">
+
+    <!--button sidebar-->
+    <button class="sidebar__toggle">☰</button>
+
+    <!--Layout ---------------------------------------------------------->
+    <section>
+      <span class="badge mb-sm">Layout</span>
+      <h2>Layout System</h2>
+      <p>Utilities for building responsive and scalable page structures.</p>
+    </section>
+    <!--Container ---------------------------------------------------------->
+    <section id="container">
+      <h3>Container</h3>
+      <p>Center content while controlling the maximum layout width.</p>
+      <div class="container card mb center-items">
+        <p>Container</p>
+        <code>1200px</code>
+      </div>
+      <pre class="card-code"><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
+    </section>
+    <!-- Grid ---------------------------------------------------------->
+    <section id="grid">
+      <h3>Grid</h3>
+      <p>Flexible grid utilities for scalable and modern layouts.</p>
+
+      <!-- Grids ---------------------------------------------------------->
+      <div class="card mb-md">
+        <h4>Grid Utilities</h4>
+        <!--grid-2-->
+        <p class="mt-sm center-self">grid-2</p>
+        <div class="grid-2 mb-sm">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+        </div>
+        <!--grid-3-->
+        <p class="center-self">grid-3</p>
+        <div class="grid-3 mb-sm">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+        </div>
+        <!--grid-4-->
+        <p class="center-self">grid-4</p>
+        <div class="grid-4 mb-sm">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+        </div>
+        <!--grid-5-->
+        <p class="center-self">grid-5</p>
+        <div class="grid-5 mb-sm">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+          <div class="card center-items">5</div>
+        </div>
+        <!--grid-6-->
+        <p class="center-self">grid-6</p>
+        <div class="grid-6 mb-sm">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+          <div class="card center-items">5</div>
+          <div class="card center-items">6</div>
+        </div>
+        <!--grid-7-->
+        <p class="center-self">grid-7</p>
+        <div class="grid-7 mb-sm">
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+          <div class="card center-items">4</div>
+          <div class="card center-items">5</div>
+          <div class="card center-items">6</div>
+          <div class="card center-items">7</div>
+        </div>
+
+        <pre class="card-code mt"><code>&lt;div class="grid-2"&gt;...&lt;/div&gt;
+&lt;div class="grid-3"&gt;...&lt;/div&gt;
+&lt;div class="grid-4"&gt;...&lt;/div&gt;
+&lt;div class="grid-5"&gt;...&lt;/div&gt;
+&lt;div class="grid-6"&gt;...&lt;/div&gt;
+&lt;div class="grid-7"&gt;...&lt;/div&gt;</code></pre>
+      </div>
+
+      <!-- Column Span ---------------------------------------------------------->
+      <div class="card">
+        <h4>Column Span</h4>
+        <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
+
+        <p class="center-self">grid-4 + col-3</p>
+        <div class="grid-4 mb-sm">
+          <div class="card col-3 center-items">col-3</div>
+          <div class="card center-items">1</div>
+        </div>
+
+        <p class="center-self">grid-5 + col-2</p>
+        <div class="grid-5">
+          <div class="card col-2 center-items">col-2</div>
+          <div class="card center-items">1</div>
+          <div class="card center-items">2</div>
+          <div class="card center-items">3</div>
+        </div>
+
+        <pre class="card-code mt"><code>&lt;div class="grid-4"&gt;
+  &lt;div class="col-3"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="grid-5"&gt;
+  &lt;div class="col-2"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--row ---------------------------------------------------------->
+    <section id="row">
+      <h3>Row</h3>
+      <p>Horizontal alignment utilities for inline layouts.</p>
+
+      <div class="grid-2">
+        <!--row-->
+        <div class="fx-dots">
+          <div class="row">
+            <div class="card bg-soft">1</div>
+            <div class="card bg-soft">2</div>
+            <div class="card bg-soft">3</div>
+          </div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="row"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <!--row+center-->
+        <div class="row center-items fx-dots mb">
+          <div class="card bg-soft">1</div>
+          <div class="card bg-soft">2</div>
+          <div class="card bg-soft">3</div>
+        </div>
+        <pre class="card-code"><code>&lt;div class="row center-items"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+  </main>
+</body>

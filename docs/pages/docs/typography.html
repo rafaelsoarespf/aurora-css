@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Aurora CSS</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, aurora css" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Aurora CSS" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico" />
+  <!--Aurora CSS-->
+  <link rel="stylesheet" href="../../../css/reset.css" />
+  <link rel="stylesheet" href="../../../css/themes.css" />
+  <link rel="stylesheet" href="../../../css/globals.css" />
+  <link rel="stylesheet" href="../../../css/classes.css" />
+  <!--Aurora JS-->
+  <script src="../../../js/aurora.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../styles/docs.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body class="sidebar-layout" data-theme="aurora-light">
+
+  <!--sidebar ---------------------------------------------------------->
+  <aside id="doc-sidebar" class="sidebar"></aside>
+
+  <main class="docs content container gap-lg">
+
+    <!--button sidebar-->
+    <button class="sidebar__toggle">☰</button>
+
+    <!--Typography ---------------------------------------------------------->
+    <hr>
+    <section id="typography">
+      <span class="badge mb-sm">Typography</span>
+      <h2>Typography</h2>
+      <p>urora provides a simple typography system with semantic elements,utility classes, and text formatting styles.
+      </p>
+    </section>
+
+    <!--Typography System ---------------------------------------------------------->
+    <section id="typography-system">
+      <h3>Typography System</h3>
+      <p>Semantic elements are styled automatically, or the same styles can be applied using Aurora typography classes.
+      </p>
+
+      <div class="grid-2">
+        <!--title-->
+        <div class="card">
+          <h1 class="center-self">Title</h1>
+          <pre class="card-code"><code>&lt;h1&gt;Title&lt;/h1&gt;</code></pre>
+          <pre class="card-code"><code>&lt;span class="title"&gt;Title&lt;/span&gt;</code></pre>
+        </div>
+        <!--subtitle-->
+        <div class="card">
+          <h2 class="center-self">Subtitle</h2>
+          <pre class="card-code"><code>&lt;h2&gt;Subtitle&lt;/h2&gt;</code></pre>
+          <pre class="card-code"><code>&lt;span class="subtitle"&gt;Subtitle&lt;/span&gt;</code></pre>
+        </div>
+        <!--text-->
+        <div class="card">
+          <p class="center-self">Text</p>
+          <pre class="card-code"><code>&lt;p&gt;Text&lt;/p&gt;</code></pre>
+          <pre class="card-code"><code>&lt;span class="text"&gt;Text&lt;/span&gt;</code></pre>
+        </div>
+        <!--text-sm-->
+        <div class="card">
+          <p class="center-self text-sm">Text sm</p>
+          <pre class="card-code"><code>&lt;span class="text-sm"&gt;Text sm&lt;/span&gt;</code></pre>
+        </div>
+        <!--text-accent-->
+        <div class="card text-center">
+          <span class="text-accent">Text Accent</span>
+          <pre class="card-code"><code>&lt;span class="text-accent"&gt;Text Accent&lt;/span&gt;</code></pre>
+        </div>
+        <!--text-on-accent-->
+        <div class="card text-center bg-soft">
+          <span class="text-on-accent">Text on Accent</span>
+          <pre class="card-code"><code>&lt;span class="text-on-accent"&gt;Text on Accent&lt;/span&gt;</code></pre>
+        </div>
+        <!--text-bold-->
+        <div class="card text-center">
+          <span class="text-bold">Text Bold</span>
+          <pre class="card-code"><code>&lt;span class="text-bold"&gt;Text Bold&lt;/span&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!--Text Elements ---------------------------------------------------------->
+    <section id="text-elements">
+      <h3>Text Elements</h3>
+      <p>Common semantic HTML elements for text formatting and annotations.</p>
+      <div class="grid-3">
+        <!--strong-->
+        <div class="card text-center">
+          <p><strong>Strong Text</strong></p>
+          <pre class="card-code"><code>&lt;strong&gt;Strong Text&lt;/strong&gt;</code></pre>
+        </div>
+        <!--mark-->
+        <div class="card text-center">
+          <p><mark>Highlighted Text</mark></p>
+          <pre class="card-code"><code>&lt;mark&gt;Highlighted Text&lt;/mark&gt;</code></pre>
+        </div>
+        <!--abbr-->
+        <div class="card text-center">
+          <p><abbr title="Abbreviation">abbr</abbr></p>
+          <pre class="card-code"><code>&lt;abbr title="Abbreviation"&gt;abbr&lt;/abbr&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!--Text Colors ---------------------------------------------------------->
+    <section id="text-colors">
+      <h3>Text Colors</h3>
+      <p>Utility classes for applying fixed text colors.</p>
+      <div class="alert mb">These text colors are fixed and are not affected by the active theme.</div>
+
+      <div class="grid-2">
+        <!--red-->
+        <div class="card center-items text-red">Red</div>
+        <pre class="card-code"><code>&lt;span class="text-red"&gt;Red&lt;/span&gt;</code></pre>
+
+        <!--salmon-->
+        <div class="card center-items text-salmon">Salmon</div>
+        <pre class="card-code"><code>&lt;span class="text-salmon"&gt;Salmon&lt;/span&gt;</code></pre>
+
+        <!--orange-->
+        <div class="card center-items text-orange">Orange</div>
+        <pre class="card-code"><code>&lt;span class="text-orange"&gt;Orange&lt;/span&gt;</code></pre>
+
+        <!--yellow-->
+        <div class="card center-items text-yellow">Yellow</div>
+        <pre class="card-code"><code>&lt;span class="text-yellow"&gt;Yellow&lt;/span&gt;</code></pre>
+
+        <!--lime-->
+        <div class="card center-items text-lime">Lime</div>
+        <pre class="card-code"><code>&lt;span class="text-lime"&gt;Lime&lt;/span&gt;</code></pre>
+
+        <!--green-->
+        <div class="card center-items text-green">Green</div>
+        <pre class="card-code"><code>&lt;span class="text-green"&gt;Green&lt;/span&gt;</code></pre>
+
+        <!--teal-->
+        <div class="card center-items text-teal">Teal</div>
+        <pre class="card-code"><code>&lt;span class="text-teal"&gt;Teal&lt;/span&gt;</code></pre>
+
+        <!--cyan-->
+        <div class="card center-items text-cyan">Cyan</div>
+        <pre class="card-code"><code>&lt;span class="text-cyan"&gt;Cyan&lt;/span&gt;</code></pre>
+
+        <!--blue-->
+        <div class="card center-items text-blue">Blue</div>
+        <pre class="card-code"><code>&lt;span class="text-blue"&gt;Blue&lt;/span&gt;</code></pre>
+
+        <!--indigo-->
+        <div class="card center-items text-indigo">Indigo</div>
+        <pre class="card-code"><code>&lt;span class="text-indigo"&gt;Indigo&lt;/span&gt;</code></pre>
+
+        <!--purple-->
+        <div class="card center-items text-purple">Purple</div>
+        <pre class="card-code"><code>&lt;span class="text-purple"&gt;Purple&lt;/span&gt;</code></pre>
+
+        <!--pink-->
+        <div class="card center-items text-pink">Pink</div>
+        <pre class="card-code"><code>&lt;span class="text-pink"&gt;Pink&lt;/span&gt;</code></pre>
+
+        <!--brown-->
+        <div class="card center-items text-brown">Brown</div>
+        <pre class="card-code"><code>&lt;span class="text-brown"&gt;Brown&lt;/span&gt;</code></pre>
+
+        <!--gray-->
+        <div class="card center-items text-gray">Gray</div>
+        <pre class="card-code"><code>&lt;span class="text-gray"&gt;Gray&lt;/span&gt;</code></pre>
+
+        <!--black-->
+        <div class="card center-items text-black">Black</div>
+        <pre class="card-code"><code>&lt;span class="text-black"&gt;Black&lt;/span&gt;</code></pre>
+
+        <!--white-->
+        <div class="card bg-black center-items text-white">White</div>
+        <pre class="card-code"><code>&lt;span class="text-white"&gt;White&lt;/span&gt;</code></pre>
+
+        <!--gold-->
+        <div class="card center-items text-gold"><strong>Gold</strong></div>
+        <pre class="card-code"><code>&lt;span class="text-gold"&gt;Gold&lt;/span&gt;</code></pre>
+
+        <!--silver-->
+        <div class="card center-items text-silver"><strong>Silver</strong></div>
+        <pre class="card-code"><code>&lt;span class="text-silver"&gt;Silver&lt;/span&gt;</code></pre>
+
+        <!--bronze-->
+        <div class="card center-items text-bronze"><strong>Bronze</strong></div>
+        <pre class="card-code"><code>&lt;span class="text-bronze"&gt;Bronze&lt;/span&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--Code ---------------------------------------------------------->
+    <section id="code">
+      <h3>Code</h3>
+      <p>Utilities for displaying inline and block code snippets.</p>
+
+      <div class="grid-3">
+        <!-- Inline Code -->
+        <div class="card">
+          <p class="mb-sm center-self">Inline Code</p>
+          <p class="mb">Use <code>code</code> for inline snippets.</p>
+          <pre class="card-code"><code>&lt;code&gt;code&lt;/code&gt;</code></pre>
+        </div>
+        <!-- Code Block -->
+        <div class="card">
+          <p class="mb-sm center-self">Code Block</p>
+          <pre><code>Example block content</code></pre>
+          <pre class="card-code">
+<code>&lt;pre&gt;
+  &lt;code&gt;Example block content&lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+        </div>
+        <!-- card-code -->
+        <div class="card">
+          <p class="center-self mb-sm">card-code</p>
+          <p class="center-self">Example</p>
+          <pre class="card-code"><code>Example code snippet</code></pre>
+          <p class="center-self">HTML</p>
+          <pre class="card-code">
+<code>&lt;pre class="card-code"&gt;
+  &lt;code&gt;Example code snippet&lt;/code&gt;
+&lt;/pre&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!--Quotes ---------------------------------------------------------->
+    <section id="quotes">
+      <h3>Quotes</h3>
+      <p>Semantic elements for inline and block quotations.</p>
+      <div class="grid-2">
+        <!--Inline Quote-->
+        <div class="card">
+          <p class="center-self mb-sm"><q>Inline Quote</q></p>
+          <pre class="card-code"><code>&lt;q&gt;Inline Quote.&lt;/q&gt;</code></pre>
+        </div>
+        <!--Blockquote-->
+        <div class="card">
+          <p class="mb-sm center-self">Blockquote</p>
+          <blockquote>Aurora CSS focuses on atmospheric interfaces,
+            reusable utilities and scalable design systems.
+            <footer>Aurora Documentation</footer>
+          </blockquote>
+          <pre class="card-code"><code>&lt;blockquote&gt;
+  Aurora CSS focuses on atmospheric interfaces,
+  reusable utilities and scalable design systems.
+  &lt;footer&gt;Aurora Documentation&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>

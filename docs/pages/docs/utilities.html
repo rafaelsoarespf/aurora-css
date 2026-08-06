@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--About Project-->
+  <title>Aurora CSS</title>
+  <meta name="description" content="Modern CSS framework focused on elegance, responsiveness and clean design" />
+  <meta name="author" content="Rafael" />
+  <meta name="keywords" content="css, framework, responsive, modern ui, frontend, aurora css" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Aurora CSS" />
+  <meta property="og:description" content="Modern CSS framework focused on elegance and responsive design." />
+  <meta property="og:type" content="website" />
+
+  <!--Theme-->
+  <meta name="theme-color" content="#121212" />
+
+  <!--Content Security Policy (CSP)-->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self';script-src 'self';style-src 'self' 'unsafe-inline';img-src 'self' data: blob:;font-src 'self' data:;connect-src 'self' https: ws: wss:;object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;" />
+  <!--Referrer Policy-->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <!-- Permissions Policy-->
+  <meta http-equiv="Permissions-Policy"
+    content="camera=(),microphone=(),geolocation=(),payment=(),usb=(),accelerometer=(),gyroscope=(),magnetometer=()" />
+  <!-- HSTS (somente se usar HTTPS, configurar no servidor) -->
+  <!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains"> -->
+
+  <!--Favicon-->
+  <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico" />
+  <!--Aurora CSS-->
+  <link rel="stylesheet" href="../../../css/reset.css" />
+  <link rel="stylesheet" href="../../../css/themes.css" />
+  <link rel="stylesheet" href="../../../css/globals.css" />
+  <link rel="stylesheet" href="../../../css/classes.css" />
+  <!--Aurora JS-->
+  <script src="../../../js/aurora.js" defer></script>
+  <!--CSS-->
+  <link rel="stylesheet" href="../../styles/docs.css" />
+  <!--Scripts-->
+  <script type="module" src="../../dist/main.js"></script>
+</head>
+
+<body class="sidebar-layout" data-theme="aurora-light">
+
+  <!--sidebar ---------------------------------------------------------->
+  <aside id="doc-sidebar" class="sidebar"></aside>
+
+  <main class="docs content container gap-lg">
+
+    <!--button sidebar-->
+    <button class="sidebar__toggle">☰</button>
+
+    <!--Utilities ---------------------------------------------------------->
+    <hr>
+    <section>
+      <span class="badge mb-sm">Utilities</span>
+      <h2>Utilities</h2>
+      <p>Utility classes for spacing, alignment, sizing, and layout adjustments.</p>
+    </section>
+
+    <!--Position ---------------------------------------------------------->
+    <section id="position">
+      <span class="badge mb-sm">Position</span>
+      <h2>Position</h2>
+      <p>Position elements inside a parent element.</p>
+
+      <div class="card center-self" style="height: 150px; width: 350px;">
+        <span class="badge position-t">.position-t</span>
+        <span class="badge position-r">.position-r</span>
+        <span class="badge position-b">.position-b</span>
+        <span class="badge position-l">.position-l</span>
+        <span class="badge position-tl">.position-tl</span>
+        <span class="badge position-tr">.position-tr</span>
+        <span class="badge position-bl">.position-bl</span>
+        <span class="badge position-br">.position-br</span>
+      </div>
+      <pre class="card-code mt"><code>&lt;div class="card"&gt;
+  &lt;span class="badge position-tr"&gt;New&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+      <div class="alert mt">Position classes require the parent element to use <code>position: relative</code> (or
+        another positioned value).</div>
+    </section>
+
+    <!--Spacing ---------------------------------------------------------->
+    <section id="spacing">
+      <h3>Spacing</h3>
+      <p>Margin utility classes for consistent spacing between elements.</p>
+      <!--table-->
+      <table>
+        <!--thead-->
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <!--tbody-->
+        <tbody>
+          <tr>
+            <td>.mt-none / .mb-none</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>.mt-sm / .mb-sm</td>
+            <td>0.5rem</td>
+          </tr>
+          <tr>
+            <td>.mt / .mb</td>
+            <td>1rem</td>
+          </tr>
+          <tr>
+            <td>.mt-md / .mb-md</td>
+            <td>1.5rem</td>
+          </tr>
+          <tr>
+            <td>.mt-lg / .mb-lg</td>
+            <td>3rem</td>
+          </tr>
+        </tbody>
+      </table>
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;div class="mb-lg"&gt; ... &lt;/div&gt;</code></pre>
+    </section>
+
+    <!--gap ---------------------------------------------------------->
+    <section id="gap">
+      <h3>Gap</h3>
+      <p>Gap utility classes for controlling spacing between flex and grid items.</p>
+      <!--table-->
+      <table>
+        <!--thead-->
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <!--tbody-->
+        <tbody>
+          <tr>
+            <td>.gap-none</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>.gap-sm</td>
+            <td>0.5rem</td>
+          </tr>
+          <tr>
+            <td>.gap</td>
+            <td>1rem</td>
+          </tr>
+          <tr>
+            <td>.gap-md</td>
+            <td>1.5rem</td>
+          </tr>
+          <tr>
+            <td>.gap-lg</td>
+            <td>3rem</td>
+          </tr>
+        </tbody>
+      </table>
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;div class="gap-md"&gt;...&lt;/div&gt;</code></pre>
+    </section>
+
+    <!--center ---------------------------------------------------------->
+    <section id="center">
+      <h3>Center</h3>
+      <p>Utility classes for centering elements and content.</p>
+      <!--center-->
+      <p class="mt"><code>.center</code> centers content horizontally and vertically inside a container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="center">
+          <div class="card">Center</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="center"&gt;
+  &lt;div class="card"&gt;Center&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--center items-->
+      <p class="mt-lg"><code>.center-items</code> centers multiple children inside a flex or grid container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="center-items">
+          <div class="card">Center Items</div>
+          <div class="card">Center Items</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="center-items"&gt;
+  &lt;div class="card"&gt;Center Items&lt;/div&gt;
+  &lt;div class="card"&gt;Center Items&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--center self-->
+      <p class="mt-lg"><code>.center-self</code> centers the element itself within its parent container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="card center-self">Center Self</div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="card center-self"&gt;Center Self&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <!--text alignment ---------------------------------------------------------->
+    <section id="text-alignment">
+      <h3>Text Alignment</h3>
+      <p>Utility classes for horizontal text alignment.</p>
+      <div class="grid-3">
+        <!--text left-->
+        <div class="card">
+          <p class="text-left">Left aligned text</p>
+        </div>
+        <!--text center-->
+        <div class="card">
+          <p class="text-center">Centered text</p>
+        </div>
+        <!--text right-->
+        <div class="card">
+          <p class="text-right">Right aligned text</p>
+        </div>
+      </div>
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;p class="text-left"&gt;Left aligned text&lt;/p&gt;
+&lt;p class="text-center"&gt;Centered text&lt;/p&gt;
+&lt;p class="text-right"&gt;Right aligned text&lt;/p&gt;</code></pre>
+    </section>
+
+    <!-- size ---------------------------------------------------------->
+    <section id="size">
+      <h3>Size</h3>
+      <p>Width utility classes for common layout sizes.</p>
+      <!--table-->
+      <table class="mb-md">
+        <!--thead-->
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Width</th>
+          </tr>
+        </thead>
+        <!--tbody-->
+        <tbody>
+          <tr>
+            <td>.size-sm</td>
+            <td>320px</td>
+          </tr>
+          <tr>
+            <td>.size-md</td>
+            <td>640px</td>
+          </tr>
+          <tr>
+            <td>.size-lg</td>
+            <td>960px</td>
+          </tr>
+          <tr>
+            <td>.size-xl</td>
+            <td>1280px</td>
+          </tr>
+          <tr>
+            <td>.size-full</td>
+            <td>100%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--preview-->
+      <div class="card">
+        <!--size-sm-->
+        <p>.size-sm</p>
+        <div class="bg-accent size-sm">320px</div>
+        <!--size-md-->
+        <p>.size-md</p>
+        <div class="bg-accent size-md">640px</div>
+        <!--size-lg-->
+        <p>.size-lg</p>
+        <div class="bg-accent size-lg">960px</div>
+        <!--size-xl-->
+        <p>.size-xl</p>
+        <div class="bg-accent size-xl">1280px</div>
+        <!--size-full-->
+        <p>.size-full</p>
+        <div class="bg-accent size-full">100%</div>
+      </div>
+      <!--code-->
+      <pre class="card-code mt"><code>&lt;div class="size-md"&gt; ... &lt;/div&gt;</code></pre>
+    </section>
+
+    <!--Border ---------------------------------------------------------->
+    <section id="border">
+      <h3>Border</h3>
+      <p>Utility classes for adding and customizing borders.</p>
+
+      <!--table-->
+      <table>
+        <!--thead-->
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <!--tbody-->
+        <tbody>
+          <tr>
+            <td>.border</td>
+            <td>Adds a 1px border using <code>--color-border</code>.</td>
+          </tr>
+          <tr>
+            <td>.border-none</td>
+            <td>Removes all borders.</td>
+          </tr>
+          <tr>
+            <td>.border-top</td>
+            <td>Adds a top border.</td>
+          </tr>
+          <tr>
+            <td>.border-right</td>
+            <td>Adds a right border.</td>
+          </tr>
+          <tr>
+            <td>.border-bottom</td>
+            <td>Adds a bottom border.</td>
+          </tr>
+          <tr>
+            <td>.border-left</td>
+            <td>Adds a left border.</td>
+          </tr>
+          <tr>
+            <td>.border-accent</td>
+            <td>Changes the border color to <code>--color-accent</code>. Use together with a border utility.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--border-->
+      <div class="grid-2 mt">
+        <div class="card border">Default Border</div>
+        <div class="card border border-accent">Accent Border</div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="border"&gt;Default Border&lt;/div&gt;</code></pre>
+        <pre class="card-code"><code>&lt;div class="border border-accent"&gt;Accent Border&lt;/div&gt;</code></pre>
+      </div>
+
+      <h3 class="mt-lg">Border Colors</h3>
+      <p>Utility classes for applying fixed border colors.</p>
+      <div class="alert mb">These border colors are fixed and are not affected by the active theme.</div>
+
+      <div class="grid-2">
+        <!--red-->
+        <div class="card border border-red center-items">Red</div>
+        <pre class="card-code"><code>&lt;div class="border border-red"&gt;Red&lt;/div&gt;</code></pre>
+
+        <!--salmon-->
+        <div class="card border border-salmon center-items">Salmon</div>
+        <pre class="card-code"><code>&lt;div class="border border-salmon"&gt;Salmon&lt;/div&gt;</code></pre>
+
+        <!--orange-->
+        <div class="card border border-orange center-items">Orange</div>
+        <pre class="card-code"><code>&lt;div class="border border-orange"&gt;Orange&lt;/div&gt;</code></pre>
+
+        <!--yellow-->
+        <div class="card border border-yellow center-items">Yellow</div>
+        <pre class="card-code"><code>&lt;div class="border border-yellow"&gt;Yellow&lt;/div&gt;</code></pre>
+
+        <!--lime-->
+        <div class="card border border-lime center-items">Lime</div>
+        <pre class="card-code"><code>&lt;div class="border border-lime"&gt;Lime&lt;/div&gt;</code></pre>
+
+        <!--green-->
+        <div class="card border border-green center-items">Green</div>
+        <pre class="card-code"><code>&lt;div class="border border-green"&gt;Green&lt;/div&gt;</code></pre>
+
+        <!--teal-->
+        <div class="card border border-teal center-items">Teal</div>
+        <pre class="card-code"><code>&lt;div class="border border-teal"&gt;Teal&lt;/div&gt;</code></pre>
+
+        <!--cyan-->
+        <div class="card border border-cyan center-items">Cyan</div>
+        <pre class="card-code"><code>&lt;div class="border border-cyan"&gt;Cyan&lt;/div&gt;</code></pre>
+
+        <!--blue-->
+        <div class="card border border-blue center-items">Blue</div>
+        <pre class="card-code"><code>&lt;div class="border border-blue"&gt;Blue&lt;/div&gt;</code></pre>
+
+        <!--indigo-->
+        <div class="card border border-indigo center-items">Indigo</div>
+        <pre class="card-code"><code>&lt;div class="border border-indigo"&gt;Indigo&lt;/div&gt;</code></pre>
+
+        <!--purple-->
+        <div class="card border border-purple center-items">Purple</div>
+        <pre class="card-code"><code>&lt;div class="border border-purple"&gt;Purple&lt;/div&gt;</code></pre>
+
+        <!--pink-->
+        <div class="card border border-pink center-items">Pink</div>
+        <pre class="card-code"><code>&lt;div class="border border-pink"&gt;Pink&lt;/div&gt;</code></pre>
+
+        <!--brown-->
+        <div class="card border border-brown center-items">Brown</div>
+        <pre class="card-code"><code>&lt;div class="border border-brown"&gt;Brown&lt;/div&gt;</code></pre>
+
+        <!--gray-->
+        <div class="card border border-gray center-items">Gray</div>
+        <pre class="card-code"><code>&lt;div class="border border-gray"&gt;Gray&lt;/div&gt;</code></pre>
+
+        <!--black-->
+        <div class="card border border-black center-items">Black</div>
+        <pre class="card-code"><code>&lt;div class="border border-black"&gt;Black&lt;/div&gt;</code></pre>
+
+        <!--white-->
+        <div class="card border border-white center-items">White</div>
+        <pre class="card-code"><code>&lt;div class="border border-white"&gt;White&lt;/div&gt;</code></pre>
+
+        <!--gold-->
+        <div class="card border border-gold center-items">Gold</div>
+        <pre class="card-code"><code>&lt;div class="border border-gold"&gt;Gold&lt;/div&gt;</code></pre>
+
+        <!--silver-->
+        <div class="card border border-silver center-items">Silver</div>
+        <pre class="card-code"><code>&lt;div class="border border-silver"&gt;Silver&lt;/div&gt;</code></pre>
+
+        <!--bronze-->
+        <div class="card border border-bronze center-items">Bronze</div>
+        <pre class="card-code"><code>&lt;div class="border border-bronze"&gt;Bronze&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+  </main>
+</body>

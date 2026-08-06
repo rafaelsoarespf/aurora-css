@@ -21,13 +21,13 @@
   --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
   --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
 
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-sm: 0 2px 4px rgba(253, 66, 66, 0.05);
   --shadow-md: 0 4px 10px rgba(0,0,0,0.08);
   --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 /*============================================================*/
-/* Dark x======================================================*/
+/* Dark ======================================================*/
 [data-theme="dark"] {
   --color-background: linear-gradient(135deg, #121212, #1e1e1e);
   --color-surface-1: rgba(30, 30, 30, 0.8);
