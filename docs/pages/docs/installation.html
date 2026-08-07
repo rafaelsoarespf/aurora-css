@@ -50,35 +50,64 @@
   <!--sidebar ---------------------------------------------------------->
   <aside id="doc-sidebar" class="sidebar"></aside>
 
+  <!--main ------------------------------------------------------------->
   <main class="docs content container gap-lg">
-
     <!--button sidebar-->
     <button class="sidebar__toggle">☰</button>
-
-    <!--Installation ---------------------------------------------------------->
-    <section id="installation">
+    <!--installation-->
+    <section>
       <span class="badge mb-sm">Installation</span>
+      <h1>Installation</h1>
+      <p>Download the Aurora CSS files and add them to your project.</p>
+    </section>
+    <hr>
+    <!--folder structure-->
+    <section>
+      <h2>1. Folder Structure</h2>
+      <p class="mb">Place the Aurora CSS files inside your project.</p>
 
-      <h2>Installation</h2>
-      <p>Download the Aurora files and add them to your project.</p>
-      <!--code-->
-      <pre class="card-code mb"><code>css/
+      <pre class="card-code"><code>css/
 ├─ reset.css
 ├─ globals.css
 ├─ classes.css
 └─ themes.css
 
 js/
-└─ aurora.js <span class="text-muted">// Optional</span></code></pre>
-      <!--text-->
-      <p>Import the Aurora files:</p>
-      <!--code-->
+└─ aurora.js // Optional</code></pre>
+    </section>
+
+    <!--stylesheets------------------------------------------------------->
+    <section>
+      <h2>2. Import the Aurora files </h2>
+      <p class="mb">Import the Aurora CSS files into your HTML document.</p>
+
       <pre class="card-code"><code>&lt;link rel="stylesheet" href="./css/reset.css"&gt;
 &lt;link rel="stylesheet" href="./css/globals.css"&gt;
 &lt;link rel="stylesheet" href="./css/classes.css"&gt;
-&lt;link rel="stylesheet" href="./css/themes.css"&gt;
-&lt;!-- Optional --&gt;
-&lt;script src="./js/aurora.js" defer&gt;&lt;/script&gt;</code></pre>
+&lt;link rel="stylesheet" href="./css/themes.css"&gt;</code></pre>
+      <div class="alert mt">Note: Aurora CSS works without JavaScript. Import <code>aurora.js</code> only if you need interactive components such as Navbar, Sidebar, Panel and Theme Selector.</div>
+
+    </section>
+
+    <!--next steps-------------------------------------------------------->
+    <section>
+      <h2>3. Next Steps</h2>
+      <p class="mb-lg">
+        Aurora CSS is now ready to use. Continue by learning how themes work or start
+        exploring the available components.
+      </p>
+
+      <div class="grid-2 gap">
+        <a href="./themes.html" class="card hover-lift hover-border">
+          <h3>Themes</h3>
+          <p>Learn how to switch and customize Aurora themes.</p>
+        </a>
+
+        <a href="./components.html" class="card hover-lift hover-border">
+          <h3>Components</h3>
+          <p>Explore reusable interface components such as buttons, cards and forms.</p>
+        </a>
+      </div>
     </section>
 
   </main>
