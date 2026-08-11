@@ -55,36 +55,38 @@
     <!--button sidebar-->
     <button class="sidebar__toggle">☰</button>
 
-    <!--Layout ---------------------------------------------------------->
+    <!--layout ---------------------------------------------------------->
     <section>
       <span class="badge mb-sm">Layout</span>
-      <h2>Layout System</h2>
-      <p>Utilities for building responsive and scalable page structures.</p>
+      <h1>Layout</h1>
+      <p>Build responsive and scalable page structures with Aurora CSS layout utilities.</p>
     </section>
-    <!--Container ---------------------------------------------------------->
+    <hr>
+    <!--container ------------------------------------------------------->
     <section id="container">
-      <h3>Container</h3>
-      <p>Center content while controlling the maximum layout width.</p>
+      <h2>Container</h2>
+      <p class="mb">Center content while controlling the maximum layout width.</p>
+
       <div class="container card mb center-items">
         <p>Container</p>
         <code>1200px</code>
       </div>
+
       <pre class="card-code"><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
     </section>
-    <!-- Grid ---------------------------------------------------------->
+    <!--grid ------------------------------------------------------------>
     <section id="grid">
-      <h3>Grid</h3>
-      <p>Flexible grid utilities for scalable and modern layouts.</p>
+      <h2>Grid</h2>
+      <p class="mb">Create flexible layouts with predefined grid column utilities.</p>
 
-      <!-- Grids ---------------------------------------------------------->
       <div class="card mb-md">
-        <h4>Grid Utilities</h4>
         <!--grid-2-->
         <p class="mt-sm center-self">grid-2</p>
         <div class="grid-2 mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
         </div>
+
         <!--grid-3-->
         <p class="center-self">grid-3</p>
         <div class="grid-3 mb-sm">
@@ -92,6 +94,7 @@
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
         </div>
+
         <!--grid-4-->
         <p class="center-self">grid-4</p>
         <div class="grid-4 mb-sm">
@@ -100,6 +103,7 @@
           <div class="card center-items">3</div>
           <div class="card center-items">4</div>
         </div>
+
         <!--grid-5-->
         <p class="center-self">grid-5</p>
         <div class="grid-5 mb-sm">
@@ -109,6 +113,7 @@
           <div class="card center-items">4</div>
           <div class="card center-items">5</div>
         </div>
+
         <!--grid-6-->
         <p class="center-self">grid-6</p>
         <div class="grid-6 mb-sm">
@@ -119,6 +124,7 @@
           <div class="card center-items">5</div>
           <div class="card center-items">6</div>
         </div>
+
         <!--grid-7-->
         <p class="center-self">grid-7</p>
         <div class="grid-7 mb-sm">
@@ -139,9 +145,9 @@
 &lt;div class="grid-7"&gt;...&lt;/div&gt;</code></pre>
       </div>
 
-      <!-- Column Span ---------------------------------------------------------->
+      <!--column span ---------------------------------------------------->
       <div class="card">
-        <h4>Column Span</h4>
+        <h3>Column Span</h3>
         <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
 
         <p class="center-self">grid-4 + col-3</p>
@@ -168,10 +174,10 @@
       </div>
     </section>
 
-    <!--row ---------------------------------------------------------->
+    <!--row ------------------------------------------------------------->
     <section id="row">
-      <h3>Row</h3>
-      <p>Horizontal alignment utilities for inline layouts.</p>
+      <h2>Row</h2>
+      <p class="mb">Arrange elements horizontally with the row utility.</p>
 
       <div class="grid-2">
         <!--row-->
@@ -182,17 +188,20 @@
             <div class="card bg-soft">3</div>
           </div>
         </div>
+
         <pre class="card-code"><code>&lt;div class="row"&gt;
   &lt;div&gt;1&lt;/div&gt;
   &lt;div&gt;2&lt;/div&gt;
   &lt;div&gt;3&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-        <!--row+center-->
+
+        <!--row + center-->
         <div class="row center-items fx-dots mb">
           <div class="card bg-soft">1</div>
           <div class="card bg-soft">2</div>
           <div class="card bg-soft">3</div>
         </div>
+
         <pre class="card-code"><code>&lt;div class="row center-items"&gt;
   &lt;div&gt;1&lt;/div&gt;
   &lt;div&gt;2&lt;/div&gt;

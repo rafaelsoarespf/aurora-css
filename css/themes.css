@@ -21,9 +21,9 @@
   --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
   --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
 
-  --shadow-sm: 0 2px 4px rgba(253, 66, 66, 0.05);
-  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 10px rgba(0,0,0,0.08);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
 }
 
 /*============================================================*/
@@ -52,8 +52,6 @@
   --shadow-md: 0 4px 10px rgba(0,0,0,0.2);
   --shadow-lg: 0 10px 30px rgba(0,0,0,0.3);
 }
-
-
 
 /*============================================================*/
 /* Light Teal ================================================*/
@@ -494,4 +492,32 @@
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, .10);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, .20);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, .30);
+}
+
+
+[data-theme="dark+"] {
+  --color-background: linear-gradient(135deg, #090a0e, #16181f, #090a0e);
+
+  --color-surface-1: #181b22;
+  --color-surface-2: #252a34;
+
+  --color-title: #e6e9ef;
+  --color-subtitle: #b7beca;
+  --color-text: #9aa3af;
+
+  --color-border: #3a404c;
+
+  --color-accent: #5d6f7e;
+  --color-on-accent: #fdfdfd;
+
+  --blur: blur(18px);
+
+  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
+  --font-subtitle: 500 1.4rem "Roboto", Verdana, Helvetica, sans-serif;
+  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
+  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
 }
