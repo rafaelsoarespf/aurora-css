@@ -70,49 +70,53 @@
       <div class="grid-2">
         <!--card-->
         <div class="card center-items">
-          <h1>Card</h1>
+          <h2>Card</h2>
           <p>Default card style.</p>
         </div>
         <pre class="card-code"><code>&lt;div class="card"&gt;
-  &lt;h1&gt;Card&lt;/h1&gt;
+  &lt;h2&gt;Card&lt;/h2&gt;
   &lt;p&gt;Default card style.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
         <!--card ghost-->
         <div class="card-ghost center-items">
-          <h1>Card Ghost</h1>
+          <h2>Card Ghost</h2>
           <p>Minimal appearance.</p>
         </div>
         <pre class="card-code"><code>&lt;div class="card-ghost"&gt;
-  &lt;h1&gt;Card Ghost&lt;/h1&gt;
+  &lt;h2&gt;Card Ghost&lt;/h2&gt;
   &lt;p&gt;Minimal appearance.&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-        <!--card outline-->
-        <div class="card-outline center-items">
-          <h1>Card Outline</h1>
-          <p>Accent border style.</p>
-        </div>
-        <pre class="card-code"><code>&lt;div class="card-outline"&gt;
-  &lt;h1&gt;Card Outline&lt;/h1&gt;
-  &lt;p&gt;Accent border style.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
         <!--card soft-->
         <div class="card-soft center-items">
-          <h1>Card Soft</h1>
-          <p>Subtle accent background.</p>
+          <h2>Card Soft</h2>
+          <p>Subtle soft background.</p>
         </div>
         <pre class="card-code"><code>&lt;div class="card-soft"&gt;
-  &lt;h1&gt;Card Soft&lt;/h1&gt;
-  &lt;p&gt;Subtle accent background.&lt;/p&gt;
+  &lt;h2&gt;Card Soft&lt;/h2&gt;
+  &lt;p&gt;Subtle soft background.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
-        <!--card glow-->
-        <div class="card-glow center-items">
-          <h1>Card Glow</h1>
-          <p>Highlighted content.</p>
+        <!--card accent-->
+        <div class="card bg-accent center-items">
+          <h2>Card Accent</h2>
+          <p>Accent background.</p>
         </div>
-        <pre class="card-code"><code>&lt;div class="card-glow"&gt;
-  &lt;h1&gt;Card Glow&lt;/h1&gt;
-  &lt;p&gt;Highlighted content.&lt;/p&gt;
+        <pre class="card-code"><code>&lt;div class="card bg-accent"&gt;
+  &lt;h2&gt;Card Accent&lt;/h2&gt;
+  &lt;p&gt;Accent background.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
+        <!--card image-->
+        <div class="card-img">
+          <img src="../../assets/images/image.png" alt="Card image">
+          <h2>Card Image</h2>
+          <p>Card with an integrated image.</p>
+        </div>
+
+        <pre class="card-code"><code>&lt;div class="card-img"&gt;
+  &lt;img src="..." alt="..."&gt;
+  &lt;h2&gt;Card Image&lt;/h2&gt;
+  &lt;p&gt;Card with an integrated image.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </div>
     </section>
 
     <!--buttons --------------------------------------------------------->
@@ -185,7 +189,6 @@
       <pre class="card-code"><code>&lt;div class="alert"&gt;This is an &lt;strong&gt;alert message.&lt;/strong&gt;&lt;/div&gt;
 &lt;div class="alert bg-accent"&gt;This is an &lt;strong&gt;alert message.&lt;/strong&gt;&lt;/div&gt;</code></pre>
     </section>
-
 
     <!--tooltip --------------------------------------------------------->
     <section id="tooltips">
@@ -615,7 +618,8 @@
 &lt;/nav&gt;</code></pre>
 
       <p class="mt-lg"><strong>Semantic HTML:</strong> For production usage, you can wrap the navbar inside a
-        <code>&lt;header&gt;</code> element.</p>
+        <code>&lt;header&gt;</code> element.
+      </p>
       <!--code-->
       <pre class="card-code mt"><code>&lt;header class="navbar"&gt;
   &lt;nav class="navbar__content" aria-label="Main navigation"&gt;
@@ -636,7 +640,8 @@
     <section id="sidebar">
       <h2>Sidebar</h2>
       <p class="mb-md">Responsive sidebar for dashboards and application layouts. On mobile, use
-        <code>.sidebar__toggle</code> to open and close the sidebar.</p>
+        <code>.sidebar__toggle</code> to open and close the sidebar.
+      </p>
       <!--code-->
       <pre class="card-code"><code>&lt;body class="sidebar-layout"&gt;           
   &lt;aside class="sidebar"&gt;

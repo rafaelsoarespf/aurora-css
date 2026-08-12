@@ -442,10 +442,10 @@
 /* dark slate mist ===========================================*/
 
 [data-theme="dark-slate-mist"] {
-  --color-background: linear-gradient(135deg, #0E1318 0%, #131A21 50%, #18222B 100%);
+  --color-background: linear-gradient(135deg, #0E1318 0%, #18222B 100%, #131A21 50%);
 
-  --color-surface-1: rgba(20, 27, 34, 0.82);
-  --color-surface-2: #1C2630;
+  --color-surface-1: rgba(23, 33, 41, 0.82);
+  --color-surface-2: #172129;
 
   --color-title: #E6EDF2;
   --color-subtitle: #C9D3DA;
@@ -469,33 +469,7 @@
 }
 
 
-[data-theme="dark+"] {
-  --color-background: linear-gradient(135deg, #090A0B 0%, #0D0E13 55%, #111219 100%);
-  --color-surface-1: rgba(19, 20, 23, 0.8);
-  --color-surface-2: #17181c;
-
-  --color-title: #F5F5F4;
-  --color-subtitle: #D8DCE0;
-  --color-text: #B6BDC3;
-
-  --color-border: rgba(255, 255, 255, .11);
-  --color-accent: #718A89;
-  --color-on-accent: #FFFFFF;
-
-  --blur: blur(15px);
-
-  --font-title: 700 2rem "Montserrat", Verdana, Helvetica, sans-serif;
-  --font-subtitle: 500 1.45rem "Montserrat", Verdana, Helvetica, sans-serif;
-  --font-text: 400 1rem "Inter", Verdana, Helvetica, sans-serif;
-  --font-text-sm: 400 0.875rem "Inter", Verdana, Helvetica, sans-serif;
-
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, .10);
-  --shadow-md: 0 4px 10px rgba(0, 0, 0, .20);
-  --shadow-lg: 0 10px 30px rgba(0, 0, 0, .30);
-}
-
-
-[data-theme="dark+"] {
+[data-theme="blacksteel"] {
   --color-background: linear-gradient(135deg, #090a0e, #16181f, #090a0e);
 
   --color-surface-1: #181b22;

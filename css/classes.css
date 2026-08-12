@@ -682,7 +682,7 @@ input.switch:disabled {
 }
 
 /*card -------------------------------------------------------*/
-.card,.card-ghost,.card-outline,.card-soft,.card-glow{
+.card,.card-ghost,.card-soft{
   position: relative;
   padding: 1.5rem 1.2rem;
   border-radius:12px;
@@ -693,16 +693,16 @@ input.switch:disabled {
   transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
 
-.card:hover,.card-ghost:hover,.card-outline:hover,.card-soft:hover,.card-glow:hover{
+.card:hover,.card-ghost:hover,.card-soft:hover{
   box-shadow:var(--shadow-lg);
 }
 
-:where(.card,.card-ghost,.card-outline,.card-soft,.card-glow)
+:where(.card,.card-ghost,.card-soft)
 :where(h1,h2,h3,h4,h5,h6,p) {
   margin: 0;
 }
 
-:is(.card,.card-ghost,.card-outline,.card-soft,.card-glow) p{
+:is(.card,.card-ghost,.card-soft) p{
   opacity:.9;
 }
 
@@ -717,37 +717,39 @@ input.switch:disabled {
   border:1px solid var(--color-border);
 }
 
-.card-ghost:hover{
-  box-shadow:var(--shadow-md);
-}
-
-.card-outline{
-  background:transparent;
-  border:1px solid var(--color-accent);
-}
-
-.card-outline:hover{
-  box-shadow:var(--shadow-md);
-}
-
 .card-soft{
   background:color-mix(in srgb,var(--color-accent) 8%,var(--color-surface-1));
   border:1px solid color-mix(in srgb,var(--color-accent) 20%,transparent);
   box-shadow:var(--shadow-md);
 }
 
-.card-soft:hover{
-  box-shadow:var(--shadow-lg);
+/*card-image ------------------------------------------------------------------*/
+.card-img {
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.65rem;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  padding-bottom: 1.5rem;
 }
 
-.card-glow{
-  background:var(--color-surface-1);
-  border:1px solid var(--color-accent);
-  box-shadow:0 0 20px color-mix(in srgb,var(--color-accent) 50%,transparent),var(--shadow-md);
+.card-img > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.card-glow:hover{
-  box-shadow:0 0 35px color-mix(in srgb,var(--color-accent) 70%,transparent),var(--shadow-lg);
+.card-img > img + * {
+  margin-top: 0.6rem;
+}
+
+.card-img > :not(img) {
+  padding: 0 1.2rem;
 }
 
 /* card-code ----------------------------------------------------------------------*/
