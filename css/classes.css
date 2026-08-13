@@ -752,6 +752,46 @@ input.switch:disabled {
   padding: 0 1.2rem;
 }
 
+/*card-img-left and card-img-right*/
+.card-img-left,
+.card-img-right {
+  position: relative;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.65rem;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.card-img-left {
+  padding: 1.5rem 1.2rem 1.5rem calc(40% + 1.2rem);
+}
+
+.card-img-right {
+  padding: 1.5rem calc(40% + 1.2rem) 1.5rem 1.2rem;
+}
+
+.card-img-left > img,
+.card-img-right > img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-img-left > img {
+  left: 0;
+}
+
+.card-img-right > img {
+  right: 0;
+}
 /* card-code ----------------------------------------------------------------------*/
 :not(pre) > code {
   background: color-mix(in srgb,var(--color-accent) 20%,rgba(255,255,255,0.06));
