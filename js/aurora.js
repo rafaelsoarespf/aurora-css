@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {     
     initThemeSelector();
+    initSelect();
     initNavbar();
     initSidebar();
     initPanel();
@@ -29,6 +30,78 @@ function initThemeSelector() {
       selectors.forEach((s) => {
         s.value = theme;
       });
+    });
+  });
+}
+
+//initSelect -------------------------------------------------------------------
+function initSelect() {
+  const selects = document.querySelectorAll(".select");
+
+  selects.forEach((select) => {
+    const button = select.querySelector(".select__button");
+    const options = select.querySelectorAll(".select__option");
+
+    if (!(button instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    const updatePosition = () => {
+      const menu = select.querySelector(".select__menu");
+
+      if (!(menu instanceof HTMLElement)) {
+        return;
+      }
+
+      const buttonRect = button.getBoundingClientRect();
+      const menuHeight = menu.offsetHeight;
+      const spaceBelow = window.innerHeight - buttonRect.bottom;
+      const spaceAbove = buttonRect.top;
+
+      if (spaceBelow < menuHeight && spaceAbove > spaceBelow) {
+        select.setAttribute("data-position", "top");
+      } else {
+        select.setAttribute("data-position", "bottom");
+      }
+    };
+
+    button.addEventListener("click", () => {
+      select.toggleAttribute("data-open");
+
+      if (select.hasAttribute("data-open")) {
+        requestAnimationFrame(updatePosition);
+      }
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        const value = option.dataset.value;
+        const label = option.textContent.trim();
+        const selectLabel = button.querySelector(".select__label");
+
+        if (value === undefined || !(selectLabel instanceof HTMLElement)) {
+          return;
+        }
+
+        options.forEach((item) => {
+          item.removeAttribute("data-selected");
+        });
+
+        option.setAttribute("data-selected", "");
+
+        select.dataset.value = value;
+        selectLabel.textContent = label;
+
+        select.removeAttribute("data-open");
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+
+      if (target instanceof Node && !select.contains(target)) {
+        select.removeAttribute("data-open");
+      }
     });
   });
 }

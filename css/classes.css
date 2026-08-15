@@ -613,6 +613,153 @@ input.switch:disabled {
   position: relative;
   z-index: 2;
 }
+    
+/*select ------------------------------------------------------------------*/
+.select {
+  position: relative;
+  width: 100%;
+}
+
+.select__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font: var(--font-text);
+  background-color: color-mix(in srgb, var(--color-surface-2) 10%, transparent);
+  backdrop-filter: var(--blur);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: .75rem 2.8rem .75rem .9rem;
+  box-shadow: none;
+  line-height: 1.2;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+.select__button:hover {
+  opacity: 1;
+  transform: none;
+  border-color: var(--color-accent);
+  box-shadow: none;
+}
+
+.select__button:active {
+  transform: none;
+}
+
+.select__button:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+.select__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: .45rem;
+  height: .45rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-65%) rotate(45deg);
+  transition: transform .2s ease;
+}
+
+.select[data-open] .select__button {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+.select[data-open] .select__button::after {
+  transform: translateY(-35%) rotate(225deg);
+}
+
+.select__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.select__menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+  padding: .25rem;
+  background-color: color-mix(in srgb, var(--color-surface-2) 90%, transparent);
+  backdrop-filter: var(--blur);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.select__option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  padding: .28rem .5rem;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+  font: var(--font-text);
+  color: var(--color-text);
+  background: transparent;
+  text-align: left;
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.select__option:hover {
+  opacity: 1;
+  transform: none;
+  box-shadow: none;
+  background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+.select[data-open] .select__menu {
+  display: block;
+}
+
+.select__option[data-selected] {
+  color: var(--color-on-accent);
+  background: var(--color-accent);
+}
+
+.select:has(.select__button:disabled) {
+  opacity: .45;
+}
+
+.select:has(.select__button:disabled) .select__button {
+  cursor: not-allowed;
+  border-color: var(--color-border);
+  box-shadow: none;
+}
+
+.select:has(.select__button:disabled) .select__button:hover {
+  border-color: var(--color-border);
+  transform: none;
+}
+
+.select[data-position="top"] .select__menu {
+  top: auto;
+  bottom: 100%;
+}
+
 
 /* tooltip ---------------------------------------------------*/
 .tooltip,.tooltip-left,.tooltip-right,.tooltip-bottom {
