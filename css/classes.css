@@ -629,6 +629,9 @@ input.switch:disabled {
   width: 100%;
   min-width: 0;
   box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font: var(--font-text);
   background-color: color-mix(in srgb, var(--color-surface-2) 10%, transparent);
   backdrop-filter: var(--blur);
@@ -640,7 +643,6 @@ input.switch:disabled {
   line-height: 1.2;
   cursor: pointer;
   user-select: none;
-  white-space: nowrap;
   transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
 
@@ -683,11 +685,6 @@ input.switch:disabled {
   transform: translateY(-35%) rotate(225deg);
 }
 
-.select__label {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 
 .select__menu {
   position: absolute;
@@ -703,6 +700,10 @@ input.switch:disabled {
   border: 1px solid var(--color-border);
   border-radius: 12px;
   box-shadow: var(--shadow-lg);
+}
+
+.select[data-open] .select__menu {
+  display: block;
 }
 
 .select__option {
@@ -731,9 +732,7 @@ input.switch:disabled {
   background-color: color-mix(in srgb, var(--color-accent) 20%, transparent);
 }
 
-.select[data-open] .select__menu {
-  display: block;
-}
+
 
 .select__option[data-selected] {
   color: var(--color-on-accent);
@@ -759,7 +758,6 @@ input.switch:disabled {
   top: auto;
   bottom: 100%;
 }
-
 
 /* tooltip ---------------------------------------------------*/
 .tooltip,.tooltip-left,.tooltip-right,.tooltip-bottom {

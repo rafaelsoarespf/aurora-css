@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {     
-    initThemeSelector();
-    initSelect();
-    initNavbar();
-    initSidebar();
-    initPanel();
-    setTimeout(() => {initThemeSelector()}, 100);
+document.addEventListener("DOMContentLoaded", () => {
+  initThemeSelector();
+  initSelect();
+  initNavbar();
+  initSidebar();
+  initPanel();
+  setTimeout(() => { initThemeSelector() }, 100);
 });
 
 //theme selector ----------------------------------------------------------
@@ -77,9 +77,8 @@ function initSelect() {
       option.addEventListener("click", () => {
         const value = option.dataset.value;
         const label = option.textContent.trim();
-        const selectLabel = button.querySelector(".select__label");
 
-        if (value === undefined || !(selectLabel instanceof HTMLElement)) {
+        if (value === undefined) {
           return;
         }
 
@@ -90,7 +89,7 @@ function initSelect() {
         option.setAttribute("data-selected", "");
 
         select.dataset.value = value;
-        selectLabel.textContent = label;
+        button.textContent = label;
 
         select.removeAttribute("data-open");
       });
@@ -142,7 +141,7 @@ function initSidebar() {
   const sidebar = document.querySelector(".sidebar");
   const toggle = document.querySelector(".sidebar__toggle");
 
-  if (!(sidebar instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) {return;}
+  if (!(sidebar instanceof HTMLElement) || !(toggle instanceof HTMLButtonElement)) { return; }
 
   toggle.addEventListener("click", () => {
     sidebar.classList.toggle("active");
