@@ -55,27 +55,28 @@
         <li><a href="./docs/pages/docs/index.html">Docs</a></li>
         <li><a href="">GitHub</a></li>
       </ul>
-      <!--themes-->
-      <span class="mt">Theme</span>
-      <select id="theme-selector" class="theme-selector border-flicker">
-        <option value="aurora-light" selected>Aurora Light</option>
-        <option value="aurora-dark">Aurora Dark</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="light-teal">Light Teal</option>
-        <option value="dark-teal">Dark Teal</option>
-        <option value="coffee">Coffee</option>
-        <option value="paper">Paper</option>
-        <option value="neumorphism">Neumorphism</option>
-        <option value="glass">Glass</option>
-        <option value="forest">Forest</option>
-        <option value="nord">Nord</option>
-        <option value="sakura">Sakura</option>
-        <option value="gold">Gold</option>
-        <option value="light-slate-mist">Light Slate Mist</option>
-        <option value="dark-slate-mist">Dark Slate Mist</option>
-        <option value="blacksteel">blacksteel</option>
-      </select>
+      <!--theme-selector-->
+      <div class="select theme-selector mb">
+        <button class="select__btn" type="button">Aurora Light</button>
+        <div class="select__menu">
+          <button class="select__item" type="button" data-value="aurora-light"><span class="theme-preview" data-theme="aurora-light"></span>Aurora Light</button>
+          <button class="select__item" type="button" data-value="aurora-dark"><span class="theme-preview" data-theme="aurora-dark"></span>Aurora Dark</button>
+          <button class="select__item" type="button" data-value="light"><span class="theme-preview" data-theme="light"></span>Light</button>
+          <button class="select__item" type="button" data-value="dark"><span class="theme-preview" data-theme="dark"></span>Dark</button>
+          <button class="select__item" type="button" data-value="light-teal"><span class="theme-preview" data-theme="light-teal"></span>Light Teal</button>
+          <button class="select__item" type="button" data-value="dark-teal"><span class="theme-preview" data-theme="dark-teal"></span>Dark Teal</button>
+          <button class="select__item" type="button" data-value="coffee"><span class="theme-preview" data-theme="coffee"></span>Coffee</button>
+          <button class="select__item" type="button" data-value="paper"><span class="theme-preview" data-theme="paper"></span>Paper</button>
+          <button class="select__item" type="button" data-value="neumorphism"><span class="theme-preview" data-theme="neumorphism"></span>Neumorphism</button>
+          <button class="select__item" type="button" data-value="glass"><span class="theme-preview" data-theme="glass"></span>Glass</button>
+          <button class="select__item" type="button" data-value="forest"><span class="theme-preview" data-theme="forest"></span>Forest</button>
+          <button class="select__item" type="button" data-value="nord"><span class="theme-preview" data-theme="nord"></span>Nord</button>
+          <button class="select__item" type="button" data-value="sakura"><span class="theme-preview" data-theme="sakura"></span>Sakura</button>
+          <button class="select__item" type="button" data-value="gold"><span class="theme-preview" data-theme="gold"></span>Gold</button>
+          <button class="select__item" type="button" data-value="light-slate-mist"><span class="theme-preview" data-theme="light-slate-mist"></span>Light Slate Mist</button>
+          <button class="select__item" type="button" data-value="dark-slate-mist"><span class="theme-preview" data-theme="dark-slate-mist"></span>Dark Slate Mist</button>
+        </div>
+      </div>
       <button class="navbar__toggle" aria-label="Open menu">☰</button>
     </nav>
   </header>
@@ -98,33 +99,38 @@
       <h2 class="size-md">One framework. Multiple visual identities.</h2>
       <p class="size-md">Switch themes and watch the entire interface update instantly.</p>
 
-      <!--themes-->
-      <select class="theme-selector">
-        <option value="aurora-light" selected>Aurora Light</option>
-        <option value="aurora-dark" selected>Aurora Dark</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="light-teal">Light Teal</option>
-        <option value="dark-teal">Dark Teal</option>
-        <option value="coffee" selected>Coffee</option>
-        <option value="paper" selected>Paper</option>
-        <option value="neumorphism" selected>Neumorphism</option>
-        <option value="glass" selected>Glass</option>
-        <option value="forest" selected>Forest</option>
-        <option value="nord" selected>Nord</option>
-        <option value="sakura" selected>Sakura</option>
-        <option value="gold" selected>Gold</option>
-      </select>
+      <!--theme-selector-->
+      <div class="select theme-selector mb">
+        <button class="select__btn" type="button">Aurora Light</button>
+        <div class="select__menu">
+          <button class="select__item" type="button" data-value="aurora-light"><span class="theme-preview" data-theme="aurora-light"></span>Aurora Light</button>
+          <button class="select__item" type="button" data-value="aurora-dark"><span class="theme-preview" data-theme="aurora-dark"></span>Aurora Dark</button>
+          <button class="select__item" type="button" data-value="light"><span class="theme-preview" data-theme="light"></span>Light</button>
+          <button class="select__item" type="button" data-value="dark"><span class="theme-preview" data-theme="dark"></span>Dark</button>
+          <button class="select__item" type="button" data-value="light-teal"><span class="theme-preview" data-theme="light-teal"></span>Light Teal</button>
+          <button class="select__item" type="button" data-value="dark-teal"><span class="theme-preview" data-theme="dark-teal"></span>Dark Teal</button>
+          <button class="select__item" type="button" data-value="coffee"><span class="theme-preview" data-theme="coffee"></span>Coffee</button>
+          <button class="select__item" type="button" data-value="paper"><span class="theme-preview" data-theme="paper"></span>Paper</button>
+          <button class="select__item" type="button" data-value="neumorphism"><span class="theme-preview" data-theme="neumorphism"></span>Neumorphism</button>
+          <button class="select__item" type="button" data-value="glass"><span class="theme-preview" data-theme="glass"></span>Glass</button>
+          <button class="select__item" type="button" data-value="forest"><span class="theme-preview" data-theme="forest"></span>Forest</button>
+          <button class="select__item" type="button" data-value="nord"><span class="theme-preview" data-theme="nord"></span>Nord</button>
+          <button class="select__item" type="button" data-value="sakura"><span class="theme-preview" data-theme="sakura"></span>Sakura</button>
+          <button class="select__item" type="button" data-value="gold"><span class="theme-preview" data-theme="gold"></span>Gold</button>
+          <button class="select__item" type="button" data-value="light-slate-mist"><span class="theme-preview" data-theme="light-slate-mist"></span>Light Slate Mist</button>
+          <button class="select__item" type="button" data-value="dark-slate-mist"><span class="theme-preview" data-theme="dark-slate-mist"></span>Dark Slate Mist</button>
+        </div>
+      </div>
 
-      <div class="theme-preview border-pulse">
-        <div class="theme-preview__navbar">
-          <div class="theme-preview__logo"></div>
-          <div class="theme-preview__menu"></div>
+      <div class="theme-demo border-pulse">
+        <div class="theme-demo__navbar">
+          <div class="theme-demo__logo"></div>
+          <div class="theme-demo__menu"></div>
         </div>
 
-        <div class="theme-preview__content">
-          <div class="theme-preview__card card float">
-            <div class="theme-preview__accent"></div>
+        <div class="theme-demo__content">
+          <div class="theme-demo__card card float">
+            <div class="theme-demo__accent"></div>
 
             <h4>Dashboard</h4>
             <p>Colors, surfaces and components update automatically.</p>
@@ -134,17 +140,17 @@
             </div>
           </div>
 
-          <div class="theme-preview__stats">
+          <div class="theme-demo__stats">
 
-            <div class="theme-preview__stat card">
+            <div class="theme-demo__stat card">
               <strong></strong>
             </div>
 
-            <div class="theme-preview__stat card">
+            <div class="theme-demo__stat card">
               <strong></strong>
             </div>
 
-            <div class="theme-preview__stat card">
+            <div class="theme-demo__stat card">
               <strong></strong>
             </div>
           </div>

@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  initThemeSelector();
-  initSelect();
-  initNavbar();
   initSidebar();
+  initNavbar();
   initPanel();
-  setTimeout(() => { initThemeSelector() }, 100);
+  initThemeSelector()
+  setTimeout(() => { initThemeSelector();initSelect(); }, 100);
 });
 
 //theme selector ----------------------------------------------------------
@@ -12,24 +11,68 @@ function initThemeSelector() {
   const selectors = document.querySelectorAll(".theme-selector");
   const savedTheme = localStorage.getItem("aurora-theme");
 
-  if (savedTheme) {
-    document.body.setAttribute("data-theme", savedTheme);
-
-    selectors.forEach((selector) => {
-      selector.value = savedTheme;
-    });
-  }
-
   selectors.forEach((selector) => {
-    selector.addEventListener("change", () => {
-      const theme = selector.value;
+    const button = selector.querySelector(".select__btn");
+    const options = selector.querySelectorAll(".select__item");
+    if (!(button instanceof HTMLButtonElement)) { return; }
+
+    const setTheme = (theme) => {
+      const option = selector.querySelector(`.select__item[data-value="${theme}"]`);
+
+      if (!(option instanceof HTMLElement)) {
+        return;
+      }
+
+      const label = option.querySelector(".theme-name");
+
+      selector.dataset.value = theme;
+      button.textContent = label?.textContent.trim() || option.textContent.trim();
+
+      options.forEach((item) => {
+        item.removeAttribute("data-selected");
+      });
+
+      option.setAttribute("data-selected", "");
 
       document.body.setAttribute("data-theme", theme);
       localStorage.setItem("aurora-theme", theme);
 
       selectors.forEach((s) => {
-        s.value = theme;
+        if (s === selector) {
+          return;
+        }
+
+        const otherButton = s.querySelector(".select__btn");
+        const otherOptions = s.querySelectorAll(".select__item");
+        const otherOption = s.querySelector(`.select__item[data-value="${theme}"]`);
+
+        if (!(otherButton instanceof HTMLButtonElement) || !(otherOption instanceof HTMLElement)) {
+          return;
+        }
+
+        const otherLabel = otherOption.querySelector(".theme-name");
+
+        s.dataset.value = theme;
+        otherButton.textContent = otherLabel?.textContent.trim() || otherOption.textContent.trim();
+
+        otherOptions.forEach((item) => {
+          item.removeAttribute("data-selected");
+        });
+
+        otherOption.setAttribute("data-selected", "");
       });
+    };
+
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+
+    selector.addEventListener("selectchange", () => {
+      const theme = selector.dataset.value;
+
+      if (theme) {
+        setTheme(theme);
+      }
     });
   });
 }
@@ -39,8 +82,8 @@ function initSelect() {
   const selects = document.querySelectorAll(".select");
 
   selects.forEach((select) => {
-    const button = select.querySelector(".select__button");
-    const options = select.querySelectorAll(".select__option");
+    const button = select.querySelector(".select__btn");
+    const options = select.querySelectorAll(".select__item");
 
     if (!(button instanceof HTMLButtonElement)) {
       return;
@@ -92,6 +135,8 @@ function initSelect() {
         button.textContent = label;
 
         select.removeAttribute("data-open");
+
+        select.dispatchEvent(new CustomEvent("selectchange"));
       });
     });
 

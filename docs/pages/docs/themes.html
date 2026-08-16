@@ -84,43 +84,51 @@
         Aurora CSS themes.
       </p>
 
-      <select class="theme-selector mb">
-        <option value="aurora-light">Aurora Light</option>
-        <option value="aurora-dark">Aurora Dark</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="light-teal">Light Teal</option>
-        <option value="dark-teal">Dark Teal</option>
-        <option value="coffee">Coffee</option>
-        <option value="paper">Paper</option>
-        <option value="neumorphism">Neumorphism</option>
-        <option value="glass">Glass</option>
-        <option value="forest">Forest</option>
-        <option value="nord">Nord</option>
-        <option value="sakura">Sakura</option>
-        <option value="gold">Gold</option>
-        <option value="light-slate-mist">Light Slate Mist</option>
-        <option value="dark-slate-mist">Dark Slate Mist</option>
-      </select>
+      <!--theme-selector-->
+      <div class="select theme-selector mb">
+        <button class="select__btn" type="button">Aurora Light</button>
+        <div class="select__menu">
+          <button class="select__item" type="button" data-value="aurora-light"><span class="theme-preview" data-theme="aurora-light"></span>Aurora Light</button>
+          <button class="select__item" type="button" data-value="aurora-dark"><span class="theme-preview" data-theme="aurora-dark"></span>Aurora Dark</button>
+          <button class="select__item" type="button" data-value="light"><span class="theme-preview" data-theme="light"></span>Light</button>
+          <button class="select__item" type="button" data-value="dark"><span class="theme-preview" data-theme="dark"></span>Dark</button>
+          <button class="select__item" type="button" data-value="light-teal"><span class="theme-preview" data-theme="light-teal"></span>Light Teal</button>
+          <button class="select__item" type="button" data-value="dark-teal"><span class="theme-preview" data-theme="dark-teal"></span>Dark Teal</button>
+          <button class="select__item" type="button" data-value="coffee"><span class="theme-preview" data-theme="coffee"></span>Coffee</button>
+          <button class="select__item" type="button" data-value="paper"><span class="theme-preview" data-theme="paper"></span>Paper</button>
+          <button class="select__item" type="button" data-value="neumorphism"><span class="theme-preview" data-theme="neumorphism"></span>Neumorphism</button>
+          <button class="select__item" type="button" data-value="glass"><span class="theme-preview" data-theme="glass"></span>Glass</button>
+          <button class="select__item" type="button" data-value="forest"><span class="theme-preview" data-theme="forest"></span>Forest</button>
+          <button class="select__item" type="button" data-value="nord"><span class="theme-preview" data-theme="nord"></span>Nord</button>
+          <button class="select__item" type="button" data-value="sakura"><span class="theme-preview" data-theme="sakura"></span>Sakura</button>
+          <button class="select__item" type="button" data-value="gold"><span class="theme-preview" data-theme="gold"></span>Gold</button>
+          <button class="select__item" type="button" data-value="light-slate-mist"><span class="theme-preview" data-theme="light-slate-mist"></span>Light Slate Mist</button>
+          <button class="select__item" type="button" data-value="dark-slate-mist"><span class="theme-preview" data-theme="dark-slate-mist"></span>Dark Slate Mist</button>
+        </div>
+      </div>
+      
 
-      <pre class="card-code"><code>&lt;select class="theme-selector"&gt;
-  &lt;option value="aurora-light"&gt;Aurora Light&lt;/option&gt;
-  &lt;option value="aurora-dark"&gt;Aurora Dark&lt;/option&gt;
-  &lt;option value="light"&gt;Light&lt;/option&gt;
-  &lt;option value="dark"&gt;Dark&lt;/option&gt;
-  &lt;option value="light-teal"&gt;Light Teal&lt;/option&gt;
-  &lt;option value="dark-teal"&gt;Dark Teal&lt;/option&gt;
-  &lt;option value="coffee"&gt;Coffee&lt;/option&gt;
-  &lt;option value="paper"&gt;Paper&lt;/option&gt;
-  &lt;option value="neumorphism"&gt;Neumorphism&lt;/option&gt;
-  &lt;option value="glass"&gt;Glass&lt;/option&gt;
-  &lt;option value="forest"&gt;Forest&lt;/option&gt;
-  &lt;option value="nord"&gt;Nord&lt;/option&gt;
-  &lt;option value="sakura"&gt;Sakura&lt;/option&gt;
-  &lt;option value="gold"&gt;Gold&lt;/option&gt;
-  &lt;option value="light-slate-mist"&gt;Light Slate Mist&lt;/option&gt;
-  &lt;option value="dark-slate-mist"&gt;Dark Slate Mist&lt;/option&gt;
-&lt;/select&gt;</code></pre>
+      <pre class="card-code"><code>&lt;div class="select theme-selector mb"&gt;
+  &lt;button class="select__btn" type="button"&gt;Aurora Light&lt;/button&gt;
+  &lt;div class="select__menu"&gt;
+    &lt;button class="select__item" type="button" data-value="aurora-light"&gt;Aurora Light&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="aurora-dark"&gt;Aurora Dark&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="light"&gt;Light&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="dark"&gt;Dark&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="light-teal"&gt;Light Teal&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="dark-teal"&gt;Dark Teal&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="coffee"&gt;Coffee&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="paper"&gt;Paper&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="neumorphism"&gt;Neumorphism&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="glass"&gt;Glass&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="forest"&gt;Forest&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="nord"&gt;Nord&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="sakura"&gt;Sakura&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="gold"&gt;Gold&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="light-slate-mist"&gt;Light Slate Mist&lt;/button&gt;
+    &lt;button class="select__item" type="button" data-value="dark-slate-mist"&gt;Dark Slate Mist&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
       <div class="alert mt">
         <strong>Note:</strong> The Theme Selector requires <code>aurora.js</code> file.
