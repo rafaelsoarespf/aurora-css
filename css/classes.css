@@ -1611,12 +1611,35 @@ details.tree details > :not(summary):not(details) {
   background: var(--color-surface-1);
   border: 1px solid var(--color-border);
   backdrop-filter: var(--blur);
+  color: var(--color-text);
 }
 
 .surface-2 {
   background: var(--color-surface-2);
   border: 1px solid var(--color-border);
   backdrop-filter: var(--blur);
+  color: var(--color-text);
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.phantom {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  backdrop-filter: var(--blur);
+  color: var(--color-text);
+}
+
+.surface h1, .surface-2 h1, .ghost h1, .phantom h1{
+  color: var(--color-title);
+}
+
+.surface h2, .surface-2 h2, .ghost h2, .phantom h2{
+  color: var(--color-subtitle);
 }
 
 .soft {
@@ -1635,17 +1658,6 @@ details.tree details > :not(summary):not(details) {
 
 .accent :is(h1,h2,h3,h4,h5,h6,p,span,label,strong) {
   color: var(--color-on-accent);
-}
-
-.ghost {
-  background: transparent;
-  border: 1px solid var(--color-border);
-}
-
-.phantom {
-  background: transparent;
-  border: 1px solid var(--color-border);
-  backdrop-filter: var(--blur);
 }
 
 /*background -------------------------------------------------*/
