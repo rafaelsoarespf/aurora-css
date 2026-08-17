@@ -1617,6 +1617,48 @@ details.tree details > :not(summary):not(details) {
   box-shadow:none;
 }
 
+/* appearance -------------------------------------------------*/
+.surface {
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  backdrop-filter: var(--blur);
+}
+
+.surface-2 {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  backdrop-filter: var(--blur);
+}
+
+.soft {
+  background: color-mix(in srgb,var(--color-accent) 30%,transparent);
+  border: 1px solid color-mix(in srgb,var(--color-accent) 30%,transparent);
+  backdrop-filter: var(--blur);
+  color: var(--color-on-accent);
+}
+
+.accent {
+  background: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  backdrop-filter: var(--blur);
+  color: var(--color-on-accent);
+}
+
+.accent :is(h1,h2,h3,h4,h5,h6,p,span,label,strong) {
+  color: var(--color-on-accent);
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid var(--color-border);
+}
+
+.phantom {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  backdrop-filter: var(--blur);
+}
+
 /*background -------------------------------------------------*/
 .bg{
   background: var(--color-background); 
