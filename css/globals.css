@@ -49,8 +49,6 @@ p,label,span {
 
 main :is(h1, h2, h3, h4, h5, h6, p):not(.mb, .mb-none, .mb-sm, .mb-md, .mb-lg,
   .card :is(h1, h2, h3, h4, h5, h6, p),
-  .card-ghost :is(h1, h2, h3, h4, h5, h6, p),
-  .card-soft :is(h1, h2, h3, h4, h5, h6, p),
   .card-img :is(h1, h2, h3, h4, h5, h6, p),
   .card-img-right :is(h1, h2, h3, h4, h5, h6, p),
   .card-img-left :is(h1, h2, h3, h4, h5, h6, p)) {
