@@ -2776,3 +2776,40 @@ details.tree details > :not(summary):not(details) {
 
   background-repeat: no-repeat;
 }
+
+/*font -----------------------------------------------------------*/
+.font-xs {
+  font-size: 0.75rem;
+}
+
+.font-sm {
+  font-size: 0.875rem;
+}
+
+.font-md {
+  font-size: 1rem;
+}
+
+.font-lg {
+  font-size: 1.25rem;
+}
+
+.font-xl {
+  font-size: 1.5rem;
+}
+
+.font-2xl {
+  font-size: 2rem;
+}
+
+.font-3xl {
+  font-size: 3rem;
+}
+
+.font-4xl {
+  font-size: 4rem;
+}
+
+.font-5xl {
+  font-size: 5rem;
+}
