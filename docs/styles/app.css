@@ -49,9 +49,7 @@ section {
 .theme-demo__logo{
   width:120px;
   height:18px;
-
   border-radius:999px;
-
   background:var(--color-accent);
 }
 
