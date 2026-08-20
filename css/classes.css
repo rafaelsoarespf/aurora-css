@@ -92,7 +92,6 @@
 /*center ----------------------------------------------------*/
 .center {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   justify-self: center;
@@ -122,64 +121,147 @@
   align-self:center !important;
 }
 
-.right {
+.center-vertical {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  justify-self: end;
+  align-items: center;
   align-self: center;
-  text-align: right;
-  margin-left: auto;
+  margin-block: auto;
 }
 
-.right > * {
-  align-self: flex-end !important;
+.center-vertical > * {
+  align-self: center !important;
 }
 
-.left {
+.center-self-vertical {
+  display: block;
+  margin-block: auto !important;
+  align-self: center !important;
+}
+
+.center-items-vertical {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.center-items-vertical > * {
+  align-self: center !important;
+}
+
+.center-horizontal {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin-inline: auto;
+}
+
+.center-horizontal > * {
+  justify-self: center !important;
+}
+
+.center-self-horizontal {
+  display: block;
+  margin-inline: auto !important;
+  justify-self: center !important;
+}
+
+.center-items-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* top --------------------------------------------------------*/
+.top {
+  display: flex;
   align-items: flex-start;
-  justify-content: center;
-  justify-self: start;
-  align-self: center;
-  text-align: left;
-  margin-right: auto;
+  align-self: flex-start;
+  margin-block: 0 auto;
 }
 
-.left > * {
+
+.top > * {
   align-self: flex-start !important;
 }
 
-.top {
+.top-self {
+  display: block;
+  margin-block: 0 auto !important;
+  align-self: flex-start !important;
+}
+
+.top-items {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-self: center;
-  align-self: flex-start;
-  text-align: center;
-  margin-bottom: auto;
+  align-items: flex-start;
 }
 
-.top > * {
-  align-self: center !important;
+.top-items > * {
+  align-self: flex-start !important;
 }
 
+/* right ------------------------------------------------------*/
+.right {
+  display: flex;
+  justify-content: flex-end;
+  justify-self: flex-end;
+  margin-inline: auto 0;
+}
+
+.right-self {
+  display: block;
+  margin-inline: auto 0 !important;
+  justify-self: flex-end !important;
+}
+
+.right-items {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* bottom -----------------------------------------------------*/
 .bottom {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-self: center;
+  align-items: flex-end;
   align-self: flex-end;
-  text-align: center;
-  margin-top: auto;
+  margin-block: auto 0;
 }
 
 .bottom > * {
-  align-self: center !important;
+  align-self: flex-end !important;
 }
 
+.bottom-self {
+  display: block;
+  margin-block: auto 0 !important;
+  align-self: flex-end !important;
+}
+
+.bottom-items {
+  display: flex;
+  align-items: flex-end;
+}
+
+.bottom-items > * {
+  align-self: flex-end !important;
+}
+
+/* left -------------------------------------------------------*/
+.left {
+  display: flex;
+  justify-content: flex-start;
+  justify-self: flex-start;
+  margin-inline: 0 auto;
+}
+
+.left-self {
+  display: block;
+  margin-inline: 0 auto !important;
+  justify-self: flex-start !important;
+}
+
+.left-items {
+  display: flex;
+  justify-content: flex-start;
+}
 
 /*efects -----------------------------------------------------*/
 .fx-glow,.fx-glow-sm,.fx-glow-md,.fx-glow-lg {

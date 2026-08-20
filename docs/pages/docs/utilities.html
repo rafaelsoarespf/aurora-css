@@ -209,12 +209,95 @@
       </div>
     </section>
 
-    <!-- directional alignment ---------------------------------------------------------->
-    <section>
-      <h2 class="mt-xl">Directional Alignment</h2>
-      <p>Utility classes for aligning elements to the top, right, bottom, or left of their container.</p>
+    <section id="center-vertical">
+      <h2>Center Vertical</h2>
+      <p>Utility classes for centering elements and content along the vertical axis.</p>
+      <!--center-vertical-->
+      <p class="mt"><code>.center-vertical</code> centers content vertically inside a container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="center-vertical">
+          <div class="card">Center Vertical</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="center-vertical"&gt;
+  &lt;div class="card"&gt;Center Vertical&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--center-vertical items-->
+      <p class="mt-lg"><code>.center-items-vertical</code> centers multiple children vertically inside a flex container.
+      </p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="center-items-vertical">
+          <div class="card">Center Items Vertical</div>
+          <div class="card">Center Items Vertical</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="center-items-vertical"&gt;
+  &lt;div class="card"&gt;Center Items Vertical&lt;/div&gt;
+  &lt;div class="card"&gt;Center Items Vertical&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--center-vertical self-->
+      <p class="mt-lg"><code>.center-self-vertical</code> centers the element itself vertically within its parent
+        container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="card center-self-vertical">Center Self Vertical</div>
+        <!--code-->
+        <pre
+          class="card-code"><code>&lt;div class="card center-self-vertical"&gt;Center Self Vertical&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="center-horizontal">
+      <h2>Center Horizontal</h2>
+      <p>Utility classes for centering elements and content along the horizontal axis.</p>
+      <!--center-horizontal-->
+      <p class="mt"><code>.center-horizontal</code> centers content horizontally inside a container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="center-horizontal">
+          <div class="card">Center Horizontal</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="center-horizontal"&gt;
+  &lt;div class="card"&gt;Center Horizontal&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--center-horizontal items-->
+      <p class="mt-lg"><code>.center-items-horizontal</code> centers multiple children horizontally inside a flex
+        container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="center-items-horizontal">
+          <div class="card">Center Items Horizontal</div>
+          <div class="card">Center Items Horizontal</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="center-items-horizontal"&gt;
+  &lt;div class="card"&gt;Center Items Horizontal&lt;/div&gt;
+  &lt;div class="card"&gt;Center Items Horizontal&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--center-horizontal self-->
+      <p class="mt-lg"><code>.center-self-horizontal</code> centers the element itself horizontally within its parent
+        container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="card center-self-horizontal">Center Self Horizontal</div>
+        <!--code-->
+        <pre
+          class="card-code"><code>&lt;div class="card center-self-horizontal"&gt;Center Self Horizontal&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="top">
+      <h2>Top</h2>
+      <p>Utility classes for aligning elements and content to the top.</p>
       <!--top-->
-      <p class="mt"><code>.top</code> aligns the element to the top of its container.</p>
+      <p class="mt"><code>.top</code> aligns content to the top inside a container.</p>
       <div class="grid-2 fx-dots">
         <!--div-->
         <div class="top">
@@ -225,20 +308,35 @@
   &lt;div class="card"&gt;Top&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
-      <!--right-->
-      <p class="mt-lg"><code>.right</code> aligns the element to the right of its container.</p>
+      <!--top items-->
+      <p class="mt-lg"><code>.top-items</code> aligns multiple children to the top inside a flex container.</p>
       <div class="grid-2 fx-dots">
         <!--div-->
-        <div class="right">
-          <div class="card">Right</div>
+        <div class="top-items">
+          <div class="card">Top Items</div>
+          <div class="card">Top Items</div>
         </div>
         <!--code-->
-        <pre class="card-code"><code>&lt;div class="right"&gt;
-  &lt;div class="card"&gt;Right&lt;/div&gt;
+        <pre class="card-code"><code>&lt;div class="top-items"&gt;
+  &lt;div class="card"&gt;Top Items&lt;/div&gt;
+  &lt;div class="card"&gt;Top Items&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
+      <!--top self-->
+      <p class="mt-lg"><code>.top-self</code> aligns the element itself to the top within its parent container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="card top-self">Top Self</div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="card top-self"&gt;Top Self&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="bottom">
+      <h2>Bottom</h2>
+      <p>Utility classes for aligning elements and content to the bottom.</p>
       <!--bottom-->
-      <p class="mt-lg"><code>.bottom</code> aligns the element to the bottom of its container.</p>
+      <p class="mt"><code>.bottom</code> aligns content to the bottom inside a container.</p>
       <div class="grid-2 fx-dots">
         <!--div-->
         <div class="bottom">
@@ -249,8 +347,36 @@
   &lt;div class="card"&gt;Bottom&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
+      <!--bottom items-->
+      <p class="mt-lg"><code>.bottom-items</code> aligns multiple children to the bottom inside a flex container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="bottom-items">
+          <div class="card">Bottom Items</div>
+          <div class="card">Bottom Items</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="bottom-items"&gt;
+  &lt;div class="card"&gt;Bottom Items&lt;/div&gt;
+  &lt;div class="card"&gt;Bottom Items&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--bottom self-->
+      <p class="mt-lg"><code>.bottom-self</code> aligns the element itself to the bottom within its parent container.
+      </p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="card bottom-self">Bottom Self</div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="card bottom-self"&gt;Bottom Self&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="left">
+      <h2>Left</h2>
+      <p>Utility classes for aligning elements and content to the left.</p>
       <!--left-->
-      <p class="mt-lg"><code>.left</code> aligns the element to the left of its container.</p>
+      <p class="mt"><code>.left</code> aligns content to the left inside a container.</p>
       <div class="grid-2 fx-dots">
         <!--div-->
         <div class="left">
@@ -260,6 +386,67 @@
         <pre class="card-code"><code>&lt;div class="left"&gt;
   &lt;div class="card"&gt;Left&lt;/div&gt;
 &lt;/div&gt;</code></pre>
+      </div>
+      <!--left items-->
+      <p class="mt-lg"><code>.left-items</code> aligns multiple children to the left inside a flex container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="left-items">
+          <div class="card">Left Items</div>
+          <div class="card">Left Items</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="left-items"&gt;
+  &lt;div class="card"&gt;Left Items&lt;/div&gt;
+  &lt;div class="card"&gt;Left Items&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--left self-->
+      <p class="mt-lg"><code>.left-self</code> aligns the element itself to the left within its parent container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="card left-self">Left Self</div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="card left-self"&gt;Left Self&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="right">
+      <h2>Right</h2>
+      <p>Utility classes for aligning elements and content to the right.</p>
+      <!--right-->
+      <p class="mt"><code>.right</code> aligns content to the right inside a container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="right">
+          <div class="card">Right</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="right"&gt;
+  &lt;div class="card"&gt;Right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--right items-->
+      <p class="mt-lg"><code>.right-items</code> aligns multiple children to the right inside a flex container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="right-items">
+          <div class="card">Right Items</div>
+          <div class="card">Right Items</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="right-items"&gt;
+  &lt;div class="card"&gt;Right Items&lt;/div&gt;
+  &lt;div class="card"&gt;Right Items&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--right self-->
+      <p class="mt-lg"><code>.right-self</code> aligns the element itself to the right within its parent container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="card right-self">Right Self</div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="card right-self"&gt;Right Self&lt;/div&gt;</code></pre>
       </div>
     </section>
 
