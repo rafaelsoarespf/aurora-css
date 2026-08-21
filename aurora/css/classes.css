@@ -1034,48 +1034,44 @@ input.switch:disabled {
 }
 
 /*card -------------------------------------------------------*/
-.card{
+.card {
   position: relative;
-  padding: 1.5rem 1.2rem;
-  border-radius:12px;
-  display: flex;
-  flex-direction:column;
-  min-width: 0;
-  gap: 0.65rem;
-  transition: background-color .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-
-.card:hover{
-  box-shadow:var(--shadow-lg);
-}
-
-:where(.card)
-:where(h1,h2,h3,h4,h5,h6,p) {
-  margin: 0;
-}
-
-:is(.card) p{
-  opacity:.9;
-}
-
-.card{
-  background:var(--color-surface-1);
-  border:1px solid var(--color-border);
-  box-shadow:var(--shadow-md);
-}
-
-/*card-image ------------------------------------------------------------------*/
-.card-img {
-  position: relative;
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  gap: 0.65rem;
+  gap: .5rem;
+  padding: 1.5rem clamp(1rem, 4%, 1.5rem);
+  border-radius: 12px;
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  transition: background-color .25s ease, border-color .25s ease,
+    box-shadow .25s ease, transform .25s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+:is(.card) p {
+  opacity: .9;
+}
+
+/*card-img ------------------------------------------------------------------*/
+.card-img, .card-img-left,.card-img-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: .5rem;
+  border-radius: 12px;
   background: var(--color-surface-1);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-md);
   overflow: hidden;
+}
+
+.card-img {
   padding-bottom: 1.5rem;
 }
 
@@ -1085,29 +1081,11 @@ input.switch:disabled {
   height: auto;
 }
 
-.card-img > img + * {
-  margin-top: 0.6rem;
-}
-
 .card-img > :not(img) {
-  padding: 0 1.2rem;
+  padding: 0 clamp(1rem, 4%, 1.5rem);
 }
 
 /*card-img-left and card-img-right*/
-.card-img-left,
-.card-img-right {
-  position: relative;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  gap: 0.65rem;
-  background: var(--color-surface-1);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
-}
-
 .card-img-left {
   padding: 1.5rem 1.2rem 1.5rem calc(40% + 1.2rem);
 }
@@ -1133,9 +1111,10 @@ input.switch:disabled {
 .card-img-right > img {
   right: 0;
 }
+
 /* card-code ----------------------------------------------------------------------*/
 :not(pre) > code {
-  background: color-mix(in srgb,var(--color-accent) 20%,rgba(255,255,255,0.06));
+  background: color-mix(in srgb, var(--color-accent) 20%, rgba(255,255,255,0.06));
   color: var(--color-accent);
   padding: 0.2em 0.45em;
   border-radius: 6px;
@@ -1144,30 +1123,39 @@ input.switch:disabled {
 }
 
 pre:not(.card-code) {
-  background: color-mix(in srgb,var(--color-accent) 35%,rgba(117,117,117,0.5));
+  background: color-mix(in srgb, var(--color-accent) 35%, rgba(117,117,117,0.5));
   backdrop-filter: var(--blur);
-  color: color-mix(in srgb,var(--color-on-accent) 80%,rgba(248,248,248,0.5));
+  color: color-mix(in srgb, var(--color-on-accent) 80%, rgba(248,248,248,0.5));
   padding: 1.25rem;
   border-radius: 12px;
   overflow-x: auto;
   line-height: 1.7;
-  border: 1px solid color-mix(in srgb,var(--color-accent) 40%,transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
   box-shadow: var(--shadow-md);
 }
 
-pre:not(.card-code) code {
+pre:not(.card-code) code,pre.card-code code {
   display: block;
   background: transparent;
   backdrop-filter: none;
   color: inherit;
   padding: 0;
+  margin: 0;
+  border: 0;
   border-radius: 0;
+  font-family: monospace;
   font-size: 0.95rem;
   white-space: pre;
+}
+
+pre:not(.card-code) code {
   text-align: left;
 }
 
-/* terminal card*/
+pre.card-code code {
+  min-width: max-content;
+}
+
 pre.card-code {
   position: relative;
   overflow-x: auto;
@@ -1179,32 +1167,15 @@ pre.card-code {
   border-radius: 16px;
   color: var(--color-text);
   backdrop-filter: var(--blur);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   background:
     radial-gradient(circle at 20px 24px, #ff5f56 6px, transparent 7px),
     radial-gradient(circle at 44px 24px, #ffbd2e 6px, transparent 7px),
     radial-gradient(circle at 68px 24px, #27c93f 6px, transparent 7px),
-    linear-gradient(var(--color-border),var(--color-border)) top 48px left / 100% 1px no-repeat,
-    linear-gradient( rgba(255,255,255,.015),rgba(255,255,255,.015)) top / 100% 48px no-repeat,
+    linear-gradient(var(--color-border), var(--color-border)) top 48px left / 100% 1px no-repeat,
+    linear-gradient(rgba(255,255,255,.015), rgba(255,255,255,.015)) top / 100% 48px no-repeat,
     color-mix(in srgb, var(--color-surface-1) 30%, transparent);
 }
-
-pre.card-code code {
-  display: block;
-  min-width: max-content;
-  background: transparent;
-  backdrop-filter: none;
-  color: inherit;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  font: inherit;
-  font-family: monospace;
-  font-size: 0.95rem;
-  white-space: pre;
-}
-
 /*modal ------------------------------------------------------*/
 .modal {
   background: rgba(0, 0, 0, 0.1);
