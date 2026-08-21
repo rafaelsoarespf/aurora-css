@@ -90,43 +90,94 @@
 
     <!--spacing --------------------------------------------------------->
     <section id="spacing">
+      <span class="badge mb-sm">Utilities</span>
       <h2>Spacing</h2>
-      <p>Margin utility classes for consistent spacing between elements.</p>
+      <p class="mb">Margin and padding utility classes for consistent spacing between elements. Available in five sizes:
+        <code>none</code>, <code>sm</code>, default (no suffix), <code>md</code> and <code>lg</code>.</p>
 
-      <table>
-        <!--thead-->
+      <!--margin-->
+      <h3 class="mt-lg">Margin</h3>
+      <p class="mb">Use <code>.mt</code>, <code>.mb</code>, <code>.ml</code>, <code>.mr</code> for a single side, or
+        <code>.m</code> for all sides.</p>
+
+      <table class="mb">
         <thead>
           <tr>
-            <th>Class</th>
+            <th>Size</th>
             <th>Value</th>
           </tr>
         </thead>
-        <!--tbody-->
         <tbody>
           <tr>
-            <td>.mt-none / .mb-none</td>
+            <td>none</td>
             <td>0</td>
           </tr>
           <tr>
-            <td>.mt-sm / .mb-sm</td>
+            <td>sm</td>
             <td>0.5rem</td>
           </tr>
           <tr>
-            <td>.mt / .mb</td>
+            <td>(default)</td>
             <td>1rem</td>
           </tr>
           <tr>
-            <td>.mt-md / .mb-md</td>
+            <td>md</td>
             <td>1.5rem</td>
           </tr>
           <tr>
-            <td>.mt-lg / .mb-lg</td>
+            <td>lg</td>
             <td>3rem</td>
           </tr>
         </tbody>
       </table>
-      <!--code-->
-      <pre class="card-code mt"><code>&lt;div class="mb-lg"&gt; ... &lt;/div&gt;</code></pre>
+
+      <pre class="card-code"><code>&lt;div class="mt-lg"&gt; ... &lt;/div&gt;   &lt;!-- margin-top: 3rem --&gt;
+&lt;div class="mb"&gt; ... &lt;/div&gt;      &lt;!-- margin-bottom: 1rem --&gt;
+&lt;div class="ml-sm"&gt; ... &lt;/div&gt;   &lt;!-- margin-left: 0.5rem --&gt;
+&lt;div class="mr-md"&gt; ... &lt;/div&gt;   &lt;!-- margin-right: 1.5rem --&gt;
+&lt;div class="m-none"&gt; ... &lt;/div&gt;  &lt;!-- margin: 0 on all sides --&gt;</code></pre>
+
+      <!--padding-->
+      <h3 class="mt-lg">Padding</h3>
+      <p class="mb">Use <code>.pt</code>, <code>.pb</code>, <code>.pl</code>, <code>.pr</code> for a single side, or
+        <code>.p</code> for all sides.</p>
+
+      <table class="mb">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>none</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>sm</td>
+            <td>0.5rem</td>
+          </tr>
+          <tr>
+            <td>(default)</td>
+            <td>1rem</td>
+          </tr>
+          <tr>
+            <td>md</td>
+            <td>1.5rem</td>
+          </tr>
+          <tr>
+            <td>lg</td>
+            <td>3rem</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre class="card-code"><code>&lt;div class="pt-lg"&gt; ... &lt;/div&gt;   &lt;!-- padding-top: 3rem --&gt;
+&lt;div class="pb"&gt; ... &lt;/div&gt;      &lt;!-- padding-bottom: 1rem --&gt;
+&lt;div class="pl-sm"&gt; ... &lt;/div&gt;   &lt;!-- padding-left: 0.5rem --&gt;
+&lt;div class="pr-md"&gt; ... &lt;/div&gt;   &lt;!-- padding-right: 1.5rem --&gt;
+&lt;div class="p"&gt; ... &lt;/div&gt;       &lt;!-- padding: 1rem on all sides --&gt;</code></pre>
     </section>
 
     <!--gap ------------------------------------------------------------->
@@ -173,7 +224,8 @@
     <section id="direction">
       <h2>Direction</h2>
       <p>Utility classes for controlling flex direction. Each includes <code>flex-wrap: wrap</code> and a default
-        <code>gap: 1rem</code>, which can be overridden with any <code>.gap-*</code> class.</p>
+        <code>gap: 1rem</code>, which can be overridden with any <code>.gap-*</code> class.
+      </p>
       <!--row-->
       <p class="mt"><code>.row</code> arranges children in a horizontal row.</p>
       <div class="grid-2 fx-dots">

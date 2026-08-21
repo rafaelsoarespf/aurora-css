@@ -2025,16 +2025,66 @@ details.tree details > :not(summary):not(details) {
 /*margin -------------------------------------------------------*/
 .mt{margin-top:1rem;}
 .mb{margin-bottom:1rem;}
+.ml{margin-left:1rem;}
+.mr{margin-right:1rem;}
+.m{margin:1rem;}
 
 .mt-none{margin-top:0;}
 .mt-sm{margin-top:.5rem;}
 .mt-md{margin-top:1.5rem;}
 .mt-lg{margin-top:3rem;}
 
-.mb-none{margin-bottom: 0;}
+.mb-none{margin-bottom:0;}
 .mb-sm{margin-bottom:.5rem;}
 .mb-md{margin-bottom:1.5rem;}
 .mb-lg{margin-bottom:3rem;}
+
+.ml-none{margin-left:0;}
+.ml-sm{margin-left:.5rem;}
+.ml-md{margin-left:1.5rem;}
+.ml-lg{margin-left:3rem;}
+
+.mr-none{margin-right:0;}
+.mr-sm{margin-right:.5rem;}
+.mr-md{margin-right:1.5rem;}
+.mr-lg{margin-right:3rem;}
+
+.m-none{margin:0;}
+.m-sm{margin:.5rem;}
+.m-md{margin:1.5rem;}
+.m-lg{margin:3rem;}
+
+/*padding -------------------------------------------------------*/
+.pt{padding-top:1rem;}
+.pb{padding-bottom:1rem;}
+.pl{padding-left:1rem;}
+.pr{padding-right:1rem;}
+.p{padding:1rem;}
+
+.pt-none{padding-top:0;}
+.pt-sm{padding-top:.5rem;}
+.pt-md{padding-top:1.5rem;}
+.pt-lg{padding-top:3rem;}
+
+.pb-none{padding-bottom:0;}
+.pb-sm{padding-bottom:.5rem;}
+.pb-md{padding-bottom:1.5rem;}
+.pb-lg{padding-bottom:3rem;}
+
+.pl-none{padding-left:0;}
+.pl-sm{padding-left:.5rem;}
+.pl-md{padding-left:1.5rem;}
+.pl-lg{padding-left:3rem;}
+
+.pr-none{padding-right:0;}
+.pr-sm{padding-right:.5rem;}
+.pr-md{padding-right:1.5rem;}
+.pr-lg{padding-right:3rem;}
+
+.p-none{padding:0;}
+.p-sm{padding:.5rem;}
+.p-md{padding:1.5rem;}
+.p-lg{padding:3rem;}
 
 /*gap ----------------------------------------------------------*/
 .gap-none{gap:0;}
