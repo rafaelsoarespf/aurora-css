@@ -89,6 +89,55 @@
   gap: 1rem;
 }
 
+.row-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+/*column --------------------------------------------------------*/
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.column-reverse {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+/*stretch --------------------------------------------------------*/
+.stretch-items {
+  display: flex;
+  align-items: stretch;
+}
+
+.stretch-self {
+  align-self: stretch !important;
+}
+
+/*space --------------------------------------------------------*/
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /*center ----------------------------------------------------*/
 .center {
   display: flex;

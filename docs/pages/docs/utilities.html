@@ -170,6 +170,154 @@
       <pre class="card-code mt"><code>&lt;div class="gap-md"&gt;...&lt;/div&gt;</code></pre>
     </section>
 
+    <section id="direction">
+      <h2>Direction</h2>
+      <p>Utility classes for controlling flex direction. Each includes <code>flex-wrap: wrap</code> and a default
+        <code>gap: 1rem</code>, which can be overridden with any <code>.gap-*</code> class.</p>
+      <!--row-->
+      <p class="mt"><code>.row</code> arranges children in a horizontal row.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="row">
+          <div class="card">Row</div>
+          <div class="card">Row</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="row"&gt;
+  &lt;div class="card"&gt;Row&lt;/div&gt;
+  &lt;div class="card"&gt;Row&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--column-->
+      <p class="mt-lg"><code>.column</code> arranges children in a vertical column.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="column">
+          <div class="card">Column</div>
+          <div class="card">Column</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="column"&gt;
+  &lt;div class="card"&gt;Column&lt;/div&gt;
+  &lt;div class="card"&gt;Column&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--row-reverse-->
+      <p class="mt-lg"><code>.row-reverse</code> arranges children in a horizontal row, reversed.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="row-reverse">
+          <div class="card">1</div>
+          <div class="card">2</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="row-reverse"&gt;
+  &lt;div class="card"&gt;1&lt;/div&gt;
+  &lt;div class="card"&gt;2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--column-reverse-->
+      <p class="mt-lg"><code>.column-reverse</code> arranges children in a vertical column, reversed.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="column-reverse">
+          <div class="card">1</div>
+          <div class="card">2</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="column-reverse"&gt;
+  &lt;div class="card"&gt;1&lt;/div&gt;
+  &lt;div class="card"&gt;2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="stretch">
+      <h2>Stretch</h2>
+      <p>Utility classes for stretching elements to fill the cross-axis of their container.</p>
+      <!--stretch items-->
+      <p class="mt"><code>.stretch-items</code> stretches children to fill the cross-axis inside a flex container.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="row stretch-items">
+          <div class="card">Stretch Items</div>
+          <div class="card">Stretch Items</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="row stretch-items"&gt;
+  &lt;div class="card"&gt;Stretch Items&lt;/div&gt;
+  &lt;div class="card"&gt;Stretch Items&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--stretch self-->
+      <p class="mt-lg"><code>.stretch-self</code> stretches the element itself to fill the cross-axis of its parent.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="row">
+          <div class="card stretch-self">Stretch Self</div>
+          <div class="card">Normal</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="row"&gt;
+  &lt;div class="card stretch-self"&gt;Stretch Self&lt;/div&gt;
+  &lt;div class="card"&gt;Normal&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="space">
+      <h2>Space</h2>
+      <p>Utility classes for distributing children along the main axis of a flex container.</p>
+      <!--space-between-->
+      <p class="mt"><code>.space-between</code> distributes children with equal space between them.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="space-between">
+          <div class="card">1</div>
+          <div class="card">2</div>
+          <div class="card">3</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="space-between"&gt;
+  &lt;div class="card"&gt;1&lt;/div&gt;
+  &lt;div class="card"&gt;2&lt;/div&gt;
+  &lt;div class="card"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--space-around-->
+      <p class="mt-lg"><code>.space-around</code> distributes children with equal space around them.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="space-around">
+          <div class="card">1</div>
+          <div class="card">2</div>
+          <div class="card">3</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="space-around"&gt;
+  &lt;div class="card"&gt;1&lt;/div&gt;
+  &lt;div class="card"&gt;2&lt;/div&gt;
+  &lt;div class="card"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <!--space-evenly-->
+      <p class="mt-lg"><code>.space-evenly</code> distributes children with equal space between and around them.</p>
+      <div class="grid-2 fx-dots">
+        <!--div-->
+        <div class="space-evenly">
+          <div class="card">1</div>
+          <div class="card">2</div>
+          <div class="card">3</div>
+        </div>
+        <!--code-->
+        <pre class="card-code"><code>&lt;div class="space-evenly"&gt;
+  &lt;div class="card"&gt;1&lt;/div&gt;
+  &lt;div class="card"&gt;2&lt;/div&gt;
+  &lt;div class="card"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
     <!--center ---------------------------------------------------------->
     <section id="center">
       <h2>Center</h2>
