@@ -39,13 +39,24 @@ h2 {
   color: var(--color-subtitle);
 }
 
-h3,h4,h5,h6 {
+h3 {
+  font: var(--font-heading-3);
   color: var(--color-subtitle);
 }
 
-p,label,span {
-  font: var(--font-text);
-  color: var(--color-text);
+h4 {
+  font: var(--font-heading-4);
+  color: var(--color-subtitle);
+}
+
+h5 {
+  font: var(--font-heading-5);
+  color: var(--color-subtitle);
+}
+
+h6 {
+  font: var(--font-heading-6);
+  color: var(--color-subtitle);
 }
 
 main :is(h1, h2, h3, h4, h5, h6, p):not(.mb, .mb-none, .mb-sm, .mb-md, .mb-lg,
