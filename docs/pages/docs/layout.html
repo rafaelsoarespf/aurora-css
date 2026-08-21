@@ -86,103 +86,90 @@
       <pre class="card-code"><code>&lt;div class="container width-full"&gt; ... &lt;/div&gt;</code></pre>
     </section>
     <!--grid ------------------------------------------------------------>
+    <!--grid ------------------------------------------------------------>
     <section id="grid">
       <h2>Grid</h2>
-      <p class="mb">Create flexible layouts with predefined grid column utilities.</p>
+      <p class="mb">Create flexible layouts with a single <code>.grid</code> class. Children without a
+        <code>.col-*</code> class automatically divide the available space equally between them.</p>
 
       <div class="card mb-md">
-        <!--grid-2-->
-        <p class="mt-sm center-self">grid-2</p>
-        <div class="grid-2 mb-sm">
+        <!--2 items-->
+        <p class="mt-sm center-self">2 children, no col class</p>
+        <div class="grid mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
         </div>
 
-        <!--grid-3-->
-        <p class="center-self">grid-3</p>
-        <div class="grid-3 mb-sm">
-          <div class="card center-items">1</div>
-          <div class="card center-items">2</div>
-          <div class="card center-items">3</div>
-        </div>
-
-        <!--grid-4-->
-        <p class="center-self">grid-4</p>
-        <div class="grid-4 mb-sm">
+        <!--3 items-->
+        <p class="center-self">3 children, no col class</p>
+        <div class="grid mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
-          <div class="card center-items">4</div>
         </div>
 
-        <!--grid-5-->
-        <p class="center-self">grid-5</p>
-        <div class="grid-5 mb-sm">
+        <!--4 items-->
+        <p class="center-self">4 children, no col class</p>
+        <div class="grid mb-sm">
           <div class="card center-items">1</div>
           <div class="card center-items">2</div>
           <div class="card center-items">3</div>
           <div class="card center-items">4</div>
-          <div class="card center-items">5</div>
         </div>
 
-        <!--grid-6-->
-        <p class="center-self">grid-6</p>
-        <div class="grid-6 mb-sm">
-          <div class="card center-items">1</div>
-          <div class="card center-items">2</div>
-          <div class="card center-items">3</div>
-          <div class="card center-items">4</div>
-          <div class="card center-items">5</div>
-          <div class="card center-items">6</div>
-        </div>
+        <pre class="card-code mt"><code>&lt;div class="grid"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+&lt;/div&gt;
 
-        <!--grid-7-->
-        <p class="center-self">grid-7</p>
-        <div class="grid-7 mb-sm">
-          <div class="card center-items">1</div>
-          <div class="card center-items">2</div>
-          <div class="card center-items">3</div>
-          <div class="card center-items">4</div>
-          <div class="card center-items">5</div>
-          <div class="card center-items">6</div>
-          <div class="card center-items">7</div>
-        </div>
-
-        <pre class="card-code mt"><code>&lt;div class="grid-2"&gt;...&lt;/div&gt;
-&lt;div class="grid-3"&gt;...&lt;/div&gt;
-&lt;div class="grid-4"&gt;...&lt;/div&gt;
-&lt;div class="grid-5"&gt;...&lt;/div&gt;
-&lt;div class="grid-6"&gt;...&lt;/div&gt;
-&lt;div class="grid-7"&gt;...&lt;/div&gt;</code></pre>
+&lt;div class="grid"&gt;
+  &lt;div&gt;1&lt;/div&gt;
+  &lt;div&gt;2&lt;/div&gt;
+  &lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
       </div>
 
       <!--column span ---------------------------------------------------->
       <div class="card">
         <h3>Column Span</h3>
-        <p class="mb">Use column span utilities to occupy multiple grid columns.</p>
+        <p class="mb">The grid is based on 12 columns. Use <code>.col-1</code> through <code>.col-12</code> to give an
+          element a fixed width as a fraction of 12. Children without a <code>.col-*</code> class fill the remaining
+          space equally between them.</p>
 
-        <p class="center-self">grid-4 + col-3</p>
-        <div class="grid-4 mb-sm">
+        <p class="center-self">col-3 + auto</p>
+        <div class="grid mb-sm">
           <div class="card col-3 center-items">col-3</div>
-          <div class="card center-items">1</div>
+          <div class="card center-items">auto</div>
         </div>
 
-        <p class="center-self">grid-5 + col-2</p>
-        <div class="grid-5">
+        <p class="center-self">col-6 + col-6</p>
+        <div class="grid mb-sm">
+          <div class="card col-6 center-items">col-6</div>
+          <div class="card col-6 center-items">col-6</div>
+        </div>
+
+        <p class="center-self">col-2 + auto + auto</p>
+        <div class="grid">
           <div class="card col-2 center-items">col-2</div>
-          <div class="card center-items">1</div>
-          <div class="card center-items">2</div>
-          <div class="card center-items">3</div>
+          <div class="card center-items">auto</div>
+          <div class="card center-items">auto</div>
         </div>
 
-        <pre class="card-code mt"><code>&lt;div class="grid-4"&gt;
+        <pre class="card-code mt"><code>&lt;div class="grid"&gt;
   &lt;div class="col-3"&gt;...&lt;/div&gt;
+  &lt;div&gt;...&lt;/div&gt; &lt;!-- fills the remaining 75% --&gt;
 &lt;/div&gt;
 
-&lt;div class="grid-5"&gt;
-  &lt;div class="col-2"&gt;...&lt;/div&gt;
+&lt;div class="grid"&gt;
+  &lt;div class="col-6"&gt;...&lt;/div&gt;
+  &lt;div class="col-6"&gt;...&lt;/div&gt;
 &lt;/div&gt;</code></pre>
       </div>
+
+      <div class="alert mt">Note: <code>.col-N</code> is always a fixed fraction of 12 columns (e.g. <code>.col-2</code>
+        is always 16.66%, regardless of how many siblings share the row) — it does not divide relative to other
+        <code>.col-N</code> siblings. Elements without a <code>.col-*</code> class automatically share whatever space is
+        left.</div>
     </section>
 
     <!--row ------------------------------------------------------------->

@@ -11,76 +11,36 @@
 }
 
 /*grid -------------------------------------------------------*/
-.grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-7 {
-  display: grid;
-  gap: 0.5rem;
+.grid {
+  --grid-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--grid-gap);
 }
 
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
+.grid > * {
+  flex: 1 1 0;
+  min-width: 0;
 }
 
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid-5 {
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.grid-6 {
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.grid-7 {
-  grid-template-columns: repeat(7, 1fr);
-}
-
-.col-2 {
-  grid-column: span 2;
-}
-
-.col-3 {
-  grid-column: span 3;
-}
-
-.col-4 {
-  grid-column: span 4;
-}
-
-.col-5 {
-  grid-column: span 5;
-}
-
-.col-6 {
-  grid-column: span 6;
-}
-
-.col-7 {
-  grid-column: span 7;
-}
-
-
-@media (max-width: 768px) {
-  .grid-5,.grid-6,.grid-7 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+.col-1  { flex: 0 0 calc(8.333% - var(--grid-gap) * 11 / 12); }
+.col-2  { flex: 0 0 calc(16.666% - var(--grid-gap) * 10 / 12); }
+.col-3  { flex: 0 0 calc(25% - var(--grid-gap) * 9 / 12); }
+.col-4  { flex: 0 0 calc(33.333% - var(--grid-gap) * 8 / 12); }
+.col-5  { flex: 0 0 calc(41.666% - var(--grid-gap) * 7 / 12); }
+.col-6  { flex: 0 0 calc(50% - var(--grid-gap) * 6 / 12); }
+.col-7  { flex: 0 0 calc(58.333% - var(--grid-gap) * 5 / 12); }
+.col-8  { flex: 0 0 calc(66.666% - var(--grid-gap) * 4 / 12); }
+.col-9  { flex: 0 0 calc(75% - var(--grid-gap) * 3 / 12); }
+.col-10 { flex: 0 0 calc(83.333% - var(--grid-gap) * 2 / 12); }
+.col-11 { flex: 0 0 calc(91.666% - var(--grid-gap) * 1 / 12); }
+.col-12 { flex: 0 0 100%; }
 
 @media (max-width: 480px) {
-  .grid-2,.grid-3,.grid-4,.grid-5,.grid-6,.grid-7 {
-    grid-template-columns: 1fr;
+  .grid > * {
+    flex: 1 1 100% !important;
   }
 }
-
 /*row --------------------------------------------------------*/
 .row {
   display: flex;
@@ -1782,17 +1742,21 @@ details.tree details > :not(summary):not(details) {
   color: var(--color-text);
 }
 
-.surface h1, .surface-2 h1, .ghost h1, .phantom h1{
+.surface h1, .surface-2 h1, .ghost h1, .phantom h1 {
   color: var(--color-title);
 }
 
-.surface h2, .surface-2 h2, .ghost h2, .phantom h2{
+.surface h2, .surface-2 h2, .ghost h2, .phantom h2,
+.surface h3, .surface-2 h3, .ghost h3, .phantom h3,
+.surface h4, .surface-2 h4, .ghost h4, .phantom h4,
+.surface h5, .surface-2 h5, .ghost h5, .phantom h5,
+.surface h6, .surface-2 h6, .ghost h6, .phantom h6 {
   color: var(--color-subtitle);
 }
 
 .soft {
-  background: color-mix(in srgb,var(--color-accent) 25%,transparent);
-  border: 1px solid color-mix(in srgb,var(--color-accent) 15%,transparent);
+  background: color-mix(in srgb, var(--color-accent) 25%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent);
   backdrop-filter: var(--blur);
   color: var(--color-accent);
 }
