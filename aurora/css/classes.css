@@ -10,6 +10,23 @@
   margin-inline: auto;
 }
 
+/*section ----------------------------------------------------*/
+.section-sm {
+  padding-block: clamp(3rem, 6vw, 4rem);
+}
+
+.section {
+  padding-block: clamp(4rem, 8vw, 6rem);
+}
+
+.section-md {
+  padding-block: clamp(5rem, 9vw, 8rem);
+}
+
+.section-lg {
+  padding-block: clamp(6rem, 10vw, 10rem);
+}
+
 /*grid -------------------------------------------------------*/
 .grid {
   --grid-gap: 1rem;
@@ -274,11 +291,13 @@
 }
 
 /*efects -----------------------------------------------------*/
-.fx-glow,.fx-glow-sm,.fx-glow-md,.fx-glow-lg {
+.fx-glow, .fx-glow-sm, .fx-glow-md, .fx-glow-lg,
+.fx-grid, .fx-dots, .fx-gradient {
   position: relative;
   isolation: isolate;
 }
 
+/*fx-glow*/
 .fx-glow::before,.fx-glow-sm::before,.fx-glow-md::before,.fx-glow-lg::before {
   content: "";
   position: absolute;
@@ -287,131 +306,77 @@
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: var(--color-accent);
-  filter: blur(120px);
   z-index: -1;
   pointer-events: none;
-}
-
-.fx-glow::before {
-  width: min(320px, 70vw);
-  height: min(320px, 70vw);
-  opacity: 0.1;
 }
 
 .fx-glow-sm::before {
   width: 180px;
   height: 180px;
-  opacity: 0.08;
+  opacity: .08;
+  filter: blur(60px);
+}
+
+.fx-glow::before {
+  width: min(320px, 70vw);
+  height: min(320px, 70vw);
+  opacity: .1;
+  filter: blur(100px);
 }
 
 .fx-glow-md::before {
   width: min(420px, 70vw);
   height: min(420px, 70vw);
-  opacity: 0.1;
+  opacity: .1;
+  filter: blur(120px);
 }
 
 .fx-glow-lg::before {
   width: min(600px, 70vw);
   height: min(600px, 70vw);
-  opacity: 0.16;
+  opacity: .16;
+  filter: blur(140px);
 }
 
 /*fx-grid*/
-.fx-grid{
-  position:relative;
-  isolation:isolate;
-}
-
-.fx-grid::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background-image:
-    linear-gradient(color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px),
-    linear-gradient(90deg,color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px);
-  background-size:40px 40px;
-  z-index:-1;
-  pointer-events:none;
-}
-
-/*fx-grid-radial*/
-.fx-grid-radial {
-  position: relative;
-  isolation: isolate;
-}
-
-.fx-grid-radial::after {
+.fx-grid::after {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px),
-    linear-gradient(90deg,color-mix(in srgb,var(--color-text) 8%,transparent) 1px,transparent 1px);
-  background-size: 40px 40px;
-  mask-image: radial-gradient(circle, white 20%, transparent 80%);
   z-index: -1;
   pointer-events: none;
-}
-
-/* noise*/
-.fx-noise{
-  position:relative;
-  isolation:isolate;
-}
-
-.fx-noise::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  opacity:.04;
-  pointer-events:none;
-  z-index:-1;
-  background-image:radial-gradient(circle,var(--color-text) 1px,transparent 1px);
-  background-size:8px 8px;
-}
-
-/* dots -----------------------------------------------------*/
-.fx-dots{
-  position:relative;
-  isolation:isolate;
-}
-
-.fx-dots::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  z-index:-1;
-
   background-image:
-    radial-gradient(
-      color-mix(in srgb,var(--color-text) 15%,transparent) 1px,
-      transparent 1px
-    );
-  background-size:24px 24px;
+    linear-gradient(color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-text) 8%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle, white 20%, transparent 80%);
 }
 
-.fx-beam{
-  position:relative;
-  isolation:isolate;
-  overflow:hidden;
+/*fx-dots*/
+.fx-dots::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(
+    color-mix(in srgb, var(--color-text) 15%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
 }
 
-.fx-beam::before{
-  content:"";
-  position:absolute;
-  inset:-50%;
-  background:
-    linear-gradient(
-      115deg,
-      transparent 40%,
-      color-mix(in srgb,var(--color-accent) 10%,transparent) 50%,
-      transparent 60%
-    );
-  pointer-events:none;
-  z-index:-1;
+/*fx-gradient*/
+.fx-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-accent) 6%, transparent), transparent 60%  );
 }
-
 
 /*button -----------------------------------------------------*/
 .btn, .btn-outline, .btn-glow {
@@ -504,6 +469,60 @@
   pointer-events: none;
   transform: none;
   box-shadow: none;
+}
+
+/*divider ------------------------------------------------------*/
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color-accent);
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/*stat block ----------------------------------------------------*/
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font: 800 clamp(2.5rem, 5vw, 4rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  line-height: 1;
+  color: var(--color-title);
+}
+
+.stat-label {
+  font: var(--font-text-sm);
+  color: var(--color-text);
+}
+
+/*decorative text --------------------------------------------*/
+.deco-text {
+  position: relative;
+  isolation: isolate;
+}
+
+.deco-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  font: 800 clamp(3rem, 8vw, 6rem) "Sora", -apple-system, "Segoe UI", sans-serif;
+  line-height: 1;
+  color: var(--color-border);
+  pointer-events: none;
+  white-space: nowrap;
 }
 
 /*alert ------------------------------------------------------*/
@@ -2238,12 +2257,14 @@ details.tree details > :not(summary):not(details) {
   font: var(--font-title);
   color: var(--color-title);
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 .subtitle {
   font: var(--font-subtitle);
   color: var(--color-subtitle);
   line-height: 1.1;
+  text-wrap: balance;
 }
 
 .text {
@@ -2264,10 +2285,28 @@ details.tree details > :not(summary):not(details) {
   color: var(--color-on-accent);
 }
 
-.text-bold{
-  font-weight:700;
+.text-light { font-weight: 300; }
+.text-normal { font-weight: 400; }
+.text-medium { font-weight: 500; }
+.text-semibold { font-weight: 600; }
+.text-bold { font-weight: 700; }
+.text-extrabold { font-weight: 800; }
+
+.text-spacing-none { letter-spacing: 0; }
+.text-spacing-sm { letter-spacing: -0.02em; }
+.text-spacing { letter-spacing: 0.05em; }
+.text-spacing-md { letter-spacing: 0.1em; }
+.text-spacing-lg { letter-spacing: 0.15em; }
+
+.text-overline {
+  font: var(--font-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
 }
 
+/*text position*/
 .text-center { text-align: center;}
 .text-left{text-align: left;}
 .text-right{text-align: right;}
@@ -2306,7 +2345,8 @@ details.tree details > :not(summary):not(details) {
 .text-white { color: #ffffff;}
 
 .text-gold {
-  background: linear-gradient( 135deg,#8f6520 0%, #c99b3a 30%,#f2d16b 50%, #c99b3a 70%,#8f6520 100%);
+  color: #c99b3a;
+  background: linear-gradient(135deg, #8f6520 0%, #c99b3a 30%, #f2d16b 50%, #c99b3a 70%, #8f6520 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -2314,7 +2354,8 @@ details.tree details > :not(summary):not(details) {
 }
 
 .text-silver {
-  background: linear-gradient( 135deg, #6d7680 0%, #b5bec7 30%, #eef2f5 50%, #b5bec7 70%, #6d7680 100%);
+  color: #b5bec7;
+  background: linear-gradient(135deg, #6d7680 0%, #b5bec7 30%, #eef2f5 50%, #b5bec7 70%, #6d7680 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -2322,7 +2363,8 @@ details.tree details > :not(summary):not(details) {
 }
 
 .text-bronze {
-  background: linear-gradient( 135deg,#5f3c22 0%,#996339 30%, #cb9157 50%, #996339 70%, #5f3c22 100%);
+  color: #996339;
+  background: linear-gradient(135deg, #5f3c22 0%, #996339 30%, #cb9157 50%, #996339 70%, #5f3c22 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -2972,38 +3014,43 @@ details.tree details > :not(summary):not(details) {
 }
 
 /*font -----------------------------------------------------------*/
+/*font -----------------------------------------------------------*/
 .font-xs {
-  font-size: 0.75rem;
+  font-size: clamp(0.7rem, 0.68rem + 0.1vw, 0.75rem);
 }
 
 .font-sm {
-  font-size: 0.875rem;
+  font-size: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
 }
 
 .font-md {
-  font-size: 1rem;
+  font-size: clamp(0.925rem, 0.9rem + 0.15vw, 1rem);
 }
 
 .font-lg {
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 1.05rem + 0.25vw, 1.25rem);
 }
 
 .font-xl {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
 }
 
 .font-2xl {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem);
 }
 
 .font-3xl {
-  font-size: 3rem;
+  font-size: clamp(1.875rem, 1.5rem + 1.875vw, 3rem);
 }
 
 .font-4xl {
-  font-size: 4rem;
+  font-size: clamp(2.25rem, 1.6rem + 3.25vw, 4rem);
 }
 
 .font-5xl {
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 1.5rem + 5vw, 5rem);
+}
+
+.font-6xl {
+  font-size: clamp(3rem, 1.5rem + 7vw, 6.5rem);
 }
