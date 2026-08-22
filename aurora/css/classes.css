@@ -196,7 +196,6 @@
   justify-content: center;
 }
 
-
 /* top --------------------------------------------------------*/
 .top {
   display: flex;
@@ -3013,7 +3012,6 @@ details.tree details > :not(summary):not(details) {
   background-repeat: no-repeat;
 }
 
-/*font -----------------------------------------------------------*/
 /*font -----------------------------------------------------------*/
 .font-xs {
   font-size: clamp(0.7rem, 0.68rem + 0.1vw, 0.75rem);
